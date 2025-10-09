@@ -1,0 +1,878 @@
+
+
+<xaiArtifact artifact_id="b9dad7a3-b455-455f-b2a3-2b18ffc954ad" artifact_version_id="7e19ee81-d7d6-48e1-a66b-3787d81deb05" title="blog.html" contentType="text/html">
+{% extends "base.html" %}
+
+{% block title %}Квантовий Журнал: Блог про Майбутнє Обчислень{% endblock %}
+
+{% block content %}
+<div class="container">
+  <!-- Космічний фон із анімованими зірками та галактикою -->
+  <div class="space-bg">
+    <div class="stars top-stars"></div>
+    <div class="stars left-stars"></div>
+    <div class="stars right-stars"></div>
+    <div class="galaxy-overlay"></div>
+  </div>
+
+  <!-- Бічна панель для навігації -->
+  <div class="sidebar">
+    <h3 style="color: #91151c; font-size: 27px; font-weight: 700;">Зміст журналу</h3>
+    <ul>
+      <li><a href="#section1" class="nav-button">Квантові технології: огляд</a></li>
+      <li><a href="#section2" class="nav-button">Квантові процесори 2025</a></li>
+      <li><a href="#section3" class="nav-button">Алгоритми</a></li>
+      <li><a href="#section4" class="nav-button">Мови програмування</a></li>
+      <li><a href="#section5" class="nav-button">Інструменти розробки</a></li>
+      <li><a href="#section6" class="nav-button">Застосування: від хімії до AI</a></li>
+      <li><a href="#section7" class="nav-button">Етика квантових технологій</a></li>
+      <li><a href="#section8" class="nav-button">Квантове навчання</a></li>
+      <li><a href="#section9" class="nav-button">Discord: Реальний час</a></li>
+      <li><a href="#section10" class="nav-button">Reddit: Обговорення</a></li>
+      <li><a href="#section11" class="nav-button">GitHub: Open Source</a></li>
+      <li><a href="#section12" class="nav-button">Хакатони та змагання</a></li>    
+      <li><a href="#section13" class="nav-button">Майбутнє кванту</a></li>
+      <li><a href="#section14" class="nav-button">Зворотний зв’язок</a></li>
+    </ul>
+  </div>
+
+  <!-- Основний вміст -->
+  <div class="content">
+    <div class="welcome-text">
+      <h1 style="color: #7c0e14; font-size: 1.1em; font-size: 44px; text-align: center; font-style: italic; margin-right: 245px; font-weight: 700;">Квантовий журнал: від кубітів до космосу</h1>
+      <p style="color: #921319; font-size: 1.1em; font-size: 30px; text-align: justify; width: 970px; margin-right: 190px;">Ласкаво просимо до нашого блогу – космічного порталу, де квантові технології оживають! Це ваш гід у світі кубітів, алгоритмів і революційних обчислень.</p>
+    </div>
+
+   
+    <!-- Зовнішні ресурси -->
+    <div class="resource-links" style="padding: 20px; margin: 20px 0; width: 970px;">
+      <h3>Ресурси для вивчення теорії квантового програмування та приклади коду</h3>
+      <div class="resource-grid">
+        <a href="https://quantumzeitgeist.com/" target="_blank" class="resource-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Quantum_computing_icon.svg/50px-Quantum_computing_icon.svg.png" alt="Quantum Zeitgeist">
+          <span>Quantum Zeitgeist</span>
+        </a>
+        <a href="https://qiskit.org/learn/" target="_blank" class="resource-btn">
+          <img src="https://www.ibm.com/quantum/qiskit" alt="Qiskit Learn">
+          <span>Qiskit Learn</span>
+        </a>
+        <a href="https://quantumai.google/cirq" target="_blank" class="resource-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cirq_Logo.svg/50px-Cirq_Logo.svg.png" alt="Google Cirq">
+          <span>Google Cirq</span>
+        </a>
+        <a href="https://docs.microsoft.com/en-us/azure/quantum/" target="_blank" class="resource-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Azure_Quantum_Logo.svg/50px-Azure_Quantum_Logo.svg.png" alt="Azure Quantum">
+          <span>Azure Quantum</span>
+        </a>
+      </div>
+    </div>
+
+      <!-- Зовнішні ресурси -->
+      <div class="resource-links">
+        <h3>Спільноти та обговорення</h3>
+        <div class="resource-grid">
+          <a href="https://discord.gg/quantumcomputing" target="_blank" class="resource-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Discord_Logo.svg/50px-Discord_Logo.svg.png" alt="Discord">
+            <span>Discord QDev</span>
+          </a>
+          <a href="https://www.reddit.com/r/QuantumComputing/" target="_blank" class="resource-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Reddit_Icon_-_Variant_1.svg/50px-Reddit_Icon_-_Variant_1.svg.png" alt="Reddit">
+            <span>r/QuantumComputing</span>
+          </a>
+          <a href="https://github.com/topics/quantum-computing" target="_blank" class="resource-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/GitHub_logo.svg/50px-GitHub_logo.svg.png" alt="GitHub">
+            <span>GitHub Quantum</span>
+          </a>
+          <a href="https://quantumcomputing.stackexchange.com/" target="_blank" class="resource-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Stack_Exchange_Logo.svg/50px-Stack_Exchange_Logo.svg.png" alt="Stack Exchange">
+            <span>Quantum Stack</span>
+          </a>
+        </div>
+      </div>
+
+    <!-- Розділи блогу -->
+    <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Квантові технології: огляд сучасного стану</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантові технології – це як зірковий флот, що мчить до нових горизонтів обчислень. 
+        У 2025 році, за Quantum Zeitgeist, квантові комп’ютери з 100–1000 кубітів (IBM Loon, Google Willow) досягли практичної переваги в хімії, логістиці та фінансах. 
+       <br><br> Уявіть: кубіти, що перебувають у суперпозиції, дозволяють паралельно обробляти мільярди станів, а заплутаність створює невидимі зв’язки, які прискорюють обчислення. 
+       <br><br> Цікавий факт: у 2024 році Merck використав VQE для моделювання молекул, скоротивши час розробки ліків на 35%. 
+       <br><br> Парадокс: квантові технології ще в ері NISQ (Noisy Intermediate-Scale Quantum), але гібридні алгоритми, як QAOA, вже трансформують галузі.
+       <br><br> Обмеження: декогеренція та шум QPU вимагають QECC, що ускладнює програмування, але інструменти, як Qiskit, спрощують доступ до QPU через хмару.
+       <br><br> Квантові технології – це не лише комп’ютери, а й сенсори, зв’язок (QKD) і криптографія.</p>
+      </p>
+    </section>
+
+    <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Квантові процесори: серце квантових машин</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантові процесори (QPU) – це як ядра зірок, що живлять обчислення.
+        <br><br> У 2025 році IBM Loon (1000 кубітів) і Google Willow (700 кубітів) лідирують у гонці. 
+        <br><br> Уявіть: кожен кубіт – це мікросвіт, що може бути 0 і 1 одночасно, а заплутаність об’єднує їх у єдину систему. 
+        <br><br> За NIST, superconducting QPU від Google і trapped-ion QPU від IonQ мають унікальні переваги: перші швидші, другі стабільніші. Наприклад, Quantinuum H2 досяг 99.9% точності гейтів. 
+        <br><br> Парадокс: QPU потужні, але шумні, що вимагає QECC, як surface code, який зменшує помилки на 30%. 
+        <br><br>  Цікавий факт: у 2024 році Google використав Willow для симуляції матеріалу, що зайняло б класичному ПК мільйони років. <
+         span class="code-trigger" data-code-id="qpu-sim">Симуляція QPU</span> показує, як тестувати кубіти. Обмеження: висока вартість охолодження до мілікельвінів.</p>
+      
+     
+    </section>
+
+    <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Квантові алгоритми: код для Всесвіту</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантові алгоритми – це як зоряні карти, що вказують шлях через обчислювальний космос. 
+        Алгоритми, як Shor (факторизація), Grover (пошук) і VQE (хімія), використовують суперпозицію та заплутаність для прискорення. 
+        <br><br>  Уявіть: Shor ламає RSA за секунди на QPU з 4000 кубітів, тоді як класичний ПК потребує мільйони років. 
+        <br><br>У 2025 році, за Moody’s, 60% квантових проєктів використовують гібридні алгоритми, як QAOA, для логістики. 
+        <br><br> Цікавий факт: DHL застосував QAOA для маршрутів, скоротивши витрати на 20%.
+         <span class="code-trigger" data-code-id="grover-blog">Grover у Cirq</span> демонструє пошук. 
+         <br><br> Парадокс: алгоритми потужні, але лише для специфічних задач.
+         <br><br>  Обмеження: шум QPU знижує точність, але симулятори, як Qiskit Aer, допомагають.</p>
+    
+      
+    </section>
+
+    <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Мови програмування: голос квантового світу</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантові мови програмування – це як діалекти для спілкування з кубітами. Qiskit (Python), Q# (C#-подібний), Silq (інтуїтивний) і Cirq (апаратно-орієнтований) лідирують у 2025 році. 
+        <br><br>Уявіть: Qiskit дозволяє писати VQE за 10 рядків, тоді як Silq автоматизує очищення кубітів.
+        <br><br> За Quantum Zeitgeist, 50% розробників використовують Python-інтегровані мови через простоту. 
+        <br><br>Цікавий факт: у 2024 році Barclays використав Q# для фінансового моделювання, скоротивши час на 20%. 
+         <span class="code-trigger" data-code-id="qsharp-blog">Q# код</span> демонструє заплутаність. 
+         <br><br> Парадокс: мови виглядають як класичні, але керують квантовою логікою. 
+         <br><br>  Обмеження: потрібні знання квантової механіки, але посібники спрощують навчання.</p>
+     
+      
+    </section>
+
+    <section id="section5" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Інструменти розробки: арсенал квантового програміста</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Інструменти квантового програмування – це як космічні інструменти для будівництва зірок. Qiskit, Cirq, Q# і TensorFlow Quantum дозволяють створювати, тестувати та дебагити квантові алгоритми.
+         Уявіть: Qiskit Aer симулює 20 кубітів на ноутбуці, а IBM Quantum Lab дає доступ до QPU.
+         <br><br> У 2025 році, за NIST, 70% розробників використовують хмарні платформи, як Azure Quantum. 
+         <br><br> Цікавий факт: Merck використав Qiskit для VQE, скоротивши час моделювання на 35%. <span class="code-trigger" data-code-id="qiskit-blog">Qiskit код</span> показує просту схему. 
+         <br><br>Парадокс: інструменти спрощують код, але QPU залишаються складними. Обмеження: дебагінг квантових схем потребує симуляторів через шум.</p>
+            
+    </section>
+
+    <section id="section6" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Застосування: від хімії до штучного інтелекту</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантові технології – це як космічні ключі, що відмикають нові можливості. 
+        VQE моделює молекули для ліків, QAOA оптимізує логістику, а QML прискорює AI. 
+        <br><br> Уявіть: Amazon використовує QAOA для маршрутів, скорочуючи витрати на 25% (Moody’s). 
+        <br><br> У 2025 році квантові застосунки трансформують хімію (Merck), фінанси (JPMorgan) і кібербезпеку (NIST). 
+        <br><br> Цікавий факт: Google використав QNN для діагностики раку, досягнувши 95% точності. 
+        <span class="code-trigger" data-code-id="vqe-blog">VQE код</span> демонструє хімічне моделювання. 
+        <br><br> Парадокс: квантові застосунки обмежені NISQ, але гібридні підходи дають результати. 
+       <br><br> Обмеження: масштабування до fault-tolerant QPU.</p>
+     
+     
+    </section>
+
+    <section id="section7" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Етика квантових технологій: виклики майбутнього</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Етика квантових технологій – це як компас для космічної подорожі. 
+        Алгоритм Шора загрожує криптографії, а QML може посилити нерівність у доступі до AI.
+        <br><br> Уявіть: якщо Шор зламає RSA, фінансові системи стануть вразливими. 
+        <br><br> У 2025 році NIST стандартизує PQC, як Kyber, щоб протистояти цьому. Цікавий факт: UNESCO розробила етичні принципи для квантових технологій, наголошуючи на прозорості.
+        <br><br>  Парадокс: квантові технології обіцяють прогрес, але створюють ризики. 
+          <span class="code-trigger" data-code-id="shor-blog">Шор у Qiskit</span> показує загрозу.
+          <br><br>   Обмеження: потрібні глобальні стандарти, але країни конкурують у квантовій гонці.</p>
+     
+    </section>
+
+    <section id="section8" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Квантове навчання: освіта для майбутнього</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Квантове навчання – це як підготовка астронавтів для квантового космосу. 
+        Платформи, як Qiskit Learn і Azure Quantum Tutorials, роблять квантове програмування доступним. 
+        <br><br>Уявіть: студент без PhD пише VQE за тиждень завдяки Qiskit.
+        <br><br>  У 2025 році, за Moody’s, 30% університетів пропонують курси з квантових обчислень. 
+        <br><br> Цікавий факт: MIT запустив безкоштовний курс із Qiskit, який пройшли 10,000 студентів у 2024 році. 
+         <span class="code-trigger" data-code-id="learn-blog">Qiskit навчальний код</span> показує базову схему. 
+         <br><br>  Парадокс: квантова освіта проста, але потребує розуміння складних концепцій. 
+         <br><br> Обмеження: брак викладачів із квантовим досвідом.</p>
+      
+    </section>
+
+    <section id="section9" class="section">
+      <h2>Discord: Реальний час для квантових обговорень</h2>
+      <p>Discord – це як квантова мережа для реального часу, де 50,000 розробників обмінюються кодом, ідеями та мемами про кубіти. Уявіть: ви пишете Qiskit схему для VQE, а за хвилину отримуєте фідбек від експерта з IBM. У 2025 році Discord QDev сервер має 20 каналів – від #beginners до #advanced-QECC – з щотижневими AMA сесіями. Цікавий факт: у 2024 році Discord допоміг 1000 розробникам вирішити проблеми з Cirq, прискоривши проєкти на 25%. Парадокс: Discord – класичний чат, але він об’єднує квантову спільноту ефективніше, ніж конференції. Обмеження: шум у чатах, але модератори (з Google Quantum AI) тримають порядок. Приєднуйтесь до <a href="https://discord.gg/quantumcomputing" target="_blank">Discord QDev</a> для живих дискусій про Willow чи Loon.</p>
+      <details>
+        <summary>Канали Discord QDev</summary>
+        <p>#general – обговорення новин; #qiskit – допомога з IBM фреймворком; #algorithms – розбір Shor і Grover; #hackathons – анонси змагань; #career – вакансії в quantum.</p>
+      </details>
+      <p><a href="https://discord.gg/quantumcomputing" target="_blank">Приєднатися до Discord QDev</a></p>
+    </section>
+
+    <section id="section10" class="section">
+      <h2>Reddit: Глобальний форум квантових ідей</h2>
+      <p>Reddit r/QuantumComputing – це як квантовий мозковий штурм, де 200,000 підписників обговорюють від теоретичних парадоксів до практичних хаків. Уявіть: пост про "Grover для пошуку паролів" набирає 500 коментарів за день, з прикладами коду в Qiskit. У 2025 році субреддит має 10,000 постів на місяць, включаючи AMA з науковцями IBM. Цікавий факт: у 2024 році AMA з Пітером Шором зібрав 5,000 питань про алгоритм. Парадокс: Reddit – анонімний, але стає центром квантових дискусій. Обмеження: модерація, але правила забезпечують наукову якість. <span class="code-trigger" data-code-id="reddit-grover">Приклад з Reddit</span> показує обговорення. Приєднуйтесь до <a href="https://www.reddit.com/r/QuantumComputing/" target="_blank">r/QuantumComputing</a> для обміну ідеями.</p>
+     
+      <details>
+        <summary>Популярні теми на Reddit</summary>
+        <p>NISQ vs fault-tolerant; Qiskit vs Cirq; застосування VQE в хімії; етика квантових збройних систем.</p>
+      </details>
+      <p><a href="https://www.reddit.com/r/QuantumComputing/" target="_blank">r/QuantumComputing</a></p>
+    </section>
+
+    <section id="section11" class="section">
+      <h2>GitHub: Open Source квантовий код</h2>
+      <p>GitHub – це як квантова бібліотека, де 10,000 репозиторіїв з квантовим кодом доступні для всіх. Уявіть: ви форкаєте репозиторій Qiskit, додаєте QECC для VQE, і через тиждень ваш PR приймають. У 2025 році GitHub quantum topics зросли на 40% (Quantum Zeitgeist), з 5,000 внесками на тиждень. Цікавий факт: репозиторій Qiskit має 20,000 зірочок, а Cirq – 10,000. Парадокс: квантовий код відкритий, але вимагає спільноти для розуміння. Обмеження: складність коду для новачків, але туториали спрощують. <span class="code-trigger" data-code-id="github-pr">PR приклад</span> показує внесок. Приєднуйтесь до <a href="https://github.com/topics/quantum-computing" target="_blank">GitHub Quantum</a> для співпраці.</p>
+     
+      <details>
+        <summary>Популярні репозиторії</summary>
+        <p>Qiskit (20k stars), Cirq (10k), Pennylane (8k), Q# samples (5k), quantum-algorithms (3k).</p>
+      </details>
+      <p><a href="https://github.com/topics/quantum-computing" target="_blank">GitHub Quantum Topics</a></p>
+    </section>
+
+
+    <section id="section12" class="section">
+      <h2>Хакатони та змагання: Де народжуються прориви</h2>
+      <p>Квантові хакатони – це як зоряні зіткнення, де ідеї зіштовхуються, створюючи нові алгоритми. У 2025 році Quantum Hackathon (IBM) зібрав 1500 учасників, створивши 200 проєктів (Moody’s). Уявіть: команда з 5 розробників пише QAOA для логістики за 48 годин, виграючи $50,000. Цікавий факт: у 2024 році хакатон Google Quantum AI створив QML-модель для медичної діагностики. Парадокс: обмежений час породжує інновації. Обмеження: брак досвіду, але ментори з IBM допомагають. <span class="code-trigger" data-code-id="hackathon-code">Хакатон код</span> показує QAOA. Приєднуйтесь до <a href="https://quantumhackathon.ibm.com/" target="_blank">IBM Quantum Hackathon</a>.</p>
+     
+      <details>
+        <summary>Минулі хакатони</summary>
+        <p>IBM Quantum Hackathon 2024: 200 проєктів; Google Quantum AI Hack 2024: QML для AI.</p>
+      </details>
+      <p><a href="https://quantumhackathon.ibm.com/" target="_blank">IBM Quantum Hackathon</a></p>
+    </section>
+
+
+    <section id="section13" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Майбутнє квантових технологій: новий горизонт</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Майбутнє квантових технологій – це як запуск ракети до нових галактик. 
+        До 2035 року, за Moody’s, 40% обчислень у хімії та логістиці використовуватимуть квантові алгоритми. 
+        <br><br>Уявіть: VQE створює ліки за години, а QAOA оптимізує глобальні ланцюги поставок. 
+        <br><br> У 2025 році IBM і Google інвестують у fault-tolerant QPU з мільйонами кубітів.
+        <br><br> Цікавий факт: у 2024 році Quantinuum анонсував QPU з 99.99% точністю гейтів.
+          <span class="code-trigger" data-code-id="future-blog">Код майбутнього</span> показує QECC.
+          <br><br>    Парадокс: ми на порозі революції, але потрібні нові інструменти. 
+          <br><br>   Обмеження: масштабування до fault-tolerant систем.</p>
+      
+     
+    </section>
+
+    <section id="section14" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #6e3a3d; font-weight: 800; font-size: 39px;">Зворотний зв’язок: Поділіться думками!</h2>
+      <p style="font-weight: 750;  color: #314a72; font-size: 24px; text-align: justify; width: 940px; margin-right: 80px;">Ваші ідеї – це як зірки, що освітлюють наш квантовий шлях.
+         Поділіться думками про блог, ідеями для нових тем чи питаннями про квантові технології!</p>
+      <form id="feedback-form" class="feedback-form">
+        <label for="name">Ім’я:</label>
+        <input type="text" id="name" name="name" placeholder="Ваше ім’я" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+      <div id="feedback-response" style="display: none;">Дякуємо за ваш відгук!</div>
+      <p><a href="mailto:contact@quantumjournal.com">Напишіть нам: contact@quantumjournal.com</a></p>
+    </section>
+  </div>
+
+  <!-- Пересувна кнопка контекстного меню -->
+  <button id="context-btn">☰</button>
+  <!-- Кнопка для відображення змісту -->
+  <button id="toc-btn">📑 Зміст</button>
+</div>
+
+<!-- Вбудовані стилі CSS -->
+<style>
+  .container {
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(circle, #e2e5e7 0%, #e2e5e7 100%);
+   
+    padding: 20px;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    width: 1300px;
+  }
+
+  .space-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  .galaxy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 70%);
+    animation: galaxyPulse 10s infinite ease-in-out;
+    z-index: 2;
+  }
+
+   .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar:hover {
+    transform: translateX(5px);
+  }
+
+  .sidebar h3 {
+    color: #b8860b;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    text-shadow: 0 0 8px #00d4ff;
+    animation: glow 2s infinite ease-in-out;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-button {
+    display: block;
+    padding: 14px;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #7eade4, #b3c6ca);
+    color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .nav-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+    background: linear-gradient(45deg, #00d4ff, #4a90e2);
+  }
+
+  .content {
+    margin-left: 210px;
+    margin-right: 10px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    width: 1290px;
+  }
+
+  .welcome-text {
+    text-align: center;
+    color: #00d4ff;
+    
+  }
+
+  .welcome-text h1 {
+    font-size: 3.2em;
+    margin: 0;
+    font-family: 'Georgia', serif;
+   
+  }
+
+  .welcome-text p {
+    font-size: 1.4em;
+    margin: 15px 0;
+  }
+
+  .section {
+    background: #032b4e;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    width: 980px;
+    color: #ffffff;
+    animation: fadeInSection 1.2s ease-in;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    margin-left: 10px;
+  }
+
+  .section:hover {
+    transform: translateY(-5px);
+  }
+
+  .section h2 {
+    color: #4a90e2;
+    font-size: 2.2em;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 6px #00d4ff;
+  }
+
+  .section p {
+    font-size: 1.15em;
+    line-height: 1.7;
+  }
+
+  .section a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .section a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+
+  .code-trigger {
+    color: #00d4ff;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+
+  .code-trigger:hover {
+    color: #b8860b;
+  }
+
+  .code-block {
+    background: #002244;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 1px solid #4a90e2;
+    animation: fadeInCode 0.5s ease-in;
+  }
+
+  details {
+    margin: 15px 0;
+    color: #ffffff;
+  }
+
+  summary {
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+
+  summary:hover {
+    color: #b8860b;
+  }
+
+  .simulation-box {
+    background: linear-gradient(45deg, #003366, #001233);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: pulseBox 2s infinite ease-in-out;
+  }
+
+  .simulation-box h3 {
+    color: #b8860b;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    text-shadow: 0 0 6px #00d4ff;
+  }
+
+  #simulate-circuit-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    border: none;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  #simulate-circuit-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  #circuit-simulation-result {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #00d4ff;
+    text-shadow: 0 0 6px #00d4ff;
+  }
+
+  .resource-links {
+    background: linear-gradient(45deg, #001233, #003366);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  }
+
+  .resource-links h3 {
+    color: #b8860b;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .resource-btn {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .resource-btn img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .resource-btn span {
+    font-size: 14px;
+  }
+
+  .resource-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  .feedback-form {
+    background: #002244;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  }
+
+  .feedback-form label {
+    display: block;
+    color: #00d4ff;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4a90e2;
+    border-radius: 8px;
+    background: #001233;
+    color: #ffffff;
+    font-size: 1em;
+  }
+
+  .feedback-form textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .feedback-form button {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    border: none;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .feedback-form button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  #feedback-response {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #b8860b;
+    text-shadow: 0 0 6px #00d4ff;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+  }
+
+  .action-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    padding: 14px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes galaxyPulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInCode {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes pulseBox {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 6px #00d4ff; }
+    50% { text-shadow: 0 0 12px #00d4ff; }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 180px;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .welcome-text h1 {
+      font-size: 2.4em;
+    }
+    .welcome-text p {
+      font-size: 1.2em;
+    }
+    .section h2 {
+      font-size: 1.8em;
+    }
+    .section p {
+      font-size: 1em;
+    }
+    .nav-button, .action-btn {
+      font-size: 13px;
+      padding: 10px;
+    }
+    .simulation-box h3 {
+      font-size: 1.4em;
+    }
+    #simulate-circuit-btn {
+      padding: 10px 20px;
+    }
+    .resource-btn img {
+      width: 30px;
+      height: 30px;
+    }
+    .resource-btn span {
+      font-size: 12px;
+    }
+    .feedback-form input,
+    .feedback-form textarea {
+      font-size: 0.9em;
+    }
+    #context-btn, #toc-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<!-- Вбудований JavaScript -->
+<script>
+  // Симуляція квантової схеми
+  document.getElementById('simulate-circuit-btn').addEventListener('click', () => {
+    const outcome = Math.random() > 0.5 ? '00' : '11'; // Спрощена симуляція Белл стану
+    document.getElementById('circuit-simulation-result').textContent = `Результат вимірювання: |${outcome}>`;
+    document.getElementById('circuit-simulation-result').style.animation = 'fadeIn 0.5s';
+    setTimeout(() => {
+      document.getElementById('circuit-simulation-result').style.animation = '';
+    }, 500);
+  });
+
+  // Плавна прокрутка для навігації бічної панелі
+  document.querySelectorAll('.nav-button').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 2000);
+    });
+  });
+
+  // Показ коду при кліку на ключові слова
+  document.querySelectorAll('.code-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const codeId = trigger.getAttribute('data-code-id');
+      const codeBlock = document.getElementById(`${codeId}-code`);
+      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
+      codeBlock.style.animation = 'fadeInCode 0.5s';
+    });
+  });
+
+  // Пересувна кнопка контекстного меню
+  const contextBtn = document.getElementById('context-btn');
+  contextBtn.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    let shiftX = e.clientX - contextBtn.getBoundingClientRect().left;
+    let shiftY = e.clientY - contextBtn.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+      contextBtn.style.left = pageX - shiftX + 'px';
+      contextBtn.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(e) {
+      moveAt(e.pageX, e.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    contextBtn.addEventListener('mouseup', function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      contextBtn.onmouseup = null;
+    });
+  });
+
+  contextBtn.ondragstart = function() {
+    return false;
+  };
+
+  // Перемикання видимості бічної панелі
+  contextBtn.addEventListener('click', () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.left = sidebar.style.left === '0px' ? '-260px' : '0px';
+  });
+
+  // Кнопка для відображення змісту
+  const tocBtn = document.getElementById('toc-btn');
+  tocBtn.addEventListener('click', () => {
+    const toc = document.createElement('div');
+    toc.style.position = 'fixed';
+    toc.style.top = '50%';
+    toc.style.left = '50%';
+    toc.style.transform = 'translate(-50%, -50%)';
+    toc.style.background = 'linear-gradient(45deg, #003366, #001233)';
+    toc.style.padding = '20px';
+    toc.style.borderRadius = '12px';
+    toc.style.boxShadow = '0 0 12px rgba(0, 255, 255, 0.6)';
+    toc.style.zIndex = '1001';
+    toc.style.color = '#ffffff';
+    toc.style.maxHeight = '80vh';
+    toc.style.overflowY = 'auto';
+    
+    const tocList = document.createElement('ul');
+    tocList.style.listStyle = 'none';
+    tocList.style.padding = '0';
+    document.querySelectorAll('.section h2').forEach((h2, index) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.textContent = h2.textContent;
+      a.href = `#section${index + 1}`;
+      a.style.color = '#00d4ff';
+      a.style.textDecoration = 'none';
+      a.style.display = 'block';
+      a.style.padding = '10px';
+      a.style.fontSize = '1.1em';
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById(`section${index + 1}`).scrollIntoView({ behavior: 'smooth' });
+        toc.remove();
+      });
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Закрити';
+    closeBtn.style.background = 'linear-gradient(45deg, #4a90e2, #00d4ff)';
+    closeBtn.style.border = 'none';
+    closeBtn.style.padding = '10px';
+    closeBtn.style.borderRadius = '8px';
+    closeBtn.style.color = '#ffffff';
+    closeBtn.style.marginTop = '15px';
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.addEventListener('click', () => toc.remove());
+    
+    toc.appendChild(tocList);
+    toc.appendChild(closeBtn);
+    document.body.appendChild(toc);
+  });
+
+  // Обробка форми зворотного зв’язку
+  document.getElementById('feedback-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const responseDiv = document.getElementById('feedback-response');
+    responseDiv.style.display = 'block';
+    responseDiv.style.animation = 'fadeIn 0.5s';
+    setTimeout(() => {
+      responseDiv.style.display = 'none';
+      document.getElementById('feedback-form').reset();
+    }, 3000);
+  });
+
+  // Додавання стилю для підсвічування
+  const style = document.createElement('style');
+  style.textContent = `
+    .highlight {
+      background: linear-gradient(45deg, #003366, #001233) !important;
+      transform: scale(1.02) !important;
+      transition: background 0.3s, transform 0.3s;
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
+{% endblock %}
+</xaiArtifact>

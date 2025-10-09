@@ -1,0 +1,894 @@
+<xaiArtifact artifact_id="f095a08e-c726-42ba-a966-301da749515f" artifact_version_id="1a8c1f9e-2117-4b21-b973-4b5a7d1215c5" title="community.html" contentType="text/html">
+    {% extends "base.html" %}
+    
+    {% block title %}Квантовий код: дослідження синтаксичних та семантичних особливостей{% endblock %}
+    
+    {% block content %}
+    <div class="container">
+         
+      <!-- Бічна панель для навігації -->
+      <div class="sidebar">
+        <h3 style="color: #7c0e14; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
+        <ul>
+          <li><a href="#section1" class="nav-button">Вступ: особливості квантового коду</a></li>
+          <li><a href="#section2" class="nav-button">Парадигми квантового програмування</a></li>
+          <li><a href="#section3" class="nav-button">Перспективи створення універсальної високорівневої квантової мови</a></li>
+          <li><a href="#section4" class="nav-button">Еволюція синтаксису і семантики квантових мов 2000 - 2025</a></li>          
+        </ul>
+      </div>
+    
+      <!-- Основний вміст -->
+      <div class="content">
+        <div class="welcome-text">
+          <h1 style="color: #5a090d; font-size: 44px; text-align: center; font-style: italic; margin-right: 12px; font-weight: 700;">Квантовий код: дослідження синтаксичних та семантичних особливостей</h1>
+          <p style="color: #4b090c; font-size: 29px; text-align: justify; width: 1000px; margin-right: 190px;"> 
+            Квантовий код відображає принципи квантової механіки, зокрема ймовірнісний характер результатів, декогеренцію та притаманний рівень помилок, що створюють унікальні виклики для розробників і користувачів.
+            <br><br> Цей розділ розглядає синтаксичні та семантичні особливості квантових фреймворків, 
+            таких як Qiskit, #Q і Cirq, із акцентом на їхні спеціалізовані конструкції та об’єкти.</p>
+            
+
+      <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">   
+            <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Особливості коду</h2>
+          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;">Квантовий код відрізняється від класичного програмування необхідністю враховувати принципи квантової механіки, такі як суперпозиція, заплутаність, декогеренція та ймовірнісний характер результатів.
+            <br><br>  Синтаксис квантових фреймворків і мов, таких як Qiskit, Cirq та Q#, адаптований для моделювання цих явищ: він включає  <span style="font-weight: 800;  color: #211255;">спеціалізовані конструкції для роботи з кубітами, гейтами та схемами</span>, тоді як семантика забезпечує інтеграцію квантових операцій з класичними обчисленнями. 
+            <br>Наприклад, <span style="font-weight: 800;  color: #211255;">вимірювання кубітів завжди вводить стохастичність</span>, що вимагає повторних запусків для статистичних результатів. 
+            <br>Ці особливості роблять квантовий код гібридним, орієнтованим на NISQ (Noisy Intermediate-Scale Quantum) пристрої, де помилки та шум є невід'ємними, що впливає на семантику виконання: 
+            <br>- програми часто <span style="font-weight: 800;  color: #211255;">включають корекцію помилок або симуляцію шуму для реалістичного моделювання.</span></p>             
+           
+            <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> На низькому рівні квантовий код базується на кубітах (квантових бітах), 
+          гейтах та схемах. 
+          <br><br>Синтаксично <span style="font-weight: 800;  color: #211255;">кубіти представляються як об'єкти або змінні</span> (наприклад, Qubit в Q# або GridQubit в Cirq), а <span style="font-weight: 800;  color: #211255;">гейти — як оператори, що маніпулюють станами.</span> 
+          <br>Семантично гейти реалізують унітарні перетворення: гейт Адамара (H) створює суперпозицію, переводячи |0⟩ в (|0⟩ + |1⟩)/√2, тоді як CNOT створює заплутаність між кубітами. 
+          <br>Вимірювання (measurement) колапсує квантовий стан до класичного, вводячи ймовірність, що вимагає семантичної обробки результатів як статистичних даних.
+          <br><br> У фреймворках <span style="font-weight: 800;  color: #211255;">ці конструкції інтегруються в схеми — послідовності операцій, які моделюють еволюцію квантової системи, з урахуванням декогеренції</span> через шумові моделі.</p>
+               
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px; margin-top: 25px;">Базові квантові конструкції: гейти та регістри кубітів</h3>
+          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Основою квантового програмування є низькорівневі конструкції, 
+             які визначають квантові обчислення:</p>
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+              <li><strong>Квантові гейти</strong>: оператори, що маніпулюють станами кубітів, подібно до логічних вентилів у класичному програмуванні:
+                <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+                  <li><strong>Гейт Адамара (H)</strong>: Створює суперпозицію, переводячи кубіт у ймовірнісний стан (наприклад, |0⟩ у (|0⟩ + |1⟩)/√2).</li>
+                  <li><strong>Гейт CNOT</strong>: Створює заплутаність між двома кубітами, змінюючи стан цільового кубіта залежно від керуючого.</li>
+                  <li><strong>Гейти Паулі (X, Y, Z)</strong>: Виконують повороти або перевороти станів кубітів уздовж певних осей.</li>
+                  <li><strong>Гейти обертання (Rx, Ry, Rz)</strong>: Здійснюють обертання станів кубітів навколо осей сфери Блоха для точного керування.</li>
+                </ul>
+              </li>
+              <li style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800;"><strong>Регістри кубітів</strong>: <span style="font-weight: 800;  color: #211255; text-decoration: underline;">набори кубітів для зберігання та обробки квантової інформації.</span> У фреймворках, як-от Qiskit чи Cirq, кубіти визначаються як об’єкти (наприклад, QuantumRegister у Qiskit) для побудови квантових схем.</li>
+              <li style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800;"><strong><span style="font-weight: 800;  color: #211255; text-decoration: underline;">Операції вимірювання</strong>: колапсують стан кубіта до класичного біта (0 або 1), що є ключовим для отримання результатів, але вводить ймовірнісний
+                 характер через квантову механіку.</span></li>
+            </ul>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px; margin-top: 31px;">Квантові схеми: основа квантових алгоритмів</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 32px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 900; font-style: italic;"><strong>Квантові схеми</strong> — <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(29, 5, 5);">це послідовності квантових гейтів, вимірювань та інших операцій, застосованих до регістрів кубітів для реалізації квантових алгоритмів.</span> 
+              <br>Вони представлені як спрямовані ациклічні графи, що визначають потік квантової інформації. 
+              <br>Наприклад, у Qiskit схеми будуються за допомогою <strong>QuantumCircuit</strong>, 
+              а в Cirq — через <strong>cirq.Circuit</strong>.
+              
+              <br><br><span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(29, 5, 5);">Схеми кодують складні операції, такі як заплутаність і суперпозиція, адаптовані до задач оптимізації чи симуляції.</span></p>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px; margin-top: 31px;">Синтаксичні та семантичні особливості квантових фреймворків</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+              Квантові фреймворки вводять спеціалізовані конструкції для роботи з унікальними властивостями квантової механіки, 
+              такими як <span style="font-weight: 800;  color: #211255;">ймовірнісні результати</span> , <span style="font-weight: 800;  color: #211255;">декогеренція</span> (втрата квантового стану через шум середовища) та <span style="font-weight: 800;  color: #211255;">рівень 
+                помилок.</span>
+              
+              <br>Нижче наведено <span style="font-weight: 800;  color: #211255;">ключові синтаксичні конструкції та об’єкти в Qiskit, #Q і Cirq із прикладами та поясненнями.</span></p>
+          
+            <h4 style="color: #0a041d; font-weight: 700; font-size: 28px; font-style: italic; margin-top: 35px;">Qiskit: високорівневі абстракції для квантових алгоритмів</h4>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800;">Qiskit пропонує інтуїтивні, об’єктно-орієнтовані конструкції для квантового програмування, 
+              особливо для задач оптимізації та машинного навчання.</p>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Qiskit, розроблений IBM на базі Python, має синтаксис, орієнтований на об'єктно-орієнтоване програмування: 
+              <br><span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: #0a041d;">основний об'єкт QuantumCircuit дозволяє будувати схеми через методи додавання гейтів.</span> 
+             
+              <br>Семантично фреймворк підтримує гібридні обчислення, інтегруючи квантові операції з класичними оптимізаторами, наприклад, для QAOA (Quantum Approximate Optimization Algorithm). 
+              
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+             
+              <li><strong>QuantumCircuit</strong>: Основний об’єкт для створення квантових схем шляхом додавання гейтів і вимірювань.
+                <pre><code>from qiskit import QuantumCircuit
+          qc = QuantumCircuit(2)  # Схема з двома кубітами
+          qc.h(0)  # Застосування гейта Адамара
+          qc.cx(0, 1)  # Застосування гейта CNOT</code></pre>
+                <em>Пояснення</em>: Надає гнучкий інтерфейс для побудови та симуляції квантових схем.
+              </li>
+            </ul>
+          
+            <h4 style="color: #0a041d; font-weight: 700; font-size: 28px; font-style: italic; margin-top: 41px;">#Q: Низькорівневий контроль квантових операцій</h4>
+           <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Q# від Microsoft — <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">високорівнева мова з синтаксисом, подібним до C#, де операції визначаються як функції з входами/виходами, 
+            а кубіти алокуються через use q = Qubit();</span>. 
+            <br><br>Семантично вона забезпечує безшовну інтеграцію квантового та класичного коду, вимагаючи явного скидання кубітів (Reset) для дотримання квантових законів, як заборона копіювання станів. 
+            <br><br> Для QAOA використовуються операції з гамільтоніанами, наприклад, ApplyInstanceHamiltonian для еволюції cost-гамільтоніана. Приклад базової операції: operation MeasureOneQubit() : Result { use q = Qubit(); H(q); let result = M(q); Reset(q); return result; }, 
+            <br><br>де семантика вимірювання (M) враховує ймовірнісний колапс, а інтеграція з Python (через Jupyter) дозволяє гібридні програми для задач, як оптимізація з урахуванням помилок.</p>
+   
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">#Q (Q#) акцентує увагу на детальному керуванні квантовими операціями, зокрема для алгоритмів, як-от QAOA, через конструкції для еволюції гамільтоніанів.</p>
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+              <li><strong>ApplyInstanceHamiltonian</strong>: Застосовує cost-гамільтоніан (наприклад, модель Ізінга для QUBO) для еволюції станів кубітів.
+                <pre><code>operation ApplyInstanceHamiltonian(nQubits: Int, time: Double, weights: Double[], couplings: Double[], qubits: Qubit[])
+              // Застосовує еволюцію Exp(-i * time * H_C)
+          </code></pre>
+                <em>Пояснення</em>: Моделює часову еволюцію гамільтоніана, специфічного для задачі оптимізації.
+              </li>
+              <li><strong>ApplyDriverHamiltonian</strong>: Застосовує mixer-гамільтоніан для підтримки пошуку квантових станів у QAOA.
+                <pre><code>operation ApplyDriverHamiltonian(time: Double, qubits: Qubit[])
+              // Застосовує еволюцію Exp(-i * time * H_M)
+          </code></pre>
+                <em>Пояснення</em>: Забезпечує змішування квантових станів для дослідження простору рішень у алгоритмах типу QAOA.
+              </li>
+            </ul>
+          
+            <h4 style="color: #0a041d; font-weight: 700; font-size: 28px; font-style: italic;">Cirq: гнучка побудова схем</h4>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 900;">Cirq, розроблений Google, фокусується на низькорівневій розробці схем і апаратно-орієнтованому програмуванні.</p>
+            <br> <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Cirq від Google акцентує синтаксис на модульних конструкціях для NISQ-пристроїв: 
+              <br> кубіти як GridQubit відображають фізичну топологію, а схеми будуються через моменти (паралельні шари гейтів).
+              <br><br> Семантично фреймворк враховує шум і помилки, симулюючи їх через Монте-Карло або матриці густини, що робить його ідеальним для апаратно-орієнтованого програмування. 
+              <br><br>Унікальні особливості — стратегії вставки гейтів та трансформації схем для оптимізації під конкретне обладнання. Приклад побудови схеми: qubit = cirq.GridQubit(0, 0); circuit = cirq.Circuit(cirq.X(qubit)**0.5, cirq.measure(qubit, key='m'));,
+              <br><br>  де семантика гейтів (як параметризованих операторів) моделює квантову еволюцію з урахуванням декогеренції, забезпечуючи реалістичні симуляції на квантових процесорах Google.</p>
+                                   
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+              <li><strong>cirq.Circuit</strong>: Основний об’єкт для створення квантових схем із гейтами та кубітами.
+                <pre><code>import cirq
+          qubits = cirq.LineQubit.range(2)
+          circuit = cirq.Circuit(cirq.H(qubits[0]), cirq.CNOT(qubits[0], qubits[1]))</code></pre>
+                <em>Пояснення</em>: Дозволяє точно будувати схеми, оптимізовані для апаратного забезпечення, як-от квантові процесори Google.
+              </li>
+              <li><strong>cirq.GridQubit</strong>: Представляє кубіти, розташовані в сітці, відображаючи фізичну топологію квантового апаратного забезпечення.
+                <pre><code>qubit = cirq.GridQubit(0, 0)  # Кубіт у позиції (0,0) сітки</code></pre>
+                <em>Пояснення</em>: Відображає кубіти на фізичні топології апаратного забезпечення для реалістичних симуляцій.
+              </li>
+            </ul>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Отже</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Синтаксис і семантика квантових фреймворків, таких як Qiskit, #Q і Cirq, адаптовані до ймовірнісного характеру та схильності до помилок квантової механіки. Від високорівневих абстракцій, як <code>PortfolioOptimization</code> у Qiskit, до низькорівневих операцій із гамільтоніанами в #Q та апаратно-орієнтованих конструкцій у Cirq — 
+              ці інструменти дозволяють розробникам вирішувати складні задачі квантових обчислень. 
+              Розуміння їхніх унікальних конструкцій є ключем до ефективного використання квантових алгоритмів.</p>
+         </p>   
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Порівнюючи фреймворки, Qiskit вирізняється високорівневими абстракціями для алгоритмів (як PortfolioOptimization), Cirq — апаратною гнучкістю (GridQubit для топологій), а Q# — інтеграцією з класичними мовами для універсальних обчислень. 
+              <br><br>Синтаксично <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">всі вони використовують Python-подібні конструкції</span>, але семантично фокусуються на квантових викликах: ймовірність результатів вимагає статистики, декогеренція — шумових моделей. 
+              <br><br> У висновку, вибір <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">залежить від задачі — Qiskit для досліджень, Cirq для NISQ-оптимізації, Q# для гібридного програмування,</span> — але всі сприяють розвитку квантових обчислень, 
+              <br><br> роблячи абстрактні принципи механіки доступними для аналізу та застосування. </p>       
+      </div>
+    </section>   
+                 
+        <!-- Розділи блогу -->
+        <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+               
+           <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Парадигма квантового програмування: від класичних імперативних конструкцій до гібридних стохастичних моделей</h2>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантова парадигма програмування відрізняється від класичної тим, що враховує принципи квантової механіки, такі як суперпозиція (коли кубіт може бути одночасно в кількох станах) та заплутаність (залежність станів кількох кубітів). 
+              <br><br>У класичному програмуванні код виконується послідовно з детермінованими результатами, тоді як квантовий код часто є гібридним: він поєднує квантовий обчислення з класичним, а результати мають ймовірнісний характер через 
+              колапс хвильової функції під час вимірювання. 
+              <br><br> Це робить квантовий підхід не просто швидшим, а принципово іншим — він дозволяє вирішувати задачі, недоступні класичним комп'ютерам, як симуляція молекул чи оптимізація великих систем.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Станом на 2025 рік, базова теорія квантового програмування ґрунтується на фундаментальних роботах, таких як 
+              книга Майкла Нільсена та Ісаака Чуанга "Quantum Computation and Quantum Information" (2000), де описана модель квантових схем як основний підхід до побудови алгоритмів. 
+              <br><br>Ця теорія визначає парадигму як комбінацію імперативних (послідовних інструкцій) і декларативних (описових) елементів, адаптованих до стохастичної природи квантових систем. 
+              <br>Згідно з оновленими оглядами, як у "Quantum Programming Languages: A Beginner's Guide for 2025" від BlueQubit, квантовий програмування поділяється на імперативні мови, де розробник вказує послідовність кроків (наприклад, застосування гейтів), 
+              та функціональні, де акцент на описі функцій без явного керування станом.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Наприклад, у фреймворку Qiskit (від IBM, базований на Python) парадигма наближається до декларативної: розробники описують квантовий ланцюг через об’єкти 
+              на кшталт <code>QuantumCircuit</code>, а система автоматично оптимізує його для виконання на реальних пристроях з урахуванням помилок. 
+              
+              <br><br>Це робить процес схожим на складання рецепту, де фокус на результаті, а не на кожному кроці. 
+              
+              <br><br>У <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">Q# (від Microsoft) домінує функціональна парадигма: операції визначаються як чисті функції</span>, що уникають побічних ефектів, а кубіти алокуються динамічно, подібно до класичних мов на кшталт C#. 
+              <br><br>Це полегшує <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">моделювання гамільтоніанів — математичних описів квантових систем,</span> — роблячи код більш абстрактним і менш залежним від апаратного забезпечення. 
+              
+              <br><br><span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">Cirq (від Google)</span>, навпаки, підтримує <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">імперативний стиль: розробники явно керують кубітами та гейтами, що дає точний контроль,
+               але вимагає більше зусиль для обробки шуму та декогеренції</span> — втрати квантового стану через зовнішні впливи.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Глибокий аналіз показує, що <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">квантова парадигма є 
+              мультипарадигмальною, поєднуючи елементи кількох стилів для гнучкості.</span> 
+
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214209622000341-gr016.gif" style="width: 800px; height: 640px;">
+              
+              <br><br>Згідно з дослідженнями 2024–2025 років, такими як "The Evolution Of Quantum Programming Languages (2000-2025)" від Quantum Zeitgeist, високорівневі семантики, як у Qiskit, підвищують продуктивність розробки, 
+              дозволяючи швидко прототипувати алгоритми, але зменшують контроль над деталями. 
+              
+              <br><br>Низькорівневі, як у Cirq, забезпечують точність для оптимізації на NISQ-пристроях (шумних квантових комп’ютерах середнього масштабу). 
+              <br><br>Це робить квантовий підхід ідеальним для задач, де семантика фокусується на глобальному пошуку рішень через суперпозицію, наприклад, 
+              у алгоритмах на кшталт QAOA для оптимізації. 
+              
+              <br><br> В цілому, така парадигма перетворює <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">програмування на інструмент для дослідження квантової 
+                реальності, де кожен код — це експеримент з ймовірностями.</span></p>
+          
+        </section>
+        
+                             
+    
+        <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+        
+                           
+            <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Перспективи створення універсальної високорівневої квантової мови</h2>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+              
+              <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: left;">  Сучасні квантові мови, такі як Qiskit, Q# та Cirq, демонструють 
+              
+             різноманітні синтаксичні підходи: 
+                <li>- об’єктно-орієнтований у Qiskit (з використанням Python для створення квантових схем через об’єкти на кшталт QuantumCircuit;</li>
+                <li>- функціональний у Q# (з чистими функціями для моделювання гамільтоніанів);</li> 
+                <li>- та імперативний у Cirq (з точним керуванням кубітами).</li> 
+            </ul>
+
+
+            <img src="https://www.researchgate.net/publication/358904863/figure/fig5/AS:11431281368982145@1744297404300/Programming-quantum-computers-Chart-Quantum-computers-necessitate-the-use-of-two-key.tif" style="width: 800px; height: 650px;">
+
+              <br><br> <span style="font-weight: 700;  color: #1e114d; font-size: 28px; text-align: justify;">Ці підходи створюють основу для ідеї універсальної високорівневої квантової мови, яка могла б об’єднати простоту синтаксису з потуж- 
+                ними абстракціями для створення складного програмного забезпечення,
+               включаючи операційні системи (ОС) та прикладні програми.</span>
+            
+               <br><br> Однак, станом на 2025 рік, семантичні обмеження — зокрема ймовірнісна природа квантових обчислень і залежність від апаратного забезпечення — ускладнюють реалізацію такої мови.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Ключовим викликом є стохастичність квантових операцій: через колапс хвильової функції результати вимірювань кубітів є ймовірнісними, що робить семантику квантового коду нестабільною для задач, де потрібна детермінована поведінка, наприклад, у ядрі ОС. Декогеренція — втрата квантового стану через шум — додатково ускладнює створення надійного системного ПЗ. Наприклад, у Qiskit для симуляції шуму використовуються об’єкти <code>NoiseModel</code>, 
+              які дозволяють моделювати помилки апаратного забезпечення, але не усувають їх повністю. 
+              
+              <br><br>Згідно з дослідженням "Quantum Software Engineering: Challenges and Opportunities" (arXiv, 2024),
+               сучасні квантові комп’ютери (NISQ-пристрої) мають обмежену кількість кубітів (до 1000 у 2025 році за даними IBM) і високий рівень помилок (на рівні 10⁻³ за гейт), що робить розробку універсального ПЗ складною.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Незважаючи на ці обмеження, <span style="font-weight: 800;  color: #211255;">у 2025 році з’являються нові мови, 
+              як-от Guppy від Quantinuum, які пропонують вбудовані абстракції для гамільтоніанів</span> (наприклад, методи для автоматичного моделювання <code>HamiltonianEvolution</code>).
+              
+              <br><br> Це дозволяє створювати модульні бібліотеки для гібридного програмування, де квантовий код інтегрується з класичними алгоритмами. 
+              <br>Такі бібліотеки, як <span style="font-weight: 800;  color: #211255;">PennyLane для квантового машинного навчання, уже підтримують гібридні обчислення, поєднуючи Python з квантовими симуляторами.</span> 
+              
+              <br><br>Хмарні платформи, як <span style="font-weight: 800;  color: #211255;">IBM Quantum Cloud або Amazon Braket, роблять ці інструменти доступними для розробки прикладних програм, таких як квантові алгоритми для оптимізації логістики чи криптографії,</span> 
+              які можуть працювати як сервіси.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Перспективи універсальної мови пов’язані з інтеграцією синтаксису на кшталт OpenQASM 3.0 (стандарт для опису квантових схем, 
+              оновлений у 2024 році) з високорівневими конструкціями, які спрощують розробку. 
+              
+              <br><br> Наприклад, OpenQASM підтримує динамічне керування кубітами через умовні оператори, як <code>if (measure q[0] == 1) { apply X(q[1]); }</code>, що наближає синтаксис до класичних мов. 
+              
+              <br><br>Семантично, <span style="font-weight: 800;  color: #211255;">універсальна мова вимагатиме нових підходів, таких як квантові семантичні фреймворки, які обробляють контекстуальну значущість</span> (наприклад, адаптацію алгоритмів до конкретного апаратного забезпечення).
+              <br> Згідно з прогнозами аналітиків Quantum Computing Report (2025), ринок квантового ПЗ зростає з CAGR 38.5% і до 2033 року може досягти $8.6 млрд, що стимулює розробку таких мов.</p>
+          
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Чи можливо створити квантову ОС або прикладні програми для хмарних рішень? 
+              
+              <br><br> Теоретично, <span style="font-weight: 800;  color: #211255;">гібридні ОС із квантовими компонентами для специфічних задач (наприклад, квантової криптографії чи оптимізації) є досяжними до 2030-х років</span>, 
+              
+              коли очікується поява fault-tolerant квантових комп’ютерів із корекцією помилок (за прогнозами Google Quantum AI). 
+              
+              <br><br> Однак, <span style="font-weight: 800;  color: #5f0a0e;">повна універсальність залишиться викликом через обмеження кількості кубітів і потребу в стабільності, що робить хмарні сервіси — як платформи для запуску квантових алгоритмів — 
+                більш реалістичним сценарієм.</span>
+
+              <br><br> У підсумку, універсальна квантова мова може стати реальністю, якщо синтаксис спростить доступ до квантових ресурсів, а семантика врахує гібридність і шум, 
+              відкриваючи шлях до хмарних квантових додатків для широкої аудиторії.</p>
+         
+        </section>
+    
+        <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+          
+            <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Еволюція синтаксису і семантики квантових мов від 2000 до 2025: від низькорівневих схем до машинно-незалежних абстракцій</h2>
+            
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Еволюція квантових мов програмування — це захоплююча подорож, що відображає прогрес від теоретичних ідей квантових обчислень до практичних інструментів для реальних пристроїв. 
+              
+              <br><br>Станом на 2025 рік, ця еволюція охоплює понад два десятиліття, починаючи з 2000-х років, коли перші мови фокусувалися на простих описах квантових схем, і до сучасних високорівневих абстракцій, які роблять квантовий код доступним не лише фізикам, 
+              а й програмістам з різних галузей.
+              
+              <br><br>Згідно з оглядом "The Evolution Of Quantum Programming Languages (2000-2025)" від Quantum Zeitgeist, ключовим рушієм змін стало зростання апаратного забезпечення: від класичних симуляторів до шумних квантових комп'ютерів
+               середнього масштабу (NISQ), що вимагало адаптації синтаксису та семантики до реальних викликів, таких як декогеренція та помилки. 
+               
+               <br><br> Це не просто технічний прогрес, а переосмислення, як програмування може моделювати квантову реальність, де стани не детерміновані, а ймовірнісні.</p>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Ранні етапи: Низькорівневі схеми та імперативний синтаксис (2000–2010 роки)</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">На початку 2000-х років квантовий програмування було тісно пов'язано з моделлю квантових схем, запропонованою у фундаментальній книзі Майкла Нільсена та Ісаака Чуанга "Quantum Computation and Quantum Information" (2000). Ранні мови, такі як Quantum Assembly Language (QASM), розроблений у 2004 році IBM, мали простий імперативний синтаксис, подібний до асемблера: розробники описували послідовність гейтів (операторів) на кубітах, наприклад, <code>h q[0];</code> для застосування гейта Адамара. Семантика цих мов була обмежена детермінованими симуляціями на класичних комп'ютерах, ігноруючи шум, оскільки реальні квантові пристрої були недоступними. Логічно, такий підхід був необхідним для теоретичного тестування алгоритмів, 
+              як Шора чи Гровера, але він вимагав глибоких знань фізики, роблячи програмування елітарним.</p>
+            
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">До 2010-х років з'явилися мови на кшталт Scaffold (2012, від Princeton University), яка ввела більш структурований імперативний синтаксис з елементами C-подібних конструкцій. Наприклад, розробники могли визначати модулі для повторного використання схем: <code>module BellPair(Qubit a, Qubit b) { H(a); CNOT(a,b); }</code>. Семантика еволюціонувала до підтримки компіляції на різні апаратні платформи, але все ще фокусувалася на ідеалізованих моделях без шумових ефектів. Цей період ілюструє логічний перехід: як тільки квантові симулятори стали потужнішими, мови почали враховувати масштабованість, але залишалися низькорівневими, подібно до того, як класичне програмування еволюціонувало від асемблера до C.</p>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Середній період: Гібридні моделі та функціональна семантика (2010–2020 роки)</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">З появою перших реальних квантових процесорів від компаній як IBM (2016) та Google (2019), синтаксис мов став більш абстрактним. Q# від Microsoft (2017) ввела функціональну парадигму, натхненну F# та C#, де операції — це чисті функції без побічних ефектів: <code>operation MeasureSuperposition() : Result { use q = Qubit(); H(q); return M(q); }</code>. Семантика тут інтегрувала стохастику — ймовірнісні результати вимірювань, — роблячи код гібридним: квантовий для обчислень, класичний для обробки даних. Аналогічно, Qiskit (2017) від IBM використав Python для об'єктно-орієнтованого підходу, дозволяючи будувати схеми як об'єкти: <code>qc = QuantumCircuit(2); qc.h(0); qc.cx(0,1);</code>.</p>
+            
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічно, цей етап був відповіддю на NISQ-еру: семантика почала враховувати шум через вбудовані моделі, як у Cirq (2018 від Google), де "моменти" дозволяють паралельні операції: <code>circuit.append(cirq.Moment(cirq.H(q) for q in qubits))</code>. Це зробило мови адаптивними до апаратного забезпечення, зменшуючи залежність від конкретних пристроїв. Згідно з опитуванням "Quantum Programming Languages: Survey and Bibliography" (2006, оновлено в 2020-х), понад 50 мов з'явилося до 2020, з акцентом на trade-offs: імперативні для контролю, функціональні для абстракції.</p>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Сучасний етап: Високорівневі абстракції та інтеграція з AI (2020–2025 роки)</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">До 2025 року еволюція досягла піку з 13 провідними мовами, включаючи PennyLane (2018, оновлена для AI-інтеграції), яка поєднує квантовий код з машинним навчанням: <code>dev = qml.device('default.qubit', wires=2); @qml.qnode(dev) def circuit(params): qml.RX(params[0], wires=0);</code>. Синтаксис став декларативним, фокусуючись на описі алгоритмів, як VQE (Variational Quantum Eigensolver) у Q#, де семантика автоматично оптимізує для шуму. Cirq у 2025 версії ввів модульні моменти для паралельних операцій з вбудованими моделями декогеренції, дозволяючи симулювати реальні помилки: <code>noisy_circuit = cirq.with_noise(cirq.depolarize(0.01), circuit)</code>.</p>
+           
+            
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Цікавий аспект — перехід до семантичних фреймворків для обробки природної мови (NLP), де квантова семантика моделює контекстуальність значень, як у паперах arXiv 2025 року (наприклад, "Quantum Semantics for NLP: Contextual Models"). Тут семантика використовує суперпозицію для представлення неоднозначностей слів, роблячи квантовий код інструментом для AI. Грунтовний аналіз trade-offs, як у дослідженні "Is Productivity in Quantum Programming Equivalent to Expressiveness?" (2024), показує: вищі абстракції підвищують доступність для не-фізиків (зменшуючи бар'єр входу на 30–50%, 
+              <br><br> за оцінками BlueQubit 2025), але вимагають компромісів у контролі над низькорівневими деталями, як шум і топологія кубітів.</p>
+          
+            <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Аналіз і висновки</h3>
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічно, еволюція синтаксису від імперативного до декларативного відображає загальний тренд у програмуванні: 
+              від апаратно-залежного коду до абстракцій, що ховають складність.
+              <br><br> Семантика еволюціонувала від детермінованих до стохастичних моделей, інтегруючи шум як невід'ємну частину, що робить квантовий код реалістичним для NISQ. 
+              <br><br>Це всебічно висвітлює тему: для професіоналів, як у лекції, важливо розуміти, що така еволюція стимулює міждисциплінарність — від фізики до AI, — дозволяючи аналіз продуктивності через метрики, 
+              як глибина схем чи стійкість до помилок. 
+              <br><br>В результаті, до 2025 року квантовий програмування стало машинно-незалежним,
+               відкриваючи шлях до універсальних інструментів, де кожен розробник може експериментувати з квантовою реальністю, перетворюючи абстрактні ідеї на практичні рішення.</p>
+              
+        </section>
+     
+          <!-- Пересувна кнопка контекстного меню -->
+      <button id="context-btn">☰</button>
+      <!-- Кнопка для відображення змісту -->
+      <button id="toc-btn">📑 Зміст</button>
+    </div>
+    
+    <!-- Вбудовані стилі CSS -->
+    <style>
+      .container {
+        position: relative;
+        min-height: 100vh;
+        
+        background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
+        padding: 20px;
+        overflow-x: hidden;
+        font-family: 'Arial', sans-serif;
+      }
+    
+      .space-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.65;
+        z-index: 1;
+      }
+    
+      .galaxy-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 70%);
+        animation: galaxyPulse 10s infinite ease-in-out;
+        z-index: 2;
+      }
+    
+       
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 310px;
+        height: 100vh;
+        padding: 20px;
+        z-index: 999;
+        overflow-y: auto;
+    
+       background-color: #b3c6ca;
+        transition: transform 0.3s ease;
+      }
+    
+      .sidebar:hover {
+        transform: translateX(5px);
+      }
+    
+      .sidebar h3 {
+        color: #b8860b;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+        text-shadow: 0 0 8px #00d4ff;
+        animation: glow 2s infinite ease-in-out;
+      }
+    
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+    
+      .nav-button {
+        display: block;
+     padding: 14px;
+     margin: 10px 0;
+      background: linear-gradient(45deg, #7eade4, #b3c6ca);
+     color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
+     text-decoration: none;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+     font-weight: 800;
+       font-size: 18px;
+      }
+    
+      .nav-button:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+        background: linear-gradient(45deg, #00d4ff, #4a90e2);
+      }
+    
+      .content {
+        max-width: 1060px;
+    margin-left: 195px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+      }
+    
+      .welcome-text {
+        text-align: center;
+        color: #00d4ff;
+        
+        animation: fadeIn 2s ease-in-out;
+      }
+    
+      .welcome-text h1 {
+        font-size: 3.2em;
+        margin: 0;
+        font-family: 'Georgia', serif;
+        animation: slideIn 1.5s ease-out;
+      }
+    
+      .welcome-text p {
+        font-size: 1.4em;
+        margin: 15px 0;
+      }
+    
+      .section {
+        background: #A6B8D3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    animation: fadeInSection 1.2s ease-in;
+    
+    margin-left: 310px;
+    width: 1020px;
+      }
+    
+      .section:hover {
+        transform: translateY(-5px);
+      }
+    
+      .section h2 {
+        color: #4a90e2;
+        font-size: 2.2em;
+        font-family: 'Georgia', serif;
+        text-shadow: 0 0 6px #00d4ff;
+      }
+    
+      .section p {
+        font-size: 1.15em;
+        line-height: 1.7;
+      }
+    
+      .section a {
+        color: #00d4ff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+    
+      .section a:hover {
+        color: #b8860b;
+        text-decoration: underline;
+      }
+    
+      .code-trigger {
+        color: #00d4ff;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: color 0.3s;
+      }
+    
+      .code-trigger:hover {
+        color: #b8860b;
+      }
+    
+      .code-block {
+        background: #002244;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 10px 0;
+        font-size: 0.9em;
+        color: #ffffff;
+        border: 1px solid #4a90e2;
+        animation: fadeInCode 0.5s ease-in;
+      }
+    
+      .simulation-box {
+        background: linear-gradient(45deg, #003366, #001233);
+        padding: 30px;
+        border-radius: 12px;
+        margin: 25px 0;
+        text-align: center;
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+        animation: pulseBox 2s infinite ease-in-out;
+      }
+    
+      .simulation-box h3 {
+        color: #b8860b;
+        margin-bottom: 15px;
+        font-size: 1.6em;
+        text-shadow: 0 0 6px #00d4ff;
+      }
+    
+      #simulate-circuit-btn {
+        background: linear-gradient(45deg, #4a90e2, #00d4ff);
+        border: none;
+        padding: 12px 25px;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      #simulate-circuit-btn:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+      }
+    
+      #circuit-simulation-result {
+        margin-top: 15px;
+        font-size: 1.3em;
+        color: #00d4ff;
+        text-shadow: 0 0 6px #00d4ff;
+      }
+    
+      .resource-links {
+        background: linear-gradient(45deg, #001233, #003366);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 25px 0;
+        text-align: center;
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+      }
+    
+      .resource-links h3 {
+        color: #b8860b;
+        font-size: 1.6em;
+        margin-bottom: 20px;
+      }
+    
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+    
+      .resource-btn {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(45deg, #4a90e2, #00d4ff);
+        padding: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      .resource-btn img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    
+      .resource-btn span {
+        font-size: 14px;
+      }
+    
+      .resource-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+      }
+    
+      .feedback-form {
+        background: #002244;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+      }
+    
+      .feedback-form label {
+        display: block;
+        color: #00d4ff;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+    
+      .feedback-form input,
+      .feedback-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #4a90e2;
+        border-radius: 8px;
+        background: #001233;
+        color: #ffffff;
+        font-size: 1em;
+      }
+    
+      .feedback-form textarea {
+        height: 150px;
+        resize: vertical;
+      }
+    
+      .feedback-form button {
+        background: linear-gradient(45deg, #4a90e2, #00d4ff);
+        border: none;
+        padding: 12px 25px;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      .feedback-form button:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+      }
+    
+      #feedback-response {
+        margin-top: 15px;
+        font-size: 1.2em;
+        color: #b8860b;
+        text-shadow: 0 0 6px #00d4ff;
+      }
+    
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin: 25px 0;
+      }
+    
+      .action-btn {
+        background: linear-gradient(45deg, #4a90e2, #00d4ff);
+        padding: 14px 25px;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      .action-btn:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+      }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes galaxyPulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInCode {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes pulseBox {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 6px #00d4ff; }
+    50% { text-shadow: 0 0 12px #00d4ff; }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 180px;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .welcome-text h1 {
+      font-size: 2.4em;
+    }
+    .welcome-text p {
+      font-size: 1.2em;
+    }
+    .section h2 {
+      font-size: 1.8em;
+    }
+    .section p {
+      font-size: 1em;
+    }
+    .nav-button, .action-btn {
+      font-size: 13px;
+      padding: 10px;
+    }
+    .simulation-box h3 {
+      font-size: 1.4em;
+    }
+    #join-hackathon-btn {
+      padding: 10px 20px;
+    }
+    .resource-btn img {
+      width: 30px;
+      height: 30px;
+    }
+    .resource-btn span {
+      font-size: 12px;
+    }
+    .feedback-form input,
+    .feedback-form textarea {
+      font-size: 0.9em;
+    }
+    #context-btn, #toc-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<!-- Вбудований JavaScript -->
+<script>
+  // Симуляція хакатону
+  document.getElementById('join-hackathon-btn').addEventListener('click', () => {
+    const events = [
+      'Quantum Hackathon 2025: 15-17 жовтня, онлайн, призи $50,000!',
+      'Google Quantum AI Hack: 20-22 листопада, гібридний формат.',
+      'Qiskit Global Hackathon: 5-7 грудня, доступ до IBM Loon.'
+    ];
+    const randomEvent = events[Math.floor(Math.random() * events.length)];
+    document.getElementById('hackathon-result').textContent = `Наступна подія: ${randomEvent}`;
+    document.getElementById('hackathon-result').style.animation = 'fadeIn 0.5s';
+    setTimeout(() => {
+      document.getElementById('hackathon-result').style.animation = '';
+    }, 500);
+  });
+
+  // Плавна прокрутка для навігації бічної панелі
+  document.querySelectorAll('.nav-button').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 2000);
+    });
+  });
+
+  // Показ коду при кліку на ключові слова
+  document.querySelectorAll('.code-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const codeId = trigger.getAttribute('data-code-id');
+      const codeBlock = document.getElementById(`${codeId}-code`);
+      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
+      codeBlock.style.animation = 'fadeInCode 0.5s';
+    });
+  });
+
+  // Пересувна кнопка контекстного меню
+  const contextBtn = document.getElementById('context-btn');
+  contextBtn.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    let shiftX = e.clientX - contextBtn.getBoundingClientRect().left;
+    let shiftY = e.clientY - contextBtn.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+      contextBtn.style.left = pageX - shiftX + 'px';
+      contextBtn.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(e) {
+      moveAt(e.pageX, e.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    contextBtn.addEventListener('mouseup', function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      contextBtn.onmouseup = null;
+    });
+  });
+
+  contextBtn.ondragstart = function() {
+    return false;
+  };
+
+  // Перемикання видимості бічної панелі
+  contextBtn.addEventListener('click', () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.left = sidebar.style.left === '0px' ? '-260px' : '0px';
+  });
+
+  // Кнопка для відображення змісту
+  const tocBtn = document.getElementById('toc-btn');
+  tocBtn.addEventListener('click', () => {
+    const toc = document.createElement('div');
+    toc.style.position = 'fixed';
+    toc.style.top = '50%';
+    toc.style.left = '50%';
+    toc.style.transform = 'translate(-50%, -50%)';
+    toc.style.background = 'linear-gradient(45deg, #003366, #001233)';
+    toc.style.padding = '20px';
+    toc.style.borderRadius = '12px';
+    toc.style.boxShadow = '0 0 12px rgba(0, 255, 255, 0.6)';
+    toc.style.zIndex = '1001';
+    toc.style.color = '#ffffff';
+    toc.style.maxHeight = '80vh';
+    toc.style.overflowY = 'auto';
+    
+    const tocList = document.createElement('ul');
+    tocList.style.listStyle = 'none';
+    tocList.style.padding = '0';
+    document.querySelectorAll('.section h2').forEach((h2, index) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.textContent = h2.textContent;
+      a.href = `#section${index + 1}`;
+      a.style.color = '#00d4ff';
+      a.style.textDecoration = 'none';
+      a.style.display = 'block';
+      a.style.padding = '10px';
+      a.style.fontSize = '1.1em';
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById(`section${index + 1}`).scrollIntoView({ behavior: 'smooth' });
+        toc.remove();
+      });
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Закрити';
+    closeBtn.style.background = 'linear-gradient(45deg, #4a90e2, #00d4ff)';
+    closeBtn.style.border = 'none';
+    closeBtn.style.padding = '10px';
+    closeBtn.style.borderRadius = '8px';
+    closeBtn.style.color = '#ffffff';
+    closeBtn.style.marginTop = '15px';
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.addEventListener('click', () => toc.remove());
+    
+    toc.appendChild(tocList);
+    toc.appendChild(closeBtn);
+    document.body.appendChild(toc);
+  });
+
+  // Обробка форми зворотного зв’язку
+  document.getElementById('feedback-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const responseDiv = document.getElementById('feedback-response');
+    responseDiv.style.display = 'block';
+    responseDiv.style.animation = 'fadeIn 0.5s';
+    setTimeout(() => {
+      responseDiv.style.display = 'none';
+      document.getElementById('feedback-form').reset();
+    }, 3000);
+  });
+
+  // Додавання стилю для підсвічування
+  const style = document.createElement('style');
+  style.textContent = `
+    .highlight {
+      background: linear-gradient(45deg, #003366, #001233) !important;
+      transform: scale(1.02) !important;
+      transition: background 0.3s, transform 0.3s;
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
+{% endblock %}
+</xaiArtifact>

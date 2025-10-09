@@ -1,0 +1,1124 @@
+
+<xaiArtifact artifact_id="c62d2eb3-344e-4784-9511-4781a84f6cb1" artifact_version_id="626e55b4-ee86-4a14-a322-d12e43390ee4" title="quantum_languages.html" contentType="text/html">
+{% extends "base.html" %}
+
+{% block title %}Еволюція Мов Програмування для Квантових Систем{% endblock %}
+
+{% block content %}
+<div class="processors-container">
+  <!-- Subtle cosmic background with animated stars -->
+  <div class="space-bg">
+    <div class="stars top-stars"></div>
+    <div class="stars left-stars"></div>
+    <div class="stars right-stars"></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div id="sidebar-menu" class="sidebar-menu">
+    <h3 style="color: #580e12; font-size: 25px;">Навігація по веб - сторінці квантові мови програмування</h3>
+    <ul>
+      <li><a href="#section1" class="menu-link">Теоретичні основи</a></li>
+      <li><a href="#section2" class="menu-link">Історія: Від QASM до Q#</a></li>
+      <li><a href="#section3" class="menu-link">Гібридні парадигми</a></li>
+      <li><a href="#section4" class="menu-link">Qiskit 2.0 та Python</a></li>
+      <li><a href="#section5" class="menu-link">Q# для хмарних систем</a></li>
+      <li><a href="#section6" class="menu-link">Silq: Інтуїтивність</a></li>
+      <li><a href="#section7" class="menu-link">Cirq і Google Willow</a></li>
+      <li><a href="#section8" class="menu-link">Тренди 2025</a></li>
+      <li><a href="#section9" class="menu-link">Майбутнє мов</a></li>
+    </ul>
+  </div>
+
+  <!-- Modal Context Menu -->
+  <div id="modal-menu" class="modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h3>Контекстне меню</h3>
+      <ul>
+        <li><a href="#section1" class="menu-link">Теоретичні основи</a></li>
+        <li><a href="#section2" class="menu-link">Історія: Від QASM до Q#</a></li>
+        <li><a href="#section3" class="menu-link">Гібридні парадигми</a></li>
+        <li><a href="#section4" class="menu-link">Qiskit 2.0 та Python</a></li>
+        <li><a href="#section5" class="menu-link">Q# для хмарних систем</a></li>
+        <li><a href="#section6" class="menu-link">Silq: Інтуїтивність</a></li>
+        <li><a href="#section7" class="menu-link">Cirq і Google Willow</a></li>
+        <li><a href="#section8" class="menu-link">Тренди 2025</a></li>
+        <li><a href="#section9" class="menu-link">Майбутнє мов</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Content wrapper -->
+  <div class="content-wrapper">
+    <!-- Welcome text -->
+    <div class="welcome-text">
+      <h1 style="color: #921319; font-size: 43px; text-align: center; font-style: italic; font-weight: 700; margin-right: 150px;">Еволюція мов програмування: кодуючи квантовий Всесвіт</h1>
+      <br><p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 1020px; margin-right: 80px;">Уявіть квантовий комп’ютер як оркестр, де кожен кубіт – інструмент, що грає в суперпозиції. 
+       <br> <br>Мови програмування – це партитури, які перетворюють хаос квантових станів у гармонію обчислень, доступну навіть без PhD з фізики.</p>
+   
+       <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/quantum_ed6837d966.webp" style="width: 620px; height: 540px; margin-right: 180px;">
+      </div>
+
+    <!-- Розділи -->
+    <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left; ">Теоретичні основи: чому квантові мови особливі</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантові алгоритми – це як танець частинок у мікросвіті, де <span style="font-weight: bold; color: rgb(56, 28, 28);">суперпозиція, заплутаність і інтерференція</span> створюють обчислення, недоступні класичним комп’ютерам. 
+        <br>Але ці особливості <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">вимагають унікальних парадигм програмування.</span>
+        <br><br> <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">Квантові мови</span> повинні підтримувати паралелізм (аналог мультитредінгу), керувати заплутаністю та уникати <span style="font-weight: bold; color: rgb(56, 28, 28);">"вимірювального колапсу"</span>, коли спостереження руйнує суперпозицію. 
+        <br>Наприклад, <span style="font-weight: bold; color: rgb(56, 28, 28);">алгоритм Шора</span> для факторизації потребує створення суперпозиції всіх можливих станів, 
+        що <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">неможливо в класичних мовах, як C++ чи Python, без спеціальних абстракцій.</span> 
+        
+        <br><br>Ранні мови, як QASM (2000), були низькорівневими, подібними до асемблера, описуючи гейти (Hadamard, CNOT). 
+        
+        <br<br><span style="font-weight: 800;  color: #211255;">Сучасні мови 2025 року, як Q# чи Silq, – це high-level інструменти, що абстрагують квантові операції</span>, подібно до того, як Python спрощує роботу з пам’яттю порівняно з C. 
+        <br><br>Квантові мови виглядають класичними, але їхня логіка – це міст до мікросвіту. Вони <span style="font-weight: 800;  color: #211255;">також підтримують гібридні обчислення, де класичні CPU керують QPU</span>, що критично для сучасних систем із 100–1000 кубітів (MIT Quantum Index). 
+        Обмеження: <span style="font-weight: bold; color: rgb(56, 28, 28);">шум і декогеренція</span> вимагають інтеграції з QECC, що ускладнює синтаксис.</p>
+      <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><ul  style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Про квантові алгоритми та спеціальні мови</span> програмування, такі як:
+           <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Twist</span> – це відкрита мова програмування квантових комп’ютерів, яку було розроблено у 2018 році. Вона заснована на Python і використовує відкритий вихідний код. Twist підтримує симуляцію квантових обчислень і їх реалізацію на реальних квантових пристроях;</li>
+           <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit</span> – це відкритий набір інструментів для розробки квантових алгоритмів, створений компанією IBM. Він містить у собі мову програмування Qiskit, яка заснована на Python і дає змогу створювати і симулювати квантові алгоритми, а також реалізовувати їх на реальних квантових пристроях;</li>
+           <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Cirq</span> – це відкрита мова програмування квантових обчислень, розроблена компанією Google. Заснована на мові Python і надає інструменти для створення квантових алгоритмів та їх реалізації на реальних квантових пристроях;</li>
+           <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Quil</span> – це мова програмування квантових обчислень, розроблена компанією Rigetti. Вона дає змогу створювати квантові алгоритми та реалізовувати їх на реальних квантових пристроях. Quil використовує спеціальний синтаксис, який нагадує асемблерний код;</li>
+           <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Microsoft Q#</span> – це мова програмування квантових обчислень, створена компанією Microsoft. Вона заснована на мові C# і дає змогу створювати квантові алгоритми, симулювати їх і реалізовувати на реальних квантових пристроях.</li>
+      </ul>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">можна прочитати в наступній публікації: <a href="https://foxminded.ua/kvantove-prohramuvannia/"  style="font-weight: 800;  color: rgb(75, 25, 25); font-size: 26px;" alt="мови програмування для квантових комп'ютерів">Мови програмування для квантових комп'ютерів</a></p>
+      </p>
+          
+    </section>
+
+    <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Історія: від QASM до Q# і Silq</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Еволюція квантових мов – це як подорож від паперових сувоїв до цифрових бібліотек. 
+        
+        <br><br>У 2000 році <span style="font-weight: bold; color: rgb(56, 28, 28); font-size: 27px; text-align: justify;">QASM (Quantum Assembly Language)</span> став першим кроком, дозволяючи описувати квантові гейти, як інструкції в асемблері. Це було як писати музику нотами вручну: точно, але складно. 
+        
+        <img src="https://nap.nationalacademies.org/openbook/25196/xhtml/images/img-170.jpg" style="width: 620px; height: 570px; margin-top: 25px; margin-left: 80px;">
+
+        <br><br>У 2010-х з’явилися високорівневі мови, як <span class="code-trigger" data-code-id="qsharp" style="font-weight: bold; color: rgb(56, 28, 28);">Q#</span> від Microsoft, що інтегрується з Visual Studio і підтримує гібридні обчислення для Azure Quantum. 
+        Q# абстрагує гейти в функції, подібно до того, як Python ховає деталі пам’яті.
+        
+        <br><br>У 2020 році <span style="font-weight: bold; color: rgb(56, 28, 28);">Silq</span> представив "інтуїтивний" підхід, автоматично керуючи допоміжними кубітами, що зменшує помилки розробників на 30% (Quantum Zeitgeist). 
+         
+        <br><br> У 2025 році <span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit 2.0</span> і <span style="font-weight: bold; color: rgb(56, 28, 28);">Cirq</span> від Google домінують завдяки інтеграції з Python, роблячи квантове програмування доступним для AI-розробників. <span style="font-weight: bold; color: rgb(56, 28, 28); text-decoration: underline;">Cучасні квантові мови спрощують код до рівня Python, але під капотом керують складними системами з 
+          <span style="font-weight: bold; color: rgb(56, 28, 28);">декогеренцією</span> та QECC.</span> 
+         <br><br><span style="font-weight: bold; color: rgb(56, 28, 28); font-size: 26px;">Наприклад, QASM досі використовується для низькорівневих операцій, але Q# і Silq дозволяють писати алгоритми, як VQE, без знання фізичних деталей.</span>
+        
+         <img src="https://miro.medium.com/v2/resize:fit:1400/0*jAvz6HU6VLNAdEhy" style="width: 550px; height: 500px; margin-left: 80px;">
+
+         <br><span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline; margin-top: 25px; font-size: 27px;">Історично квантові мови еволюціонували від апаратно-орієнтованих до user-friendly, подібно до переходу від Fortran до Java.</span></p>
+     
+      
+    </section>
+
+    <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Гібридні парадигми: класичне + квантове</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Гібридні парадигми в квантових мовах – це як диригент, що керує оркестром із класичних і квантових інструментів.
+         Квантові комп’ютери (QPU) потужні, але обмежені <span style="font-weight: bold; color: rgb(56, 28, 28);">декогеренцією</span> та кількістю кубітів (100–1000 у 2025, MIT).
+         <br><br> Тому мови, як <span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit</span> чи <span style="font-weight: bold; color: rgb(56, 28, 28);">Q#</span>, комбінують класичні CPU/GPU для оптимізації та QPU для квантових обчислень. 
+         
+         <br><span style="font-weight: 800;  color: #211255;"> Класичний Python-код у Qiskit керує параметрами квантової схеми, подібно до того, як диригент задає ритм, а QPU виконує "соло" суперпозиції.</span>
+         <br>Це критично для алгоритмів, як <span class="code-trigger" data-code-id="vqe-hybrid" style="font-weight: bold; color: rgb(56, 28, 28);">VQE</span> (Variational Quantum Eigensolver), де класичний оптимізатор (наприклад, COBYLA) налаштовує квантові параметри. 
+        
+          <br><br><span style="font-weight: 800;  color: #211255;">Гібридний підхід дозволяє масштабувати обчислення, використовуючи хмарні платформи</span>, як IBM Quantum чи Azure Quantum. 
+          Квантові мови виглядають як класичні, але їхня логіка враховує квантову природу, де операції незворотні через вимірювання. 
+         </p>
+     
+      
+    </section>
+
+    <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Qiskit 2.0 та Python: демократизація квантового коду</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Qiskit 2.0</span> у 2025 році – це як космічний корабель, що робить квантове програмування доступним для Python-розробників. 
+        
+        <br><br><span style="font-weight: bold;  color: rgb(56, 28, 28);">Python – найпопулярніша мова для AI та ML, і Qiskit використовує її синтаксис,</span> щоб абстрагувати складність квантових гейтів. 
+        
+        <br><br>Замість опису низькорівневих операцій, як у QASM, ви пишете код, схожий на TensorFlow, створюючи <span class="code-trigger" data-code-id="qiskit-circuit" style="font-weight: bold; color: rgb(56, 28, 28);">квантові схеми</span> з кількох рядків. 
+        
+        <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28);">Qiskit підтримує симуляцію на класичних комп’ютерах і доступ до реальних QPU, як IBM Loon, через хмару.</span> 
+        <br>Це дозволяє тестувати алгоритми, як Shor чи Grover, без фізичного доступу до квантового апаратного забезпечення. 
+        <br><br>У 2025 році Qiskit 2.0 інтегрується з QECC, зменшуючи помилки на 30% (NIST), і підтримує гібридні алгоритми, як VQE, для задач, як моделювання молекул.
+        <br>Qiskit виглядає як Python-бібліотека, але керує квантовим хаосом. За Quantum Zeitgeist, <span style="font-weight: bold;  color: rgb(56, 28, 28);">50% квантових розробників використовують Qiskit через його простоту та спільноту.</span></p>
+         
+        <details>
+          <summary>Наприклад, для вирішення задачі оптимізації портфеля фінансових активів</summary>
+          <p style="font-size: 21px; font-style: italic; font-weight: 800; color: navy;">
+            Це класична задача фінансової математики, де потрібно вибрати активи для максимізації прибутку при мінімальному ризику, з урахуванням бюджету. Квантова парадигма використовується, оскільки класичні методи (наприклад, для великих наборів даних) є обчислювально складними, а квантові алгоритми, як QAOA (Quantum Approximate Optimization Algorithm), можуть потенційно знайти оптимальні рішення швидше завдяки суперпозиції та заплутаності. Qiskit обрано як фреймворк, бо це відкрита платформа від IBM для квантового програмування, яка інтегрує інструменти для моделювання, оптимізації та симуляції квантових систем, з підтримкою реальних квантових пристроїв. Ось лаконічний і зрозумілий опис процесу з методологічним підходом:<br><br>
+        
+            <strong>1. Визначення допоміжної функції для виведення результатів</strong><br>
+            Створюємо функцію <code>print_result</code>, яка форматує результати оптимізації (вибрані активи, значення цільової функції, ймовірності). Це полегшує аналіз результатів, виводячи їх у зрозумілому вигляді.<br><br>
+        
+            <strong>2. Налаштування генератора випадкових чисел для відтворюваності</strong><br>
+            Встановлюємо випадкове зерно (<code>random_seed = 1234</code>) для генерації даних, щоб результати були однаковими при повторних запусках. Це правильно, що воно використовується для генерації випадкових значень фінансових активів (часових рядів прибутків), але це лише для моделювання тестових даних, а не реальних ринкових.<br><br>
+        
+            <strong>3. Визначення параметрів задачі оптимізації портфеля</strong><br>
+            Задаємо кількість активів (<code>num_assets = 4</code>), яка дорівнює кількості кубітів. Так, тут маються на увазі логічні кубіти, оскільки кожен актив представлений одним кубітом у квантовій моделі для бінарного вибору (включити/не включити актив у портфель).<br><br>
+        
+            <strong>4. Генерація даних: очікувані прибутки та матриця коваріації</strong><br>
+            Використовуємо <code>RandomDataProvider</code> для створення синтетичних часових рядів прибутків активів. Це дійсно створює математичну модель, де <code>mu</code> — вектор очікуваних прибутків, а <code>sigma</code> — матриця коваріації, що відображає волатильність і кореляцію між активами.<br><br>
+        
+            <strong>5. Візуалізація матриці коваріації (опціонально)</strong><br>
+            Відображаємо матрицю <code>sigma</code> як теплову карту, щоб побачити кореляцію між активами (наскільки їхні прибутки рухаються разом). Висока кореляція означає, що активи поводяться схоже, що може збільшити ризик портфеля.<br><br>
+        
+            <strong>6. Встановлення параметрів оптимізації</strong><br>
+            Задаємо фактори ризику (<code>q = 0.5</code>), бюджет (<code>budget = num_assets // 2</code>) і штраф за порушення бюджету (<code>penalty = num_assets</code>). Ці параметри балансують між максимізацією прибутку та мінімізацією ризику, враховуючи обмеження на кількість активів у портфелі.<br><br>
+        
+            <strong>7. Створення об’єкта задачі оптимізації портфеля</strong><br>
+            Формуємо об’єкт <code>PortfolioOptimization</code>, який є високорівневою абстракцією задачі. Об’єкт інкапсулює всі параметри (прибутки, коваріацію, бюджет), готуючи задачу до подальшого перетворення.<br><br>
+        
+            <strong>8. Перетворення задачі у форму квадратичної програми</strong><br>
+            Переводимо задачу в формат квадратичної програми (Quadratic Program), який сумісний із квантовими алгоритмами, такими як QAOA. Це математичне формулювання, де цільова функція та обмеження виражені як квадратичні рівняння.<br><br>
+        
+            <strong>9. Розв’язання задачі за допомогою QAOA</strong><br>
+            Використовуємо алгоритм QAOA з оптимізатором COBYLA та симулятором (<code>Sampler</code>). QAOA ітерує через квантові стани, щоб знайти оптимальний розв’язок, використовуючи кілька повторень (<code>reps=3</code>) для покращення точності.<br><br>
+        
+            <strong>10. Виведення результатів</strong><br>
+            Викликаємо функцію <code>print_result</code>, щоб показати оптимальний набір активів, значення цільової функції (баланс між прибутком і ризиком) та ймовірності можливих рішень, отриманих із квантового стану.
+          </p>
+        </details>
+         
+     <div id="qiskit-circuit-code" class="code-block" style="font-size: 23px; font-weight: 800; color:#003366;">
+      <pre>
+          # Імпорт необхідних бібліотек для квантової оптимізації портфеля
+          from qiskit.circuit.library import TwoLocal
+          from qiskit.result import QuasiDistribution
+          from qiskit_aer.primitives import Sampler
+          from qiskit_algorithms import NumPyMinimumEigensolver, QAOA, SamplingVQE
+          from qiskit_algorithms.optimizers import COBYLA
+          from qiskit_finance.applications.optimization import PortfolioOptimization
+          from qiskit_finance.data_providers import RandomDataProvider
+          from qiskit_optimization.algorithms import MinimumEigenOptimizer
+          import numpy as np
+          import matplotlib.pyplot as plt
+          import datetime
+          from qiskit.utils import algorithm_globals
+          
+          # Визначення допоміжної функції для виведення результатів у зручному форматі
+          def print_result(result):
+              """
+              Виводить результат оптимізації, включаючи оптимальний вибір, значення 
+              та розподіл ймовірностей розв'язків.
+              """
+              selection = result.x
+              value = result.fval
+              print("Optimal: selection {}, value {:.4f}".format(selection, value))
+          
+              eigenstate = result.min_eigen_solver_result.eigenstate
+              probabilities = (
+                  eigenstate.binary_probabilities()
+                  if isinstance(eigenstate, QuasiDistribution)
+                  else {k: np.abs(v) ** 2 for k, v in eigenstate.to_dict().items()}
+              )
+              print("\n----------------- Full result ---------------------")
+              print("selection\tvalue\t\tprobability")
+              print("---------------------------------------------------")
+              probabilities = sorted(probabilities.items(), key=lambda x: x[1], reverse=True)
+          
+              for k, v in probabilities:
+                  x = np.array([int(i) for i in list(reversed(k))])
+                  value = portfolio.to_quadratic_program().objective.evaluate(x)
+                  print("%10s\t%.4f\t\t%.4f" % (x, value, v))
+          
+          # Встановлення випадкового зерна для відтворюваності та визначення параметрів задачі
+          algorithm_globals.random_seed = 1234
+          
+          # Визначення параметрів задачі оптимізації портфеля
+          num_assets = 4  # Кількість активів (дорівнює кількості кубітів)
+          seed = 123      # Випадкове зерно для генерації даних
+          
+          # Генерація очікуваних прибутків та матриці коваріації з випадкових часових рядів даних
+          stocks = [("TICKER%s" % i) for i in range(num_assets)]
+          data = RandomDataProvider(
+              tickers=stocks,
+              start=datetime.datetime(2016, 1, 1),
+              end=datetime.datetime(2016, 1, 30),
+              seed=seed,
+          )
+          data.run()
+          mu = data.get_period_return_mean_vector()      # Вектор очікуваних прибутків
+          sigma = data.get_period_return_covariance_matrix()  # Матриця коваріації
+          
+          # Опціонально: Візуалізація матриці коваріації
+          plt.imshow(sigma, interpolation="nearest")
+          plt.show()
+          
+          # Встановлення параметрів оптимізації
+          q = 0.5              # Фактор ризику (контролює апетит до ризику)
+          budget = num_assets // 2  # Обмеження бюджету (кількість активів для вибору)
+          penalty = num_assets      # Параметр штрафу за порушення обмеження бюджету
+          
+          # Створення екземпляра задачі оптимізації портфеля
+          portfolio = PortfolioOptimization(
+              expected_returns=mu, 
+              covariances=sigma, 
+              risk_factor=q, 
+              budget=budget
+          )
+          
+          # Перетворення на форму квадратичної програми
+          qp = portfolio.to_quadratic_program()
+          print(qp)
+          
+          # Розв'язання за допомогою QAOA (Quantum Approximate Optimization Algorithm)
+          # Налаштування оптимізатора
+          cobyla = COBYLA()
+          cobyla.set_options(maxiter=250)  # Максимальна кількість ітерацій
+          
+          # Створення екземпляра QAOA з вказаними повтореннями
+          qaoa_mes = QAOA(sampler=Sampler(), optimizer=cobyla, reps=3)
+          
+          # Обгортка QAOA з MinimumEigenOptimizer для розв'язання квадратичної програми
+          qaoa = MinimumEigenOptimizer(qaoa_mes)
+          
+          # Розв'язання задачі оптимізації портфеля
+          result = qaoa.solve(qp)
+          
+          # Виведення результатів
+          print_result(result)
+     </pre>
+   </div>
+
+      
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #050d55;">
+        <thead>
+          <tr style="background: #003366;">
+            <th style="padding: 10px; border: 1px solid #4a90e2;">Фреймворк</th>
+            <th style="padding: 10px; border: 1px solid #4a90e2;">Розробник</th>
+            <th style="padding: 10px; border: 1px solid #4a90e2;">Особливості</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Qiskit</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">IBM</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Python, QECC, хмара</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Q#</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Microsoft</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Гібридні, Azure</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Silq</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">ETH Zurich</td>
+            <td style="padding: 10px; border: 1px solid #4a90e2;">Інтуїтивність, безпека</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><a href="https://www.ibm.com/quantum/qiskit" style="font-weight: 800;  color: rgb(56, 28, 28); font-size: 24px; font-style: italic;" target="_blank">Qiskit documentation</a></p>
+    </section>
+
+    <section id="section5" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Q# для хмарних квантових систем</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Q#</span> від Microsoft – це як космічна станція, що об’єднує розробників у <span style="font-weight: bold;  color: rgb(56, 28, 28);">хмарному просторі Azure Quantum.</span> 
+        
+        <br><br>Створена для гібридних обчислень, Q# дозволяє писати квантові програми, що виконуються на QPU чи симуляторах, інтегруючись із C# чи Python. 
+        
+        <br>Ви пишете код, схожий на класичний, але він керує <span style="font-weight: bold; color: rgb(56, 28, 28);">заплутаністю кубітів</span>, як диригент оркестру. 
+        
+        <br><br>Q# підтримує алгоритми, як <span class="code-trigger" data-code-id="qsharp-grover" style="font-weight: bold; color: rgb(56, 28, 28);">Grover</span>, для пошуку в неструктурованих базах даних із квадратичним прискоренням. 
+        
+       <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28);">У 2025 році Q# використовується в 30% хмарних квантових проєктів (Moody’s), завдяки інтеграції з Azure,</span> що забезпечує доступ до QPU від Quantinuum і IonQ.
+        
+       <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28);">Q# виглядає як C#, але його функції, як H чи CNOT, відображають квантову природу.</span>  
+       <br>Q# вимагає вивчення <span style="font-weight: bold;  color: rgb(56, 28, 28);">нової парадигми, але бібліотеки, як Quantum Development Kit</span>, спрощують це.
+         
+         <br><br>Наприклад, Q# дозволяє створювати гібридні алгоритми для оптимізації в логістиці, де класичний код оптимізує параметри, а квантовий виконує обчислення.</p>
+         <details>
+          <summary>Наприклад, для вирішення задачі оптимізації маршруту в логістиці (TSP)</summary>
+          <p style="font-size: 21px; font-style: italic; font-weight: 800; color: navy;">
+            Давайте розберемося крок за кроком: задача TSP (Travelling Salesman Problem, або проблема комівояжера) — це класичний приклад у логістиці, де потрібно знайти найкоротший маршрут, що проходить через усі вказані міста точно один раз і повертається до стартового пункту, мінімізуючи загальну відстань чи час. Це корисно для реальних сценаріїв, як планування доставок чи маршрутів транспорту. Чому тут застосовується квантовий підхід? Класичні алгоритми для великих наборів міст вимагають величезних обчислень (вона належить до класу NP-складних задач), тому квантові методи, такі як QAOA (Quantum Approximate Optimization Algorithm — квантовий алгоритм наближеної оптимізації), можуть допомогти знайти хороші наближені рішення швидше. QAOA використовує ключові квантові принципи: суперпозицію (коли кубіти — базові одиниці квантової інформації — перебувають у кількох станах одночасно, дозволяючи паралельний пошук) та заплутаність (зв'язок між кубітами, що посилює обчислювальну потужність). Мова Q# від Microsoft обрана, бо це спеціалізований інструмент для квантового програмування в Quantum Development Kit: вона дозволяє легко працювати з кубітами, симулювати алгоритми та запускати їх на реальних квантових комп'ютерах. Важливий коментар: у цій програмі нейромережа не використовується. QAOA — це не нейронна мережа, а варіаційний квантовий алгоритм, натхненний ідеями оптимізації, але без шарів нейронів чи навчання на даних; він базується на квантовій механіці та класичній оптимізації параметрів. Ось лаконічний і зрозумілий опис процесу з методологічним підходом:<br><br>
+        
+            <strong>1. Визначення основної операції для застосування QAOA</strong><br>
+            Створюємо операцію <code>ApplyQAOA</code>, яка реалізує алгоритм QAOA для задачі, сформульованої як QUBO (Quadratic Unconstrained Binary Optimization — квадратична бінарна оптимізація без обмежень, де рішення представлені 0/1 змінними, наприклад, для вибору шляхів у TSP). Вона починається з створення суперпозиції (за допомогою Hadamard-гейтів, що ставлять кубіти в рівномірний розподіл станів) і чергують "cost-гамільтоніан" (енергія проблеми, що оцінює якість рішення) та "mixer-гамільтоніан" (для "перемішування" станів і пошуку кращих варіантів).<br><br>
+        
+            <strong>2. Реалізація cost-гамільтоніана (модель Ising для QUBO)</strong><br>
+            Операція <code>ApplyInstanceHamiltonian</code> моделює cost-гамільтоніан — математичний оператор, що описує "вартість" або енергію системи в квантовій механіці. Вона використовує модель Ising (фізична модель магнітних спінів, де бінарні змінні мапуються на "вгору/вниз" стани). Застосовує фазові зсуви (гейт Rz для лінійних частин, що впливають на окремі кубіти) та взаємодії (симуляція ZZ-гейтів через Controlled Rz для пар кубітів, що враховують зв'язки між змінними), з параметром "часу еволюції" (гамма — кут обертання для контролю глибини).<br><br>
+        
+            <strong>3. Реалізація mixer-гамільтоніана</strong><br>
+            Операція <code>ApplyDriverHamiltonian</code> створює mixer-гамільтоніан — стандартний для QAOA, що складається з суми X-гейтів (операторів, що "перевертають" стани кубітів). Використовує гейт Rx (ротація навколо X-осі) з параметром бетта, дозволяючи системі "досліджувати" різні комбінації станів і уникати локальних мінімумів.<br><br>
+        
+            <strong>4. Оцінка ймовірності конкретного стану</strong><br>
+            Операція <code>MeasureProbabilityForState</code> розраховує, наскільки ймовірним є певний стан (бінарний вектор, що кодує маршрут у TSP, наприклад, послідовність відвідування міст). Використовує функцію EstimateFrequency для статистичної оцінки на основі багатьох вимірювань (квантові стани колапсують при вимірюванні, тому потрібні повторення для точності). Це ключова квантова специфіка: результати — ймовірнісні, а не детерміновані.<br><br>
+        
+            <strong>5. Перевірка стану реєстру кубітів</strong><br>
+            Допоміжна операція <code>MeasureRegisterIsInState</code> вимірює весь реєстр кубітів (за допомогою MultiM — множинного вимірювання, що дає результати для кожного кубіту) і порівнює з цільовим станом. Повертає Zero, якщо збігається (дійсний маршрут без повторів), або One інакше — це фільтрує недійсні рішення в TSP.<br><br>
+        
+            <strong>6. Приклад запуску для логістичної задачі (TSP для 3 міст)</strong><br>
+            Операція <code>SolveLogisticsTSP</code> налаштовує конкретний приклад: TSP з 3 містами, кодованими 6 кубітами (бінарне представлення позицій у циклі). Визначає ваги (лінійні коефіцієнти h_i для окремих змінних), з'єднання (квадратичні J_ij для взаємодій, у верхньому трикутнику матриці, що враховує витрати між містами), параметри бетта/гамма (оптимізовані класично для кращої точності).<br><br>
+        
+            <strong>7. Оцінка ймовірностей дійсних станів</strong><br>
+            Визначає дійсні стани (дозволені цикли в TSP, наприклад, повні маршрути без повторів) і обчислює їх ймовірності за допомогою <code>MeasureProbabilityForState</code>, використовуючи задану кількість вимірювань (1024 "пострілів" — повторів симуляції для статистичної надійності).<br><br>
+        
+            <strong>8. Обчислення ймовірності недійсних станів</strong><br>
+            Розраховує залишкову ймовірність (otherProb) для всіх недійсних станів, віднімаючи суму ймовірностей дійсних — це показує, наскільки добре QAOA уникає помилкових рішень і оцінює загальну ефективність алгоритму.<br><br>
+        
+            <strong>9. Повернення результатів</strong><br>
+            Повертає масив ймовірностей для дійсних станів та недійсних, що дозволяє подальшу класичну обробку (наприклад, вибір найкращого маршруту з найвищою ймовірністю або найнижчою "енергією" — вартістю шляху).<br><br>
+        
+            <strong>10. Загальна інтеграція</strong><br>
+            Уся програма розміщена в просторі імен (namespace) LogisticsOptimization, об'єднуючи операції для симуляції QAOA на Q#. Це наближено до реальних квантових програм: результати можна адаптувати для більших логістичних задач, як оптимізація ланцюгів постачань, з потенціалом для масштабування на потужніші квантові системи.
+          </p>
+        </details>
+     
+         <div id="qsharp-grover-code" class="code-block" style="font-size: 23px; font-weight: 800; color:#003366;">
+        <pre>
+          namespace LogisticsOptimization {
+
+            open Microsoft.Quantum.Intrinsic;
+            open Microsoft.Quantum.Measurement;
+            open Microsoft.Quantum.Arrays;
+            open Microsoft.Quantum.Math;
+            open Microsoft.Quantum.Convert;
+            open Microsoft.Quantum.Diagnostics;
+        
+            // Основна операція для застосування QAOA до задачі оптимізації маршрутів (наприклад, TSP як QUBO)
+            operation ApplyQAOA(
+                qubits : Qubit[],           // Кубіти для представлення змінних
+                numSegments : Int,          // Кількість шарів QAOA (p)
+                weights : Double[],         // Вагові коефіцієнти для лінійних членів (h_i в Ising)
+                couplings : Double[],       // Коефіцієнти взаємодій (J_ij в Ising)
+                timeX : Double[],           // Параметри бетта для міксеру (driver Hamiltonian)
+                timeZ : Double[]            // Параметри гамма для гамільтоніана проблеми (cost Hamiltonian)
+            ) : Unit {
+                // Підготовка рівномірної суперпозиції: застосування Hadamard до всіх кубітів
+                ApplyToEach(H, qubits);
+        
+                // Застосування шарів QAOA: чергування cost та mixer гамільтоніанів
+                for (tz, tx) in Zipped(timeZ, timeX) {
+                    // Застосування еволюції cost гамільтоніана: Exp(-i * tz * H_C)
+                    ApplyInstanceHamiltonian(Length(qubits), tz, weights, couplings, qubits);
+                    // Застосування еволюції mixer гамільтоніана: Exp(-i * tx * H_M)
+                    ApplyDriverHamiltonian(tx, qubits);
+                }
+            }
+        
+            // Операція для застосування cost гамільтоніана (Ising модель для QUBO)
+            operation ApplyInstanceHamiltonian(
+                nQubits : Int,              // Кількість кубітів
+                time : Double,              // Час еволюції (гамма)
+                weights : Double[],         // Лінійні коефіцієнти
+                couplings : Double[],       // Квадратичні коефіцієнти
+                qubits : Qubit[]            // Регістр кубітів
+            ) : Unit is Adj + Ctl {
+                // Застосування фазових зсувів для лінійних членів (Z на кожному кубіті)
+                for i in 0..nQubits-1 {
+                    Rz(2.0 * time * weights[i], qubits[i]);
+                }
+                // Застосування для квадратичних членів (ZZ взаємодії)
+                mutable idx = 0;
+                for i in 0..nQubits-2 {
+                    for j in i+1..nQubits-1 {
+                        let angle = 2.0 * time * couplings[idx];
+                        Controlled Rz([qubits[i]], (angle, qubits[j]));  // Симуляція ZZ через CNOT + Rz + CNOT, але спрощено
+                        set idx += 1;
+                    }
+                }
+            }
+        
+            // Операція для застосування mixer гамільтоніана (стандартний для QAOA: сума X на кубітах)
+            operation ApplyDriverHamiltonian(
+                time : Double,              // Час еволюції (бетта)
+                qubits : Qubit[]            // Регістр кубітів
+            ) : Unit is Adj + Ctl {
+                // Застосування Rx на кожен кубіт для еволюції під H_M = sum X_i
+                ApplyToEach(Rx(2.0 * time, _), qubits);
+            }
+        
+            // Операція для оцінки ймовірності конкретного стану
+            operation MeasureProbabilityForState(
+                state : Result[],           // Цільовий стан (бінарний вектор)
+                numSegments : Int,          // Кількість шарів
+                weights : Double[],         // Вагові коефіцієнти
+                couplings : Double[],       // Коефіцієнти взаємодій
+                timeX : Double[],           // Параметри бетта
+                timeZ : Double[],           // Параметри гамма
+                numMeasurements : Int       // Кількість вимірювань для оцінки
+            ) : Double {
+                // Використання EstimateFrequency для оцінки частоти стану
+                return EstimateFrequency(
+                    ApplyQAOA(_, numSegments, weights, couplings, timeX, timeZ),
+                    MeasureRegisterIsInState(_, state),
+                    Length(state),
+                    numMeasurements
+                );
+            }
+        
+            // Допоміжна операція для перевірки, чи реєстр у заданому стані
+            operation MeasureRegisterIsInState(
+                register : Qubit[],         // Регістр кубітів
+                state : Result[]            // Цільовий стан
+            ) : Result {
+                let results = MultiM(register);  // Вимірювання всіх кубітів
+                if (All(EqualR, Zipped(results, state))) {
+                    return Zero;  // Збігається
+                } else {
+                    return One;   // Не збігається
+                }
+            }
+        
+            // Приклад запуску для логістичної задачі: оптимізація маршруту (TSP для 3 міст як QUBO)
+            // Тут: Дозволені стани для циклу (наприклад, для 6 кубітів у TSP кодуванні)
+            operation SolveLogisticsTSP() : Double[] {
+                // Визначення параметрів для прикладу TSP (спрощений QUBO)
+                let numQubits = 6;  // Для 3 міст у бінарному кодуванні
+                let numSegments = 2;  // p=2
+                let weights = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0];  // Прикладні ваги (h_i)
+                let couplings = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5];  // J_ij (верхній трикутник)
+                let timeX = [PI() / 4.0, PI() / 4.0];  // Бетта (оптимізовані класично)
+                let timeZ = [PI() / 2.0, PI() / 2.0];  // Гамма
+                let numMeasurements = 1024;  // Кількість пострілів
+        
+                // Дозволені стани для TSP (приклад: цикли)
+                let state1 = [One, One, One, One, Zero, Zero];
+                let state2 = [Zero, One, Zero, One, One, One];
+                let state3 = [One, Zero, One, Zero, One, One];
+                let states = [state1, state2, state3];
+        
+                mutable result = new Double[Length(states) + 1];
+                mutable otherProb = 1.0;  // Ймовірність недійсних станів
+        
+                // Оцінка ймовірностей для кожного дійсного стану
+                for (index, state) in Enumerated(states) {
+                    let prob = MeasureProbabilityForState(state, numSegments, weights, couplings, timeX, timeZ, numMeasurements);
+                    set result w/= index <- prob;
+                    set otherProb -= prob;
+                }
+        
+                set result w/= Length(states) <- otherProb;
+        
+                // Повернення ймовірностей (для подальшої оцінки енергії класично)
+                return result;
+            }
+        }
+        </pre>
+      </div>
+      <p><a href="https://docs.microsoft.com/en-us/azure/quantum/" style="font-weight: 800;  color: rgb(56, 28, 28); font-size: 24px; font-style: italic;" target="_blank">Microsoft Q# Documentation</a></p>
+    </section>
+
+    <section id="section6" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Silq: інтуїтивність у квантовому коді</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Silq</span>, розроблений ETH Zurich. У 2025 році Silq оновлено для автоматичного керування допоміжними кубітами, що зменшує помилки на 40% порівняно з QASM (Quantum Zeitgeist). 
+        
+        <br><br>У класичних квантових мовах, як QASM, розробник вручну очищає тимчасові кубіти, що призводить до помилок. Silq робить це автоматично, подібно до garbage collection у Java. 
+        
+        <br>Це дозволяє писати <span class="code-trigger" data-code-id="silq-circuit" style="font-weight: bold; color: rgb(56, 28, 28);">чисті схеми</span>, зосереджуючись на логіці, а не на квантовій механіці.
+        <br><br> Silq ідеально підходить для алгоритмів, як QAOA, для оптимізації комбінаторних задач. 
+         
+        <br><br> У 2025 році Silq використовується в 20% академічних проєктів, але його інтеграція з промисловими QPU, як IBM Loon, ще обмежена. 
+         <br>Silq менш універсальний, ніж Qiskit, але його інтуїтивність робить його улюбленцем для новачків.</p>
+      <div id="silq-circuit-code" class="code-block" style="font-size: 23px;">
+        <pre>
+def bellPair() : (qbit, qbit) {
+    x = qbit; y = qbit;
+    x = H(x); // Суперпозиція
+    (x, y) = CNOT(x, y); // Заплутаність
+    return (x, y);
+}
+        </pre>
+      </div>
+      <p><a href="https://silq.ethz.ch/" style="font-weight: 800;  color: rgb(56, 28, 28); font-size: 24px; font-style: italic;" target="_blank">Silq Documentation</a></p>
+    </section>
+
+    <section id="section7" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Cirq і Google Willow: оптимізація для апаратного забезпечення</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="font-weight: bold; color: rgb(56, 28, 28);">Cirq</span> від Google – це як інженер, що створює схеми, ідеально підігнані під апаратне забезпечення, зокрема <span style="font-weight: bold; color: rgb(56, 28, 28);">Google Willow</span>.
+        
+        У 2025 році Cirq оптимізує квантові схеми для surface code, зменшуючи помилки на 25% (NIST). 
+        <br><br>Замість універсального коду, Cirq дозволяє вказати фізичне розташування кубітів, що критично для superconducting QPU.
+        <br>Cirq підтримує алгоритми, як <span class="code-trigger" data-code-id="cirq-circuit" style="font-weight: bold; color: rgb(56, 28, 28);">QAOA</span>, для задач, як оптимізація логістики. 
+        
+        <br><br>Cirq вимагає знання апаратних деталей, але його Python-синтаксис робить це доступним. 
+        <br><br>У 2025 році Cirq використовується в 35% проєктів Google Quantum AI, зокрема для симуляції матеріалів. 
+        Обмеження: Cirq менш гнучкий для гібридних систем, ніж Qiskit, але його оптимізація для Willow робить його лідером для специфічних QPU.</p>
+      <div id="cirq-circuit-code" class="code-block" style="font-size: 23px;">
+        <pre>
+import cirq
+qubits = [cirq.GridQubit(0, i) for i in range(2)]
+circuit = cirq.Circuit()
+circuit.append(cirq.H(qubits[0]))  # Суперпозиція
+circuit.append(cirq.CNOT(qubits[0], qubits[1]))  # Заплутаність
+circuit.append(cirq.measure(*qubits, key='result'))
+        </pre>
+      </div>
+      <p><a href="https://quantumai.google/cirq" style="font-weight: 800;  color: rgb(56, 28, 28); font-size: 24px; font-style: italic;" target="_blank">Cirq Language Docs</a></p>
+    </section>
+
+    <section id="section8" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left;">Тенденції 2025: квантовий код для всіх</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">У 2025 році квантові мови стають мостом між мікросвітом та реальністю. 
+        
+       <br>За Quantum Zeitgeist, 50% розробників QML використовують Python-інтегровані фреймворки, як <span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit</span> чи <span style="font-weight: bold; color: rgb(56, 28, 28);">Cirq</span>, завдяки їхній доступності. 
+        
+        <br>Уявіть: програміст без знань квантової фізики пише код для <span style="font-weight: bold; color: rgb(56, 28, 28);">VQE</span>, що моделює молекулу, використовуючи Qiskit 2.0. 
+        <br><br>Перспективи: інтеграція з AI (<span style="font-weight: bold; color: rgb(56, 28, 28);">TensorFlow Quantum</span>), хмарними платформами (<span style="font-weight: bold; color: rgb(56, 28, 28);">Azure Quantum</span>) і фокус на гібридних алгоритмах. 
+        Квантові мови стають простішими, але їхня складність зростає через QECC і шум.
+       
+         <br>Але при цьому, квантові мови ще не універсальні, але хмарні симулятори дозволяють тестувати код без QPU. Наприклад, DHL використовує Q# для оптимізації маршрутів, досягаючи 20% економії часу.</p>
+      
+    </section>
+
+    <section id="section9" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700;  font-size: 35px; text-align: left;">Майбутнє квантових мов:</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє квантових мов – це як створення універсального перекладача для спілкування з мікросвітом. 
+        <br>До 2035 року, за прогнозами Moody’s, 30% розробників AI використовуватимуть квантові мови для гібридних задач, як моделювання білків чи оптимізація фінансів. 
+        <br><br>Уявіть: <span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit 3.0</span> інтегрується з PyTorch, дозволяючи створювати квантові нейронні мережі з кількох рядків.
+        <br><span style="font-weight: bold; color: rgb(56, 28, 28);">Silq</span> може стати стандартом для інтуїтивного програмування, <br>а <span style="font-weight: bold; color: rgb(56, 28, 28);">Q#</span> – для хмарних QPU. 
+        
+        <br><br>В майбутньому квантові мови стануть настільки простими, що їх вивчатимуть у школах, але вони керуватимуть системами з мільйонами кубітів.
+        <br> Розробники вже можуть почати з Qiskit чи Cirq, створюючи алгоритми для реальних задач. Почніть свою квантову подорож сьогодні, і, можливо, ви напишете код для наступного прориву!</p>   
+      
+    </section>
+  </div>
+
+  <!-- Draggable Context Button -->
+  <button id="context-btn">☰</button>
+  <!-- Book Button for Modal Menu -->
+  <button id="book-btn">📘</button>
+</div>
+
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
+
+<!-- Inline CSS for Sections, Menu, and Animations -->
+<style>
+  .processors-container {
+    position: relative;
+    min-height: 100vh;
+    width: 1300px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    margin-left: 0px;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
+  }
+
+  .space-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  
+  .content-wrapper {
+    max-width: 1020px;
+    margin-left: 195px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .welcome-text {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #c2cedf;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 1200px;
+    
+  }
+
+  .welcome-text h1 {
+    font-size: 3em;
+    color: #00d4ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00d4ff;
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+  }
+
+  .welcome-text p {
+    font-size: 1.3em;
+    color: #eed8d8;
+    margin: 15px 0;
+  }
+
+  .section {
+    background: #A6B8D3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    animation: fadeInSection 1.2s ease-in;
+    
+    margin-left: 210px;
+    width: 1065px;
+  }
+
+  .section h2 {
+    font-size: 2em;
+    color: #8b7dbb;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+  }
+
+  .section h3 {
+    font-size: 1.5em;
+    color: #eed8d8;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .section p, .section ul, .section ol {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #eed8d8;
+    font-size: 25px;
+    text-align: justify;
+  }
+
+  .section span[style*="font-weight: bold"] {
+    font-weight: bold;
+  }
+
+  .section span[style*="text-decoration: underline"] {
+    text-decoration: underline;
+  }
+
+  .section a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .section a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+
+  .section details summary {
+    font-weight: bold;
+    color: #4a90e2;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .section details ul {
+    color: #eed8d8;
+    font-size: 25px;
+  }
+
+  .code-trigger {
+    color: #00d4ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .code-trigger:hover {
+    color: #b8860b;
+  }
+
+  .code-block {
+    background: #A6B8D3;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 1px solid #4a90e2;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+  }
+
+  .action-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    padding: 14px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  .section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .section th, .section td {
+    padding: 12px;
+    border: 1px solid #4a90e2;
+    text-align: left;
+  }
+
+  .section th {
+    background: #6e90b3;
+    color: #ffffff;
+  }
+
+  .sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-menu.hidden {
+    transform: translateX(-280px);
+  }
+
+  .sidebar-menu h3 {
+    color: #4a90e2;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu-link {
+    display: block;
+    padding: 14px;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #7eade4, #b3c6ca);
+    color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .menu-link:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  #context-btn, #book-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: move;
+    font-size: 22px;
+    z-index: 1000;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: pulseBtn 2s infinite;
+  }
+
+  #context-btn {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  #book-btn {
+    bottom: 25px;
+    right: 80px;
+  }
+
+  #context-btn:hover, #book-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .modal-content {
+    background: linear-gradient(45deg, #003366, #143a81);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #4a90e2;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  #close-modal {
+    color: #00d4ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #close-modal:hover,
+  #close-modal:focus {
+    color: #b8860b;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-content h3 {
+    color: #4a90e2;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .modal-content .menu-link {
+    font-size: 20px;
+    color: #00d4ff;
+    background: none;
+    box-shadow: none;
+    font-style: normal;
+  }
+
+  .modal-content .menu-link:hover {
+    background: #4a90e2;
+    color: #b8860b;
+    transform: scale(1.05);
+  }
+
+  .attribution {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  @media (max-width: 768px) {
+    .processors-container {
+      padding: 10px;
+      width: auto;
+      margin-left: 180px;
+    }
+    .content-wrapper {
+      margin-left: 180px;
+      padding: 20px;
+    }
+    .welcome-text h1 {
+      font-size: 2.2em;
+    }
+    .section h2 {
+      font-size: 1.6em;
+    }
+    .section h3 {
+      font-size: 1.3em;
+    }
+    .section p, .section ul, .section ol, .section details ul {
+      font-size: 20px;
+    }
+    .sidebar-menu {
+      width: 160px;
+    }
+    .sidebar-menu h3 {
+      font-size: 22px;
+    }
+    .menu-link {
+      font-size: 18px;
+      padding: 10px;
+    }
+    #context-btn, #book-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    #book-btn {
+      right: 70px;
+    }
+    .modal-content {
+      width: 80%;
+    }
+    .modal-content .menu-link {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<!-- Inline JavaScript for Draggable Buttons, Menu, and Highlight -->
+<script>
+  // Fade-in sections on load
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.section').forEach((section, index) => {
+    section.style.animationDelay = `${index * 0.2}s`;
+    section.style.animation = 'fadeInSection 1.2s ease-in forwards';
+  });
+});
+
+// Function to make buttons draggable
+function makeDraggable(button) {
+  if (!button) {
+    console.error('Button element is null or undefined');
+    return { getIsDragging: () => false };
+  }
+
+  let isDragging = false;
+
+  button.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    isDragging = true;
+    let shiftX = e.clientX - button.getBoundingClientRect().left;
+    let shiftY = e.clientY - button.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+      button.style.left = pageX - shiftX + 'px';
+      button.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(e) {
+      if (isDragging) {
+        moveAt(e.pageX, e.pageY);
+      }
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    document.addEventListener('mouseup', function() {
+      if (isDragging) {
+        document.removeEventListener('mousemove', onMouseMove);
+        isDragging = false;
+      }
+    });
+
+    button.ondragstart = function() {
+      return false;
+    };
+  }); // Додано відсутню закриваючу дужку
+
+  return { getIsDragging: () => isDragging };
+}
+
+// Draggable context button
+const contextBtn = document.getElementById('context-btn');
+const contextDrag = makeDraggable(contextBtn);
+
+// Toggle sidebar menu on context button click
+contextBtn.addEventListener('click', (e) => {
+  if (!contextDrag.getIsDragging()) {
+    const sidebar = document.getElementById('sidebar-menu');
+    sidebar.classList.toggle('hidden');
+  }
+});
+
+// Draggable book button and modal menu
+const bookBtn = document.getElementById('book-btn');
+const modal = document.getElementById('modal-menu');
+const closeModal = document.getElementById('close-modal');
+const bookDrag = makeDraggable(bookBtn);
+
+bookBtn.addEventListener('click', (e) => {
+  if (!bookDrag.getIsDragging()) {
+    const isVisible = modal.style.display === 'block';
+    modal.style.display = isVisible ? 'none' : 'block';
+    if (!isVisible) {
+      const rect = bookBtn.getBoundingClientRect();
+      modal.style.left = `${rect.left}px`;
+      modal.style.top = `${rect.top - modal.offsetHeight - 10}px`;
+    }
+  }
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// Smooth scroll and highlight for menu links
+document.querySelectorAll('.menu-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('highlight');
+      });
+      target.classList.add('highlight');
+      setTimeout(() => {
+        target.classList.remove('highlight');
+      }, 2000);
+      document.getElementById('sidebar-menu').classList.add('hidden');
+      modal.style.display = 'none';
+    }
+  });
+});
+
+// Show/hide code blocks on click
+document.querySelectorAll('.code-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const codeId = trigger.getAttribute('data-code-id');
+    const codeBlock = document.getElementById(`${codeId}-code`);
+    codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
+  });
+});
+
+// Dynamic highlight style
+const style = document.createElement('style');
+style.textContent = `
+  .highlight {
+    background: linear-gradient(45deg, #003366, #001233) !important;
+    transform: scale(1.02) !important;
+    transition: background 0.3s, transform 0.3s;
+  }
+`;
+document.head.appendChild(style);
+
+
+</script>
+{% endblock %}
+</xaiArtifact>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Quantum-Inspired Programming through an interactive atomic model. Learn quantum processors, algorithms, and more.">
+    <meta name="keywords" content="quantum computing, quantum-inspired programming, quantum algorithms, QML, post-quantum cryptography">
+    <meta name="author" content="Quantum-Inspired Programming Team">
+    <title>{% block title %}Quantum-Inspired Programming{% endblock %}</title>
+    
+    <!-- Favicon (use electron-like icon) -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='electron.svg') }}">
+    
+    <!-- Bootstrap CSS for responsive layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle, #c9d4d6 0%, #c9d4d6 100%);
+            color: #ffffff;
+            transition: opacity 0.3s;
+        }
+        
+        .container {
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 10px;
+            left: 18px;
+            z-index: 7;
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+            color: rgba(77, 8, 19, 0.9);
+            font-size: 10px;
+            font-style:italic;
+            font-weight: 1000;
+        }
+        
+        .back-btn img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 5px  rgba(206, 194, 178, 0.9));
+        }
+        
+        .back-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 980px) {
+            .container {
+                padding: 10px;
+            }
+            .back-btn {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button to Home (Electron Icon) -->
+    <a href="/" class="back-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Electron.svg/512px-Electron.svg.png" alt="Back to Home">
+    </a>
+    
+    <!-- Main Content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <!-- Footer with Attribution -->
+    <footer class="footer">
+       
+        Built with <a href="https://flask.palletsprojects.com/" target="_blank">Flask</a>.
+    </footer>
+    
+    <!-- Bootstrap JS (for potential components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for Smooth Transitions -->
+    <script>
+        // Ensure smooth fade-in on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => { document.body.style.opacity = '1'; }, 100);
+        });
+    </script>
+</body>
+</html>
