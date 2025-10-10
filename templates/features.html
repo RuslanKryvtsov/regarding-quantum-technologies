@@ -102,19 +102,14 @@
             <br><br>де семантика вимірювання (M) враховує ймовірнісний колапс, а інтеграція з Python (через Jupyter) дозволяє гібридні програми для задач, як оптимізація з урахуванням помилок.</p>
    
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">#Q (Q#) акцентує увагу на детальному керуванні квантовими операціями, зокрема для алгоритмів, як-от QAOA, через конструкції для еволюції гамільтоніанів.</p>
-            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
               <li><strong>ApplyInstanceHamiltonian</strong>: Застосовує cost-гамільтоніан (наприклад, модель Ізінга для QUBO) для еволюції станів кубітів.
                 <pre><code>operation ApplyInstanceHamiltonian(nQubits: Int, time: Double, weights: Double[], couplings: Double[], qubits: Qubit[])
               // Застосовує еволюцію Exp(-i * time * H_C)
           </code></pre>
                 <em>Пояснення</em>: Моделює часову еволюцію гамільтоніана, специфічного для задачі оптимізації.
               </li>
-              <li><strong>ApplyDriverHamiltonian</strong>: Застосовує mixer-гамільтоніан для підтримки пошуку квантових станів у QAOA.
-                <pre><code>operation ApplyDriverHamiltonian(time: Double, qubits: Qubit[])
-              // Застосовує еволюцію Exp(-i * time * H_M)
-          </code></pre>
-                <em>Пояснення</em>: Забезпечує змішування квантових станів для дослідження простору рішень у алгоритмах типу QAOA.
-              </li>
+            
             </ul>
           
             <h4 style="color: #0a041d; font-weight: 700; font-size: 28px; font-style: italic;">Cirq: гнучка побудова схем</h4>
@@ -125,17 +120,14 @@
               <br><br>Унікальні особливості — стратегії вставки гейтів та трансформації схем для оптимізації під конкретне обладнання. Приклад побудови схеми: qubit = cirq.GridQubit(0, 0); circuit = cirq.Circuit(cirq.X(qubit)**0.5, cirq.measure(qubit, key='m'));,
               <br><br>  де семантика гейтів (як параметризованих операторів) моделює квантову еволюцію з урахуванням декогеренції, забезпечуючи реалістичні симуляції на квантових процесорах Google.</p>
                                    
-            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+            <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
               <li><strong>cirq.Circuit</strong>: Основний об’єкт для створення квантових схем із гейтами та кубітами.
                 <pre><code>import cirq
           qubits = cirq.LineQubit.range(2)
           circuit = cirq.Circuit(cirq.H(qubits[0]), cirq.CNOT(qubits[0], qubits[1]))</code></pre>
                 <em>Пояснення</em>: Дозволяє точно будувати схеми, оптимізовані для апаратного забезпечення, як-от квантові процесори Google.
               </li>
-              <li><strong>cirq.GridQubit</strong>: Представляє кубіти, розташовані в сітці, відображаючи фізичну топологію квантового апаратного забезпечення.
-                <pre><code>qubit = cirq.GridQubit(0, 0)  # Кубіт у позиції (0,0) сітки</code></pre>
-                <em>Пояснення</em>: Відображає кубіти на фізичні топології апаратного забезпечення для реалістичних симуляцій.
-              </li>
+              
             </ul>
           
             <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Отже</h3>
@@ -168,7 +160,7 @@
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Наприклад, у фреймворку Qiskit (від IBM, базований на Python) парадигма наближається до декларативної: розробники описують квантовий ланцюг через об’єкти 
               на кшталт <code>QuantumCircuit</code>, а система автоматично оптимізує його для виконання на реальних пристроях з урахуванням помилок. 
               
-              <br><br>Це робить процес схожим на складання рецепту, де фокус на результаті, а не на кожному кроці. 
+              <br>>Це робить процес схожим на складання рецепту, де фокус на результаті, а не на кожному кроці. 
               
               <br><br>У <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">Q# (від Microsoft) домінує функціональна парадигма: операції визначаються як чисті функції</span>, що уникають побічних ефектів, а кубіти алокуються динамічно, подібно до класичних мов на кшталт C#. 
               <br><br>Це полегшує <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">моделювання гамільтоніанів — математичних описів квантових систем,</span> — роблячи код більш абстрактним і менш залежним від апаратного забезпечення. 
@@ -176,10 +168,10 @@
               <br><br><span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">Cirq (від Google)</span>, навпаки, підтримує <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">імперативний стиль: розробники явно керують кубітами та гейтами, що дає точний контроль,
                але вимагає більше зусиль для обробки шуму та декогеренції</span> — втрати квантового стану через зовнішні впливи.</p>
           
-            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Глибокий аналіз показує, що <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">квантова парадигма є 
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 27px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left; font-style: italic;">Глибокий аналіз показує, що <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: bold; color: rgb(56, 28, 28);">квантова парадигма є 
               мультипарадигмальною, поєднуючи елементи кількох стилів для гнучкості.</span> 
 
-              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214209622000341-gr016.gif" style="width: 800px; height: 640px;">
+              <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214209622000341-gr016.gif" style="width: 850px; height: 670px; margin-top: 37px; margin-left: 37px;">
               
               <br><br>Згідно з дослідженнями 2024–2025 років, такими як "The Evolution Of Quantum Programming Languages (2000-2025)" від Quantum Zeitgeist, високорівневі семантики, як у Qiskit, підвищують продуктивність розробки, 
               дозволяючи швидко прототипувати алгоритми, але зменшують контроль над деталями. 
@@ -201,10 +193,14 @@
             <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Перспективи створення універсальної високорівневої квантової мови</h2>
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
               
-              <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: left;">  Сучасні квантові мови, такі як Qiskit, Q# та Cirq, демонструють 
+              <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> 
+               
+             Сучасні квантові мови та бібліотеки, такі як Qiskit, Q# і Cirq, демонструють різноманітність підходів до програмування, поєднуючи імперативну, об’єктно-орієнтовану та частково функціональну парадигми.
+             
+             <br><span style="color:#001233;">Наприклад, Qiskit і Cirq, як бібліотеки на основі Python, використовують об’єктно-орієнтований підхід для створення квантових схем, тоді як Q# поєднує імперативний стиль із елементами функціонального та 
+             домено-специфічного програмування, що відображає різні способи організації та виконання квантових алгоритмів:</span>
               
-             різноманітні синтаксичні підходи: 
-                <li>- об’єктно-орієнтований у Qiskit (з використанням Python для створення квантових схем через об’єкти на кшталт QuantumCircuit;</li>
+             <li>- об’єктно-орієнтований у Qiskit (з використанням Python для створення квантових схем через об’єкти на кшталт QuantumCircuit;</li>
                 <li>- функціональний у Q# (з чистими функціями для моделювання гамільтоніанів);</li> 
                 <li>- та імперативний у Cirq (з точним керуванням кубітами).</li> 
             </ul>
@@ -212,11 +208,11 @@
 
             <img src="https://www.researchgate.net/publication/358904863/figure/fig5/AS:11431281368982145@1744297404300/Programming-quantum-computers-Chart-Quantum-computers-necessitate-the-use-of-two-key.tif" style="width: 800px; height: 650px;">
 
-              <br><br> <span style="font-weight: 700;  color: #1e114d; font-size: 28px; text-align: justify;">Ці підходи створюють основу для ідеї універсальної високорівневої квантової мови, яка могла б об’єднати простоту синтаксису з потуж- 
+              <br><br> <span style="color: #271c2b; font-size: 26px; text-align: justify; font-family: 'Cardo', serif; font-style: italic;">Ці підходи створюють основу для ідеї універсальної високорівневої квантової мови, яка могла б об’єднати простоту синтаксису з потуж- 
                 ними абстракціями для створення складного програмного забезпечення,
                включаючи операційні системи (ОС) та прикладні програми.</span>
             
-               <br><br> Однак, станом на 2025 рік, семантичні обмеження — зокрема ймовірнісна природа квантових обчислень і залежність від апаратного забезпечення — ускладнюють реалізацію такої мови.</p>
+               <br><span style="color:#271c2b; font-size: 26px; text-align: justify; font-family: 'Cardo', serif; font-style: italic;"> Однак, станом на 2025 рік, семантичні обмеження — зокрема ймовірнісна природа квантових обчислень і залежність від апаратного забезпечення — ускладнюють реалізацію такої мови.</span></p>
           
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Ключовим викликом є стохастичність квантових операцій: через колапс хвильової функції результати вимірювань кубітів є ймовірнісними, що робить семантику квантового коду нестабільною для задач, де потрібна детермінована поведінка, наприклад, у ядрі ОС. Декогеренція — втрата квантового стану через шум — додатково ускладнює створення надійного системного ПЗ. Наприклад, у Qiskit для симуляції шуму використовуються об’єкти <code>NoiseModel</code>, 
               які дозволяють моделювати помилки апаратного забезпечення, але не усувають їх повністю. 
@@ -343,16 +339,16 @@
        
       .sidebar {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 310px;
-        height: 100vh;
-        padding: 20px;
-        z-index: 999;
-        overflow-y: auto;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 96vh;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: scroll; /* Замість auto */
     
-       background-color: #b3c6ca;
-        transition: transform 0.3s ease;
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
       }
     
       .sidebar:hover {

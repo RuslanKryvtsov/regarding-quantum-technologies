@@ -292,19 +292,19 @@
     z-index: 1;
   }
 
-  
+ 
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 310px;
     height: 100vh;
-    
-    background-color: #b3c6ca; 
     padding: 20px;
     z-index: 999;
-   
-    transition: left 0.3s ease;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
   }
 
   .sidebar h3 {

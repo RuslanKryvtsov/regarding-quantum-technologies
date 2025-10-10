@@ -68,9 +68,9 @@
        
        <br> <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;"> Qiskit надає інструменти у своїй бібліотеці машинного навчання Qiskit для побудови та роботи з квантовими нейронними мережами (QNN). Ось приклади коду, що ілюструють ключові компоненти та базову реалізацію 
           QNN:
-        <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">1. Basic Parameterized Quantum Circuit (PQC) as a building block:
+        <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 25px; color: #0a010e; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">1. Basic Parameterized Quantum Circuit (PQC) as a building block:
         
-        <pre style="font-size: 21px; font-weight: 1000;"><code>
+        <pre style="font-size: 23px; font-weight: 800; color:#003366;"><code>
           theta = ParameterVector('θ', length=2)
           qc = QuantumCircuit(2)
           qc.ry(theta[0], 0)  # Rotation-Y gate on qubit 0 with parameter theta[0]
@@ -80,10 +80,10 @@
 
         </span>
 
-          <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">2. Defining a Quantum Neural Network (QNN) using Qiskit Machine Learning:
+          <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 25px; color: #0a010e; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">2. Defining a Quantum Neural Network (QNN) using Qiskit Machine Learning:
           This example demonstrates creating a SamplerQNN, which is based on the measurement outcomes (samples) of a quantum circuit: </span>
 
-        <pre style="font-size: 21px; font-weight: 1000;"><code>
+        <pre style="font-size: 23px; font-weight: 800; color:#003366;"><code>
           import numpy as np
           from qiskit.circuit.library import ZZFeatureMap, RealAmplitudes
           from qiskit_machine_learning.neural_networks import SamplerQNN
@@ -110,10 +110,10 @@
         </code></pre>
     
         
-     <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">3. Training a QNN for a simple classification task:
+     <br> <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 25px; color: #0a010e; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800; font-style: italic;">3. Training a QNN for a simple classification task:
         This example outlines the structure for training a QNN within a classification context, often involving classical optimization:</span>
 
-        <pre style="font-size: 21px; font-weight: 1000;"><code>
+        <pre style="font-size: 23px; font-weight: 800; color:#003366;"><code>
           import numpy as np
           from qiskit.circuit.library import ZZFeatureMap, RealAmplitudes
           from qiskit_machine_learning.neural_networks import SamplerQNN
@@ -154,7 +154,7 @@
       
         </p>
 
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left; font-weight: 800; font-style: italic; text-align: justify;">  Звичайно, це дуже спрощений зразок коду створення QNN (квантової нейромережі), з використанням квантових схем (quantum circuits); <br>в другому фрагменті кода
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 25px; color: #0a010e; animation: colorShiftCardo 5s infinite alternate; text-align: left; font-weight: 800; font-style: italic; text-align: justify;">  Звичайно, це дуже спрощений зразок коду створення QNN (квантової нейромережі), з використанням квантових схем (quantum circuits); <br>в другому фрагменті кода
           ми вже визначаємо квантову нейромережу (QNN) використовуючи бібліотеку мови Python - numpy та фреймворк qiskit, а саме:  qiskit.circuit.library, qiskit_machine_learning.neural_networks, qiskit primitives
           <br>В третьому прикладі - тренування квантової мережі (QNN) для вирішення задачі простої класифікації.</p>
                      
@@ -164,7 +164,7 @@
         <br><span style="font-weight: bold;  color: rgb(56, 28, 28);">Інтерференція підсилює правильні рішення,</span> пригнічуючи помилкові, як хвилі, що створюють гармонію в океані хаосу. 
         <br><br><span style="font-weight: bold;  color: rgb(56, 28, 28);">У 2025 році QML використовує гібридні системи: класичні алгоритми (наприклад, TensorFlow) оптимізують параметри квантових схем,</span> а квантові ядра (quantum kernels) оцінюють відстані в багатовимірних просторах. 
         <br><br>Це дозволяє, наприклад, класифікувати молекулярні структури для drug discovery у 10 разів швидше, ніж класичні SVM. <span style="font-weight: bold;  color: rgb(56, 28, 28);">Однак обмеження – декогеренція та потреба в error correction (QECC) – роблять гібридний підхід критичним.</span></p>      <div id="quantum-circuit-code" class="code-block" style="display: none;">
-        <pre>
+        <pre style="font-size: 23px; font-weight: 800; color:#003366;">
 import pennylane as qml
 dev = qml.device('default.qubit', wires=2)
 @qml.qnode(dev)
@@ -192,7 +192,7 @@ def circuit(params):
          <br> Обмеження – висока чутливість до декогеренції та потреба в QECC, що збільшує overhead (49 фізичних кубітів на 1 логічний у surface code).
          <br><br> Проте гібридний підхід дозволяє використовувати сучасні квантові процесори (<span style="font-weight: bold;  color: rgb(56, 28, 28);">Google Willow, IBM Loon)</span> для практичних задач, як-от оптимізація логістики чи моделювання хімічних реакцій.</p>
       <div id="hybrid-qsvm-code" class="code-block" style="display: none;">
-        <pre>
+        <pre style="font-size: 23px; font-weight: 800; color:#003366;">
 import pennylane as qml
 from pennylane import numpy as np
 dev = qml.device('default.qubit', wires=4)
@@ -391,21 +391,19 @@ def generator_circuit(params):
     opacity: 0.65;
     z-index: 1;
   }
-
   
-
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 310px;
     height: 100vh;
-    
-    background-color: #b3c6ca; 
     padding: 20px;
     z-index: 999;
-   
-    transition: left 0.3s ease;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
   }
 
   .sidebar h3 {

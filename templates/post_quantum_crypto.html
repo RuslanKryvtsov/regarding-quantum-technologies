@@ -39,44 +39,24 @@
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700;">Проблематика PQC: Чому класична криптографія в небезпеці</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Класична криптографія – це як старовинний замок із хитромудрими ключами: <span style="font-weight: bold;  color: #afab6e;">RSA, ECDSA чи Diffie-Hellman забезпечують безпеку Інтернету, банківських транзакцій і IoT-пристроїв.</span> 
-        <br><br>Але квантовий комп’ютер із <span class="code-trigger" data-code-id="shor-alg">алгоритмом Шора</span> загрожує зламати ці системи за лічені секунди. Хоча повноцінний "quantum advantage" для криптоатак ще попереду, NIST уже стандартизує постквантові алгоритми, щоб захистити fintech, healthcare та IoT. 
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Класична криптографія – це як старовинний замок із хитромудрими ключами: <span style="font-weight: bold;  color: rgb(56, 28, 28);">RSA, ECDSA чи Diffie-Hellman забезпечують безпеку Інтернету, банківських транзакцій і IoT-пристроїв.</span> 
+        <br><br>Але квантовий комп’ютер із алгоритмом Шора загрожує зламати ці системи за лічені секунди. Хоча повноцінний "quantum advantage" для криптоатак ще попереду, NIST уже стандартизує постквантові алгоритми, щоб захистити fintech, healthcare та IoT. 
         <br><br>Проблема: сучасні протоколи (TLS, VPN) покладаються на вразливі алгоритми, і перехід на PQC – це не просто оновлення, а глобальна перебудова інфраструктури. 
         Щоб захистити цифровий світ, потрібно переосмислити його основи, 
        подібно до того, як квантова механіка змінила погляд на Всесвіт. 
-        <br><br><span style="font-weight: bold;  color: #afab6e;">PQC – це не "патч", а нова парадигма</span>, що забезпечує стійкість до квантових атак, зберігаючи сумісність із класичними системами.</p>
+        <br><br><span style="font-weight: bold;  color: rgb(56, 28, 28);">PQC – це не "патч", а нова парадигма</span>, що забезпечує стійкість до квантових атак, зберігаючи сумісність із класичними системами.</p>
 
         <img src="https://images.synopsys.com/is/image/synopsys/quantum-cryptography-vs-post-quantum-cryptography?$social-post$" style="width: 710px; height: 610px;" alt="Квантова криптографія проти постквантової криптографії">
-
-      <div id="shor-alg-code" class="code-block" style="display: none;">
-        <pre>
-from qiskit import QuantumCircuit
-qc = QuantumCircuit(4, 2)
-qc.h(range(2))  # Суперпозиція
-qc.cx(0, 2)     # Заплутаність
-qc.cx(1, 3)
-qc.measure([2, 3], [0, 1])
-        </pre>
-      </div>
-      <p><a href="https://www.itpro.com/technology/quantum-computing/post-quantum-cryptography" target="_blank">ITProToday: Post-Quantum Cryptography 2025</a></p>
+    
     </section>
 
     <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700;">Теоретичні основи: як працює постквантова криптографія</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Постквантова криптографія (PQC) – це як космічний щит, що захищає дані від квантових атак.
-        <br> На відміну від <span style="font-weight: bold;  color: #856108;">RSA</span>, яке спирається на <span style="font-weight: bold;  color: #afab6e;">складність факторизації</span>, чи <span style="font-weight: bold;  color: #856108;">ECDSA</span>, що базується на <span style="font-weight: bold;  color: #afab6e;">дискретному логарифмі</span>, <span style="font-weight: bold;  color: #856108;">PQC</span> використовує математичні задачі, <span style="font-weight: bold;  color: #afab6e;">стійкі до квантових алгоритмів</span>, таких як Шора чи Гровера.
-        <br><br> <span style="font-weight: bold; text-decoration: underline;">Основні категорії PQC: <span class="code-trigger" data-code-id="kyber-alg">lattice-based</span> (Kyber, NTRU), hash-based (SPHINCS+), code-based (McEliece), multivariate quadratic та supersingular elliptic curves.</span>
+        <br> На відміну від <span style="font-weight: bold;  color: rgb(56, 28, 28);">RSA</span>, яке спирається на <span style="font-weight: bold;  color: rgb(56, 28, 28);">складність факторизації</span>, чи <span style="font-weight: bold;  color: rgb(56, 28, 28);">ECDSA</span>, що базується на <span style="font-weight: bold;  color: rgb(56, 28, 28);">дискретному логарифмі</span>, <span style="font-weight: bold;  color: rgb(56, 28, 28);">PQC</span> використовує математичні задачі, <span style="font-weight: bold;  color: rgb(56, 28, 28);">стійкі до квантових алгоритмів</span>, таких як Шора чи Гровера.
+        <br><br> <span style="font-weight: bold; text-decoration: underline;">Основні категорії PQC: lattice-based (Kyber, NTRU), hash-based (SPHINCS+), code-based (McEliece), multivariate quadratic та supersingular elliptic curves.</span>
         <br><br>  Уявіть lattice-based криптографію як лабіринт у багатовимірному просторі: знайти вихід (зламати) складно навіть для квантового комп’ютера, бо це потребує вирішення задачі найкоротшого вектора (SVP). Hash-based підписи, навпаки, – це як цифровий відбиток, що залежить від криптографічних хеш-функцій, стійких до квантових атак Гровера. <br><br>У 2025 році NIST стандартизував Kyber і Dilithium, які поєднують ефективність (невеликий розмір ключів) і безпеку.  <br><br>Наприклад, Kyber забезпечує шифрування з ключами ~1 KB, що ідеально для IoT. Обмеження: більший обчислювальний overhead порівняно з RSA, але це ціна за безпеку в квантовій ері.</p>
-      <div id="kyber-alg-code" class="code-block" style="display: none;">
-        <pre>
-from oqs import KeyEncapsulation
-kyber = KeyEncapsulation("Kyber512")
-public_key = kyber.generate_keypair()
-ciphertext, shared_secret = kyber.encap_secret(public_key)
-decrypted_secret = kyber.decap_secret(ciphertext)
-        </pre>
-      </div>
-      <p><a href="https://openquantumsafe.org/" target="_blank">OpenQuantumSafe Repository</a></p>
+      
     </section>
 
     <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
@@ -138,7 +118,7 @@ decrypted_secret = kyber.decap_secret(ciphertext)
         
         <br><br>Обмеження: PQC потребує більших ключів і обчислень, що ускладнює інтеграцію в старі системи, але гібридні протоколи (RSA+Kyber) вирішують цю проблему. 
        
-        <br><br><span style="font-weight: 700;  color: #afab6e; text-decoration: underline;">У 2025 році Google Chrome і Mozilla Firefox тестують PQC у TLS 1.3, забезпечуючи сумісність із класичними системами.</span></p>
+        <br><br><span style="font-weight: 700;  color: rgb(56, 28, 28); text-decoration: underline;">У 2025 році Google Chrome і Mozilla Firefox тестують PQC у TLS 1.3, забезпечуючи сумісність із класичними системами.</span></p>
     </section>
 
     <section id="section5" class="section">
@@ -150,17 +130,7 @@ decrypted_secret = kyber.decap_secret(ciphertext)
          <br><br> PQC, як Kyber, захищає, використовуючи задачі, які навіть Шор не може вирішити ефективно. 
         
         <br><br>Симуляція Шора в Qiskit показує, як квантова суперпозиція та заплутаність розв’язують задачу факторизації.</p>
-      <div id="shor-sim-code" class="code-block" style="display: none;">
-        <pre>
-from qiskit import QuantumCircuit, Aer, execute
-qc = QuantumCircuit(4, 2)
-qc.h([0, 1])  # Суперпозиція для періодичного пошуку
-qc.cx(0, 2)
-qc.cx(1, 3)
-qc.measure([2, 3], [0, 1])
-result = execute(qc, Aer.get_backend('qasm_simulator')).result()
-        </pre>
-      </div>
+      
     </section>
 
     <section id="section6" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
@@ -206,18 +176,9 @@ result = execute(qc, Aer.get_backend('qasm_simulator')).result()
         <br><br>Уявіть: кожен ваш пароль, транзакція чи медичний запис шифрується Kyber чи Dilithium, стійкими до алгоритму Шора.
         
        <br><br>У 2025 році компанії, як IBM і Google, інвестують у гібридні системи, де PQC працює поряд із QECC для квантових мереж. 
-       OpenQuantumSafe дозволяє розробникам тестувати PQC уже сьогодні, використовуючи <span class="code-trigger" data-code-id="pqc-test">бібліотеки для Python; хмарні платформи (AWS, Azure) і стандарти NIST спрощують цей шлях. </span>. 
+       OpenQuantumSafe дозволяє розробникам тестувати PQC уже сьогодні, використовуючи бібліотеки для Python; хмарні платформи (AWS, Azure) і стандарти NIST спрощують цей шлях.  
        
-      <div id="pqc-test-code" class="code-block" style="display: none;">
-        <pre>
-from oqs import Signature
-dilithium = Signature("Dilithium2")
-public_key = dilithium.generate_keypair()
-message = b"Secure message"
-signature = dilithium.sign(message)
-verify = dilithium.verify(message, signature, public_key)
-        </pre>
-      </div>
+      
     </section>
   </div>
 
