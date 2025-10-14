@@ -1,4 +1,3 @@
-<xaiArtifact artifact_id="f095a08e-c726-42ba-a966-301da749515f" artifact_version_id="f8f4d3a5-2904-4fad-b3c3-cc923d844cc0" title="home.html" contentType="text/html">
 {% extends "base.html" %}
 
 {% block title %}Quantum-Inspired Programming - Explore the Microverse{% endblock %}
@@ -22,7 +21,6 @@
       <li><a href="/tools" class="nav-button" data-tab-id="">Інструменти розробника</a></li>
       <li><a href="/features" class="nav-button" data-tab-id="">Квантовий код: дослідження синтаксичних та семантичних особливостей</a></li>
       <li><a href="/blog" class="nav-button" data-tab-id="">Блог</a></li> 
-  
     </ul>
   </div>
 
@@ -85,14 +83,12 @@
         <div class="particle-shape"></div>
         <span class="label">Community</span>
       </a>
-      
     </div>
   </div>
-  <body style="background-image: url('https://quantumai.google/images/og-image.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></body>
 
   <!-- Welcome text -->
   <div class="welcome-text">
-    <h1 style="color: #2b1b64; text-align: center; margin-bottom: 20px; font-size: 1.8em; text-shadow: 0 0 5px #dddf99;  font-size: 37px; font-weight: 820;">Quantum-Inspired Programming</h1>
+    <h1 style="color: #2b1b64; text-align: center; margin-bottom: 20px; font-size: 1.8em; text-shadow: 0 0 5px #dddf99; font-size: 37px; font-weight: 820;">Quantum-Inspired Programming</h1>
     <p style="color: #d1a974; text-align: center; margin-bottom: 20px; font-size: 23px; font-weight: 1050; font-style: italic;">Click a particle to explore the quantum microverse!</p>
   </div>
 </div>
@@ -101,31 +97,16 @@
 <style>
   .landing-container {
     position: relative;
-    height: 190vh;
+    height: 100vh;
     overflow: hidden;
-    background: radial-gradient(circle, #B0E0E633 20%, #87CEEB80 80%);  
-    background-image: url('https://quantumai.google/images/og-image.png');  
-    width: 1300px;
-    margin-left: 100px;
-  }
-
-  .space-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-
-    background-image: url('https://quantumai.google/images/og-image.png');  
+    background-image: url('https://quantumai.google/images/og-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.6;
-    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  
   .atom-wrapper {
     position: absolute;
     top: 50%;
@@ -183,7 +164,6 @@
     font-weight: 1000;
     font-size: 9px;
     text-align: center;
-    
     z-index: 5;
   }
 
@@ -191,31 +171,31 @@
     position: absolute;
     border: 1px dashed rgba(120, 142, 156, 0.3);
     border-radius: 50%;
-    animation: rotate 21s linear infinite; /* Adjusted speed */
+    animation: rotate 21s linear infinite;
   }
 
   .inner-orbit {
-    width: 150px; /* Intermediate radius */
+    width: 150px;
     height: 150px;
     top: 140px;
     left: -20px;
-    animation-duration: 16s; /* Adjusted speed */
+    animation-duration: 16s;
   }
 
   .middle-orbit {
-    width: 290px; /* Intermediate radius */
+    width: 290px;
     height: 290px;
     top: 90px;
     left: -60px;
-    animation-duration: 34s reverse; /* Adjusted speed */
+    animation-duration: 34s reverse;
   }
 
   .outer-orbit {
-    width: 300px; /* Intermediate radius */
+    width: 300px;
     height: 300px;
     top: 50px;
     left: -60px;
-    animation-duration: 18s; /* Adjusted speed */
+    animation-duration: 18s;
   }
 
   .sidebar {
@@ -225,7 +205,6 @@
     width: 350px;
     height: 100vh;
     background: linear-gradient(180deg, #A6B8D3 0%, #DEB887 100%);
-   
     padding: 20px;
     z-index: 999;
     overflow-y: auto;
@@ -243,7 +222,7 @@
     padding: 12px;
     margin: 8px 0;
     background: linear-gradient(45deg, #b3c6ca, #ecb789);
-    color: #211255; 
+    color: #211255;
     text-align: left;
     text-decoration: none;
     border-radius: 8px;
@@ -284,7 +263,6 @@
     text-align: center;
     color: #7d93cf;
     z-index: 4;
-   
     animation: fadeIn 2s ease-in-out;
   }
 
@@ -376,10 +354,10 @@
   // Random glow and chaotic movement for particles
   function randomGlowAndMove() {
     document.querySelectorAll('.particle').forEach(el => {
-      const randomX = Math.sin(Date.now() / 2000) * 4; // Adjusted amplitude
+      const randomX = Math.sin(Date.now() / 2000) * 4;
       const randomY = Math.cos(Date.now() / 2000) * 4;
       const baseTransform = el.style.transform;
-      el.style.transform = `${baseTransform} translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 180}deg)`; // Reduced rotation
+      el.style.transform = `${baseTransform} translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 180}deg)`;
       const shape = el.querySelector('.particle-shape');
       shape.style.filter = `drop-shadow(0 0 ${Math.random() * 5 + 5}px #00ffff)`;
     });
@@ -402,4 +380,3 @@
 
 <p class="attribution">Images from Wikimedia Commons (Public Domain).</p>
 {% endblock %}
-</xaiArtifact>
