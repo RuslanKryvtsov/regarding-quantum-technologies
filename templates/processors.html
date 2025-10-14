@@ -130,13 +130,36 @@
       <h2 style="color: #0a041d; font-weight: 700;">Частина 3: Архітектура – гібридні та нові конфігурації</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="font-weight: bold;  color: rgb(56, 28, 28);">Традиційна Von Neumann (shared memory для даних/інструкцій) не найкраще рішення для квантових систем через декогеренцію та ймовірнісність.</span></p>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="text-decoration: underline; font-weight: 600;">Замість цього – <span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline;">гібридні архітектури: quantum core (qubits для паралельних обчислень)</span> + <span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline;">classical co-processor (error correction, control).</span></p>
-      <ol style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">А також, нові моделі:
-        <li>load-store (NTT, 2025) з окремою quantum memory;</li>
-        <li>measurement-based (MBQC) де обчислення – серія вимірювань;</li>
-        <li>topological braiding (Microsoft) без динамічних гейт.</li>
-      </ol>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Мікросвіт вимагає ізоляції, тому процесори – не в десктопах, а в дата-центрах (IBM Quantum Data Center, 2025) з dilution refrigerators та вакуумними камерами.</p>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Конфігурація: модульні чіпи в рексах, інтеграція з класичними GPU/CPU via quantum links.</p>
+      
+      <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #0a051d; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Архітектура квантових комп'ютерів на основі надпровідникових кубітів характеризується компактним процесором (чіпом із кубітами), який займає лише малу частину загального об'єму системи. 
+       <br>Мікросвіт вимагає захисту від зовнішніх впливів, а тому Основний простір відводиться складним системам ізоляції та охолодження, зокрема розведеному холодильнику (dilution refrigerator), що забезпечує наднизькі температури (~10 mK) через багатоступеневу систему охолодження 
+        (від 300 K до мілікельвінів).
+        <br><br>  Вакуумна ізоляція підтримує термічну та механічну стабільність, а магнітні екрани з мю-металу (mu-metal) і криоперму (cryoperm) захищають кубіти від електромагнітних перешкод.</p>
+     <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Зверху холодильника кріпляться численні коаксіальні кабелі, мікрохвильові лінії та флюкс-проводи, які з'єднуються з зовнішніми контролерами для керування кубітами, зчитування квантових станів і подачі живлення. 
+      <br><br>Ці кабелі проходять через низькочастотні фільтри, аттенюатори та теплові якорі на кожній температурній ступені, щоб мінімізувати теплові шуми. Додаткові компоненти включають кріогенні підсилювачі (HEMT або квантові параметричні підсилювачі) для посилення сигналів зчитування, 
+      <br>а також інфрачервоні абсорбери для зменшення теплового випромінювання.</p>
+    <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Конструктивні модулі, такі як теплові поглиначі (heat sinks), опорні рами та кріогенні конектори, забезпечують структурну стабільність і масштабованість системи. 
+      Оптичні порти та спеціалізовані роз'єми дозволяють інтегрувати додаткові модулі для квантової комунікації чи масштабування. 
+      </p>
+    
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"></p>
+      
+      <img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-29082-4_22/MediaObjects/513503_1_En_22_Fig2_HTML.png" style="width: 440px; height: 350px; " alt="Image">
+      <img src="https://attend.ieee.org/qc-dcep/wp-content/uploads/sites/561/QC.jpg" style="width: 420px; height: 360px ; margin-right: 5px;" alt="Image">
+    
+      <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #0a051d; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Усі ці елементи разом забезпечують стабільну роботу квантового процесора в умовах наднизьких температур і мінімальних зовнішніх впливів.</p>
+      
+      <img src="https://www.sharetechnote.com/html/QC/image/QC_HW_Chipset_01.png" style="width: 460px; height: 440px; margin-top: 20px;" alt="Image">
+
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        Квантові процесори (QPU) не схожі на звичайні комп'ютерні чіпи, які використовують мільйони транзисторів на кремнієвій пластині, створених за допомогою 2-нм чи 3-нм технологій для обробки даних у вигляді 0 і 1. 
+        <br>Замість цього, квантові процесори використовують кубіти — спеціальні елементи, які можуть одночасно бути в стані 0, 1 або їх комбінації завдяки квантовій суперпозиції.</p>
+        <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #0a051d; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Основою квантового процесора є <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">надпровідникові кубіти, наприклад, трансмони</span>, створені з джозефсоновими переходами (спеціальними надпровідними контактами).
+        <br> Вони обробляють інформацію, зберігаючи квантові стани, які дозволяють виконувати складні обчислення швидше, ніж класичні комп'ютери, для певних задач, як-от оптимізація чи криптографія.</p>
+        <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #0a051d; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Кубіти з’єднані з <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">резонаторами — пристроями, які "зчитують" стан кубітів, передаючи сигнали назовні</span>. Контрольні лінії надсилають мікрохвильові імпульси, щоб змінювати стан кубітів, керуючи обчисленнями. 
+        <br><br>Чіп виготовляється на кремнієвій основі, але з грубшими структурами (близько 350 нм), ніж у звичайних процесорах, і потребує наднизьких температур для роботи без шумів.</p>
+
+        <br> <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Конфігурація: модульні чіпи в рексах, інтеграція з класичними GPU/CPU via quantum links.</p>
       <details>
         <summary><span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline;">Альтернативи Von Neumann</span></summary>
         <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
@@ -740,4 +763,3 @@
     document.head.appendChild(style);
 </script>
 {% endblock %}
-
