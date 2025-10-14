@@ -50,6 +50,8 @@
             <br><br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> У 2025 році, за Quantum Zeitgeist, 60% квантових розробників використовують Python-інтегровані фреймворки, як Qiskit, завдяки їхній доступності. 
              
             <br>Наприклад, Qiskit дозволяє створювати алгоритми, як VQE, за кілька рядків коду, а Cirq оптимізує схеми для Google Willow. </p>
+
+          
              
              <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інструменти поділяються на:
               <li>1) <strong>Фреймворки</strong> для створення схем (Qiskit, Cirq);</li>
@@ -59,7 +61,9 @@
               <li> 5) <strong>Дебагери</strong> для аналізу схем.</li> 
             </ul>
 
-            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> <br><br>  Парадокс: ці інструменти виглядають як класичні IDE, але керують кубітами, чутливими до декогеренції.
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left;">   Парадокс: ці інструменти виглядають як класичні IDE, але керують кубітами, чутливими до декогеренції.
+              <img src="https://www.hpcwire.com/wp-content/uploads/2022/09/Intel_Quantum_SDK.png" style="width: 690px; height: 450px;">
+             
               <br><br> Симулятори, як Qiskit Aer, дозволяють тестувати код локально.</p>      
         </section>
     
@@ -70,7 +74,7 @@
             
             <br><br>Парадокс: Qiskit виглядає як Python-бібліотека, але керує QPU з декогеренцією. 
             
-            <span class="code-trigger" data-code-id="qiskit-tool">Qiskit код</span> демонструє створення схеми. 
+            Qiskit код демонструє створення схеми. 
             
             <br><br> Обмеження: симуляція великих схем потребує значних ресурсів, але хмарні QPU вирішують це.</p>     
       </section>
@@ -91,7 +95,7 @@
           <h2 style="color: #0a041d; font-weight: 700;">IBM Quantum Lab: хмарна платформа для розробки</h2>
           <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">IBM Quantum Lab – це як космічна лабораторія, де розробники тестують квантові алгоритми на реальних QPU. У 2025 році платформа надає доступ до IBM Loon (1000 кубітів) і симуляторів Aer. Уявіть: програміст запускає VQE для моделювання молекули через браузер, без фізичного QPU. IBM Quantum Lab використовується в 40% квантових проєктів (Quantum Zeitgeist), зокрема Merck для дизайну ліків. Платформа включає візуалізацію схем і дебагери, що робить її аналогом браузерних DevTools для квантового коду.
             <br> Парадокс: це хмарна платформа, але керує фізичними QPU.
-            <br><br>   <span class="code-trigger" data-code-id="ibm-lab">Код для IBM Quantum Lab</span> показує запуск схеми. 
+            <br><br>   Код для IBM Quantum Labпоказує запуск схеми. 
              <br><br>   Обмеження: латентність хмарного доступу, але симулятори компенсують це.</p>
                 
         </section>
@@ -102,12 +106,13 @@
             <br><br> У 2025 році Google використовує TFQ для діагностики раку, досягнувши 95% точності.
              TFQ включає симулятори та дебагери, що робить його аналогом Jupyter Notebook для QML.
              TFQ виглядає як TensorFlow, але працює з кубітами. 
-             <br><br>  <span class="code-trigger" data-code-id="tfq-tool">TFQ код</span> показує QNN. Обмеження: потребує знання ML і квантової механіки, але документація спрощує це.</p>        
+             <br><br> Обмеження: потребує знання ML і квантової механіки, але документація спрощує це.</p>        
         </section>
     
         <section id="section10" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
           <h2 style="color: #0a041d; font-weight: 700;">Майбутнє квантових інструментів: код для Всесвіту</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту. До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач. Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.            <br> Почніть із <span class="code-trigger" data-code-id="future-tool">Qiskit</span>, щоб долучитися до квантової революції!</p>                        
+          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту. До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач. Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.           
+             <br> Почніть із Qiskit, щоб долучитися до квантової революції!</p>                        
         </section>
       </div>
     
