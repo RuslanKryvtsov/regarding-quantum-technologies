@@ -4,16 +4,10 @@
 
 {% block content %}
 <div class="container">
-  <!-- Космічний фон із анімованими зірками -->
-  <div class="space-bg">
-    <div class="stars top-stars"></div>
-    <div class="stars left-stars"></div>
-    <div class="stars right-stars"></div>
-  </div>
-
+ 
   <!-- Бічна панель для навігації -->
   <div class="sidebar" id="sidebar">
-    <h3 style="color: #2c2104; font-size: 31px; text-align: center; margin-bottom: 31px;">Навігація по постквантовій криптографії</h3>
+    <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;"">Навігація по веб-сторінці постквантова криптографія</h3>
     <ul>
       <li><a href="#section1" class="nav-button">Проблематика PQC</a></li>
       <li><a href="#section2" class="nav-button">Теоретичні основи</a></li>
@@ -31,7 +25,7 @@
   <div class="content">
     <div class="welcome-text">
       <h1 style="color: #7c0e14; font-size: 1.2em; font-size: 44px; text-align: center; font-style: italic; margin-right: 50px; font-weight: 900;">Постквантова криптографія: захист даних у квантовому майбутньому</h1>
-      <p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 980px; margin-right: 155px;">Уявіть цифровий світ як фортецю, де кожен замок – це RSA чи ECDSA. Квантовий комп’ютер із алгоритмом Шора – це таран, що загрожує зруйнувати ці стіни. 
+      <p style="color: rgb(63, 28, 28); font-size: 29px; text-align: justify; width: 940px; margin-right: 170px; font-weight: 1700; -webkit-text-stroke: 1px black;">Уявіть цифровий світ як фортецю, де кожен замок – це RSA чи ECDSA. Квантовий комп’ютер із алгоритмом Шора – це таран, що загрожує зруйнувати ці стіни. 
         <br>Постквантова криптографія (PQC) – ваш новий щит, створений для захисту в епоху квантових загроз.</p>
     </div>
 
@@ -289,9 +283,25 @@
   }
 
   .welcome-text {
+    
+    margin-left: 0px;
     text-align: center;
-    color: #00d4ff;
+    color: #ffffff; /* White for higher contrast */
+    animation: fadeIn 2s ease-in-out;
+    padding: 40px 20px;
+    background-image: url('https://www.nxp.jp/assets/images/en/blogs/POST-QUANTUM-CRYPTOGRAPHY-1140x380.jpg');
+    background-size: 135%; /* Scales the image to 70% of its original size */
+    background-position: center; /* Keeps image aligned to the left, vertically centered */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 10px;
+    width: 100%; /* Maintains specified width */
+    min-height: 430px; /* Maintains minimum height */
+    background-color: rgba(197, 210, 212, 0.3); /* Maintains transparency */
+    background-blend-mode: overlay; /* Blends image with background color */
+    text-shadow: 1px 1px 2px rgba(223, 211, 211, 0.8); /* Maintains text shadow for contrast */
   }
+
+  
 
   .welcome-text h1 {
     font-size: 45px;

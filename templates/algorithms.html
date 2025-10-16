@@ -13,7 +13,7 @@
 
   <!-- Бічна панель для навігації -->
   <div class="sidebar">
-    <h3>Навігація по квантових алгоритмах</h3>
+    <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;">Навігація по веб-сторінці квантові алгоритми</h3>
     <ul>
       <li><a href="#section1" class="nav-button">Основи квантових алгоритмів</a></li>
       <li><a href="#section2" class="nav-button">Історія виникнення</a></li>
@@ -49,13 +49,17 @@
   <!-- Основний вміст -->
   <div class="content">
     <div class="welcome-text">
-      <h1 style="color: #921319; font-size: 1.1em; font-size: 44px; text-align: center; font-style: italic; margin-right: 170px; font-weight: 900;">Квантові алгоритми: код для розблокування Всесвіту</h1>
-      <p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 960px; margin-right: 120px;">Уявіть квантовий алгоритм як карту зоряного неба, де кожна зірка – це кубіт, що світить у всіх можливих станах одночасно. 
-        <br>Ці алгоритми – ключ до вирішення задач, які класичним комп’ютерам здаються галактичними лабіринтами.</p>
+      
+     
     </div>
 
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h1 style="color: #6e080d;  font-size: 48px; text-align: center; font-style: italic; margin-right: 60px; font-weight: 1200; margin-top: 15px;">Квантові алгоритми: код для розблокування Всесвіту</h1>
+    
+      <br><br> <p style="font-weight: 950;  color: rgb(56, 28, 28); font-size: 31px; text-align: justify; width: 1120px; margin-right: 130px; font-style: italic;">Уявіть квантовий алгоритм як карту зоряного неба, де кожна зірка – це кубіт, що світить у всіх можливих станах одночасно. 
+        <br>Ці алгоритми – ключ до вирішення задач, які класичним комп’ютерам здаються галактичними лабіринтами.</p>
+     
       <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left; ">Основи квантових алгоритмів: що це таке</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантові алгоритми – це як космічні навігатори, що використовують закони квантової механіки – суперпозицію, заплутаність і інтерференцію – для вирішення задач швидше, ніж класичні комп’ютери.
         
@@ -275,8 +279,9 @@
     padding: 20px;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    width: 1200px;
+    width: 1600px;
     margin-right: 150px;
+    margin-left: 110px;
     
   }
 
@@ -350,15 +355,26 @@
   }
 
   .welcome-text {
+    margin-left: 0px;
     text-align: center;
+    color: #ffffff; /* Changed to white for higher contrast */
+    animation: fadeIn 2s ease-in-out;
     padding: 40px 20px;
-    background-color: #c2cedf;
+    background-image: url('https://www.researchgate.net/publication/323904792/figure/fig3/AS:606458651607046@1521602418270/A-quantum-programming-model.png');
+    background-size: 86%; /* Image fits within the div without stretching */
+    background-position: left center; /* Moves image to the bottom to avoid text overlap */
+    background-repeat: no-repeat; /* Prevents image repetition */
     border-radius: 10px;
-    margin: 20px 0;  
-    width: 1000px;  
     
+    width: 115%; /* Maintains full width of parent */
+    min-height: 360px; /* Maintains minimum height */
+    background-color: rgba(197, 210, 212, 0.3); /* Increased opacity to 0.7 for better text readability */
+    background-blend-mode: overlay; /* Blends image with background color */
+    text-shadow: 1px 1px 2px rgba(223, 211, 211, 0.8); /* Adds shadow to text for contrast */
+   
   }
 
+  
   .welcome-text h1 {
     font-size: 3em;
     margin: 0;
@@ -378,7 +394,7 @@
     color: #ffffff;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-    width: 1000px;
+    width: 1200px;
     margin-left: 130px;
   }
 

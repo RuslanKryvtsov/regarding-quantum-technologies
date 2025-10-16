@@ -7,16 +7,11 @@
 
 {% block content %}
 <div class="container">
-  <!-- Космічний фон із анімованими зірками -->
-  <div class="space-bg">
-    <div class="stars top-stars"></div>
-    <div class="stars left-stars"></div>
-    <div class="stars right-stars"></div>
-  </div>
+  
 
   <!-- Бічна панель для навігації -->
   <div class="sidebar">
-    <h3 style="color: #0a041d; font-weight: 700;">Навігація по QML & AI</h3>
+    <h3 style="color: #80090f; font-style: italic; font-size: 25px; font-weight: 900;">Навігація по веб-сторінці QML & AI</h3>
     <ul>
       <li style="color: #b8860b; font-size: 1.1em; font-size: 31px; text-align: justify; font-style: italic; font-weight: 600;"><a href="#section1" class="nav-button">Проблематика QML</a></li>
       <li style="color: #b8860b; font-size: 1.1em; font-size: 25px; text-align: justify; font-style: italic; font-weight: 600;"><a href="#section2" class="nav-button">Теоретичні основи</a></li>
@@ -35,9 +30,10 @@
     <div class="welcome-text">
       <h1 style="color: #7c0e14; font-size: 1.2em; font-size: 44px; text-align: center; font-style: italic; margin-right: 170px; font-weight: 900;">Поєднання штучного інтелекту з <br>квантовим світом</h1>
      
-      <p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 1000px; margin-right: 150px;">Уявіть Всесвіт як гігантську нейронну мережу, де кубіти – це нейрони, 
+      <p style="font-weight: 950;  color: rgb(48, 21, 21); font-size: 29px; text-align: justify; width: 940px; margin-right: 150px;">Уявіть Всесвіт як гігантську нейронну мережу, де кубіти – це нейрони, 
         що обчислюють у всіх можливих станах одночасно. <br><br>Квантове машинне навчання (QML) – це міст між класичним AI та квантовим хаосом, що відкриває двері до нових горизонтів.</p>
-    </div>
+          
+     </div>
 
     
     <!-- Розділи -->
@@ -454,7 +450,21 @@ def generator_circuit(params):
     color: #00d4ff;
     
     animation: fadeIn 2s ease-in-out;
-  }
+
+    
+    padding: 40px 20px;
+    background-image: url('https://www.ibusinesstalk.co.uk/wp-content/uploads/2025/04/Quantum-AI-in-Finance.jpg');
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 80%; /* Full width of the parent container */
+    min-height: 170px; /* Minimum height to ensure visibility */
+    background-color: rgba(197, 210, 212, 0.3); /* Semi-transparent fallback for readability */
+    background-blend-mode: overlay; /* Blends the image with the background color for better text contrast */
+}
+  
 
   .welcome-text h1 {
     font-size: 3em;

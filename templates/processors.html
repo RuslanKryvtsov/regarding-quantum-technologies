@@ -14,7 +14,7 @@
 
   <!-- Sidebar Menu -->
   <div id="sidebar-menu" class="sidebar-menu">
-    <h3>Навігація по веб-сторінці "Квантові процесори"</h3>
+    <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці "Квантові процесори"</h3>
     <ul>
       <li><a href="#section1" class="menu-link" style="color: #211255; font-weight: 700;">Частина 1: Суть та класифікація</a></li>
       <li><a href="#section2" class="menu-link" style="color: #211255; font-weight: 700;">Частина 2: Конструктивні особливості</a></li>
@@ -296,7 +296,7 @@
   .processors-container {
     position: relative;
     min-height: 100vh;
-    width: 1300px;
+    width: 1600px;
     color: #ffffff;
     padding: 20px;
     margin: 0 auto;
@@ -321,21 +321,28 @@
 
  
   .content-wrapper {
-    max-width: 1100px;
-    margin-left: 140px;
+    max-width: 1300px;
+    margin-left: 110px;
     padding: 30px;
     position: relative;
     z-index: 2;
   }
 
+  
   .welcome-text {
     text-align: center;
     padding: 40px 20px;
-    background: #b3c6ca
+    background-image: url('https://quantumai.google/static/site-assets/images/marketing/home/slide-1.png');
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
     border-radius: 10px;
     margin: 20px 0;
-    
-  }
+    width: 100%; /* Full width of the parent container */
+    min-height: 290px; /* Minimum height to ensure visibility */
+    background-color: rgba(194, 207, 209, 0.7); /* Semi-transparent fallback for readability */
+    background-blend-mode: overlay; /* Blends the image with the background color for better text contrast */
+}
 
   .welcome-text h1 {
     font-size: 46px;
@@ -355,7 +362,7 @@
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-    max-width: 1000px;
+    max-width: 1400px;
     
   }
 
