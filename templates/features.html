@@ -35,17 +35,102 @@
         </div>    
 
       <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 115px;">   
-            <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Особливості коду</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;">Квантовий код відрізняється від класичного програмування необхідністю враховувати принципи квантової механіки, такі як суперпозиція, заплутаність, декогеренція та ймовірнісний характер результатів.
-            <br><br>  Синтаксис квантових фреймворків і мов, таких як Qiskit, Cirq та Q#, адаптований для моделювання цих явищ: він включає  <span style="font-weight: 800;  color: #211255;">спеціалізовані конструкції для роботи з кубітами, гейтами та схемами</span>, тоді як семантика забезпечує інтеграцію квантових операцій з класичними обчисленнями. 
+        <h2 style="color: #740e13; font-weight: 700; font-size: 37px; text-align: center;">Особливості квантового програмування</h2>
+
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"><strong>Основні будівельні блоки квантових програм</strong><br>
+        Квантові програми ґрунтуються на <em>принципах квантової механіки</em> і використовують спеціалізовані структури для роботи з <span style="font-weight: 800;  color: #211255;">квантовими станами</span>. 
+        Основними елементами є <span style="font-weight: 800;  color: #211255;">квантові схеми</span>, <span style="font-weight: 800;  color: #211255;">квантові вентилі</span> та <span style="font-weight: 800;  color: #211255;">квантові примітиви</span>, які разом формують основу для створення квантових алгоритмів.</p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #271c2b; text-align: justify;"><strong>Квантові схеми (Quantum Circuits)</strong><br>
+        <em>Квантова схема</em> є <span style="font-weight: 800;  color: #211255;">центральною моделлю <em>квантових обчислень</em>, що визначає послідовність операцій над <em>квантовими бітами (кубітами)</em></span>. Схема включає:<br>
+        - <strong>Кубіти</strong>: на відміну від класичних бітів, кубіти можуть перебувати в <em>суперпозиції</em> станів |0⟩, |1⟩ або їх комбінації (α|0⟩ + β|1⟩).<br>
+        - <strong>Квантові вентилі</strong>: операції, що трансформують стани кубітів.<br>
+        - <strong>Вимірювання</strong>: процес, який переводить квантовий стан у <em>класичний біт</em> (0 або 1).<br>
+        - <strong>Класичні регістри</strong>: зберігають результати вимірювань.<br>
+        Приклад створення схеми в <em>Qiskit</em>:<br>
+        <pre><code style="color:rgb(29, 5, 5); font-size: 19px;">from qiskit import QuantumCircuit
+        qc = QuantumCircuit(2, 2)  # 2 кубіти, 2 класичні біти</code></pre></p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #271c2b; text-align: justify;"><strong>Квантові вентилі (Quantum Gates)</strong><br>
+          <span style="font-weight: 800;  color: #211255;">Квантові вентилі</span> — це <span style="font-weight: 800;  color: #211255;"></span>унітарні операції</span>, які змінюють <span style="font-weight: 800;  color: #211255;">квантові стани</span> кубітів, виконуючи роль аналогів класичних логічних операцій. Основні вентилі включають:<br>
+        вентиль Адамара (H); вентилі Паулі (X, Y, Z); CNOT двохкубітний вентиль; поворотні вентилі (Rx, Ry, Rz); SWAP обмінює стани двох кубітів.</p>
+                   
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #271c2b; text-align: justify;"><strong>Квантові примітиви</strong><br>
+          <span style="font-weight: 800;  color: #211255;">Квантові примітиви</span> — це базові операції або алгоритми, які є основою для складніших квантових програм. До них належать:<br>
+        - <em>Ініціалізація кубітів</em>: встановлення стану, зазвичай |0⟩.<br>
+        - <em>Суперпозиція</em>: створення комбінацій станів через вентиль Адамара.<br>
+        - <em>Заплутаність</em>: створення корельованих станів за допомогою CNOT.<br>
+        - <em>Вимірювання</em>: отримання класичних даних із квантових станів.<br>
+        - <em>Квантове перетворення Фур’є (QFT)</em>: ключовий елемент алгоритмів, таких як <em>Шора</em>.<br>
+        - <em>Оракули</em>: спеціальні схеми для кодування проблем, наприклад, у <em>алгоритмі Гровера</em>.</p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 29px; color: #271c2b; text-align: justify;"><strong>Змінні в квантових програмах</strong><br>
+        Змінні в <em>квантових програмах</em> відрізняються від класичних:<br>
+        - <span style="font-weight: 800;  color: #211255;"><strong>Квантові змінні (кубіти)</strong></span>: кубіти є носіями інформації, що перебувають у <em>квантовому стані</em> (α|0⟩ + β|1⟩), де α і β — <em>комплексні амплітуди</em>. Через <em>теорему про заборону клонування</em> кубіти не можна копіювати.<br>
+        - <span style="font-weight: 800;  color: #211255;"><strong>Класичні змінні</strong>: використовуються для зберігання <em>результатів вимірювань</em> або параметрів, наприклад, кутів для вентилів.</span> У <em>Qiskit</em>:<br>
+       
+       
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"> <span style="font-weight: 800;  color: #211255;"><strong>Гібридне програмування</strong></span>: квантові обчислення комбінуються з класичними, 
+          де класичні змінні обробляють параметри або результати.</p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"><strong>Відмінності між класичними та квантовими функціями</strong><br>
+        <em>Квантові програми</em> мають суттєві відмінності від класичних через унікальну природу квантових обчислень:<br>
+        - <strong>Класичні функції</strong> оперують <em>детермінованими бітами</em> і дають передбачувані результати. <em>Класичні методи</em> у ООП працюють із внутрішнім станом об’єктів і дозволяють копіювання даних.<br>
+        - <span style="font-weight: 800;  color: #211255;"><strong>Квантові "функції"</strong> — це <em>послідовності вентилів</em> або <em>квантові оператори</em>, що діють на кубіти.</span> 
+        <span style="font-weight: 800;  color: #100f14; font-size: 29px;"><br>Вони:  унітарні, імовірнісні, обмежені забороною клонування, використовують <em>суперпозицію</em> та <em>заплутаність</em> для паралельної обробки.</span>
+          
+      
+        У <em>Qiskit</em> приклад реалізації "функції":<br>
+        <pre><code style="color:rgb(29, 5, 5); font-size: 19px;">def apply_hadamard(qc, qubit):
+            qc.h(qubit)</code></pre>
+           
+            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"> Високорівневі абстракції, такі як алгоритми Шора
+             чи <em>Гровера</em>, будуються через комбінацію вентилів і примітивів. <em>Параметризовані схеми</em> (залежні від змінних, наприклад, кутів) використовуються в алгоритмах типу <em>VQE</em> чи <em>QAOA</em>.</p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"><strong>Аналоги об’єктів у квантових програмах</strong><br>
+        У <em>класичному програмуванні</em> об’єкти поєднують дані та методи. 
+        <br><br>У квантових програмах прямих аналогів немає, але є схожі концепції:<br>
+        - <span style="font-weight: 800;  color: #211255;"><em>Квантові схеми</em> можна розглядати як "об’єкти", де кубіти — це <em>дані</em>, а вентилі та вимірювання — <em>методи</em>.</span> Наприклад, у <em>Qiskit</em> <em>QuantumCircuit</em> інкапсулює ці елементи.<br>
+        - <span style="font-weight: 800;  color: #211255;"><em>Квантові регістри</em> — групи кубітів, що нагадують структури даних</span>, але обмежені неможливістю копіювання.<br>
+        - <span style="font-weight: 800;  color: #211255;"><em>Гібридні об’єкти</em>: у <em>гібридних програмах</em> класичні об’єкти (наприклад, у Python) містять квантові схеми як атрибути:<br></span>
+        <pre><code style="color:rgb(29, 5, 5); font-size: 19px;">class QuantumModel:
+            def __init__(self, num_qubits):
+                self.circuit = QuantumCircuit(num_qubits)
+            def add_gate(self, gate, qubit):
+                self.circuit.append(gate, [qubit])</code></pre>
+                <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"> ООП у квантових програмах використовується рідко через <em>імовірнісну природу</em> та обмеження на маніпуляцію станами. Натомість акцент робиться на <em>модульність</em> і <em>композицію схем</em>.</p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"><span style="font-weight: 800;  color: #211255;"><strong>Ключові відмінності квантових і класичних 
+          програм</strong></span><br>
+        - <strong>Дані</strong>: класичні — <em>біти</em> (0 або 1); квантові — <em>кубіти</em> (<em>суперпозиція</em>, <em>заплутаність</em>).<br>
+        - <strong>Операції</strong>: класичні — <em>логічні операції</em> (AND, OR, NOT); квантові — <em>унітарні вентилі</em>.<br>
+        - <strong>Детермінованість</strong>: класичні — <em>детерміновані</em>; квантові — <em>імовірнісні</em>.<br>
+        - <strong>Копіювання</strong>: класичні дані копіюються; квантові — ні (<em>заборона клонування</em>).<br>
+        - <strong>Абстракції</strong>: класичні — <em>функції</em>, <em>класи</em>; квантові — <em>схеми</em>, <em>вентилі</em>, <em>примітиви</em>.</p>
+        
+      
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;"><strong>Висновки</strong><br>
+          <span style="font-weight: 800;  color: #0b022c;">Квантові схеми</span> є основою програм, включаючи <em>кубіти</em>, <em>вентилі</em> та <em>вимірювання</em>. 
+        <br><span style="font-weight: 800;  color: #0b022c;">Квантові вентилі</span> (H, CNOT) замінюють класичні логічні операції.
+        <br><span style="font-weight: 800;  color: #0b022c;">Змінні</span> поділяються на <em>квантові (кубіти)</em> та <em>класичні (регістри)</em>. 
+        <br><span style="font-weight: 800;  color: #0b022c;">Квантові функції</span> — це вентильні послідовності, обмежені <em>унітарністю</em> та <em>забороною клонування</em>. 
+        <br><span style="font-weight: 800;  color: #0b022c;">Аналоги об’єктів — це <em>схеми</em> або <em>гібридні класи</em></span>, але повного ООП немає через <em>квантову природу</em>.</p> 
+       
+          
+          
+          
+           <br> <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; text-align: justify;">Квантовий код відрізняється від класичного програмування необхідністю враховувати принципи квантової механіки, такі як суперпозиція, заплутаність, декогеренція та ймовірнісний характер результатів.
+            <br><br> <span style="font-weight: 800;  color: #211255;"> Синтаксис квантових фреймворків і мов, таких як Qiskit, Cirq та Q#, адаптований для моделювання цих явищ:</span> він включає  <span style="font-weight: 800;  color: #211255;">спеціалізовані конструкції для роботи з кубітами, гейтами та схемами</span>, тоді як семантика забезпечує інтеграцію квантових операцій з класичними обчисленнями. 
             <br>Наприклад, <span style="font-weight: 800;  color: #211255;">вимірювання кубітів завжди вводить стохастичність</span>, що вимагає повторних запусків для статистичних результатів. 
-            <br>Ці особливості роблять квантовий код гібридним, орієнтованим на NISQ (Noisy Intermediate-Scale Quantum) пристрої, де помилки та шум є невід'ємними, що впливає на семантику виконання: 
-            <br>- програми часто <span style="font-weight: 800;  color: #211255;">включають корекцію помилок або симуляцію шуму для реалістичного моделювання.</span></p>             
+            
+            <br>Також, програми часто <span style="font-weight: 800;  color: #211255;">включають корекцію помилок або симуляцію шуму для реалістичного моделювання.</span></p>             
            
             <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> На низькому рівні квантовий код базується на кубітах (квантових бітах), 
           гейтах та схемах. 
           <br><br>Синтаксично <span style="font-weight: 800;  color: #211255;">кубіти представляються як об'єкти або змінні</span> (наприклад, Qubit в Q# або GridQubit в Cirq), а <span style="font-weight: 800;  color: #211255;">гейти — як оператори, що маніпулюють станами.</span> 
-          <br>Семантично гейти реалізують унітарні перетворення: гейт Адамара (H) створює суперпозицію, переводячи |0⟩ в (|0⟩ + |1⟩)/√2, тоді як CNOT створює заплутаність між кубітами. 
+          
           <br>Вимірювання (measurement) колапсує квантовий стан до класичного, вводячи ймовірність, що вимагає семантичної обробки результатів як статистичних даних.
           <br><br> У фреймворках <span style="font-weight: 800;  color: #211255;">ці конструкції інтегруються в схеми — послідовності операцій, які моделюють еволюцію квантової системи, з урахуванням декогеренції</span> через шумові моделі.</p>
                
@@ -144,13 +229,14 @@
          </p>   
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Порівнюючи фреймворки, Qiskit вирізняється високорівневими абстракціями для алгоритмів (як PortfolioOptimization), Cirq — апаратною гнучкістю (GridQubit для топологій), а Q# — інтеграцією з класичними мовами для універсальних обчислень. 
               <br><br>Синтаксично <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">всі вони використовують Python-подібні конструкції</span>, але семантично фокусуються на квантових викликах: ймовірність результатів вимагає статистики, декогеренція — шумових моделей. 
-              <br><br> У висновку, вибір <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">залежить від задачі — Qiskit для досліджень, Cirq для NISQ-оптимізації, Q# для гібридного програмування,</span> — але всі сприяють розвитку квантових обчислень, 
-              <br><br> роблячи абстрактні принципи механіки доступними для аналізу та застосування. </p>       
+              <br><br> У висновку, вибір <span class="code-trigger" data-code-id="quantum-paradigm" style="font-weight: 900; color: rgb(56, 28, 28);">залежить від задачі — Qiskit для досліджень, Cirq для NISQ-оптимізації,
+                 Q# для гібридного програмування,</span> — але всі сприяють розвитку квантових обчислень, 
+               роблячи абстрактні принципи механіки доступними для аналізу та застосування. </p>       
       </div>
     </section>   
                  
         <!-- Розділи блогу -->
-        <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+        <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 5px; margin-left: 225px;">
                
            <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Парадигма квантового програмування: від класичних імперативних конструкцій до гібридних стохастичних моделей</h2>
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантова парадигма програмування відрізняється від класичної тим, що враховує принципи квантової механіки, такі як суперпозиція (коли кубіт може бути одночасно в кількох станах) та заплутаність (залежність станів кількох кубітів). 
@@ -194,7 +280,7 @@
         
                              
     
-        <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+        <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 5px; margin-left: 225px;">
         
                            
             <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Перспективи створення універсальної високорівневої квантової мови</h2>
@@ -258,7 +344,7 @@
          
         </section>
     
-        <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+        <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 5px; margin-left: 225px;">
           
             <h2 style="color: #5f0a0e; font-weight: 700; font-size: 35px; text-align: center;">Еволюція синтаксису і семантики квантових мов від 2000 до 2025: від низькорівневих схем до машинно-незалежних абстракцій</h2>
             
@@ -293,10 +379,9 @@
             <h3 style="color: #0a041d; font-weight: 700; font-size: 30px;">Аналіз і висновки</h3>
             <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічно, еволюція синтаксису від імперативного до декларативного відображає загальний тренд у програмуванні: 
               від апаратно-залежного коду до абстракцій, що ховають складність.
-              <br><br> Семантика еволюціонувала від детермінованих до стохастичних моделей, інтегруючи шум як невід'ємну частину, що робить квантовий код реалістичним для NISQ. 
-              <br><br>Це всебічно висвітлює тему: для професіоналів, як у лекції, важливо розуміти, що така еволюція стимулює міждисциплінарність — від фізики до AI, — дозволяючи аналіз продуктивності через метрики, 
-              як глибина схем чи стійкість до помилок. 
-              <br><br>В результаті, до 2025 року квантовий програмування стало машинно-незалежним,
+              <br> Семантика еволюціонувала від детермінованих до стохастичних моделей, інтегруючи шум як невід'ємну частину, що робить квантовий код реалістичним для NISQ. 
+              
+              <br>В результаті, до 2025 року квантове програмування стало машинно-незалежним,
                відкриваючи шлях до універсальних інструментів, де кожен розробник може експериментувати з квантовою реальністю, перетворюючи абстрактні ідеї на практичні рішення.</p>
               
         </section>

@@ -62,11 +62,27 @@
         <br>Наприклад, <span style="font-weight: bold; color: rgb(56, 28, 28);">алгоритм Шора</span> для факторизації потребує створення суперпозиції всіх можливих станів, 
         що <span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">неможливо в класичних мовах, як C++ чи Python, без спеціальних абстракцій.</span> 
         
-        <br><br>Ранні мови, як QASM (2000), були низькорівневими, подібними до асемблера, описуючи гейти (Hadamard, CNOT). 
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <span style="font-weight: bold; color: #2c3e50;">Квантові мови</span> носять <em style="color: #e74c3c;">ймовірнісний характер</em> та враховують фізичні особливості носіїв <span style="font-weight: bold; color: #2c3e50;">квантової інформації</span>. Основою є <span style="font-weight: bold; color: #2c3e50;">квантові схеми</span>, а послідовне виконання <em style="color: #e74c3c;">квантових інструкцій</em> на базовому рівні реалізовано за допомогою декількох різних типів <span style="font-weight: bold; color: #2c3e50;">квантових вентилів</span> (т.зв. <em style="color: #e74c3c;">гейтів</em>).
+        </p>
         
-        <br<br><span style="font-weight: 800;  color: #211255;">Сучасні мови 2025 року, як Q# чи Silq, – це high-level інструменти, що абстрагують квантові операції</span>, подібно до того, як Python спрощує роботу з пам’яттю порівняно з C. 
-        <br><br>Квантові мови виглядають класичними, але їхня логіка – це міст до мікросвіту. Вони <span style="font-weight: 800;  color: #211255;">також підтримують гібридні обчислення, де класичні CPU керують QPU</span>, що критично для сучасних систем із 100–1000 кубітів (MIT Quantum Index). 
-        Обмеження: <span style="font-weight: bold; color: rgb(56, 28, 28);">шум і декогеренція</span> вимагають інтеграції з QECC, що ускладнює синтаксис.</p>
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          Даний розділ програмування розвивався, починаючи з <span style="font-weight: bold; color: #2c3e50;">низькорівневих мов</span>, де код пишеться та виконується на рівні окремих інструкцій (мова <span style="font-weight: bold; color: #2c3e50;">QASM</span>, – фактично <em style="color: #e74c3c;">асемблер</em>). 
+          Сучасні мови та <span style="font-weight: bold; color: #2c3e50;">фреймворки</span>, побудовані на базі мов <span style="font-weight: bold; color: #2c3e50;">Python</span> та <span style="font-weight: bold; color: #2c3e50;">C#</span>, дозволяють абстрагувати взаємодію з <em style="color: #e74c3c;">hardware</em> та навіть писати <span style="font-weight: bold; color: #2c3e50;">квантові нейромережі</span>.
+        </p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <span style="font-weight: bold; color: #2c3e50;">Середовища розробки SDK</span>, які включають різноманітні інструменти, – це своєрідний міст між <em style="color: #e74c3c;">кубітами</em> та <span style="font-weight: bold; color: #2c3e50;">високорівневими абстракціями</span>. Величезною перевагою є можливість створювати та запускати <span style="font-weight: bold; color: #2c3e50;">квантові програми</span>, використовуючи <em style="color: #e74c3c;">емулятори</em>.
+        </p>
+        
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          Головною властивістю даних <span style="font-weight: bold; color: #2c3e50;">хмарних систем</span> є можливість тестувати програму ніби на справжньому <em style="color: #e74c3c;">квантовому комп’ютері</em>, використовуючи <span style="font-weight: bold; color: #2c3e50;">біти</span> для моделювання поведінки та основних властивостей <em style="color: #e74c3c;">кубітів</em>.
+        </p>
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+       
+       
+        Квантові мови виглядають класичними, але їхня логіка – це міст до мікросвіту. Вони <span style="font-weight: 800;  color: #211255;">також підтримують гібридні обчислення, де класичні CPU керують QPU.</span> 
+       </p>
       <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><ul  style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #211255; font-style: italic; font-weight: 800; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Про квантові алгоритми та спеціальні мови</span> програмування, такі як:
            <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Twist</span> – це відкрита мова програмування квантових комп’ютерів, яку було розроблено у 2018 році. Вона заснована на Python і використовує відкритий вихідний код. Twist підтримує симуляцію квантових обчислень і їх реалізацію на реальних квантових пристроях;</li>
            <li><span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit</span> – це відкритий набір інструментів для розробки квантових алгоритмів, створений компанією IBM. Він містить у собі мову програмування Qiskit, яка заснована на Python і дає змогу створювати і симулювати квантові алгоритми, а також реалізовувати їх на реальних квантових пристроях;</li>
