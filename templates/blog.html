@@ -116,7 +116,7 @@
           
           <strong>Масштабування:</strong> <span style="font-weight: bold; color: rgb(56, 28, 28);">Масштабування квантових комп’ютерів</span> — це не лише збільшення кількості кубітів, а й технологічні прориви для зменшення розмірів, вартості та підвищення доступності, зокрема для компаній enterprise-рівня. У 2025 році системи з сотнями кубітів (як у IBM) вже вирішують практичні задачі, але для масштабування до тисяч чи мільйонів потрібні модульні конструкції, де кілька менших чипів працюють разом, і вдосконалені алгоритми корекції помилок. Нові матеріали та компактніші кріосистеми роблять апаратне забезпечення меншим, а хмарний доступ (через платформи типу Qiskit) спрощує використання для бізнесу, наприклад, для оптимізації логістики чи моделювання молекул.<br><br>
           
-          <span style="font-weight: bold; color: rgb(56, 28, 28);">Провідні центри розробки (2025):</span><br>
+          <h2 style="color: #6d2c2f; font-weight: 700; font-size: 35px;">Провідні центри розробки (2025):</h2><br>
           1. <strong>IBM Quantum</strong>: Розробляє системи з сотнями кубітів, доступні через хмару, з фокусом на хімічне моделювання.<br>
           2. <strong>Google Quantum AI</strong>: Працює над алгоритмами для машинного навчання та оптимізації.<br>
           3. <strong>IonQ</strong>: Спеціалізується на стабільних іонних системах для практичних задач, як-от медичне моделювання.<br>
@@ -163,24 +163,39 @@
         <br><br>Ці інструменти доступні для дослідників, інженерів та розробників через хмарні платформи або локальні середовища, що робить їх зручними для практичного використання.</span>
 
      <ol style="font-weight: 750; line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #211255; animation: colorShiftCardo 5s infinite alternate; text-align: justify; width: 940px; margin-right: 80px; font-style: italic;"><span style="font-weight: 750;  color: #071325; font-size: 29px; text-align: left; margin-right: 80px;"> 
-        Популярні хмарні квантові симулятори (станом на 2025 рік):</span>
+      <h2 style="color: #6d2c2f; font-weight: 700; font-size: 35px;">Популярні хмарні квантові емулятори (станом на 2025 рік):</h2>
         <li> <a href="https://quantumai.google/" style="color: #314a72; text-decoration: underline;">Google Quantum AI</a>: Платформа на базі Cirq, яка дозволяє моделювати квантові алгоритми та тестувати їх на симуляторах або апаратному забезпеченні Google через хмарний доступ.</li>
         <li> <a href="https://azure.microsoft.com/en-us/solutions/quantum-computing/" style="color: #314a72; text-decoration: underline;">Microsoft Azure Quantum</a>: Хмарна платформа, що підтримує Q# та інші інструменти для створення і симуляції квантових програм, з інтеграцією різноманітного квантового обладнання.</li>
         <li> <a href="https://aws.amazon.com/braket/" style="color: #314a72; text-decoration: underline;">Amazon Braket</a>: Сервіс AWS, який надає доступ до квантових симуляторів і апаратних платформ (D-Wave, IonQ, Rigetti) для моделювання квантових систем.</li>
         <li> <a href="https://cloud.xanadu.ai/" style="color: #314a72; text-decoration: underline;">Xanadu Cloud (PennyLane)</a>: Хмарна платформа для гібридних квантово-класичних обчислень, що використовує бібліотеку PennyLane для симуляції та інтеграції з квантовим обладнанням.</li>
       </ol>
            
-      <ol style="font-weight: 750; line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #211255; animation: colorShiftCardo 5s infinite alternate; text-align: justify; width: 940px; margin-right: 80px; font-style: italic;"><span style="font-weight: 750;  color: #071325; font-size: 29px; text-align: left; margin-right: 80px;">
-      Як користуватись хмарними квантовими симуляторами:</span>
-        <li> <span style="font-weight: bold; color: rgb(56, 28, 28);">Зареєструйтесь:</span> Створіть обліковий запис на обраній платформі (наприклад, Google Quantum AI, Azure Quantum, Amazon Braket або Xanadu Cloud), використовуючи електронну пошту або корпоративний акаунт. Для Google Quantum AI це можна зробити через їхній сайт, де ви отримаєте доступ до Cirq безкоштовно; Azure Quantum вимагає Azure акаунт для інтеграції з іншими сервісами Microsoft; Amazon Braket використовує AWS акаунт з можливістю безкоштовного рівня для тестування; Xanadu Cloud пропонує реєстрацію для доступу до PennyLane з хмарними ресурсами.</li>
-        <li><span style="font-weight: bold; color: rgb(56, 28, 28);"> Виберіть інструмент:</span> Ознайомтесь з документацією платформи та оберіть мову програмування чи бібліотеку (наприклад, Cirq для Google, Q# для Azure, Braket SDK для Amazon, PennyLane для Xanadu). Для студентів IT рекомендується почати з Python-бібліотек, як Cirq або PennyLane, оскільки вони інтегруються з знайомими фреймворками, такими як NumPy чи PyTorch, дозволяючи моделювати квантові схеми як звичайний код.</li>
-       <li> <span style="font-weight: bold; color: rgb(56, 28, 28);"> Створіть або завантажте код:</span> Напишіть код для квантової схеми у веб-інтерфейсі чи локально (наприклад, у Jupyter Notebook), задаючи кубіти, гейти (як Hadamard, CNOT) та параметри симуляції. Наприклад, у Cirq створіть QuantumCircuit з qubits і додайте операції; у PennyLane визначте qnode для гібридних обчислень. Завантажте готовий скрипт з гітхабу або прикладів платформи для швидкого старту.</li>
-        <li><span style="font-weight: bold; color: rgb(56, 28, 28);"> Запустіть симуляцію:</span> Виконайте симуляцію через хмарний симулятор (локальний або віддалений) або, за наявності доступу, на реальному квантовому обладнанні (наприклад, IonQ через Azure чи Rigetti через Braket). Аналізуйте результати, такі як вектори станів, ймовірності чи енергії, через вбудовані API або дашборди платформи. Для IT студентів це подібно до запуску коду в хмарі, з моніторингом завдань у черзі.</li>
-        <li> <span style="font-weight: bold; color: rgb(56, 28, 28);">Вивчіть tutorials та приклади:</span> Більшість платформ пропонують вбудовані tutorials, як "Cirq basics" від Google для створення першого кола чи "Quantum machine learning" від PennyLane. Для студентів IT це ідеально для практики, оскільки включає кодові приклади, що демонструють суперпозицію, заплутаність та алгоритми, як Grover чи VQE.</li>
-        <li><span style="font-weight: bold; color: rgb(56, 28, 28);"> Візуалізуйте результати:</span> Використовуйте інструменти візуалізації, як Bloch spheres у Cirq, гістограми в Braket чи графіки в Azure, для розуміння квантових станів. Це допомагає студентам IT візуально перевіряти код, подібно до дебагінгу в класичному програмуванні.</li>
-        <li> <span style="font-weight: bold; color: rgb(56, 28, 28);">Інтегруйте з іншими технологіями:</span> Поєднайте симулятори з машинним навчанням (наприклад, PennyLane з PyTorch для quantum ML) або класичними обчисленнями для гібридних алгоритмів. Функціональність включає оптимізацію параметрів, моделювання шуму та масштабовані симуляції до десятків кубітів.</li>
-        <li><span style="font-weight: bold; color: rgb(56, 28, 28);"> Обробіть помилки та масштабуйте:</span> Додавайте моделі шуму в симуляції для реалістичного тестування, моніторте квоти використання (наприклад, час на QPU в Braket) та оптимізуйте код для більших систем. Для студентів це вчить ефективному управлінню ресурсами в хмарі.</li>
-        <li> <span style="font-weight: bold; color: rgb(56, 28, 28);">Приєднайтесь до спільноти:</span> Участвуйте в форумах, як PennyLane discuss чи AWS quantum communities, для обміну кодом та порад. Це розширює функціональність через користувацькі плагіни та спільні проекти.</li>
+      <ol style="font-weight: 750; line-height: 1.6; font-family: 'Cardo', serif; font-size: 34px; color: #071325; animation: colorShiftCardo 5s infinite alternate; text-align: justify; width: 940px; margin-right: 80px; font-style: italic;">
+     <h2 style="color: #6d2c2f; font-weight: 700; font-size: 35px;">Як користуватись хмарними квантовими емуляторами:</h2> 
+        <li> <span style="font-weight: bold; color: #211255; font-style: 34px;">Зареєструйтесь:</span> Створіть обліковий запис на обраній платформі (наприклад, Google Quantum AI, Azure Quantum, Amazon Braket або Xanadu Cloud), використовуючи електронну пошту або корпоративний акаунт. 
+          <br><span style="font-weight: 750;  color: #071325; font-size: 30px; text-align: justify; font-style: italic;"> - Для Google Quantum AI це можна зробити через їхній сайт, де ви отримаєте доступ до Cirq безкоштовно;</span>
+          <br><span style="font-weight: 750;  color: #071325; font-size: 30px; text-align: justify; font-style: italic;"> -Azure Quantum вимагає Azure акаунт для інтеграції з іншими сервісами Microsoft;</span>
+          <br><span style="font-weight: 750;  color: #071325; font-size: 30px; text-align: justify; font-style: italic;"> - Amazon Braket використовує AWS акаунт з можливістю безкоштовного рівня для тестування; </span>
+          <br><span style="font-weight: 750;  color: #071325; font-size: 30px; text-align: justify; font-style: italic;"> -Xanadu Cloud пропонує реєстрацію для доступу до PennyLane з хмарними ресурсами.</span></li>
+        <li><span style="font-weight: bold; color: #211255; font-style: 34px;"> Виберіть інструмент:</span> Ознайомтесь з документацією платформи та оберіть мову програмування чи бібліотеку (наприклад, Cirq для Google, Q# для Azure, Braket SDK для Amazon, PennyLane для Xanadu). 
+          <br>Рекомендується почати з Python-бібліотек, як Cirq або PennyLane, оскільки вони інтегруються з знайомими фреймворками, такими як NumPy чи PyTorch, дозволяючи моделювати квантові схеми як звичайний код.</li>
+       <li> <span style="font-weight: bold; color: #211255; font-style: 34px;"> Створіть або завантажте код:</span> Напишіть код для квантової схеми у веб-інтерфейсі чи локально (наприклад, у Jupyter Notebook), задаючи кубіти, гейти (як Hadamard, CNOT) та параметри симуляції. 
+        <br>Наприклад, у Cirq створіть QuantumCircuit з qubits і додайте операції;
+        <br> у PennyLane визначте qnode для гібридних обчислень. 
+        <br>Завантажте готовий скрипт з гітхабу або прикладів платформи для швидкого старту.</li>
+        <li><span style="font-weight: bold; color: #211255; font-style: 34px;"> Запустіть симуляцію:</span> Виконайте симуляцію через хмарний симулятор (локальний або віддалений) або, за наявності доступу, на реальному квантовому обладнанні (наприклад, IonQ через Azure чи Rigetti через Braket). 
+          <br>Аналізуйте результати, такі як вектори станів, ймовірності чи енергії, через вбудовані API або дашборди платформи. 
+          </li>
+        <li> <span style="font-weight: bold; color: #211255; font-style: 34px;">Вивчіть tutorials та приклади:</span> Більшість платформ пропонують вбудовані tutorials, як "Cirq basics" від Google для створення першого кола чи "Quantum machine learning" від PennyLane. 
+          <br>Це ідеально для практики, оскільки включає кодові приклади, що демонструють суперпозицію, заплутаність та алгоритми, як Grover чи VQE.</li>
+        <li><span style="font-weight: bold; color: #211255; font-style: 34px;"> Візуалізуйте результати:</span> Використовуйте інструменти візуалізації, як Bloch spheres у Cirq, гістограми в Braket чи графіки в Azure, для розуміння квантових станів.
+          <br> Це допомагає візуально перевіряти код, подібно до дебагінгу в класичному програмуванні.</li>
+        <li> <span style="font-weight: bold; color: #211255; font-style: 34px;">Інтегруйте з іншими технологіями:</span> Поєднайте симулятори з машинним навчанням (наприклад, PennyLane з PyTorch для quantum ML) або класичними обчисленнями для гібридних алгоритмів. 
+          <br>Функціональність включає оптимізацію параметрів, моделювання шуму та масштабовані симуляції до десятків кубітів.</li>
+        <li><span style="font-weight: bold; color: #211255; font-style: 34px;"> Обробіть помилки та масштабуйте:</span> Додавайте моделі шуму в симуляції для реалістичного тестування, моніторте квоти використання (наприклад, час на QPU в Braket) та оптимізуйте код для більших систем. 
+          <br>Це вчить ефективному управлінню ресурсами в хмарі.</li>
+        <li> <span style="font-weight: bold; color: #211255; font-style: 34px;">Приєднайтесь до спільноти:</span> Приймайте участь у форумах, як PennyLane discuss чи AWS quantum communities, для обміну кодом та порад. 
+          <br>Це розширює функціональність через користувацькі плагіни та спільні проекти.</li>
       </ol>
        
       <img src="https://media.licdn.com/dms/image/sync/v2/D5627AQElJPn1PxSjTA/articleshare-shrink_1280_800/B56ZjzarcZHQAU-/0/1756430514500?e=2147483647&v=beta&t=bg3cMG5H9qmU_PAaZg3DlAmLM9UK7JzLDyMQiN7y83w" alt="LinkedIn Article Image" style="width: 600px; height: 410px;">
@@ -416,7 +431,7 @@
     color: #4a90e2;
     font-size: 2.2em;
     font-family: 'Georgia', serif;
-    text-shadow: 0 0 6px #00d4ff;
+   
   }
 
   .section p {

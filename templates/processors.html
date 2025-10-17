@@ -4,41 +4,35 @@
 
 {% block content %}
 <!-- Main container for the processors page -->
-<div class="processors-container">
-  <!-- Subtle cosmic background with animated stars -->
-  <div class="space-bg">
-    <div class="stars top-stars"></div>
-    <div class="stars left-stars"></div>
-    <div class="stars right-stars"></div>
-  </div>
-
+<div class="quantum-page-container">
+  
   <!-- Sidebar Menu -->
-  <div id="sidebar-menu" class="sidebar-menu">
+  <div id="sidebar-menu" class="nav-sidebar">
     <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці "Квантові процесори"</h3>
     <ul>
-      <li><a href="#section1" class="menu-link" style="color: #211255; font-weight: 700;">Частина 1: Суть та класифікація</a></li>
-      <li><a href="#section2" class="menu-link" style="color: #211255; font-weight: 700;">Частина 2: Конструктивні особливості</a></li>
-      <li><a href="#section3" class="menu-link" style="color: #211255; font-weight: 700;">Частина 3: Архітектура відмінна від Фон Неймановської</a></li>
-      <li><a href="#section4" class="menu-link" style="color: #211255; font-weight: 700;">Частина 4: Конфігурація в дата-центрах</a></li>
-      <li><a href="#section5" class="menu-link" style="color: #211255; font-weight: 700;">Частина 5: Прототипи техногігантів</a></li>
-      <li><a href="#section6" class="menu-link" style="color: #211255; font-weight: 700;">Частина 6: Майбутні тенденції</a></li>
-      <li><a href="#section7" class="menu-link" style="color: #211255; font-weight: 700;">Частина 7: Ресурси для вивчення</a></li>
+      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Частина 1: Суть та класифікація</a></li>
+      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Частина 2: Конструктивні особливості</a></li>
+      <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Частина 3: Архітектура відмінна від Фон Неймановської</a></li>
+      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Частина 4: Конфігурація в дата-центрах</a></li>
+      <li><a href="#section5" class="nav-link" style="color: #211255; font-weight: 700;">Частина 5: Прототипи техногігантів</a></li>
+      <li><a href="#section6" class="nav-link" style="color: #211255; font-weight: 700;">Частина 6: Майбутні тенденції</a></li>
+      <li><a href="#section7" class="nav-link" style="color: #211255; font-weight: 700;">Частина 7: Ресурси для вивчення</a></li>
     </ul>
   </div>
 
   <!-- Modal Context Menu -->
-  <div id="modal-menu" class="modal">
+  <div id="modal-menu" class="context-modal">
     <div class="modal-content">
       <span id="close-modal">&times;</span>
       <h3>Контекстне меню</h3>
       <ul>
-        <li><a href="#section1" class="menu-link">Частина 1: Суть та класифікація</a></li>
-        <li><a href="#section2" class="menu-link">Частина 2: Конструктивні особливості</a></li>
-        <li><a href="#section3" class="menu-link">Частина 3: Архітектура відмінна від Фон Неймановської</a></li>
-        <li><a href="#section4" class="menu-link">Частина 4: Конфігурація в дата-центрах</a></li>
-        <li><a href="#section5" class="menu-link">Частина 5: Прототипи техногігантів</a></li>
-        <li><a href="#section6" class="menu-link">Частина 6: Майбутні тенденції</a></li>
-        <li><a href="#section7" class="menu-link">Частина 7: Ресурси для вивчення</a></li>
+        <li><a href="#section1" class="nav-link">Частина 1: Суть та класифікація</a></li>
+        <li><a href="#section2" class="nav-link">Частина 2: Конструктивні особливості</a></li>
+        <li><a href="#section3" class="nav-link">Частина 3: Архітектура відмінна від Фон Неймановської</a></li>
+        <li><a href="#section4" class="nav-link">Частина 4: Конфігурація в дата-центрах</a></li>
+        <li><a href="#section5" class="nav-link">Частина 5: Прототипи техногігантів</a></li>
+        <li><a href="#section6" class="nav-link">Частина 6: Майбутні тенденції</a></li>
+        <li><a href="#section7" class="nav-link">Частина 7: Ресурси для вивчення</a></li>
       </ul>
     </div>
   </div>
@@ -51,7 +45,7 @@
     </div>
 
     <!-- Частина 1: Вступ і Суть Квантових Процесорів -->
-    <section id="section1" class="section" >
+    <section id="section1" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 1: Суть квантових процесорів – класифікація та відмінності від класичних</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="font-weight: bold;  color: rgb(56, 28, 28);">Квантовий комп’ютер</span> ― це пристрій, який використовує принципи <span style="font-weight: bold;">квантової механіки</span> для виконання певних обчислень. І робить це він набагато швидше, ніж класичний ПК.</p>
       
@@ -62,7 +56,6 @@
       <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">На відміну від класичних CPU/GPU (послідовні, детерміновані), <span style="font-weight: bold;  color: rgb(56, 28, 28);">квантові – паралельні, ймовірнісні, вразливі до декогеренції</span> (втрата стану через взаємодію з оточенням).</p>
       <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Саме завдяки цьому квантові комп’ютери <span style="font-weight: bold;  color: rgb(56, 28, 28);">можуть водночас розв’язувати велику кількість можливих комбінацій, що сприяє прискоренню вирішення завдань,</span> як факторизація чи симуляція молекул; пошук у великих базах даних і моделювання складних квантових систем. І те що звичайний ПК робить роками, квантовий може зробити менше, ніж за секунду.</p>
       
-    
       <h2 style="color: #0a041d; font-weight: 700;">Історія квантових комп’ютерів</h2>
       <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
         <li>Одну з перших ідей, пов’язаних з квантовими обчисленнями, запропонував у 1980-х роках фізик <span style="font-weight: bold;">Річард Фейнман</span>. Він стверджував, що квантові комп’ютери <span style="font-weight: bold; text-decoration: underline;">потенційно можуть моделювати фізичні системи більш ефективно,</span> ніж звичайні ПК.</li>
@@ -87,7 +80,7 @@
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Однак для підтримки цих унікальних властивостей квантові процесори вимагають мінімізації <span style="font-weight: bold;">декогеренції</span> та підтримки стабільності кубітів протягом усього процесу обчислень. Декогеренція - це втрата квантових властивостей кубіта через зовнішні впливи, що призведе до порушення квантових обчислень. Тому важливо створювати умови, які мінімізують вплив зовнішнього середовища, наприклад, шляхом охолодження кубітів до екстремально низьких температур для досягнення надпровідності. Ці складнощі в управлінні та підтримці стабільності кубітів являють собою одну з ключових технічних проблем у галузі квантових обчислень.</p>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Більш глибоке уявлення про те,як влаштовані квантові комп"ютери можна отримати, прочитавши наступну публікацію:</p>
        
-      <a href="https://blog.allo.ua/ua/kvantovi-komp-yuteri-shho-tse-yak-pratsyuyut-yaki-perspektivi_2018-07-39/"  alt="принципи роботи квантових компьютерів">принципи роботи квантових комп"ютерів</a>
+      <a href="https://blog.allo.ua/ua/kvantovi-komp-yuteri-shho-tse-yak-pratsyuyut-yaki-perspektivi_2018-07-39/" alt="принципи роботи квантових компьютерів">принципи роботи квантових комп"ютерів</a>
        
       <details>
         <summary>Ключові відмінності та класифікація</summary>
@@ -101,7 +94,7 @@
     </section>
 
     <!-- Частина 2: Конструктивні Особливості залежно від Типів Квантів -->
-    <section id="section2" class="section" >
+    <section id="section2" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 2: Конструктивні особливості – від фотонів до Majorana Fermions</h2>
       <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
         <span style="font-weight: bold;  color: rgb(56, 28, 28);">Кожен тип кубіту диктує унікальну конструкцію:</span>
@@ -126,7 +119,7 @@
     </section>
 
     <!-- Частина 3: Архітектура Квантових Комп'ютерів – Від Фон Неймана до Гібридних Моделей -->
-    <section id="section3" class="section" >
+    <section id="section3" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 3: Архітектура – гібридні та нові конфігурації</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="font-weight: bold;  color: rgb(56, 28, 28);">Традиційна Von Neumann (shared memory для даних/інструкцій) не найкраще рішення для квантових систем через декогеренцію та ймовірнісність.</span></p>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="text-decoration: underline; font-weight: 600;">Замість цього – <span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline;">гібридні архітектури: quantum core (qubits для паралельних обчислень)</span> + <span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline;">classical co-processor (error correction, control).</span></p>
@@ -173,7 +166,7 @@
     </section>
 
     <!-- Частина 4: Конфігурація в комп'ютері нового типу – дата-центри та модульність -->
-    <section id="section4" class="section" >
+    <section id="section4" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 4: Конфігурація – не в системному блоці: дата-центри та модульні системи</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантові процесори – не для десктопів: <span style="text-decoration: underline; font-weight: 600;">вони вимагають вакууму, криогенів (-273°C) та ізоляції від вібрацій, тому інтегруються в дата-центри як "quantum pods"</span> (IBM Quantum System Two, 2025) – модульні рекс з 1000+ qubits, підключені до класичних серверів via fiber optics.</p>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Конфігурація: гібридний кластер (quantum accelerator + GPU/CPU), де quantum – для складних задач, класичний – для control.</p>
@@ -191,7 +184,7 @@
     </section>
 
     <!-- Частина 5: Готові Проекти Техногігантів – Прототипи та Тести -->
-    <section id="section5" class="section" >
+    <section id="section5" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 5: Прототипи техногігантів – готові проєкти 2025</h2>
       <img src="https://i.pinimg.com/736x/e2/00/66/e20066f391cb5a296c50a33b7dbc9b8f.jpg" style="width: 730px; height: 570px;" alt="Квантова графіка">
 
@@ -251,7 +244,7 @@
     </section>
 
     <!-- Частина 6: Майбутні Тренди та Виклики -->
-    <section id="section6" class="section" >
+    <section id="section6" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 6: майбутні тренди – гібридні системи та масштабування</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє – гібридні quantum-classical кластери в data centers, з quantum accelerators як GPU.</p>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Тренд: модульність (multi-chip, IBM) та networking (photonic links, IonQ).</p>
@@ -269,7 +262,7 @@
     </section>
 
     <!-- Частина 7: Заклик до Дій та Ресурси -->
-    <section id="section7" class="section" >
+    <section id="section7" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Частина 7: почніть роботу з квантовим Hardware</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Експериментуйте з cloud quantum (IBM Q, AWS Braket). Почніть з симуляторів, перейдіть до прототипів. У 2025 – доступно для devs.</p>
       <details>
@@ -283,17 +276,18 @@
     </section>
   </div>
 
-  <!-- Draggable Context Button -->
+  <!-- Пересувна кнопка контекстного меню -->
   <button id="context-btn">☰</button>
-  <!-- Book Button for Modal Menu -->
-  <button id="book-btn">📘</button>
+
+  <!-- Кнопка у вигляді книжечки для модального меню -->
+  <button id="book-btn">📖</button>
 </div>
 
 <p class="attribution">Data from Quantum Insider, IBM, Google, Microsoft (2025). Images from Wikimedia Commons (Public Domain).</p>
 
 <!-- Inline CSS for Sections, Menu, and Animations -->
 <style>
-  .processors-container {
+  .quantum-page-container {
     position: relative;
     min-height: 100vh;
     width: 1600px;
@@ -303,10 +297,10 @@
     margin-left: 0px;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-   background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
+    background-color: #c9d4d6; /* Легкий бежевий для гармонії */
   }
 
-  .space-bg {
+  .cosmic-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -319,51 +313,48 @@
     z-index: 1;
   }
 
- 
   .content-wrapper {
     max-width: 1300px;
-    margin-left: 110px;
+    margin-left: 310px;
     padding: 30px;
     position: relative;
     z-index: 2;
   }
 
-  
   .welcome-text {
     text-align: center;
     padding: 40px 20px;
     background-image: url('https://quantumai.google/static/site-assets/images/marketing/home/slide-1.png');
-    background-size: cover; /* Ensures the image covers the div */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image repetition */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     margin: 20px 0;
-    width: 100%; /* Full width of the parent container */
-    min-height: 290px; /* Minimum height to ensure visibility */
-    background-color: rgba(194, 207, 209, 0.7); /* Semi-transparent fallback for readability */
-    background-blend-mode: overlay; /* Blends the image with the background color for better text contrast */
-}
+    width: 100%;
+    min-height: 290px;
+    background-color: rgba(194, 207, 209, 0.7);
+    background-blend-mode: overlay;
+  }
 
   .welcome-text h1 {
     font-size: 46px;
-    color: #7c0e14;                                    
+    color: #7c0e14;
     margin-bottom: 10px;
-   
-    font-family: 'Georgia', ser                             
+    font-family: 'Georgia', serif;
     font-weight: 900;
-    text-align: center; font-style: italic; margin-right: 170px;
+    text-align: center;
+    font-style: italic;
+    margin-right: 170px;
   }
 
   .section {
     background: #A6B8D3;
-    
     padding: 25px;
     margin: 25px 0;
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
     max-width: 1400px;
-    
   }
 
   .section h2 {
@@ -420,13 +411,7 @@
     font-size: 25px;
   }
 
-  .highlight {
-    background: linear-gradient(45deg, #003366, #001233) !important;
-    transform: scale(1.02) !important;
-    transition: background 0.3s, transform 0.3s;
-  }
-
-  .sidebar-menu {
+  .nav-sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -440,38 +425,38 @@
     transition: transform 0.3s ease;
   }
 
-  .sidebar-menu.hidden {
-    transform: translateX(-280px);
+  .nav-sidebar.hidden {
+    transform: translateX(-310px);
   }
 
-  .sidebar-menu h3 {
+  .nav-sidebar h3 {
     color: #4a90e2;
     text-align: center;
     font-size: 27px;
     margin-bottom: 20px;
   }
 
-  .sidebar-menu ul {
+  .nav-sidebar ul {
     list-style: none;
     padding: 0;
   }
 
-  .menu-link {
+  .nav-link {
     display: block;
     padding: 14px;
     margin: 10px 0;
     background: linear-gradient(45deg, #7eade4, #b3c6ca);
-    color: #211255; 
-     text-align: left; font-style: italic; font-weight: 800;
-    
+    color: #211255;
+    text-align: left;
+    font-style: italic;
+    font-weight: 800;
     text-decoration: none;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    font-weight: bold;
     font-size: 23px;
   }
 
-  .menu-link:hover {
+  .nav-link:hover {
     transform: scale(1.06);
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
   }
@@ -505,7 +490,7 @@
     transform: scale(1.1);
   }
 
-  .modal {
+  .context-modal {
     display: none;
     position: fixed;
     z-index: 1001;
@@ -554,7 +539,7 @@
     padding: 0;
   }
 
-  .modal-content .menu-link {
+  .modal-content .nav-link {
     font-size: 20px;
     color: #00d4ff;
     background: none;
@@ -562,7 +547,7 @@
     font-style: normal;
   }
 
-  .modal-content .menu-link:hover {
+  .modal-content .nav-link:hover {
     background: #4a90e2;
     color: #b8860b;
     transform: scale(1.05);
@@ -595,18 +580,24 @@
     50% { transform: scale(1.06); }
   }
 
+  @keyframes colorShiftCardo {
+    0% { color: #271c2b; }
+    100% { color: #4a2c5b; }
+  }
+
   @media (max-width: 768px) {
-    .processors-container {
+    .quantum-page-container {
       padding: 10px;
       width: auto;
-      margin-left: 180px;
+      margin-left: 0;
     }
     .content-wrapper {
-      margin-left: 180px;
+      margin-left: 0;
       padding: 20px;
     }
     .welcome-text h1 {
       font-size: 2.2em;
+      margin-right: 0;
     }
     .section h2 {
       font-size: 1.6em;
@@ -617,13 +608,13 @@
     .section p, .section ul, .section ol, .section details ul {
       font-size: 20px;
     }
-    .sidebar-menu {
-      width: 160px;
+    .nav-sidebar {
+      width: 250px;
     }
-    .sidebar-menu h3 {
+    .nav-sidebar h3 {
       font-size: 22px;
     }
-    .menu-link {
+    .nav-link {
       font-size: 18px;
       padding: 10px;
     }
@@ -638,7 +629,7 @@
     .modal-content {
       width: 80%;
     }
-    .modal-content .menu-link {
+    .modal-content .nav-link {
       font-size: 16px;
     }
   }
@@ -646,127 +637,102 @@
 
 <!-- Inline JavaScript for Draggable Buttons, Menu, and Highlight -->
 <script>
-  // Fade-in sections on load
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.section').forEach((section, index) => {
-      section.style.animationDelay = `${index * 0.2}s`;
-      section.style.animation = 'fadeInSection 1.2s ease-in forwards';
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Highlight the section temporarily
+        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+        target.classList.add('highlight');
+        setTimeout(() => target.classList.remove('highlight'), 2000);
+        // Close modal if clicking from modal menu
+        const modal = document.getElementById('modal-menu');
+        if (modal.style.display === 'block') {
+          modal.style.display = 'none';
+        }
+      }
     });
   });
 
-  // Function to make buttons draggable
-  function makeDraggable(button) {
-    if (!button) {
-      console.error('Button element is null or undefined');
-      return { getIsDragging: () => false };
-    }
+  // Draggable context button for toggling sidebar
+  const contextBtn = document.getElementById('context-btn');
+  let isDragging = false;
+  let currentX;
+  let currentY;
+  let initialX;
+  let initialY;
 
-    let isDragging = false;
+  contextBtn.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    initialX = e.clientX - currentX;
+    initialY = e.clientY - currentY;
+    isDragging = true;
+  });
 
-    button.addEventListener('mousedown', function(e) {
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
       e.preventDefault();
-      isDragging = true;
-      let shiftX = e.clientX - button.getBoundingClientRect().left;
-      let shiftY = e.clientY - button.getBoundingClientRect().top;
-
-      function moveAt(pageX, pageY) {
-        button.style.left = pageX - shiftX + 'px';
-        button.style.top = pageY - shiftY + 'px';
-      }
-
-      function onMouseMove(e) {
-        if (isDragging) {
-          moveAt(e.pageX, e.pageY);
-        }
-      }
-
-      document.addEventListener('mousemove', onMouseMove);
-
-      document.addEventListener('mouseup', function() {
-        if (isDragging) {
-          document.removeEventListener('mousemove', onMouseMove);
-          isDragging = false;
-        }
-      });
-
-      button.ondragstart = function() {
-        return false;
-      };
-
-      return { getIsDragging: () => isDragging };
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+      contextBtn.style.left = currentX + 'px';
+      contextBtn.style.top = currentY + 'px';
     }
+  });
 
-    // Draggable context button
-    const contextBtn = document.getElementById('context-btn');
-    const contextDrag = makeDraggable(contextBtn);
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+  });
 
-    // Toggle sidebar menu on context button click
-    contextBtn.addEventListener('click', (e) => {
-      if (!contextDrag.getIsDragging()) {
-        const sidebar = document.getElementById('sidebar-menu');
-        sidebar.classList.toggle('hidden');
-      }
-    });
+  contextBtn.ondragstart = function() {
+    return false;
+  };
 
-    // Draggable book button and modal menu
-    const bookBtn = document.getElementById('book-btn');
-    const modal = document.getElementById('modal-menu');
-    const closeModal = document.getElementById('close-modal');
-    const bookDrag = makeDraggable(bookBtn);
+  // Initialize position
+  contextBtn.style.position = 'fixed';
+  currentX = window.innerWidth - 70; // Adjust for right: 25px
+  currentY = window.innerHeight - 70; // Adjust for bottom: 25px
+  contextBtn.style.left = currentX + 'px';
+  contextBtn.style.top = currentY + 'px';
 
-    bookBtn.addEventListener('click', (e) => {
-      if (!bookDrag.getIsDragging()) {
-        const isVisible = modal.style.display === 'block';
-        modal.style.display = isVisible ? 'none' : 'block';
-        if (!isVisible) {
-          const rect = bookBtn.getBoundingClientRect();
-          modal.style.left = `${rect.left}px`;
-          modal.style.top = `${rect.top - modal.offsetHeight - 10}px`;
-        }
-      }
-    });
+  // Toggle sidebar visibility
+  contextBtn.addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebar-menu');
+    sidebar.classList.toggle('hidden');
+  });
 
-    closeModal.addEventListener('click', () => {
+  // Modal menu for book button
+  const bookBtn = document.getElementById('book-btn');
+  const modal = document.getElementById('modal-menu');
+  const closeModal = document.getElementById('close-modal');
+
+  bookBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
       modal.style.display = 'none';
-    });
+    }
+  });
 
-    // Close modal when clicking outside
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-
-    // Smooth scroll and highlight for menu links
-    document.querySelectorAll('.menu-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-          document.querySelectorAll('.section').forEach(sec => {
-            sec.classList.remove('highlight');
-          });
-          target.classList.add('highlight');
-          setTimeout(() => {
-            target.classList.remove('highlight');
-          }, 2000);
-          document.getElementById('sidebar-menu').classList.add('hidden');
-          modal.style.display = 'none';
-        }
-      });
-    });
-
-    // Dynamic highlight style
-    const style = document.createElement('style');
-    style.textContent = `
-      .highlight {
-        background: linear-gradient(45deg, #003366, #001233) !important;
-        transform: scale(1.02) !important;
-        transition: background 0.3s, transform 0.3s;
-      }
-    `;
-    document.head.appendChild(style);
+  // Highlight style
+  const style = document.createElement('style');
+  style.textContent = `
+    .highlight {
+      background: linear-gradient(45deg, #ffe4b5, #fffaf0) !important;
+      transform: scale(1.02) !important;
+      transition: background 0.3s, transform 0.3s;
+    }
+  `;
+  document.head.appendChild(style);
 </script>
+
 {% endblock %}

@@ -3,37 +3,23 @@
 {% block title %}Корекція помилок у квантових системах{% endblock %}
 
 {% block content %}
-<div class="quantum-page-container">
+<div class="container">
   <!-- Космічний фон із анімованими зірками -->
-  <div class="cosmic-background">
+  <div class="space-bg">
     <div class="stars top-stars"></div>
     <div class="stars left-stars"></div>
     <div class="stars right-stars"></div>
   </div>
 
   <!-- Бічна панель для навігації -->
-  <div class="nav-sidebar" id="sidebar-menu">
+  <div class="sidebar" id="sidebar">
     <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
     <ul>
-      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Основи QECC</a></li>
-      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Обмеження та переваги</a></li>
-      <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Типи кодів</a></li>
-      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Актуальність 2025</a></li>
+      <li><a href="#section1" class="nav-button" style="color: #211255; font-weight: 700;">Основи QECC</a></li>
+      <li><a href="#section2" class="nav-button" style="color: #211255; font-weight: 700;">Обмеження та переваги</a></li>
+      <li><a href="#section3" class="nav-button" style="color: #211255; font-weight: 700;">Типи кодів</a></li>
+      <li><a href="#section4" class="nav-button" style="color: #211255; font-weight: 700;">Актуальність 2025</a></li>
     </ul>
-  </div>
-
-  <!-- Модальне меню для book-btn -->
-  <div id="modal-menu" class="context-modal">
-    <div class="modal-content">
-      <span id="close-modal">&times;</span>
-      <h3>Контекстне меню</h3>
-      <ul>
-        <li><a href="#section1" class="nav-link">Основи QECC</a></li>
-        <li><a href="#section2" class="nav-link">Обмеження та переваги</a></li>
-        <li><a href="#section3" class="nav-link">Типи кодів</a></li>
-        <li><a href="#section4" class="nav-link">Актуальність 2025</a></li>
-      </ul>
-    </div>
   </div>
 
   <!-- Основний вміст -->
@@ -43,8 +29,11 @@
       <p style="font-size: 26px; text-align: justify; font-weight: 700;  color: rgb(85, 38, 38);">Уявіть океан суперпозиції, де кожна хвиля – потенційне обчислення.
          <br>Декогеренція – це шторм, що руйнує цю тендітну структуру.
          <br> Корекція помилок – ваш маяк, що зберігає квантову магію.</p>
-      <img src="https://nextbigfuture.s3.amazonaws.com/uploads/2018/04/33112e1edc9474c0d7746ae49995a3a6.jpg" style="width: 725px; height: 645px;" alt="Технологічна ілюстрація">
+
+         <img src="https://nextbigfuture.s3.amazonaws.com/uploads/2018/04/33112e1edc9474c0d7746ae49995a3a6.jpg" style="width: 725px; height: 645px;" alt="Технологічна ілюстрація">
     </div>
+
+   
 
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
@@ -54,10 +43,14 @@
          <br><br> QECC комбінує <span style="font-weight: bold;  color: rgb(56, 28, 28);">кілька фізичних кубітів (наприклад, 49 у surface code) в один логічний,</span> використовуючи синдромні вимірювання – "пальпацію" помилок без руйнування суперпозиції.
          <br><br> Парадокс: щоб захистити один кубіт, потрібно 49, але це створює експоненційну стійкість, як маяк у штормі, що освітлює шлях для мільйонів обчислень.
          <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28);">У 2025 році surface code став стандартом, дозволяючи fault-tolerant обчислення, де помилки 10⁻¹⁰ на логічний кубіт.</span></p>
-      <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 25px; font-style: italic; text-decoration: underline;">Слід розуміти, що корекція помилок у квантових системах існує як на фізичному, так і на програмному рівнях:</span></p>
-      <img src="https://images.squarespace-cdn.com/content/v1/5d52f7bd9d7b3e0001819015/1598377517551-A7Z3QEP2NIQ9S2K9B1GG/2020-08-25+18_44_59-_shorcode12.py+-+C__quantum_shorcode12.py+%283.7.7%29_.png?format=1000w" style="width: 725px; height: 645px;" alt="Код Shor">
-      <h3 style="color: #0a041d; font-weight: 700;">Example: Quantum error correction - Shor code in Qiskit</h3>
-      <details>
+         
+         <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 25px; font-style: italic; text-decoration: underline;">Слід розуміти, що корекція помилок у квантових системах існує як на фізичному, так і на програмному рівнях:</span></p>
+
+         <img src="https://images.squarespace-cdn.com/content/v1/5d52f7bd9d7b3e0001819015/1598377517551-A7Z3QEP2NIQ9S2K9B1GG/2020-08-25+18_44_59-_shorcode12.py+-+C__quantum_shorcode12.py+%283.7.7%29_.png?format=1000w" style="width: 725px; height: 645px;" alt="Код Shor">
+         <h3 style="color: #0a041d; font-weight: 700;">Example: Quantum error correction - Shor code in Qiskit</h3>
+     
+     
+         <details>
         <summary>Концепція логічних кубітів</summary>
         <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічний кубіт – це "команда" фізичних, де <span style="font-weight: bold;  color: rgb(56, 28, 28);">інформація кодується в колективному стані.</span> 
           <br>Синдромні вимірювання виявляють помилки без колапсу суперпозиції, подібно до того, як лікар "промацує" пацієнта без втручання. Джерело: <a href="https://github.com/Qiskit/qiskit-tutorials/tree/main/tutorials/advanced/quantum_error_correction" target="_blank">Qiskit Error Correction Tutorials</a>.</p>
@@ -139,6 +132,7 @@
 
     <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700;">Актуальність 2025: перші fault-tolerant демонстрації</h2>
+
       <img src="https://thequantuminsider.com/wp-content/uploads/2024/09/qedma-stack-1024x651.jpg" style="width: 650px; height: 570px;" alt="Qedma стек">
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">У 2025 році QECC переходить від теорії до практики: перші fault-tolerant демонстрації в IBM Poughkeepsie data center, де логічні кубіти витримують обчислення на 1000+ фізичних.
          <br>Критично для реальних задач: симуляція матеріалів (хімія нових батарей), де декогеренція руйнувала б результати.
@@ -154,11 +148,20 @@
   <button id="context-btn">☰</button>
   <!-- Пересувна кнопка Book -->
   <button id="book-btn">📘</button>
+  <!-- Контекстне меню для Book -->
+  <div id="book-context-menu" class="context-menu" style="display: none;">
+    <ul>
+      <li><a href="#section1" class="context-menu-item">Основи QECC</a></li>
+      <li><a href="#section2" class="context-menu-item">Обмеження та переваги</a></li>
+      <li><a href="#section3" class="context-menu-item">Типи кодів</a></li>
+      <li><a href="#section4" class="context-menu-item">Актуальність 2025</a></li>
+    </ul>
+  </div>
 </div>
 
 <!-- Вбудовані стилі CSS -->
 <style>
-  .quantum-page-container {
+  .container {
     position: relative;
     min-height: 100vh;
     width: 1500px;
@@ -167,10 +170,10 @@
     margin-left: 40px;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    background-color: #b6c2cc;
+    background-color: #b6c2cc; /* Легкий бежевий для гармонії */
   }
 
-  .cosmic-background {
+  .space-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -183,7 +186,7 @@
     z-index: 1;
   }
 
-  .nav-sidebar {
+  .sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -197,38 +200,37 @@
     transition: transform 0.3s ease;
   }
 
-  .nav-sidebar.hidden {
-    transform: translateX(-310px);
+  .sidebar.hidden {
+    transform: translateX(-280px);
   }
 
-  .nav-sidebar h3 {
+  .sidebar h3 {
     color: #4a90e2;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 23px;
   }
 
-  .nav-sidebar ul {
+  .sidebar ul {
     list-style: none;
     padding: 0;
   }
 
-  .nav-link {
+  .nav-button {
     display: block;
     padding: 14px;
     margin: 10px 0;
     background: linear-gradient(45deg, #7eade4, #b3c6ca);
-    color: #211255;
-    text-align: left;
-    font-style: italic;
-    font-weight: 800;
+    color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
     text-decoration: none;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
     font-size: 23px;
   }
 
-  .nav-link:hover {
+  .nav-button:hover {
     transform: scale(1.06);
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
   }
@@ -259,13 +261,16 @@
   }
 
   .section {
+        
     background: #A6B8D3;
+    
     padding: 25px;
     margin: 25px 0;
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
     max-width: 1000px;
+   
   }
 
   .section h2 {
@@ -380,64 +385,33 @@
     font-size: 1.2em;
   }
 
-  .context-modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.65);
-  }
-
-  .modal-content {
+  .context-menu {
+    position: absolute;
     background: linear-gradient(45deg, #003366, #001233);
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #4a90e2;
-    width: 300px;
-    border-radius: 12px;
-    text-align: center;
+    border-radius: 10px;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    padding: 10px;
+    z-index: 1001;
     animation: fadeIn 0.3s ease-in;
   }
 
-  #close-modal {
-    color: #00d4ff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  #close-modal:hover,
-  #close-modal:focus {
-    color: #b8860b;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .modal-content h3 {
-    color: #4a90e2;
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
-
-  .modal-content ul {
+  .context-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .modal-content .nav-link {
-    font-size: 20px;
+  .context-menu-item {
+    display: block;
+    padding: 10px;
     color: #00d4ff;
-    background: none;
-    box-shadow: none;
-    font-style: normal;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
   }
 
-  .modal-content .nav-link:hover {
+  .context-menu-item:hover {
     background: #4a90e2;
     color: #b8860b;
     transform: scale(1.05);
@@ -456,16 +430,6 @@
   @keyframes fadeInSection {
     0% { opacity: 0; transform: translateY(25px); }
     100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes pulseBtn {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.06); }
-  }
-
-  @keyframes colorShiftCardo {
-    0% { color: #271c2b; }
-    100% { color: #4a2c5b; }
   }
 
   #context-btn, #book-btn {
@@ -497,26 +461,18 @@
     transform: scale(1.1);
   }
 
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
   @media (max-width: 768px) {
-    .quantum-page-container {
-      width: auto;
-      margin-left: 0;
-      padding: 10px;
-    }
-    .nav-sidebar {
-      width: 250px;
-    }
-    .nav-sidebar h3 {
-      font-size: 20px;
-    }
-    .nav-link {
-      font-size: 18px;
-      padding: 10px;
+    .sidebar {
+      width: 160px;
     }
     .content {
-      margin-left: 0;
+      margin-left: 180px;
       padding: 20px;
-      width: auto;
     }
     .welcome-text h1 {
       font-size: 2.2em;
@@ -530,8 +486,15 @@
     .section p {
       font-size: 1em;
     }
-    .section table {
-      font-size: 0.9em;
+    .nav-button, .action-btn {
+      font-size: 13px;
+      padding: 10px;
+    }
+    .simulation-box h3 {
+      font-size: 1.3em;
+    }
+    .simulate-error-btn {
+      padding: 10px 20px;
     }
     #context-btn, #book-btn {
       width: 40px;
@@ -541,108 +504,144 @@
     #book-btn {
       right: 70px;
     }
-    .modal-content {
-      width: 80%;
+    .context-menu {
+      width: 140px;
     }
-    .modal-content .nav-link {
-      font-size: 16px;
+    .context-menu-item {
+      font-size: 14px;
+      padding: 8px;
     }
   }
 </style>
 
 <!-- Вбудований JavaScript -->
 <script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('.nav-link').forEach(link => {
+  // Симуляція декогеренції
+  document.getElementById('simulate-error-btn').addEventListener('click', () => {
+    const errorRate = 0.1; // 10% error rate
+    const resultWithout = Math.random() < errorRate ? 'Помилка!' : 'OK';
+    const resultWith = Math.random() < 0.001 ? 'Помилка!' : 'OK (QECC)';
+    document.getElementById('error-simulation-result').innerHTML = `
+      Без корекції: <span style="color: ${resultWithout === 'OK' ? '#00d4ff' : '#ff4444'}">${resultWithout}</span><br>
+      З QECC: <span style="color: ${resultWith === 'OK' ? '#00d4ff' : '#ff4444'}">${resultWith}</span>
+    `;
+    document.getElementById('error-simulation-result').style.animation = 'fadeIn 0.5s';
+    setTimeout(() => {
+      document.getElementById('error-simulation-result').style.animation = '';
+    }, 500);
+  });
+
+  // Плавна прокрутка для навігації бічної панелі
+  document.querySelectorAll('.nav-button').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        // Highlight the section temporarily
-        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
-        target.classList.add('highlight');
-        setTimeout(() => target.classList.remove('highlight'), 2000);
-        // Close modal if clicking from modal menu
-        const modal = document.getElementById('modal-menu');
-        if (modal.style.display === 'block') {
-          modal.style.display = 'none';
-        }
-      }
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 2000);
     });
   });
 
-  // Draggable context button for toggling sidebar
-  const contextBtn = document.getElementById('context-btn');
-  let isDragging = false;
-  let currentX;
-  let currentY;
-  let initialX;
-  let initialY;
+  // Функція для перетягування кнопок
+  function makeDraggable(button) {
+    if (!button) {
+      console.error('Button element is null or undefined');
+      return { getIsDragging: () => false };
+    }
 
-  contextBtn.addEventListener('mousedown', function(e) {
-    e.preventDefault();
-    initialX = e.clientX - currentX;
-    initialY = e.clientY - currentY;
-    isDragging = true;
-  });
+    let isDragging = false;
 
-  document.addEventListener('mousemove', function(e) {
-    if (isDragging) {
+    button.addEventListener('mousedown', function(e) {
       e.preventDefault();
-      currentX = e.clientX - initialX;
-      currentY = e.clientY - initialY;
-      contextBtn.style.left = currentX + 'px';
-      contextBtn.style.top = currentY + 'px';
+      isDragging = true;
+      let shiftX = e.clientX - button.getBoundingClientRect().left;
+      let shiftY = e.clientY - button.getBoundingClientRect().top;
+
+      function moveAt(pageX, pageY) {
+        button.style.left = pageX - shiftX + 'px';
+        button.style.top = pageY - shiftY + 'px';
+      }
+
+      function onMouseMove(e) {
+        if (isDragging) {
+          moveAt(e.pageX, e.pageY);
+        }
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+
+      document.addEventListener('mouseup', function() {
+        if (isDragging) {
+          document.removeEventListener('mousemove', onMouseMove);
+          isDragging = false;
+        }
+      });
+
+      button.ondragstart = function() {
+        return false;
+      };
+    });
+
+    return { getIsDragging: () => isDragging };
+  }
+
+  // Пересувна кнопка контекстного меню
+  const contextBtn = document.getElementById('context-btn');
+  const contextDrag = makeDraggable(contextBtn);
+
+  // Перемикання видимості бічної панелі
+  contextBtn.addEventListener('click', (e) => {
+    if (!contextDrag.getIsDragging()) {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('hidden');
     }
   });
 
-  document.addEventListener('mouseup', function() {
-    isDragging = false;
-  });
-
-  contextBtn.ondragstart = function() {
-    return false;
-  };
-
-  // Initialize position
-  contextBtn.style.position = 'fixed';
-  currentX = window.innerWidth - 70; // Adjust for right: 25px
-  currentY = window.innerHeight - 70; // Adjust for bottom: 25px
-  contextBtn.style.left = currentX + 'px';
-  contextBtn.style.top = currentY + 'px';
-
-  // Toggle sidebar visibility
-  contextBtn.addEventListener('click', () => {
-    const sidebar = document.getElementById('sidebar-menu');
-    sidebar.classList.toggle('hidden');
-  });
-
-  // Modal menu for book button
+  // Пересувна кнопка Book та контекстне меню
   const bookBtn = document.getElementById('book-btn');
-  const modal = document.getElementById('modal-menu');
-  const closeModal = document.getElementById('close-modal');
+  const bookContextMenu = document.getElementById('book-context-menu');
+  const bookDrag = makeDraggable(bookBtn);
 
-  bookBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-  });
-
-  closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
+  bookBtn.addEventListener('click', (e) => {
+    if (!bookDrag.getIsDragging()) {
+      const isVisible = bookContextMenu.style.display === 'block';
+      bookContextMenu.style.display = isVisible ? 'none' : 'block';
+      if (!isVisible) {
+        const rect = bookBtn.getBoundingClientRect();
+        bookContextMenu.style.left = `${rect.left}px`;
+        bookContextMenu.style.top = `${rect.top - bookContextMenu.offsetHeight - 10}px`;
+      }
     }
   });
 
-  // Highlight style
+  // Плавна прокрутка для пунктів контекстного меню
+  document.querySelectorAll('.context-menu-item').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 2000);
+      bookContextMenu.style.display = 'none'; // Закрити меню після кліку
+    });
+  });
+
+  // Закриття контекстного меню при кліку поза ним
+  document.addEventListener('click', (e) => {
+    if (!bookBtn.contains(e.target) && !bookContextMenu.contains(e.target)) {
+      bookContextMenu.style.display = 'none';
+    }
+  });
+
+  // Додавання стилю для підсвічування
   const style = document.createElement('style');
   style.textContent = `
     .highlight {
-      background: linear-gradient(45deg, #ffe4b5, #fffaf0) !important;
+      background: linear-gradient(45deg, #003366, #001233) !important;
       transform: scale(1.02) !important;
       transition: background 0.3s, transform 0.3s;
     }
@@ -650,4 +649,5 @@
   document.head.appendChild(style);
 </script>
 
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
 {% endblock %}
