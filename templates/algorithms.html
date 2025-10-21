@@ -99,17 +99,17 @@
       <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left; ">Історія виникнення: хто створив квантові алгоритми</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Історія квантових алгоритмів – це як відкриття нових галактик у 1980-х, коли квантових комп’ютерів ще не існувало.
        
-        <ul style="font-weight: bold; color: #211255; font-size: 21px;">
+        <ul style="color: #322968; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">
         <br>1982 році Річард Фейнман запропонував ідею квантових обчислень для моделювання фізичних систем, недоступних класичним комп’ютерам. 
         <br>1985 році Девід Дойч розробив концепцію універсального квантового комп’ютера, показавши, що квантовий алгоритм може бути швидшим.
         <br>1994 році Пітер Шор створив алгоритм Шора, який факторизує числа експоненціально швидше, загрожуючи RSA.
         <br>1996 році Лов Гровер розробив алгоритм для пошуку з квадратичним прискоренням. 
       </ul>    
        
-      <br><br><span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; ">  Вищезгадані алгоритми створювалися теоретично, на папері, за допомогою математики квантової механіки, коли QPU існували лише в уяві.
+      <br><br><span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 23px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left; ">  Вищезгадані алгоритми створювалися теоретично, на папері, за допомогою математики квантової механіки, коли QPU існували лише в уяві.
           Теоретики, як Шор, передбачили квантову перевагу, коли кубіти були лише мрією.</span> 
         
-        <img src="https://d2908q01vomqb2.cloudfront.net/5a5b0f9b7d3f8fc84c3cef8fd8efaaa6c70d75ab/2023/10/05/flow_chart_FH_final.png" style="width: 690px; height: 550px;" alt="Діаграма процесу">
+          <img src="https://static-cdn.spinq.cn/24-official-static/static/img/20-detail-spinqit/img_spinqit_3.png" style="width: 600px; height: 430px; margin-top: 55px; margin-left: 35px;">
       
         <br><span style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; ">У 2000-х IBM і Google почали створювати перші QPU, а Qiskit і Cirq дозволили реалізувати
            ці алгоритми.</span>
@@ -122,12 +122,142 @@
       <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left; ">Класифікація квантових алгоритмів</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантові алгоритми поділені за типами задач. 
         
-        <ul style="font-weight: bold; color: #211255; font-size: 21px;">Основні категорії:
+        <ul style="color: #322968; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Основні категорії:
         <li >1) <strong>Алгоритми на основі суперпозиції</strong> (Shor, Grover), що використовують паралелізм для прискорення;</li>
         <li >2) <strong>Гібридні алгоритми</strong> (VQE, QAOA), що комбінують класичні та квантові обчислення;</li> 
         <li >3) <strong>Симуляційні алгоритми</strong> для моделювання квантових систем (наприклад, молекул);</li>
         <li >4) <strong>Алгоритми машинного навчання</strong> (QSVM, QNN). Уявіть: кожен тип – це інструмент у космічному арсеналі.</li> 
       </ul>
+
+     
+      <h2 style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Крім того, можна розглянути комплексну класифікація квантових алгоритмів, структурована за основними математичними методами і моделями які використовуються в певного типу алгоритмах, 
+         що робить її більш професійною та всеосяжною порівняно з базовими поділами.</h2>
+         <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Класифікація охоплює близько 130 відомих алгоритмів, поділяючи їх на 8 основних категорій з ієрархією підкатегорій, де це доречно. 
+         Кожна категорія включає лаконічні пояснення, ключові приклади, а також математичні методи та моделі, що використовуються</p>
+       
+         <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Види квантових алгоритмів в залежності від математичних моделей та методологічних підходів для вирішення:</p>
+   <ol style="font-weight: bold; color: #211255; font-size: 21px;">
+   <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми на основі квантового перетворення Фур'є (QFT) та прихованих структур</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Ці алгоритми використовують QFT для ефективного аналізу періодичностей, фаз та прихованих підгруп у алгебраїчних і чорно-ящикових задачах, забезпечуючи експоненціальну або суперполіноміальну швидкодію. Вони ідеальні для криптоаналізу та чисельної теорії, з підкатегоріями для абелєвих/неабелєвих груп.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Shor's (факторизація), Simon's (прихований період), Deutsch-Jozsa (балансовані функції), Bernstein-Vazirani (прихований рядок), Hidden Subgroup Problem (HSP).</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: QFT як аналог дискретного перетворення Фур'є, реалізований через Hadamard-ворота та фазові повороти для оцінки фаз (quantum phase estimation); модель чорної скриньки з оракулом; HSP як узагальнення, де QFT застосовується над представленнями груп для знаходження підгруп (абелєві HSP — поліноміальний час, неабелєві — для спеціальних груп як симетрична чи діедральна).</p>
+    
+      <h3 style="color: #07060e; font-style: italic; font-size: 26px; font-weight: 700;">Співвідношення з перетвореннями Фур'є (QFT)</h3>
+      <img src="https://nap.nationalacademies.org/openbook/25196/xhtml/images/img-82.jpg" style="width: 630px; height: 520px;">
+
+      <p style="color: #332a69; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Квантове перетворення Фур'є (QFT) — це не окрема категорія алгоритмів, а інструмент (primitive), що використовується в алгоритмах на основі суперпозиції (ваша категорія 1). 
+        <br> QFT дозволяє ефективно оцінювати фази та періоди завдяки суперпозиції, забезпечуючи експоненціальне прискорення. 
+      <br><br> Наприклад, у Shor's алгоритмі QFT є ключовим для оцінки фаз (quantum phase estimation), що веде до факторизації. 
+      <br>Grover не залежить від QFT, але обидва використовують паралелізм суперпозиції. 
+      <br><br> У класифікаціях QFT часто виділяється як окрема група: на Wikipedia — "алгоритми на основі QFT" (Deutsch-Jozsa, Simon's, Shor's, приховані підгрупи); 
+      <br>в arXiv — як кореневий primitive, що підтримує класи прихованих підгруп та динамічних систем; у Quantum Zoo — в алгебраїчних/чисельних алгоритмах (factoring, discrete-log). 
+      <br><br> Тобто QFT посилює вашу першу категорію, але не є самостійним типом — це будівельний блок для задач, як криптоаналіз чи симуляція.</p>
+    
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми на основі амплітудного посилення та пошуку</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Фокус на посиленні ймовірності бажаних станів у суперпозиції для пошуку в неструктурованих даних, з квадратичною швидкодією. Підкатегорії: неструктурований пошук, оцінка кількості та зіткнення.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Grover's (пошук у базі даних), Quantum Counting (підрахунок маркованих елементів), Collision Finding (знаходження зіткнень).</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Амплітудне посилення через ітеративні відбиття (Grover-оператор: оракул + дифузія); модель оракула для запитів; комбінація з фазовою оцінкою для підрахунку (наприклад, eigenvalue estimation Grover-оператора); для зіткнень — квантові прогулянки на графах.</p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми на основі квантових прогулянок</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Аналоги класичних випадкових прогулянок, але з суперпозицією для експоненціальної швидкодії в графових і чорно-ящикових задачах. Підкатегорії: дискретні/неперервні прогулянки, графові властивості.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Element Distinctness (виявлення дублікатів), Triangle-Finding (трикутники в графах), Welded Tree (пошук у деревах), Graph Collision.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Квантові прогулянки на Cayley-графах або Johnson-графах з операторами еволюції (унітарні матриці); модель запиту до суміжності/списку; комбінація з амплітудним посиленням для виявлення колізій; span-програми для оцінки складності запитів.</p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми симуляції та наближення</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Моделювання квантових систем для фізики, хімії та динаміки, з експоненціальною швидкодією для багатьох тіл. Підкатегорії: симуляція Гамільтоніанів, диференціальні рівняння, бозонне семплювання.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Quantum Simulation (молекули, реакції), Boson Sampling (фотонні мережі), HHL (лінійні системи рівнянь), ODE/PDE solvers (хвильові рівняння).</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Симуляція Гамільтоніанів через Trotter-Suzuki апроксимацію або quantum signal processing; фазова оцінка для енергетичних спектрів; Carleman-лінеаризація для нелінійних рівнянь; модель лінійної оптики для бозонів (обчислення перманенту матриць).</p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Варіаційні та гібридні квантово-класичні алгоритми</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Гібридні методи для NISQ-пристроїв, де квантовий комп'ютер готує стани, а класичний оптимізує параметри для наближених розв'язків. Підкатегорії: eigensolvers, оптимізація.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: VQE (основний стан молекул), QAOA (комбінаторна оптимізація), CQE (контрактовані eigensolvers).</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Варіаційний принцип (мінімізація функції вартості через параметризовані ансатци); класична оптимізація (градієнтний спуск, Nelder-Mead); модель квантового кола з зворотним зв'язком; проекція на багаточасткові простори для скорочених рівнянь Шредінгера.</p>
+   
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Варіаційні квантові алгоритми (Variational Quantum Algorithms, VQA)</p>
+
+    <img src="https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs42254-021-00348-9/MediaObjects/42254_2021_348_Fig1_HTML.png" style="width: 680px; height: 530px;">
+ 
+    <h3 style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Варіаційні квантові алгоритми — це гібридні квантово-класичні алгоритми, які використовують квантовий комп’ютер для обчислення складних квантових станів, а класичний комп’ютер — для оптимізації параметрів цих станів.</h3> 
+    <p style="color: #332a69; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;"> Вони базуються на варіяційному принципі, де мета — знайти мінімальне значення (або наближення) для деякої функції вартості (cost function), яка описує задачу. <p></p>
+
+   <ol style="color: #332a69; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Як використовуються:
+    <li >1. Підготовка квантового стану:
+   - На квантовому комп’ютері створюється параметризований квантовий стан (ансатц) за допомогою квантових вентилів, чиї параметри (наприклад, кути повороту) можна налаштувати.
+   - Ансатц — це припущення про форму хвильової функції, яка залежить від параметрів.</li>
+
+   <li > 2. Обчислення функції вартості:
+   - Квантовий комп’ютер вимірює значення функції вартості (наприклад, енергію системи для задач квантової хімії чи значення цільової функції для оптимізації).
+   - Функція вартості залежить від параметрів квантового стану.</li>
+
+   <li > 3. Класична оптимізація:
+   - Класичний комп’ютер використовує алгоритми оптимізації (наприклад, градієнтний спуск, Nelder-Mead або інші) для ітераційного налаштування параметрів ансатцу, щоб мінімізувати функцію вартості.</li>
+
+   <li >4. Ітерація:
+   - Процес повторюється: квантовий комп’ютер обчислює функцію вартості для нових параметрів, а класичний комп’ютер коригує параметри, доки не буде досягнуто оптимального рішення.</li>
+  </ol>
+
+  <ul style="color: #332a69; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Навіщо використовуються: 
+  
+    <li >- Квантові обмеження: VQA розроблені для роботи на сучасних квантових комп’ютерах із обмеженою кількістю кубітів і високим рівнем шуму (NISQ — Noisy Intermediate-Scale Quantum devices).</li>
+   <li >- Задачі:</li>
+   <li >- Квантова хімія: Знаходження основного стану молекул (наприклад, алгоритм VQE — Variational Quantum Eigensolver).</li>
+    <li >- Оптимізація: Розв’язання комбінаторних задач, наприклад, задачі максимального розрізу графа.</li>
+   <li >- Машинне навчання: Тренування квантових нейронних мереж (Quantum Machine Learning).</li>
+   <li >- Переваги: VQA ефективні для задач, де потрібно наближено знаходити оптимальні рішення, і вони стійкі до шумів у квантових системах.</li>
+  </ul>
+ 
+  <p style="color: #332a69; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Навіщо використовуються:>Приклад — VQE (Variational Quantum Eigensolver)**:
+ <br> - Мета: Знайти найнижчу енергію молекули (основний стан).
+ <br> - Процес: Квантовий комп’ютер готує пробний стан молекули, обчислює енергію (очікуване значення гамільтоніана). Класичний комп’ютер оптимізує параметри ансатцу, щоб мінімізувати енергію.
+ <br>   - Застосування: Моделювання хімічних реакцій, розробка нових матеріалів.</p>
+
+<p style="color: #322968; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Навіщо використовуються:>Лаконічний висновок:
+  <br> Варіаційні квантові алгоритми — це гібридні методи, які комбінують квантові обчислення для створення та оцінки складних станів із класичною оптимізацією для налаштування параметрів. 
+  <br> <br> Вони використовуються для розв’язання задач квантової хімії, оптимізації та машинного навчання на сучасних шумних квантових комп’ютерах, завдяки їхній стійкості до помилок і ефективності.</p>
+   
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми квантового машинного навчання</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Інтеграція квантових методів у ML для класифікації, кластеризації та аналізу даних, з потенційними експоненціальними швидкодіями для когерентних даних. Підкатегорії: на основі лінійних систем, адiabатичні, Grover-based.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: QSVM (квантові опорні векторні машини), QNN (квантові нейронні мережі), Quantum PCA (головні компоненти), Cluster-Finding.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: HHL для розв'язання лінійних систем (деякі деквантизовані); адіабатична оптимізація для тренування; амплітудне посилення для підзадач; квантова оцінка ядер (kernel estimation) для SVM; топологічний аналіз даних через persistent homology.</p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Алгоритми оптимізації та чисельних методів</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;" >Пояснення: Розв'язання оптимізаційних задач, динамічного програмування та криптоаналізу з поліноміальними швидкодіями. Підкатегорії: динамічне програмування, графікові, граткові проблеми.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Quantum Dynamic Programming (TSP, set cover), Nash Equilibria Approximation, Lattice Problems (shortest vector), Double-Bracket Algorithms (матрична діагоналізація).</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Grover з динамічним програмуванням на гіперкубах; QFT для редукції граткових задач; фільтрація через квантові вимірювання; double-bracket flows (групові комутатори) для неунітарних потоків, дискретизованих через Hamiltonian simulation.</p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary style="color: #211255; font-style: italic;">Топологічні та BQP-повні алгоритми</summary>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Пояснення: Алгоритми для топологічних задач і найскладніших у BQP (bounded-error quantum polynomial time), часто з симуляцією польових теорій. Підкатегорії: вузлові інваріанти, квантова криптоаналіз.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Ключові приклади: Computing Knot Invariants (Jones polynomial), Quantum Cryptanalysis (атаки на RSA, lattices), Group Isomorphism.</p>
+      <p style="color: #251e4e; font-style: italic; font-size: 24px; font-weight: 900; text-align: justify;">Математичні методи та моделі: Топологічна квантова теорія поля (TQFT, Chern-Simons) для апроксимації поліномів (Jones, HOMFLY); модель квантового кола для симуляції; HSP-редукції для групової ізоморфності; Gibbs sampling для рівноваг.</p>
+    </details>
+  </li>
+</ol>
+<p style="color: #282633cc; font-style: italic; font-size: 26px; font-weight: 700;">Висновок: Ця класифікація є гнучкою, оскільки алгоритми часто перетинаються (наприклад, QFT у симуляції). Вона охоплює як fault-tolerant (майбутні) алгоритми, так і NISQ-сумісні, з акцентом на математичні primitives для глибшого розуміння.</p>
        
       <br><br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">- Наприклад, <span style="font-weight: 800;  color: #211255;">алгоритм Шора факторизує числа</span>, використовуючи квантову transform Fourier, 
           а <span style="font-weight: 800;  color: #211255;">Grover шукає в базах даних.</span> 
