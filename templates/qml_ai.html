@@ -331,7 +331,7 @@ def generator_circuit(params):
         <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Уявіть квантову нейронну мережу, яка не просто вчиться, а "відчуває" дані, використовуючи суперпозицію для експоненціального прискорення. </p>
         <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Хоча сучасні квантові комп’ютери обмежені 1000 кубітів, гібридні системи дозволяють досягати quantum advantage уже сьогодні. </p>
         <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Наприклад, IBM планує до 2030 року запустити fault-tolerant QML-системи з мільйонами логічних кубітів, що зробить QML основою для AI в реальному часі.</p> 
-        <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Розробники можуть почати з <span class="code-trigger" data-code-id="qml-future">PennyLane чи Qiskit</span>, експериментуючи з простими моделями, як QSVM чи QGANs. </p>
+        <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Розробники можуть почати з <span style="color:#271c2b ;">PennyLane чи Qiskit</span>, експериментуючи з простими моделями, як QSVM чи QGANs. </p>
         <br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Виклик – інтеграція з класичними системами та подолання декогеренції – буде вирішено через прогрес у QECC та хмарних платформах. Почніть свою подорож у QML уже сьогодні, і, 
           можливо, ви створите наступний прорив у AI!</p>
     </section>
@@ -352,7 +352,9 @@ def generator_circuit(params):
     padding: 20px;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    width: 1300px;
+    width: 100%; max-width: 1400px; margin: 0 auto;
+    margin-left: 280px;
+    
   }
 
   .nav-sidebar {
@@ -405,12 +407,13 @@ def generator_circuit(params):
   }
 
   .content {
-    margin-left: 210px;
+   
+    margin-left: 280px;
     margin-right: 10px;
     padding: 30px;
     position: relative;
     z-index: 2;
-    width: 1290px;
+    width: 1450px;
   }
 
   .welcome-text {
@@ -424,7 +427,7 @@ def generator_circuit(params):
     background-repeat: no-repeat;
     border-radius: 10px;
     margin: 20px 0;
-    width: 80%;
+    width: 100%;
     min-height: 170px;
     background-color: rgba(197, 210, 212, 0.3);
     background-blend-mode: overlay;
@@ -444,9 +447,11 @@ def generator_circuit(params):
   .section {
     background-color: #A6B8D3;
     padding: 25px;
-    margin: 25px 0;
+    
     border-radius: 12px;
-    width: 980px;
+
+    width: 100%; max-width: 1450px; margin: 20px auto;
+    
     color: #ffffff;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
@@ -702,7 +707,12 @@ def generator_circuit(params):
     transform: scale(1.1);
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 1450px) {
+  .quantum-page-container { width: 100%; }
+  .content { width: 100%; max-width: 1450px; margin: 0 auto; }
+  .section { width: 100%; max-width: 1500px; margin: 20px auto; }
+}
+  @media (max-width: 1400px) {
     .quantum-page-container {
       width: auto;
       margin-left: 0;
@@ -747,7 +757,7 @@ def generator_circuit(params):
       right: 70px;
     }
     .modal-content {
-      width: 80%;
+      width: 100%;
     }
     .modal-content .nav-link {
       font-size: 16px;
@@ -856,7 +866,7 @@ def generator_circuit(params):
   const style = document.createElement('style');
   style.textContent = `
     .highlight {
-      background: linear-gradient(45deg, #ffe4b5, #fffaf0) !important;
+      background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
       transform: scale(1.02) !important;
       transition: background 0.3s, transform 0.3s;
     }

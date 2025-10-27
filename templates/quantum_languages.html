@@ -1,5 +1,4 @@
 
-<xaiArtifact artifact_id="c62d2eb3-344e-4784-9511-4781a84f6cb1" artifact_version_id="626e55b4-ee86-4a14-a322-d12e43390ee4" title="quantum_languages.html" contentType="text/html">
 {% extends "base.html" %}
 
 {% block title %}Еволюція Мов Програмування для Квантових Систем{% endblock %}
@@ -47,7 +46,7 @@
     <!-- Welcome text -->
     <div class="welcome-text">
       <h1 style="color: #921319; font-size: 43px; text-align: center; font-style: italic; font-weight: 700; margin-right: 150px;">Еволюція мов програмування: кодуючи квантовий Всесвіт</h1>
-      <br><p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 1020px; margin-right: 80px;">Уявіть квантовий комп’ютер як оркестр, де кожен кубіт – інструмент, що грає в суперпозиції. 
+      <br><p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 1270px; margin-right: 80px;">Уявіть квантовий комп’ютер як оркестр, де кожен кубіт – інструмент, що грає в суперпозиції. 
        <br> <br>Мови програмування – це партитури, які перетворюють хаос квантових станів у гармонію обчислень, доступну навіть без PhD з фізики.</p>
    
        <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/quantum_ed6837d966.webp" style="width: 620px; height: 540px; margin-right: 180px;">
@@ -113,10 +112,12 @@
          
         <br><br> У 2025 році <span style="font-weight: bold; color: rgb(56, 28, 28);">Qiskit 2.0</span> і <span style="font-weight: bold; color: rgb(56, 28, 28);">Cirq</span> від Google домінують завдяки інтеграції з Python, роблячи квантове програмування доступним для AI-розробників. <span style="font-weight: bold; color: rgb(56, 28, 28); text-decoration: underline;">Cучасні квантові мови спрощують код до рівня Python, але під капотом керують складними системами з 
           <span style="font-weight: bold; color: rgb(56, 28, 28);">декогеренцією</span> та QECC.</span> 
-         <br><br><span style="font-weight: bold; color: rgb(56, 28, 28); font-size: 26px;">Наприклад, QASM досі використовується для низькорівневих операцій, але Q# і Silq дозволяють писати алгоритми, як VQE, без знання фізичних деталей.</span>
         
-         <img src="https://miro.medium.com/v2/resize:fit:1400/0*jAvz6HU6VLNAdEhy" style="width: 550px; height: 500px; margin-left: 80px;">
+        
+         <img src="https://miro.medium.com/v2/resize:fit:1400/0*jAvz6HU6VLNAdEhy" style="width: 550px; height: 500px; margin-left: 0px; margin-top: 25px;">
 
+         <span style="font-weight: bold; color: rgb(56, 28, 28); font-size: 24px; text-align: left;">Наприклад, QASM досі використовується для низькорівневих операцій, але Q# і Silq дозволяють писати алгоритми, як VQE
+          , без знання фізичних деталей.</span>
          <br><span style="font-weight: bold;  color: rgb(56, 28, 28); text-decoration: underline; margin-top: 25px; font-size: 27px;">Історично квантові мови еволюціонували від апаратно-орієнтованих до user-friendly, подібно до переходу від Fortran до Java.</span></p>
      
       
@@ -713,7 +714,7 @@
   .processors-container {
     position: relative;
     min-height: 100vh;
-    width: 1300px;
+    width: 1540px;
     color: #ffffff;
     padding: 20px;
     margin: 0 auto;
@@ -739,8 +740,8 @@
 
   
   .content-wrapper {
-    max-width: 1020px;
-    margin-left: 195px;
+    max-width: 800px;
+    margin-left: 180px;
     padding: 30px;
     position: relative;
     z-index: 2;
@@ -752,7 +753,7 @@
     background-color: #c2cedf;
     border-radius: 10px;
     margin: 20px 0;
-    width: 1200px;
+    width: 1410px;
     
   }
 
@@ -778,8 +779,8 @@
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
     
-    margin-left: 210px;
-    width: 1065px;
+    margin-left: 190px;
+    width: 1410px;
   }
 
   .section h2 {
@@ -802,6 +803,7 @@
     color: #eed8d8;
     font-size: 25px;
     text-align: justify;
+    max-width: 1260px;
   }
 
   .section span[style*="font-weight: bold"] {
@@ -1065,7 +1067,7 @@
     50% { transform: scale(1.06); }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1350px) {
     .processors-container {
       padding: 10px;
       width: auto;
@@ -1106,7 +1108,7 @@
       right: 70px;
     }
     .modal-content {
-      width: 80%;
+      width: 99%;
     }
     .modal-content .menu-link {
       font-size: 16px;
@@ -1239,17 +1241,17 @@ document.querySelectorAll('.code-trigger').forEach(trigger => {
 });
 
 // Dynamic highlight style
+
 const style = document.createElement('style');
-style.textContent = `
-  .highlight {
-    background: linear-gradient(45deg, #003366, #001233) !important;
-    transform: scale(1.02) !important;
-    transition: background 0.3s, transform 0.3s;
-  }
-`;
-document.head.appendChild(style);
+  style.textContent = `
+    .highlight {
+      background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
+      transform: scale(1.02) !important;
+      transition: background 0.3s, transform 0.3s;
+    }
+  `;
+  document.head.appendChild(style);
 
 
 </script>
 {% endblock %}
-</xaiArtifact>

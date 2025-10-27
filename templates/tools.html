@@ -1,543 +1,533 @@
- 
+{% extends "base.html" %}
 
-    <xaiArtifact artifact_id="9068a51e-1dd2-4603-8a94-e8506e9fc88b" artifact_version_id="98f930ea-47c2-4cf3-8bcf-8f134a83aadb" title="tools.html" contentType="text/html">
-    {% extends "base.html" %}
-    
-    {% block title %}Інструменти та Ресурси для Квантового Програмування{% endblock %}
-    
-    {% block content %}
-    <div class="container">
-     
-    
-      <!-- Бічна панель для навігації -->
-      <div class="sidebar">
-        <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;">Навігація по веб-торінці інструменти програмування</h3>
-        <ul>
-          <li><a href="#section1" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Огляд інструментів</a></li>
-          
-          <li><a href="#section3" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Qiskit: Python для кванту</a></li>
-          <li><a href="#section7" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Quantum Development Kit</a></li>
-          <li><a href="#section8" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">IBM Quantum Lab</a></li>
-          <li><a href="#section9" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">TensorFlow Quantum</a></li>
-          <li><a href="#section10" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Майбутнє інструментів</a></li>
-        </ul>
-      </div>
-    
-      <!-- Основний вміст -->
-      <div class="content">
-        <div class="welcome-text">
-          <h1 style="color: rgb(148, 34, 34); font-size: 39px; font-size: 44px; text-align: left; font-style: italic;">Інструменти квантового програмування: арсенал для космосу кодів</h1>
-          <p style="color: rgb(56, 28, 28); font-size: 29px; font-size: 30px; text-align: justify; width: 970px; font-weight: 700;">Уявіть квантові інструменти як телескопи, що дозволяють зазирнути в мікросвіт кубітів. 
-            Вони спрощують створення алгоритмів, які розблоковують потенціал квантових комп’ютерів для хімії, фінансів і AI.</p>
-        </div>
-    
-               <!-- Розділи -->
-        <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">Огляд інструментів для квантового програмування</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інструменти для квантового програмування – це як космічні кораблі, що допомагають розробникам подорожувати 
-            квантовим Всесвітом.
-            
-            <img src="https://cdn.prod.website-files.com/643d2eea03135260bdaca209/6585c96ed3adbabd970281f6_developer%20tools.webp" style="width: 720px; height: 480px;" alt="Інструменти розробника">
+{% block title %}Інструменти та Ресурси для Квантового Програмування{% endblock %}
 
-           <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Вони включають: 
-             <li>фреймворки (Qiskit, Cirq);</li>
-             <li>мови (Q#, Silq);</li> 
-             <li>IDE (Quantum Development Kit);</li> 
-             <li>симулятори (Aer, Qiskit Simulator);</li> 
-             <li>хмарні платформи (IBM Quantum Lab, Azure Quantum).</li> 
-            </ul>
+{% block content %}
+<div class="container">
+  <!-- Бічна панель для навігації -->
+  <div class="sidebar">
+    <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;">Навігація по веб-сторінці інструменти програмування</h3>
+    <ul>
+      <li><a href="#section1" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Огляд інструментів</a></li>
+      <li><a href="#section3" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Qiskit: Python для кванту</a></li>
+      <li><a href="#section7" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Quantum Development Kit</a></li>
+      <li><a href="#section8" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">IBM Quantum Lab</a></li>
+      <li><a href="#section9" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">TensorFlow Quantum</a></li>
+      <li><a href="#section10" class="nav-button" style="color: #140b30; font-size: 23px; text-align: left; font-style: italic;">Майбутнє інструментів</a></li>
+    </ul>
+  </div>
 
-            <br><br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> У 2025 році, за Quantum Zeitgeist, 60% квантових розробників використовують Python-інтегровані фреймворки, як Qiskit, завдяки їхній доступності. 
-             
-            <br>Наприклад, Qiskit дозволяє створювати алгоритми, як VQE, за кілька рядків коду, а Cirq оптимізує схеми для Google Willow. </p>
-
-          
-             
-             <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інструменти поділяються на:
-              <li>1) <strong>Фреймворки</strong> для створення схем (Qiskit, Cirq);</li>
-              <li> 2) <strong>Мови</strong> для високорівневого програмування (Q#, Silq);</li>
-              <li> 3) <strong>Симулятори</strong> для тестування без QPU;</li> 
-              <li> 4) <strong>Хмарні платформи</strong> для доступу до QPU;</li> 
-              <li> 5) <strong>Дебагери</strong> для аналізу схем.</li> 
-            </ul>
-
-            <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left;">   Парадокс: ці інструменти виглядають як класичні IDE, але керують кубітами, чутливими до декогеренції.
-              <img src="https://www.hpcwire.com/wp-content/uploads/2022/09/Intel_Quantum_SDK.png" style="width: 690px; height: 450px;">
-             
-              <br><br> Симулятори, як Qiskit Aer, дозволяють тестувати код локально.</p>      
-        </section>
-    
-           
-        <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">Qiskit: Python для квантового програмування</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Qiskit – це як космічний конструктор Lego для квантових програм, побудований на Python. Розроблений IBM, він дозволяє створювати алгоритми, як Shor чи VQE, без глибоких знань квантової фізики. Уявіть: розробник пише код, схожий на TensorFlow, і тестує його на IBM Loon через хмару. У 2025 році Qiskit 2.0 підтримує QECC і симуляцію на класичних ПК, що робить його вибором для 50% квантових розробників (Quantum Zeitgeist). Наприклад, Merck використовує Qiskit для моделювання молекул, скорочуючи час розробки ліків на 30%. Qiskit включає Aer (симулятор), Terra (компілятор) і Ignis (QECC), що робить його аналогом PyCharm для квантового світу.
-            
-            <br><br>Парадокс: Qiskit виглядає як Python-бібліотека, але керує QPU з декогеренцією. 
-            
-            Qiskit код демонструє створення схеми. 
-            
-            <br><br> Обмеження: симуляція великих схем потребує значних ресурсів, але хмарні QPU вирішують це.</p>     
-      </section>
-      
-       
-    
-        <section id="section7" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">Quantum Development Kit: екосистема для Q#</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"><span style="font-weight: bold; color: rgb(56, 28, 28);">Quantum Development Kit (QDK) від Microsoft – це як космічний порт для Q#</span>. 
-            Він включає симулятори, дебагери та бібліотеки для створення гібридних алгоритмів.
-            QDK дозволяє тестувати код на локальному симуляторі перед запуском на Azure Quantum.
-            <br><br>  У 2025 році QDK використовується в 25% хмарних проєктів (Moody’s), зокрема для фінансових застосувань.
-            <br><br>   Наприклад, HSBC тестує QDK для моделювання ризиків, скоротивши час аналізу на 15%. QDK інтегрується з Visual Studio, що робить його аналогом PyCharm для квантового світу. 
-            <br><br>   ПQDK виглядає як класична IDE, але підтримує квантову логіку. <span class="code-trigger" data-code-id="qdk-tool">QDK код</span> демонструє симуляцію. Обмеження: потрібне вивчення Q#, але документація спрощує це.</p>        
-        </section>
-    
-        <section id="section8" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">IBM Quantum Lab: хмарна платформа для розробки</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">IBM Quantum Lab – це як космічна лабораторія, де розробники тестують квантові алгоритми на реальних QPU. У 2025 році платформа надає доступ до IBM Loon (1000 кубітів) і симуляторів Aer. Уявіть: програміст запускає VQE для моделювання молекули через браузер, без фізичного QPU. IBM Quantum Lab використовується в 40% квантових проєктів (Quantum Zeitgeist), зокрема Merck для дизайну ліків. Платформа включає візуалізацію схем і дебагери, що робить її аналогом браузерних DevTools для квантового коду.
-            <br> Парадокс: це хмарна платформа, але керує фізичними QPU.
-            <br><br>   Код для IBM Quantum Labпоказує запуск схеми. 
-             <br><br>   Обмеження: латентність хмарного доступу, але симулятори компенсують це.</p>
-                
-        </section>
-    
-        <section id="section9" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">TensorFlow Quantum: квантове машинне навчання</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">TensorFlow Quantum (TFQ) – це як космічний суперкомп’ютер для квантового машинного навчання. Інтегруючись із Cirq, TFQ дозволяє створювати QNN і QSVM для задач, як класифікація медичних зображень. Уявіть: TFQ комбінує квантові схеми з нейронними мережами, прискорюючи тренування на 30% (Quantum Zeitgeist). 
-            <br><br> У 2025 році Google використовує TFQ для діагностики раку, досягнувши 95% точності.
-             TFQ включає симулятори та дебагери, що робить його аналогом Jupyter Notebook для QML.
-             TFQ виглядає як TensorFlow, але працює з кубітами. 
-             <br><br> Обмеження: потребує знання ML і квантової механіки, але документація спрощує це.</p>        
-        </section>
-    
-        <section id="section10" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-          <h2 style="color: #0a041d; font-weight: 700;">Майбутнє квантових інструментів: код для Всесвіту</h2>
-          <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту. До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач. Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.           
-             <br> Почніть із Qiskit, щоб долучитися до квантової революції!</p>                        
-        </section>
-      </div>
-    
-      <!-- Пересувна кнопка контекстного меню -->
-      <button id="context-btn">☰</button>
-      <!-- Кнопка для відображення заголовків -->
-      <button id="toc-btn">📑 Зміст</button>
+  <!-- Основний вміст -->
+  <div class="content">
+    <div class="welcome-text">
+      <h1 style="color: rgb(148, 34, 34); font-size: 46px; text-align: left; font-style: italic;">Інструменти квантового програмування: арсенал для космосу кодів</h1>
+      <p style="color: rgb(56, 28, 28); font-size: 24px; text-align: justify; font-weight: 700; font-size: 31px;">Уявіть квантові інструменти як телескопи, що дозволяють зазирнути в мікросвіт кубітів. Вони спрощують створення алгоритмів, які розблоковують потенціал квантових комп’ютерів для хімії, фінансів і AI.</p>
     </div>
-    
-    <!-- Вбудовані стилі CSS -->
-    <style>
-      .container {
-        position: relative;
-        min-height: 100vh;
-        
-        background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
-        padding: 20px;
-        overflow-x: hidden;
-        font-family: 'Arial', sans-serif;
-      }
-    
-      .space-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.65;
-        z-index: 1;
-      }
-    
+
+    <!-- Розділи -->
        
-      .sidebar {
-        position: fixed;
+    <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <h2 style="color: #0a041d; font-weight: 700;">Огляд інструментів для квантового програмування</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інструменти для квантового програмування – це як космічні кораблі, що допомагають розробникам подорожувати 
+        квантовим Всесвітом.</p>
+        
+        <img src="https://cdn.prod.website-files.com/643d2eea03135260bdaca209/6585c96ed3adbabd970281f6_developer%20tools.webp" style="width: 820px; height: 680px; margin-top: 15px;" alt="Інструменти розробника">
+
+       <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Вони включають: 
+         <li>фреймворки (Qiskit, Cirq);</li>
+         <li>мови (Q#, Silq);</li> 
+         <li>IDE (Quantum Development Kit);</li> 
+         <li>симулятори (Aer, Qiskit Simulator);</li> 
+         <li>хмарні платформи (IBM Quantum Lab, Azure Quantum).</li> 
+        </ul>
+
+        <br><br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> У 2025 році, за Quantum Zeitgeist, 60% квантових розробників використовують Python-інтегровані фреймворки, як Qiskit, завдяки їхній доступності. 
+         
+        <br>Наприклад, Qiskit дозволяє створювати алгоритми, як VQE, за кілька рядків коду, а Cirq оптимізує схеми для Google Willow. </p>
+
+      
+         
+         <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інструменти поділяються на:
+          <li>1) <strong>Фреймворки</strong> для створення схем (Qiskit, Cirq);</li>
+          <li> 2) <strong>Мови</strong> для високорівневого програмування (Q#, Silq);</li>
+          <li> 3) <strong>Симулятори</strong> для тестування без QPU;</li> 
+          <li> 4) <strong>Хмарні платформи</strong> для доступу до QPU;</li> 
+          <li> 5) <strong>Дебагери</strong> для аналізу схем.</li> 
+        </ul>
+
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left;">  
+           Парадокс: ці інструменти виглядають як класичні IDE, але керують кубітами, чутливими до декогеренції. <br>Симулятори, як Qiskit Aer, дозволяють тестувати код локально.</p>
+                 
+            
+    </section>
+
+    <section id="section3" class="section">
+      <h2 style="color: #0a041d; font-weight: 700;">Qiskit: Python для квантового програмування</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        Qiskit – це як космічний конструктор Lego для квантових програм, побудований на Python. Розроблений IBM, він дозволяє створювати алгоритми, як Shor чи VQE, без глибоких знань квантової фізики. Уявіть: розробник пише код, схожий на TensorFlow, і тестує його на IBM Loon через хмару. У 2025 році Qiskit 2.0 підтримує QECC і симуляцію на класичних ПК, що робить його вибором для 50% квантових розробників (Quantum Zeitgeist). Наприклад, Merck використовує Qiskit для моделювання молекул, скорочуючи час розробки ліків на 30%. Qiskit включає Aer (симулятор), Terra (компілятор) і Ignis (QECC), що робить його аналогом PyCharm для квантового світу.
+        <br><br>Парадокс: Qiskit виглядає як Python-бібліотека, але керує QPU з декогеренцією.
+       
+        <br>Обмеження: симуляція великих схем потребує значних ресурсів, але хмарні QPU вирішують це.
+      </p>
+    </section>
+
+    <section id="section7" class="section">
+      <h2 style="color: #0a041d; font-weight: 700;">Quantum Development Kit: екосистема для Q#</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        <span style="font-weight: bold; color: rgb(56, 28, 28);">Quantum Development Kit (QDK) від Microsoft – це як космічний порт для Q#.</span> Він включає симулятори, дебагери та бібліотеки для створення гібридних алгоритмів. QDK дозволяє тестувати код на локальному симуляторі перед запуском на Azure Quantum.
+        <br><br>У 2025 році QDK використовується в 25% хмарних проєктів (Moody’s), зокрема для фінансових застосувань.
+        <br><br>Наприклад, HSBC тестує QDK для моделювання ризиків, скоротивши час аналізу на 15%. QDK інтегрується з Visual Studio, що робить його аналогом PyCharm для квантового світу.
+        <br><br>Парадокс: QDK виглядає як класична IDE, але підтримує квантову логіку.
+        <span class="code-trigger" data-code-id="qdk-code">QDK код</span> демонструє симуляцію.
+      
+        <br><br>Обмеження: потрібне вивчення Q#, але документація спрощує це.
+      </p>
+    </section>
+
+    <section id="section8" class="section">
+      <h2 style="color: #0a041d; font-weight: 700;">IBM Quantum Lab: хмарна платформа для розробки</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        IBM Quantum Lab – це як космічна лабораторія, де розробники тестують квантові алгоритми на реальних QPU. У 2025 році платформа надає доступ до IBM Loon (1000 кубітів) і симуляторів Aer. Уявіть: програміст запускає VQE для моделювання молекули через браузер, без фізичного QPU. IBM Quantum Lab використовується в 40% квантових проєктів (Quantum Zeitgeist), зокрема Merck для дизайну ліків. Платформа включає візуалізацію схем і дебагери, що робить її аналогом браузерних DevTools для квантового коду.
+        <br><br>Парадокс: це хмарна платформа, але керує фізичними QPU.
+        <span class="code-trigger" data-code-id="ibm-lab-code">Код для IBM Quantum Lab</span> показує запуск схеми.
+       
+        <br><br>Обмеження: латентність хмарного доступу, але симулятори компенсують це.
+      </p>
+    </section>
+
+    <section id="section9" class="section">
+      <h2 style="color: #0a041d; font-weight: 700;">TensorFlow Quantum: квантове машинне навчання</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        TensorFlow Quantum (TFQ) – це як космічний суперкомп’ютер для квантового машинного навчання. Інтегруючись із Cirq, TFQ дозволяє створювати QNN і QSVM для задач, як класифікація медичних зображень. Уявіть: TFQ комбінує квантові схеми з нейронними мережами, прискорюючи тренування на 30% (Quantum Zeitgeist).
+        <br><br>У 2025 році Google використовує TFQ для діагностики раку, досягнувши 95% точності. TFQ включає симулятори та дебагери, що робить його аналогом Jupyter Notebook для QML.
+        <br><br>Парадокс: TFQ виглядає як TensorFlow, але працює з кубітами.
+        <span class="code-trigger" data-code-id="tfq-code">TFQ код</span> показує створення QNN.
+      
+        <br><br>Обмеження: потребує знання ML і квантової механіки, але документація спрощує це.
+      </p>
+    </section>
+
+    <section id="section10" class="section">
+      <h2 style="color: #0a041d; font-weight: 700;">Майбутнє квантових інструментів: код для Всесвіту</h2>
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту. До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач. Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.
+        <br><br>Почніть із <span class="code-trigger" data-code-id="qiskit-start">Qiskit</span>, щоб долучитися до квантової революції!
+       
+      </p>
+    </section>
+  </div>
+
+  <!-- Пересувна кнопка контекстного меню -->
+  <button id="context-btn">☰</button>
+  <!-- Кнопка для відображення змісту -->
+  <button id="toc-btn">📑 Зміст</button>
+</div>
+
+<!-- Вбудовані стилі CSS -->
+<style>
+  .container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #c9d4d6; /* Легкий бежевий для гармонії */
+    padding: 20px;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    width: 1700px; /* Збільшено з ~1000px (оригінал не мав ширини) на 300px */
+    max-width: 98%; /* Додано для адаптивності */
+    margin: 0 auto;
+  }
+
+  .space-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  .sidebar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 310px;
     height: 94vh;
     padding: 20px;
     z-index: 999;
-    overflow-y: scroll; /* Замість auto */
-    
+    overflow-y: scroll;
     background-color: #b3c6ca;
     transition: transform 0.3s ease;
-      }
-    
-      .sidebar h3 {
-        color: #4a90e2;
-        text-align: center;
-        font-size: 27px;
-        margin-bottom: 20px;
-      }
-    
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-      }
-    
-      .nav-button {
-        display: block;
+  }
+
+  .sidebar h3 {
+    color: #4a90e2;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-button {
+    display: block;
     padding: 14px;
     margin: 10px 0;
     background: linear-gradient(45deg, #7eade4, #b3c6ca);
-    color: #211255; 
-     text-align: left; font-style: italic; font-weight: 800;
-    
+    color: #211255;
+    text-align: left;
+    font-style: italic;
+    font-weight: 800;
     text-decoration: none;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    font-weight: bold;
     font-size: 23px;
-      }
-    
-      .nav-button:hover {
-        transform: scale(1.06);
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
-      }
-    
-      .content {
-        margin-left: 215px;
-        padding: 30px;
-        position: relative;
-        z-index: 2;
-        width: 1000px;
-      }
-    
-      .welcome-text {
-        text-align: center;
-        color: #00d4ff;
-        
-      }
-    
-      .welcome-text h1 {
-        font-size: 3em;
-        margin: 0;
-        font-family: 'Georgia', serif;
-      }
-    
-      .welcome-text p {
-        font-size: 1.3em;
-        margin: 15px 0;
-      }
-    
-      .section {
-        background: #001233;
-        padding: 25px;
-        margin: 25px 0;
-        border-radius: 12px;
-        color: #ffffff;
-        animation: fadeInSection 1.2s ease-in;
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-        width: 1000px;
-      }
-    
-      .section h2 {
-        color: #4a90e2;
-        font-size: 2em;
-        font-family: 'Georgia', serif;
-      }
-    
-      .section p {
-        font-size: 1.15em;
-        line-height: 1.7;
-      }
-    
-      .section a {
-        color: #00d4ff;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-    
-      .section a:hover {
-        color: #b8860b;
-        text-decoration: underline;
-      }
-    
-      .code-trigger {
-        color: #00d4ff;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    
-      .code-trigger:hover {
-        color: #b8860b;
-      }
-    
-      .code-block {
-        background: #002244;
-        padding: 15px;
-        border-radius: 8px;
-        margin: 10px 0;
-        font-size: 0.9em;
-        color: #ffffff;
-        border: 1px solid #4a90e2;
-      }
-    
-      details {
-        margin: 15px 0;
-        color: #ffffff;
-      }
-    
-      summary {
-        color: #4a90e2;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 1.2em;
-      }
-    
-      .simulation-box {
-        background: linear-gradient(45deg, #003366, #001233);
-        padding: 25px;
-        border-radius: 12px;
-        margin: 25px 0;
-        text-align: center;
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
-      }
-    
-      .simulation-box h3 {
-        color: #b8860b;
-        margin-bottom: 15px;
-        font-size: 1.5em;
-      }
-    
-      #simulate-circuit-btn {
-        background: linear-gradient(45deg, #4a90e2, #00d4ff);
-        border: none;
-        padding: 12px 25px;
-        color: #ffffff;
-        font-weight: bold;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-    
-      #simulate-circuit-btn:hover {
-        transform: scale(1.06);
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
-      }
-    
-      #circuit-simulation-result {
-        margin-top: 15px;
-        font-size: 1.3em;
-        color: #00d4ff;
-        text-shadow: 0 0 6px #00d4ff;
-      }
-    
-      .action-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin: 25px 0;
-      }
-    
-      .action-btn {
-        background: linear-gradient(45deg, #4a90e2, #00d4ff);
-        padding: 14px 25px;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: bold;
-        font-size: 15px;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-    
-      .action-btn:hover {
-        transform: scale(1.06);
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
-      }
-    
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.35; }
-        50% { opacity: 0.55; }
-      }
-    
-      @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-    
-      @keyframes fadeInSection {
-        0% { opacity: 0; transform: translateY(25px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-    
-      @keyframes pulseBtn {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.06); }
-      }
-    
-      @media (max-width: 768px) {
-        .sidebar {
-          width: 160px;
-        }
-        .content {
-          margin-left: 180px;
-          padding: 20px;
-        }
-        .welcome-text h1 {
-          font-size: 2.2em;
-        }
-        .welcome-text p {
-          font-size: 1.1em;
-        }
-        .section h2 {
-          font-size: 1.6em;
-        }
-        .section p {
-          font-size: 1em;
-        }
-        .nav-button, .action-btn {
-          font-size: 13px;
-          padding: 10px;
-        }
-        .simulation-box h3 {
-          font-size: 1.3em;
-        }
-        #simulate-circuit-btn {
-          padding: 10px 20px;
-        }
-        #context-btn, #toc-btn {
-          width: 40px;
-          height: 40px;
-          font-size: 20px;
-        }
-      }
-    </style>
-    
-    <!-- Вбудований JavaScript -->
-    <script>
-      // Симуляція квантової схеми
-      document.getElementById('simulate-circuit-btn').addEventListener('click', () => {
-        const outcome = Math.random() > 0.5 ? '00' : '11'; // Спрощена симуляція Белл стану
-        document.getElementById('circuit-simulation-result').textContent = `Результат вимірювання: |${outcome}>`;
-        document.getElementById('circuit-simulation-result').style.animation = 'fadeIn 0.5s';
-        setTimeout(() => {
-          document.getElementById('circuit-simulation-result').style.animation = '';
-        }, 500);
-      });
-    
-      // Плавна прокрутка для навігації бічної панелі
-      document.querySelectorAll('.nav-button').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const target = document.getElementById(targetId);
-          target.scrollIntoView({ behavior: 'smooth' });
-          document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
-          target.classList.add('highlight');
-          setTimeout(() => target.classList.remove('highlight'), 2000);
-        });
-      });
-    
-      // Показ коду при кліку на ключові слова
-      document.querySelectorAll('.code-trigger').forEach(trigger => {
-        trigger.addEventListener('click', () => {
-          const codeId = trigger.getAttribute('data-code-id');
-          const codeBlock = document.getElementById(`${codeId}-code`);
-          codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
-        });
-      });
-    
-       // Пересувна кнопка контекстного меню
-       const contextBtn = document.getElementById('context-btn');
-      contextBtn.addEventListener('mousedown', function(e) {
-        e.preventDefault();
-        let shiftX = e.clientX - contextBtn.getBoundingClientRect().left;
-        let shiftY = e.clientY - contextBtn.getBoundingClientRect().top;
-        
-        function moveAt(pageX, pageY) {
-          contextBtn.style.left = pageX - shiftX + 'px';
-          contextBtn.style.top = pageY - shiftY + 'px';
-        }
-    
-        function onMouseMove(e) {
-          moveAt(e.pageX, e.pageY);
-        }
-    
-        document.addEventListener('mousemove', onMouseMove);
-    
-        contextBtn.addEventListener('mouseup', function() {
-          document.removeEventListener('mousemove', onMouseMove);
-          contextBtn.onmouseup = null;
-        });
-      });
-    
-      contextBtn.ondragstart = function() {
-        return false;
-      };
-    
-      // Перемикання видимості бічної панелі
-      contextBtn.addEventListener('click', () => {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.style.left = sidebar.style.left === '0px' ? '-240px' : '0px';
-      });
-    
-      // Кнопка для відображення змісту
-      const tocBtn = document.getElementById('toc-btn');
-      tocBtn.addEventListener('click', () => {
-        const toc = document.createElement('div');
-        toc.style.position = 'fixed';
-        toc.style.top = '50%';
-        toc.style.left = '50%';
-        toc.style.transform = 'translate(-50%, -50%)';
-        toc.style.background = 'linear-gradient(45deg, #003366, #001233)';
-        toc.style.padding = '20px';
-        toc.style.borderRadius = '12px';
-        toc.style.boxShadow = '0 0 12px rgba(0, 255, 255, 0.6)';
-        toc.style.zIndex = '1001';
-        toc.style.color = '#ffffff';
-        toc.style.maxHeight = '80vh';
-        toc.style.overflowY = 'auto';
-        
-        const tocList = document.createElement('ul');
-        tocList.style.listStyle = 'none';
-        tocList.style.padding = '0';
-        document.querySelectorAll('.section h2').forEach((h2, index) => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.textContent = h2.textContent;
-          a.href = `#section${index + 1}`;
-          a.style.color = '#00d4ff';
-          a.style.textDecoration = 'none';
-          a.style.display = 'block';
-          a.style.padding = '10px';
-          a.style.fontSize = '1.1em';
-          a.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById(`section${index + 1}`).scrollIntoView({ behavior: 'smooth' });
-            toc.remove();
-          });
-          li.appendChild(a);
-          tocList.appendChild(li);
-        });
-        
-        const closeBtn = document.createElement('button');
-        closeBtn.textContent = 'Закрити';
-        closeBtn.style.background = 'linear-gradient(45deg, #4a90e2, #00d4ff)';
-        closeBtn.style.border = 'none';
-        closeBtn.style.padding = '10px';
-        closeBtn.style.borderRadius = '8px';
-        closeBtn.style.color = '#ffffff';
-        closeBtn.style.marginTop = '15px';
-        closeBtn.style.cursor = 'pointer';
-        closeBtn.addEventListener('click', () => toc.remove());
-        
-        toc.appendChild(tocList);
-        toc.appendChild(closeBtn);
-        document.body.appendChild(toc);
-      });
-    
-      // Додавання стилю для підсвічування
-      const style = document.createElement('style');
-      style.textContent = `
-        .highlight {
-          background: linear-gradient(45deg, #003366, #001233) !important;
-          transform: scale(1.02) !important;
-          transition: background 0.3s, transform 0.3s;
-        }
-      `;
-      document.head.appendChild(style);
-    </script>
-    
-    <p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
-    {% endblock %}
-    </xaiArtifact>
+  }
+
+  .nav-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  .content {
+    margin-left: 210px; /* Збільшено з 215px для ширшої бічної панелі */
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    width: 1460px; /* Збільшено з 1000px на 300px */
+    max-width: 95%; /* Додано для адаптивності */
+  }
+
+  .welcome-text {
+    text-align: center;
+    color: #00d4ff;
+    width: 1340px; /* Збільшено з 970px на 300px */
+    max-width: 95%; /* Додано для адаптивності */
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+
+  .welcome-text h1 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Georgia', serif;
+  }
+
+  .welcome-text p {
+    font-size: 1.2em; /* Зменшено з 30px до ~19px для читабельності */
+    margin: 15px 0;
+  }
+
+  .section {
+    background: #A6B8D3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    color: #ffffff;
+    animation: fadeInSection 1.2s ease-in;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    width: 1695px; /* Збільшено з 1000px на 300px */
+    max-width: 98%; /* Додано для адаптивності */
+  }
+
+  .section h2 {
+    color: #4a90e2;
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+  }
+
+  .section p {
+    font-size: 1em; /* Зменшено з 31px до ~16px для читабельності */
+    line-height: 1.7;
+  }
+
+  .section a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .section a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+
+  .code-trigger {
+    color: #00d4ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .code-trigger:hover {
+    color: #b8860b;
+  }
+
+  .code-block {
+    background: #002244;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 1px solid #4a90e2;
+  }
+
+  details {
+    margin: 15px 0;
+    color: #ffffff;
+  }
+
+  summary {
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .simulation-box {
+    background: linear-gradient(45deg, #003366, #001233);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  }
+
+  .simulation-box h3 {
+    color: #b8860b;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+
+  #context-btn, #toc-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px; /* Змінено з top на bottom для позиціонування справа знизу */
+    z-index: 1000;
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  #context-btn {
+    bottom: 80px; /* Розташовано вище #toc-btn */
+  }
+
+  #toc-btn {
+    bottom: 20px; /* Розташовано знизу */
+  }
+
+  #context-btn:hover, #toc-btn:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  @media (max-width: 1690px) {
+    .sidebar {
+      width: 200px;
+    }
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      width: 90%;
+      max-width: 900px;
+    }
+    .welcome-text {
+      width: 90%;
+      max-width: 850px;
+    }
+    .section {
+      width: 90%;
+      max-width: 900px;
+    }
+    .welcome-text h1 {
+      font-size: 2.2em;
+    }
+    .welcome-text p {
+      font-size: 1.1em;
+    }
+    .section h2 {
+      font-size: 1.6em;
+    }
+    .section p {
+      font-size: 0.9em;
+    }
+    .nav-button {
+      font-size: 18px;
+      padding: 10px;
+    }
+    #context-btn, #toc-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<!-- Вбудований JavaScript -->
+<script>
+// Плавна прокрутка для навігації бічної панелі
+document.querySelectorAll('.nav-button').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    target.scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+    target.classList.add('highlight');
+    setTimeout(() => target.classList.remove('highlight'), 2000);
+  });
+});
+
+// Показ коду при кліку на ключові слова
+document.querySelectorAll('.code-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const codeId = trigger.getAttribute('data-code-id');
+    const codeBlock = document.getElementById(`${codeId}`);
+    if (codeBlock) {
+      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
+    }
+  });
+});
+
+// Пересувна кнопка контекстного меню
+const contextBtn = document.getElementById('context-btn');
+contextBtn.addEventListener('mousedown', function(e) {
+  e.preventDefault();
+  let shiftX = e.clientX - contextBtn.getBoundingClientRect().left;
+  let shiftY = e.clientY - contextBtn.getBoundingClientRect().top;
+
+  function moveAt(pageX, pageY) {
+    contextBtn.style.left = pageX - shiftX + 'px';
+    contextBtn.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(e) {
+    moveAt(e.pageX, e.pageY);
+  }
+
+  document.addEventListener('mousemove', onMouseMove);
+
+  contextBtn.addEventListener('mouseup', function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    contextBtn.onmouseup = null;
+  });
+});
+
+contextBtn.ondragstart = function() {
+  return false;
+};
+
+// Перемикання видимості бічної панелі
+contextBtn.addEventListener('click', () => {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.transform = sidebar.style.transform === 'translateX(0px)' ? 'translateX(-310px)' : 'translateX(0px)';
+});
+
+// Кнопка для відображення змісту
+const tocBtn = document.getElementById('toc-btn');
+tocBtn.addEventListener('click', () => {
+  const existingToc = document.getElementById('toc-menu');
+  if (existingToc) {
+    existingToc.remove();
+    return;
+  }
+
+  const toc = document.createElement('div');
+  toc.id = 'toc-menu';
+  toc.style.position = 'fixed';
+  toc.style.top = '50%';
+  toc.style.left = '50%';
+  toc.style.transform = 'translate(-50%, -50%)';
+  toc.style.background = 'linear-gradient(45deg, #003366, #001233)';
+  toc.style.padding = '20px';
+  toc.style.borderRadius = '12px';
+  toc.style.boxShadow = '0 0 12px rgba(0, 255, 255, 0.6)';
+  toc.style.zIndex = '1001';
+  toc.style.color = '#ffffff';
+  toc.style.maxHeight = '80vh';
+  toc.style.overflowY = 'auto';
+
+  const tocList = document.createElement('ul');
+  tocList.style.listStyle = 'none';
+  tocList.style.padding = '0';
+  document.querySelectorAll('.section h2').forEach((h2) => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.textContent = h2.textContent;
+    const targetId = h2.parentElement.id;
+    a.href = `#${targetId}`;
+    a.style.color = '#00d4ff';
+    a.style.textDecoration = 'none';
+    a.style.display = 'block';
+    a.style.padding = '10px';
+    a.style.fontSize = '1.1em';
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      toc.remove();
+    });
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = 'Закрити';
+  closeBtn.style.background = 'linear-gradient(45deg, #4a90e2, #00d4ff)';
+  closeBtn.style.border = 'none';
+  closeBtn.style.padding = '10px';
+  closeBtn.style.borderRadius = '8px';
+  closeBtn.style.color = '#ffffff';
+  closeBtn.style.marginTop = '15px';
+  closeBtn.style.cursor = 'pointer';
+  closeBtn.addEventListener('click', () => toc.remove());
+
+  toc.appendChild(tocList);
+  toc.appendChild(closeBtn);
+  document.body.appendChild(toc);
+});
+
+// Додавання стилю для підсвічування
+const style = document.createElement('style');
+style.textContent = `
+  .highlight {
+    background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
+    transform: scale(1.02) !important;
+    transition: background 0.3s, transform 0.3s;
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
+{% endblock %}

@@ -4,13 +4,7 @@
 
 {% block content %}
 <div class="quantum-page-container">
-  <!-- Космічний фон із анімованими зірками -->
-  <div class="cosmic-background">
-    <div class="stars top-stars"></div>
-    <div class="stars left-stars"></div>
-    <div class="stars right-stars"></div>
-  </div>
-
+  
   <!-- Бічна панель для навігації -->
   <div class="nav-sidebar" id="sidebar-menu">
     <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
@@ -38,16 +32,17 @@
 
   <!-- Основний вміст -->
   <div class="content">
-    <div class="welcome-text" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h1 style="color: #0c0753; font-weight: 900;">Корекція помилок у квантових системах: захист суперпозиції від хаосу</h1>
-      <p style="font-size: 26px; text-align: justify; font-weight: 700;  color: rgb(85, 38, 38);">Уявіть океан суперпозиції, де кожна хвиля – потенційне обчислення.
-         <br>Декогеренція – це шторм, що руйнує цю тендітну структуру.
-         <br> Корекція помилок – ваш маяк, що зберігає квантову магію.</p>
-      <img src="https://nextbigfuture.s3.amazonaws.com/uploads/2018/04/33112e1edc9474c0d7746ae49995a3a6.jpg" style="width: 725px; height: 645px;" alt="Технологічна ілюстрація">
+    <h1 style="color: #0c0753; font-weight: 900; font-size: 45px;">Корекція помилок у квантових системах: захист суперпозиції від хаосу</h1>
+   
+    <div class="welcome-text" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 35px;">     
     </div>
 
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <p style="font-size: 34px; text-align: justify; font-weight: 700;  color: rgb(85, 38, 38);">Уявіть океан суперпозиції, де кожна хвиля – потенційне обчислення.
+        Декогеренція – це шторм, що руйнує цю тендітну структуру.
+         Корекція помилок – ваш маяк, що зберігає квантову магію.</p>
+     
       <h2 style="color: #0a041d; font-weight: 700;">Теоретичні основи: від фізичних кубітів до стійких логічних</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантова корекція помилок (QECC) – це не просто "виправлення помилок", а <span style="font-weight: bold;  color: rgb(56, 28, 28);">алхімія, що перетворює тендітні фізичні кубіти на стійкі логічні.</span>  
         Уявіть кубіт як тендітну хвилю на воді: bit-flip (перекидання 0↔1) – це ривок вітру, phase-flip (зміна фази) – зсув, що руйнує інтерференцію.
@@ -161,7 +156,7 @@
   .quantum-page-container {
     position: relative;
     min-height: 100vh;
-    width: 1500px;
+    width: 1680px;
     color: #ffffff;
     padding: 20px;
     margin-left: 40px;
@@ -170,18 +165,7 @@
     background-color: #b6c2cc;
   }
 
-  .cosmic-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.65;
-    z-index: 1;
-  }
+  
 
   .nav-sidebar {
     position: fixed;
@@ -234,17 +218,20 @@
   }
 
   .content {
-    margin-left: 320px;
+    margin-left: 240px;
     padding: 30px;
     position: relative;
     z-index: 2;
-    width: 980px;
+    width: 1350px;
     background: #A6B8D3;
   }
 
   .welcome-text {
-    text-align: center;
+    text-align: justify;
     color: #00d4ff;
+    width: 990px;
+    background-image: url('https://quantumcomputingreport.com/wp-content/uploads/2025/02/image-39.png');
+    height: 530px;
   }
 
   .welcome-text h1 {
@@ -265,7 +252,8 @@
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-    max-width: 1000px;
+    max-width: 1600px;
+    margin-left: 240px;
   }
 
   .section h2 {
@@ -389,7 +377,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(216, 200, 200, 0.65);
   }
 
   .modal-content {
@@ -413,7 +401,7 @@
 
   #close-modal:hover,
   #close-modal:focus {
-    color: #b8860b;
+    color: #e2e1df;
     text-decoration: none;
     cursor: pointer;
   }
@@ -439,7 +427,7 @@
 
   .modal-content .nav-link:hover {
     background: #4a90e2;
-    color: #b8860b;
+    color: #e2e1df;
     transform: scale(1.05);
   }
 
@@ -497,7 +485,7 @@
     transform: scale(1.1);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1600px) {
     .quantum-page-container {
       width: auto;
       margin-left: 0;
@@ -642,7 +630,7 @@
   const style = document.createElement('style');
   style.textContent = `
     .highlight {
-      background: linear-gradient(45deg, #ffe4b5, #fffaf0) !important;
+      background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
       transform: scale(1.02) !important;
       transition: background 0.3s, transform 0.3s;
     }

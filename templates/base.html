@@ -13,6 +13,8 @@
     
     <!-- Bootstrap CSS for responsive layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <style>
@@ -90,6 +92,98 @@
     <a href="/" class="back-btn">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Electron.svg/512px-Electron.svg.png" alt="Back to Home">
     </a>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://reddit.com" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+            <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="#search" class="search-icon"><i class="fas fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        .navbar {
+            background-color: rgba(200, 200, 200, 0.9); /* Світло-сірий з прозорістю */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+    
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+    
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .nav-links a {
+            color: #2f2f2f; /* Темно-сірий текст */
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 2px dashed #1e90ff; /* Насичена синя пунктирна рамка */
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        .nav-links a:hover {
+            background-color: #add8e6; /* Світло-синій фон при наведенні */
+            color: #2f2f2f;
+            transform: scale(1.05);
+        }
+    
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+    
+        .social-icons a {
+            color: #2f2f2f; /* Темно-сірий колір іконок */
+            font-size: 1.5rem;
+            transition: color 0.3s, transform 0.2s;
+        }
+    
+        .social-icons a:hover {
+            color: #1e90ff; /* Насичений синій при наведенні */
+            transform: scale(1.2);
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('.navbar');
+            const isNavLink = event.target.closest('.nav-links a');
+            const isSocialIcon = event.target.closest('.social-icons a');
+            
+            // Перевіряємо, чи клік НЕ був по кнопках навігації чи іконках соцмереж
+            if (!isNavLink && !isSocialIcon) {
+                navbar.classList.add('hidden');
+            }
+        });
+    </script>
     
     <!-- Main Content -->
     <div class="container">
