@@ -3,11 +3,6 @@
 
 {% block title %}Еволюція Мов Програмування для Квантових Систем{% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/css/quantum_languages.css">
-{% endblock %}
-
-
 {% block content %}
 <div class="processors-container">
  
@@ -711,7 +706,416 @@
   <!-- Book Button for Modal Menu -->
   <button id="book-btn">📘</button>
 </div>
- 
+
+<p class="attribution">Зображення з Wikimedia Commons (Public Domain).</p>
+
+<!-- Inline CSS for Sections, Menu, and Animations -->
+<style>
+  .processors-container {
+    position: relative;
+    min-height: 100vh;
+    width: 1540px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    margin-left: 0px;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
+    margin-left: 99px;
+  }
+
+  .space-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  
+  .content-wrapper {
+    max-width: 800px;
+    margin-left: 180px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .welcome-text {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #c2cedf;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 1410px;
+    
+  }
+
+  .welcome-text h1 {
+    font-size: 3em;
+    color: #00d4ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00d4ff;
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+  }
+
+  .welcome-text p {
+    font-size: 1.3em;
+    color: #eed8d8;
+    margin: 15px 0;
+  }
+
+  .section {
+    background: #A6B8D3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    animation: fadeInSection 1.2s ease-in;
+    
+    margin-left: 190px;
+    width: 1410px;
+  }
+
+  .section h2 {
+    font-size: 2em;
+    color: #8b7dbb;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+  }
+
+  .section h3 {
+    font-size: 1.5em;
+    color: #eed8d8;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .section p, .section ul, .section ol {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #eed8d8;
+    font-size: 25px;
+    text-align: justify;
+    max-width: 1260px;
+  }
+
+  .section span[style*="font-weight: bold"] {
+    font-weight: bold;
+  }
+
+  .section span[style*="text-decoration: underline"] {
+    text-decoration: underline;
+  }
+
+  .section a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .section a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+
+  .section details summary {
+    font-weight: bold;
+    color: #4a90e2;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .section details ul {
+    color: #eed8d8;
+    font-size: 25px;
+  }
+
+  .code-trigger {
+    color: #00d4ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .code-trigger:hover {
+    color: #b8860b;
+  }
+
+  .code-block {
+    background: #A6B8D3;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 1px solid #4a90e2;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+  }
+
+  .action-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    padding: 14px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  .section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .section th, .section td {
+    padding: 12px;
+    border: 1px solid #4a90e2;
+    text-align: left;
+  }
+
+  .section th {
+    background: #6e90b3;
+    color: #ffffff;
+  }
+
+  .sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-menu.hidden {
+    transform: translateX(-280px);
+  }
+
+  .sidebar-menu h3 {
+    color: #4a90e2;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu-link {
+    display: block;
+    padding: 14px;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #7eade4, #b3c6ca);
+    color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .menu-link:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  #context-btn, #book-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: move;
+    font-size: 22px;
+    z-index: 1000;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: pulseBtn 2s infinite;
+  }
+
+  #context-btn {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  #book-btn {
+    bottom: 25px;
+    right: 80px;
+  }
+
+  #context-btn:hover, #book-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .modal-content {
+    background: linear-gradient(45deg, #003366, #143a81);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #4a90e2;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  #close-modal {
+    color: #00d4ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #close-modal:hover,
+  #close-modal:focus {
+    color: #b8860b;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-content h3 {
+    color: #4a90e2;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .modal-content .menu-link {
+    font-size: 20px;
+    color: #00d4ff;
+    background: none;
+    box-shadow: none;
+    font-style: normal;
+  }
+
+  .modal-content .menu-link:hover {
+    background: #4a90e2;
+    color: #b8860b;
+    transform: scale(1.05);
+  }
+
+  .attribution {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  @media (max-width: 1350px) {
+    .processors-container {
+      padding: 10px;
+      width: auto;
+      margin-left: 180px;
+    }
+    .content-wrapper {
+      margin-left: 180px;
+      padding: 20px;
+    }
+    .welcome-text h1 {
+      font-size: 2.2em;
+    }
+    .section h2 {
+      font-size: 1.6em;
+    }
+    .section h3 {
+      font-size: 1.3em;
+    }
+    .section p, .section ul, .section ol, .section details ul {
+      font-size: 20px;
+    }
+    .sidebar-menu {
+      width: 160px;
+    }
+    .sidebar-menu h3 {
+      font-size: 22px;
+    }
+    .menu-link {
+      font-size: 18px;
+      padding: 10px;
+    }
+    #context-btn, #book-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    #book-btn {
+      right: 70px;
+    }
+    .modal-content {
+      width: 99%;
+    }
+    .modal-content .menu-link {
+      font-size: 16px;
+    }
+  }
+</style>
+
 <!-- Inline JavaScript for Draggable Buttons, Menu, and Highlight -->
 <script>
   // Fade-in sections on load

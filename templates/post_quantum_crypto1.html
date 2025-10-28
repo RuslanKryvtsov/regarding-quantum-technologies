@@ -2,10 +2,6 @@
 
 {% block title %}Постквантова Криптографія{% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/css/post_quantum_crypto.css">
-{% endblock %}
-
 {% block content %}
 <div class="container">
  
@@ -201,7 +197,395 @@
   </div>
 </div>
 
+<!-- Вбудовані стилі CSS -->
+<style>
+  .container {
+    position: relative;
+    min-height: 100vh;
+    width: 1300px;
+    color: #ffffff;
+    padding: 20px;
+    margin-right: 140px;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #b6c2cc; /* Легкий бежевий для гармонії */
+  }
+
+  .space-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    z-index: 1;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100vh;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+    
+    background-color: #b3c6ca;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.hidden {
+    transform: translateX(-330px);
+  }
+
+  .sidebar h3 {
+    color: #2c2104;
+    text-align: center;
+    margin-bottom: 31px;
+    font-size: 31px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-button {
+    display: block;
+    padding: 14px;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #7eade4, #b3c6ca);
+    color: #211255; 
+     text-align: left; font-style: italic; font-weight: 800;
+    
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .nav-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  .content {
+    margin-left: 230px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    width: 1030px;
+  }
+
+  .welcome-text {
+    
+    margin-left: 0px;
+    text-align: center;
+    color: #ffffff; /* White for higher contrast */
+    animation: fadeIn 2s ease-in-out;
+    padding: 40px 20px;
+    background-image: url('https://www.nxp.jp/assets/images/en/blogs/POST-QUANTUM-CRYPTOGRAPHY-1140x380.jpg');
+    background-size: 135%; /* Scales the image to 70% of its original size */
+    background-position: center; /* Keeps image aligned to the left, vertically centered */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    border-radius: 10px;
+    width: 100%; /* Maintains specified width */
+    min-height: 430px; /* Maintains minimum height */
+    background-color: rgba(197, 210, 212, 0.3); /* Maintains transparency */
+    background-blend-mode: overlay; /* Blends image with background color */
+    text-shadow: 1px 1px 2px rgba(223, 211, 211, 0.8); /* Maintains text shadow for contrast */
+  }
+
   
+
+  .welcome-text h1 {
+    font-size: 45px;
+    margin: 0;
+    font-family: 'Georgia', serif;
+  }
+
+  .welcome-text p {
+    font-size: 31px;
+    margin: 15px 0;
+  }
+
+  .section {
+    
+    background: #A6B8D3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    color: #ffffff;
+    animation: fadeInSection 1.2s ease-in;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  }
+
+  .section h2 {
+    color: #4a90e2;
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+  }
+
+  .section p {
+    font-size: 25px;
+    line-height: 1.7;
+  }
+
+  .section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .section th, .section td {
+    padding: 12px;
+    border: 1px solid #4a90e2;
+    text-align: left;
+  }
+
+  .section th {
+    background: #003366;
+    color: #ffffff;
+  }
+
+  .section a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .section a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+
+  .code-trigger {
+    color: #00d4ff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .code-trigger:hover {
+    color: #b8860b;
+  }
+
+  .code-block {
+    background: #002244;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: 1px solid #4a90e2;
+  }
+
+  .simulation-box {
+    background: linear-gradient(45deg, #003366, #001233);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  }
+
+  .simulation-box h3 {
+    color: #b8860b;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+
+  #simulate-pqc-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    border: none;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  #simulate-pqc-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  #pqc-simulation-result {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #00d4ff;
+    text-shadow: 0 0 6px #00d4ff;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+  }
+
+  .action-btn {
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    padding: 14px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
+  }
+
+  details {
+    margin: 15px 0;
+    color: #ffffff;
+  }
+
+  summary {
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .context-menu {
+    position: absolute;
+    background: linear-gradient(45deg, #003366, #001233);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    padding: 10px;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  .context-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .context-menu-item {
+    display: block;
+    padding: 10px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .context-menu-item:hover {
+    background: #4a90e2;
+    color: #b8860b;
+    transform: scale(1.05);
+  }
+
+  #context-btn, #book-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, #4a90e2, #00d4ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: move;
+    font-size: 22px;
+    z-index: 1000;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    animation: pulseBtn 2s infinite;
+  }
+
+  #context-btn {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  #book-btn {
+    bottom: 25px;
+    right: 80px;
+  }
+
+  #context-btn:hover, #book-btn:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseBtn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 160px;
+    }
+    .content {
+      margin-left: 180px;
+      padding: 20px;
+    }
+    .welcome-text h1 {
+      font-size: 2.2em;
+    }
+    .welcome-text p {
+      font-size: 1.1em;
+    }
+    .section h2 {
+      font-size: 1.6em;
+    }
+    .section p {
+      font-size: 1em;
+    }
+    .nav-button, .action-btn {
+      font-size: 13px;
+      padding: 10px;
+    }
+    .simulation-box h3 {
+      font-size: 1.3em;
+    }
+    #simulate-pqc-btn {
+      padding: 10px 20px;
+    }
+    #context-btn, #book-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    #book-btn {
+      right: 70px;
+    }
+    .context-menu {
+      width: 140px;
+    }
+    .context-menu-item {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+</style>
+
 <!-- Вбудований JavaScript -->
 <script>
   // Симуляція стійкості PQC
