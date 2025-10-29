@@ -1,39 +1,61 @@
 {% extends "base.html" %}
 
-{% block title %}Постквантова Криптографія{% endblock %}
+{% block title %}Data protection in Quantum future{% endblock %}
+
+
 
 {% block css %}
 <link rel="stylesheet" href="/static/css/post_quantum_crypto.css">
 {% endblock %}
 
 {% block content %}
-<div class="container">
- 
-  <!-- Бічна панель для навігації -->
-  <div class="sidebar" id="sidebar">
-    <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;"">Навігація по веб-сторінці постквантова криптографія</h3>
+<!-- Main container for the processors page -->
+<div class="quantum-page-container">
+  
+  <!-- Sidebar Menu -->
+  <div id="sidebar-menu" class="nav-sidebar">
+    <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
     <ul>
-      <li><a href="#section1" class="nav-button">Проблематика PQC</a></li>
-      <li><a href="#section2" class="nav-button">Теоретичні основи</a></li>
-      <li><a href="#section3" class="nav-button">Типи PQC алгоритмів</a></li>
-      <li><a href="#section4" class="nav-button">Тренди 2025</a></li>
-      <li><a href="#section5" class="nav-button">Загроза від Шора</a></li>
-      <li><a href="#section6" class="nav-button">PQC у Fintech</a></li>
-      <li><a href="#section7" class="nav-button">PQC для IoT</a></li>
-      <li><a href="#section8" class="nav-button">Інтеграція та стандарти</a></li>
-      <li><a href="#section9" class="nav-button">Майбутнє PQC</a></li>
+      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Проблематика PQC</a></li>
+      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Теоретичні основи</a></li>
+      <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Типи PQC алгоритмів</a></li>
+      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Тенденції 2025</a></li>
+      <li><a href="#section5" class="nav-link" style="color: #211255; font-weight: 700;">Загроза від Шора</a></li>
+      <li><a href="#section6" class="nav-link" style="color: #211255; font-weight: 700;">PQC у Fintech</a></li>
+      <li><a href="#section7" class="nav-link" style="color: #211255; font-weight: 700;">PQC для IoT</a></li>
+      <li><a href="#section8" class="nav-link" style="color: #211255; font-weight: 700;">Інтеграція та стандарти</a></li>
+      <li><a href="#section9" class="nav-link" style="color: #211255; font-weight: 700;">Майбутнє PQC</a></li>
     </ul>
   </div>
 
-  <!-- Основний вміст -->
-  <div class="content">
+  <!-- Modal Context Menu -->
+  <div id="modal-menu" class="context-modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h3>Контекстне меню</h3>
+      <ul>
+        <li><a href="#section1" class="nav-link" style="color: #3570c9; font-weight: 700;">Проблематика PQC</a></li>
+        <li><a href="#section2" class="nav-link" style="color: #3570c9; font-weight: 700;">Теоретичні основи</a></li>
+        <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Типи PQC алгоритмів</a></li>
+        <li><a href="#section4" class="nav-link" style="color: #3570c9; font-weight: 700;">Тенденції 2025</a></li>
+        <li><a href="#section5" class="nav-link" style="color: #3570c9; font-weight: 700;">Загроза від Шора</a></li>
+        <li><a href="#section6" class="nav-link" style="color: #3570c9; font-weight: 700;">PQC у Fintech</a></li>
+        <li><a href="#section7" class="nav-link" style="color: #3570c9; font-weight: 700;">PQC для IoT</a></li>
+        <li><a href="#section8" class="nav-link" style="color: #3570c9; font-weight: 700;">Інтеграція та стандарти</a></li>
+        <li><a href="#section9" class="nav-link" style="color: #3570c9; font-weight: 700;">Майбутнє PQC</a></li>  
+      </ul>
+    </div>
+  </div>
+
+  <!-- Content wrapper -->
+  <div class="content-wrapper" style="margin-left: 260px; width: 1600px;">
+    <!-- Welcome text -->
     <div class="welcome-text">
       <h1 style="color: #7c0e14; font-size: 1.2em; font-size: 44px; text-align: center; font-style: italic; margin-right: 50px; font-weight: 900;">Постквантова криптографія: захист даних у квантовому майбутньому</h1>
       <p style="color: rgb(63, 28, 28); font-size: 29px; text-align: justify; width: 940px; margin-right: 170px; font-weight: 1700; -webkit-text-stroke: 1px black;">Уявіть цифровий світ як фортецю, де кожен замок – це RSA чи ECDSA. Квантовий комп’ютер із алгоритмом Шора – це таран, що загрожує зруйнувати ці стіни. 
         <br>Постквантова криптографія (PQC) – ваш новий щит, створений для захисту в епоху квантових загроз.</p>
     </div>
 
-  
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700;">Проблематика PQC: Чому класична криптографія в небезпеці</h2>
@@ -61,52 +83,103 @@
     <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700;">Типи PQC алгоритмів: Різноманітність захисту</h2>
       <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">PQC – це як галактика алгоритмів, кожен із яких світить унікальним способом.
-        <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Основні типи: 
-          <li>lattice-based (Kyber, Dilithium);</li> 
-          <li>hash-based (SPHINCS+);</li>
-          <li> code-based (McEliece);</li> 
-          <li>multivariate quadratic (Rainbow);</li> 
-          <li>supersingular elliptic curves (SIKE).</li>
-
-        </ul>   
-
-          
-          <br><br><p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">- Lattice-based алгоритми, як Kyber, подібні до багатовимірного пазла: їхня безпека базується на складності задач, таких як Learning With Errors (LWE). Kyber забезпечує швидке шифрування з ключами ~1 KB, ідеально для HTTPS чи VPN. 
-            <img src="https://fastercapital.com/i/Quantum-Cryptography--Securing-Data-with-QIP--Types-of-Quantum-Cryptography-Protocols.webp" style="width: 612px; height: 460px;" alt="Квантова криптографія">
-          
-          
-            <br><br>- Hash-based підписи, як SPHINCS+, – це "цифрові відбитки", що використовують хеш-функції, стійкі до квантових атак (O(√n) для Гровера);
-            <br><br>- McEliece, що базується на теорії кодування, – це як броньований сейф: громіздкий (ключі до 1 MB), але надзвичайно стійкий; 
-            <br><br>- Multivariate quadratic алгоритми – це система рівнянь, що виглядає просто, але зламати її – як розв’язати кубик Рубіка в 100 вимірах;
-            <br><br>- SIKE пропонує компактні ключі, але повільніший через складність обчислень; 
-            <br><br>У 2025 році Kyber і Dilithium лідирують завдяки стандартам NIST, тоді як SPHINCS+ використовується для підписів, де розмір ключа менш критичний.</p> 
-          
-      <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #ffffff;">
-        <thead>
-          <tr style="background: #003366;">
-            <th style="padding: 10px; border: 1px solid #4a90e2;">Тип</th>
-            <th style="padding: 10px; border: 1px solid #4a90e2;">Приклад</th>
-            <th style="padding: 10px; border: 1px solid #4a90e2;">Особливості</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Lattice-based</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Kyber, Dilithium</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Компактні ключі, швидкість</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Hash-based</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">SPHINCS+</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Надійність, великі підписи</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Code-based</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">McEliece</td>
-            <td style="padding: 10px; border: 1px solid #4a90e2;">Великі ключі, висока стійкість</td>
-          </tr>
-        </tbody>
-      </table>
+        
+        <br><br>
+          <strong>PQC (Post-Quantum Cryptography)</strong> — це галактика алгоритмів, де кожен тип сяє власною зорею. 
+          Вони створені, щоб захистити дані від загроз квантових комп’ютерів, 
+          які здатні зруйнувати сучасні схеми шифрування, як-от RSA чи ECC. 
+          Замість покладатися на факторизацію або логарифмічні задачі, 
+          PQC базується на складних математичних структурах, 
+          що залишаються непідвладними навіть квантовим атакам.
+      
+      
+        <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800;">
+          <li><strong>Lattice-based</strong> — <em>Kyber, Dilithium</em></li>
+          <li><strong>Hash-based</strong> — <em>SPHINCS+</em></li>
+          <li><strong>Code-based</strong> — <em>McEliece</em></li>
+          <li><strong>Multivariate quadratic</strong> — <em>Rainbow</em></li>
+          <li><strong>Supersingular elliptic curves</strong> — <em>SIKE</em></li>
+        </ul>
+      
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <strong>Lattice-based алгоритми</strong> — серце постквантової криптографії. 
+          Їхня безпека ґрунтується на задачах <em>Learning With Errors (LWE)</em> та <em>Module-LWE</em>, 
+          які неможливо розв’язати навіть із допомогою квантових машин. 
+          Наприклад, <strong>Kyber</strong> забезпечує швидке шифрування з ключами близько 1 КБ — 
+          оптимально для протоколів <abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr> та <abbr title="Virtual Private Network">VPN</abbr>. 
+          А <strong>Dilithium</strong> пропонує ефективні цифрові підписи з високою швидкістю верифікації.
+        </p>
+      
+              
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <strong>Hash-based підписи</strong>, як <em>SPHINCS+</em>, — це "цифрові відбитки" епохи квантової безпеки. 
+          Вони ґрунтуються виключно на хеш-функціях, що залишаються стійкими навіть до алгоритму <strong>Гровера</strong>, 
+          який може лише квадратично скоротити простір пошуку (O(√n)). 
+          Такі схеми підходять для систем, де критична надійність, але менш важливий розмір підпису.
+        </p>
+      
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <strong>Code-based криптографія</strong> — класика, що пережила десятиліття. 
+          Алгоритм <em>McEliece</em> базується на складності декодування випадкових лінійних кодів. 
+          Його публічні ключі великі (до 1 МБ), проте безпека перевірена часом: 
+          за понад 40 років не знайдено практичної атаки — навіть з урахуванням квантових обчислень.
+        </p>
+      
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          <strong>Multivariate quadratic системи</strong>, як <em>Rainbow</em>, 
+          оперують рівняннями, які виглядають просто, але створюють експоненційно складний простір розв’язків — 
+          це ніби розв’язати кубик Рубіка у 100 вимірах. 
+          А <strong>SIKE</strong>, що базується на ізогенії суперсингулярних еліптичних кривих, 
+          запропонував компактні ключі, проте вразливість, знайдена у 2022 році, 
+          показала: навіть елегантна математика вимагає постійного аудиту.
+      </p>
+      
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+          У 2025 році <strong>Kyber</strong> і <strong>Dilithium</strong> 
+          стали офіційними стандартами <abbr title="National Institute of Standards and Technology">NIST</abbr> 
+          для шифрування та підписів у постквантову епоху. 
+          <em>SPHINCS+</em> доповнює їх у сценаріях, де необхідна максимальна стійкість без компромісів. 
+          Разом вони формують основу цифрової безпеки майбутнього — світу, 
+          де квантові обчислення вже не загроза, а стимул до еволюції криптографії.
+    </p>
+      
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #ffffff; font-size: 21px;">
+          <thead>
+            <tr style="background: #003366;">
+              <th style="padding: 10px; border: 1px solid #4a90e2;">Тип</th>
+              <th style="padding: 10px; border: 1px solid #4a90e2;">Приклади</th>
+              <th style="padding: 10px; border: 1px solid #4a90e2;">Ключові особливості</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #1b2a4a;">
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Lattice-based</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Kyber, Dilithium</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Швидкість, компактні ключі, NIST-стандарти</td>
+            </tr>
+            <tr style="background: #22385c;">
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Hash-based</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">SPHINCS+</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Висока надійність, великі підписи</td>
+            </tr>
+            <tr style="background: #1b2a4a;">
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Code-based</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">McEliece</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Довготривала стійкість, великі ключі</td>
+            </tr>
+            <tr style="background: #22385c;">
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Multivariate quadratic</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Rainbow</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Нелінійна складність, швидкі обчислення</td>
+            </tr>
+            <tr style="background: #1b2a4a;">
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Isogeny-based</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">SIKE</td>
+              <td style="padding: 10px; border: 1px solid #4a90e2;">Компактні ключі, потребує доопрацювання</td>
+            </tr>
+          </tbody>
+        </table>
+         
     </section>
 
     <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
@@ -176,33 +249,19 @@
         
        <br><br>У 2025 році компанії, як IBM і Google, інвестують у гібридні системи, де PQC працює поряд із QECC для квантових мереж. 
        OpenQuantumSafe дозволяє розробникам тестувати PQC уже сьогодні, використовуючи бібліотеки для Python; хмарні платформи (AWS, Azure) і стандарти NIST спрощують цей шлях.  
-       
       
     </section>
   </div>
 
+   
   <!-- Пересувна кнопка контекстного меню -->
   <button id="context-btn">☰</button>
-  <!-- Пересувна кнопка Book -->
-  <button id="book-btn">📘</button>
-  <!-- Контекстне меню для Book -->
-  <div id="book-context-menu" class="context-menu" style="display: none;">
-    <ul>
-      <li><a href="#section1" class="context-menu-item">Проблематика PQC</a></li>
-      <li><a href="#section2" class="context-menu-item">Теоретичні основи</a></li>
-      <li><a href="#section3" class="context-menu-item">Типи PQC алгоритмів</a></li>
-      <li><a href="#section4" class="context-menu-item">Тренди 2025</a></li>
-      <li><a href="#section5" class="context-menu-item">Загроза від Шора</a></li>
-      <li><a href="#section6" class="context-menu-item">PQC у Fintech</a></li>
-      <li><a href="#section7" class="context-menu-item">PQC для IoT</a></li>
-      <li><a href="#section8" class="context-menu-item">Інтеграція та стандарти</a></li>
-      <li><a href="#section9" class="context-menu-item">Майбутнє PQC</a></li>
-    </ul>
+  <!-- Кнопка у вигляді книжечки для модального меню -->
+  <button id="book-btn">📖</button>
   </div>
-</div>
- 
+
 {% endblock %}
 
 {% block js %}
-  <script src="{{ url_for('static', filename='scripts/post_quantum_crypto.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/post_quantum_crypto.js') }}"></script>
 {% endblock %}

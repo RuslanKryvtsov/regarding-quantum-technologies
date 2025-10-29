@@ -60,7 +60,7 @@
           <li> 5) <strong>Дебагери</strong> для аналізу схем.</li> 
         </ul>
 
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: left;">  
+        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">  
            Парадокс: ці інструменти виглядають як класичні IDE, але керують кубітами, чутливими до декогеренції. <br>Симулятори, як Qiskit Aer, дозволяють тестувати код локально.</p>
                  
             
@@ -68,9 +68,13 @@
 
     <section id="section3" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Qiskit: Python для квантового програмування</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
-        Qiskit – це як космічний конструктор Lego для квантових програм, побудований на Python. Розроблений IBM, він дозволяє створювати алгоритми, як Shor чи VQE, без глибоких знань квантової фізики. Уявіть: розробник пише код, схожий на TensorFlow, і тестує його на IBM Loon через хмару. У 2025 році Qiskit 2.0 підтримує QECC і симуляцію на класичних ПК, що робить його вибором для 50% квантових розробників (Quantum Zeitgeist). Наприклад, Merck використовує Qiskit для моделювання молекул, скорочуючи час розробки ліків на 30%. Qiskit включає Aer (симулятор), Terra (компілятор) і Ignis (QECC), що робить його аналогом PyCharm для квантового світу.
-        <br><br>Парадокс: Qiskit виглядає як Python-бібліотека, але керує QPU з декогеренцією.
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        Qiskit – це як космічний конструктор Lego для квантових програм, побудований на Python.
+         Розроблений IBM, він дозволяє створювати алгоритми, як Shor чи VQE, без глибоких знань квантової фізики. 
+         <br><br> Уявіть: розробник пише код, схожий на TensorFlow, і тестує його на IBM Loon через хмару.
+          У 2025 році Qiskit 2.0 підтримує QECC і симуляцію на класичних ПК, що робить його вибором для 50% квантових розробників (Quantum Zeitgeist).
+          <br><br> Наприклад, Merck використовує Qiskit для моделювання молекул, скорочуючи час розробки ліків на 30%. Qiskit включає Aer (симулятор), Terra (компілятор) і Ignis (QECC), що робить його аналогом PyCharm для квантового світу.
+        <br>Парадокс: Qiskit виглядає як Python-бібліотека, але керує QPU з декогеренцією.
        
         <br>Обмеження: симуляція великих схем потребує значних ресурсів, але хмарні QPU вирішують це.
       </p>
@@ -78,12 +82,12 @@
 
     <section id="section7" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Quantum Development Kit: екосистема для Q#</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
         <span style="font-weight: bold; color: rgb(56, 28, 28);">Quantum Development Kit (QDK) від Microsoft – це як космічний порт для Q#.</span> Він включає симулятори, дебагери та бібліотеки для створення гібридних алгоритмів. QDK дозволяє тестувати код на локальному симуляторі перед запуском на Azure Quantum.
         <br><br>У 2025 році QDK використовується в 25% хмарних проєктів (Moody’s), зокрема для фінансових застосувань.
         <br><br>Наприклад, HSBC тестує QDK для моделювання ризиків, скоротивши час аналізу на 15%. QDK інтегрується з Visual Studio, що робить його аналогом PyCharm для квантового світу.
         <br><br>Парадокс: QDK виглядає як класична IDE, але підтримує квантову логіку.
-        <span class="code-trigger" data-code-id="qdk-code">QDK код</span> демонструє симуляцію.
+        QDK код демонструє симуляцію.
       
         <br><br>Обмеження: потрібне вивчення Q#, але документація спрощує це.
       </p>
@@ -91,10 +95,12 @@
 
     <section id="section8" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">IBM Quantum Lab: хмарна платформа для розробки</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
-        IBM Quantum Lab – це як космічна лабораторія, де розробники тестують квантові алгоритми на реальних QPU. У 2025 році платформа надає доступ до IBM Loon (1000 кубітів) і симуляторів Aer. Уявіть: програміст запускає VQE для моделювання молекули через браузер, без фізичного QPU. IBM Quantum Lab використовується в 40% квантових проєктів (Quantum Zeitgeist), зокрема Merck для дизайну ліків. Платформа включає візуалізацію схем і дебагери, що робить її аналогом браузерних DevTools для квантового коду.
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        IBM Quantum Lab – це як космічна лабораторія, де розробники тестують квантові алгоритми на реальних QPU. 
+        У 2025 році платформа надає доступ до IBM Loon (1000 кубітів) і симуляторів Aer. 
+        <br><br>Уявіть: програміст запускає VQE для моделювання молекули через браузер, без фізичного QPU. IBM Quantum Lab використовується в 40% квантових проєктів (Quantum Zeitgeist), зокрема Merck для дизайну ліків. Платформа включає візуалізацію схем і дебагери, що робить її аналогом браузерних DevTools для квантового коду.
         <br><br>Парадокс: це хмарна платформа, але керує фізичними QPU.
-        <span class="code-trigger" data-code-id="ibm-lab-code">Код для IBM Quantum Lab</span> показує запуск схеми.
+        Код для IBM Quantum Lab показує запуск схеми.
        
         <br><br>Обмеження: латентність хмарного доступу, але симулятори компенсують це.
       </p>
@@ -102,11 +108,13 @@
 
     <section id="section9" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">TensorFlow Quantum: квантове машинне навчання</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
-        TensorFlow Quantum (TFQ) – це як космічний суперкомп’ютер для квантового машинного навчання. Інтегруючись із Cirq, TFQ дозволяє створювати QNN і QSVM для задач, як класифікація медичних зображень. Уявіть: TFQ комбінує квантові схеми з нейронними мережами, прискорюючи тренування на 30% (Quantum Zeitgeist).
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        TensorFlow Quantum (TFQ) – це як космічний суперкомп’ютер для квантового машинного навчання.
+         Інтегруючись із Cirq, TFQ дозволяє створювати QNN і QSVM для задач, як класифікація медичних зображень. 
+         <br><br> Уявіть: TFQ комбінує квантові схеми з нейронними мережами, прискорюючи тренування на 30% (Quantum Zeitgeist).
         <br><br>У 2025 році Google використовує TFQ для діагностики раку, досягнувши 95% точності. TFQ включає симулятори та дебагери, що робить його аналогом Jupyter Notebook для QML.
         <br><br>Парадокс: TFQ виглядає як TensorFlow, але працює з кубітами.
-        <span class="code-trigger" data-code-id="tfq-code">TFQ код</span> показує створення QNN.
+        TFQ код показує створення QNN.
       
         <br><br>Обмеження: потребує знання ML і квантової механіки, але документація спрощує це.
       </p>
@@ -114,9 +122,11 @@
 
     <section id="section10" class="section">
       <h2 style="color: #0a041d; font-weight: 700;">Майбутнє квантових інструментів: код для Всесвіту</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 24px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
-        Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту. До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач. Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.
-        <br><br>Почніть із <span class="code-trigger" data-code-id="qiskit-start">Qiskit</span>, щоб долучитися до квантової революції!
+      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        Майбутнє квантових інструментів – це як створення універсального пульта для квантового Всесвіту.
+        <br> До 2035 року, за Moody’s, 50% розробників AI використовуватимуть квантові інструменти для гібридних задач.
+        <br><br> Уявіть: Qiskit 3.0 інтегрується з PyTorch, дозволяючи створювати QNN за кілька рядків. Silq може стати стандартом для інтуїтивного кодування, а IBM Quantum Lab – універсальною платформою для QPU. У 2025 році IBM і Google інвестують у навчання, а Qiskit і Cirq стають стандартами. Парадокс: інструменти стануть настільки простими, що їх вивчатимуть у школах, але керуватимуть QPU з мільйонами кубітів. Виклик: масштабування до fault-tolerant систем.
+        <br>Почніть із Qiskit, щоб долучитися до квантової революції!
        
       </p>
     </section>

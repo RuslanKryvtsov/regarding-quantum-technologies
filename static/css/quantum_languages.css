@@ -1,36 +1,21 @@
-<!-- Inline CSS for Sections, Menu, and Animations -->
-<style>
-  .processors-container {
+
+  .quantum-page-container {
     position: relative;
     min-height: 100vh;
-    width: 1540px;
+    width: 1700px;
     color: #ffffff;
     padding: 20px;
     margin: 0 auto;
     margin-left: 0px;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    background-color: #c9d4d6; /* Легкий бежевий для гармонії */;
-    margin-left: 99px;
+    background-color: #c9d4d6; /* Легкий бежевий для гармонії */
+   
   }
 
-  .space-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Star-forming_region_S106.jpg/1024px-Star-forming_region_S106.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.65;
-    z-index: 1;
-  }
-
-  
-  .content-wrapper {
-    max-width: 800px;
-    margin-left: 180px;
+    .content-wrapper {
+    max-width: 1450px;
+    margin-left: 230px;
     padding: 30px;
     position: relative;
     z-index: 2;
@@ -46,19 +31,16 @@
     
   }
 
+  
   .welcome-text h1 {
-    font-size: 3em;
-    color: #00d4ff;
+    font-size: 46px;
+    color: #7c0e14;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px #00d4ff;
     font-family: 'Georgia', serif;
     font-weight: 900;
-  }
-
-  .welcome-text p {
-    font-size: 1.3em;
-    color: #eed8d8;
-    margin: 15px 0;
+    text-align: center;
+    font-style: italic;
+    margin-right: 170px;
   }
 
   .section {
@@ -67,14 +49,14 @@
     margin: 25px 0;
     border-radius: 12px;
     animation: fadeInSection 1.2s ease-in;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    max-width: 1690px;
     
-    margin-left: 190px;
-    width: 1410px;
   }
 
   .section h2 {
     font-size: 2em;
-    color: #8b7dbb;
+    color: #3d3a46;
     margin-bottom: 15px;
     font-family: 'Georgia', serif;
   }
@@ -92,7 +74,6 @@
     color: #eed8d8;
     font-size: 25px;
     text-align: justify;
-    max-width: 1260px;
   }
 
   .section span[style*="font-weight: bold"] {
@@ -127,67 +108,8 @@
     font-size: 25px;
   }
 
-  .code-trigger {
-    color: #00d4ff;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .code-trigger:hover {
-    color: #b8860b;
-  }
-
-  .code-block {
-    background: #A6B8D3;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 10px 0;
-    font-size: 0.9em;
-    color: #ffffff;
-    border: 1px solid #4a90e2;
-  }
-
-  .action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 25px 0;
-  }
-
-  .action-btn {
-    background: linear-gradient(45deg, #4a90e2, #00d4ff);
-    padding: 14px 25px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .action-btn:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
-  }
-
-  .section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-
-  .section th, .section td {
-    padding: 12px;
-    border: 1px solid #4a90e2;
-    text-align: left;
-  }
-
-  .section th {
-    background: #6e90b3;
-    color: #ffffff;
-  }
-
-  .sidebar-menu {
+  
+  .nav-sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -196,43 +118,44 @@
     padding: 20px;
     z-index: 999;
     overflow-y: auto;
-    
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     background-color: #b3c6ca;
     transition: transform 0.3s ease;
+    
   }
 
-  .sidebar-menu.hidden {
-    transform: translateX(-280px);
+  .nav-sidebar.hidden {
+    transform: translateX(-310px);
   }
 
-  .sidebar-menu h3 {
+  .nav-sidebar h3 {
     color: #4a90e2;
     text-align: center;
     font-size: 27px;
     margin-bottom: 20px;
   }
 
-  .sidebar-menu ul {
+  .nav-sidebar ul {
     list-style: none;
     padding: 0;
   }
 
-  .menu-link {
+  .nav-link {
     display: block;
     padding: 14px;
     margin: 10px 0;
     background: linear-gradient(45deg, #7eade4, #b3c6ca);
-    color: #211255; 
-     text-align: left; font-style: italic; font-weight: 800;
-    
+    color: #211255;
+    text-align: left;
+    font-style: italic;
+    font-weight: 800;
     text-decoration: none;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    font-weight: bold;
     font-size: 23px;
   }
 
-  .menu-link:hover {
+  .nav-link:hover {
     transform: scale(1.06);
     box-shadow: 0 0 12px rgba(0, 255, 255, 0.9);
   }
@@ -266,7 +189,7 @@
     transform: scale(1.1);
   }
 
-  .modal {
+  .context-modal {
     display: none;
     position: fixed;
     z-index: 1001;
@@ -279,7 +202,7 @@
   }
 
   .modal-content {
-    background: linear-gradient(45deg, #003366, #143a81);
+    background: linear-gradient(45deg, #003366, #001233);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #4a90e2;
@@ -315,7 +238,7 @@
     padding: 0;
   }
 
-  .modal-content .menu-link {
+  .modal-content .nav-link {
     font-size: 20px;
     color: #00d4ff;
     background: none;
@@ -323,7 +246,7 @@
     font-style: normal;
   }
 
-  .modal-content .menu-link:hover {
+  .modal-content .nav-link:hover {
     background: #4a90e2;
     color: #b8860b;
     transform: scale(1.05);
@@ -341,7 +264,6 @@
     transform: scale(1.02) !important;
     transition: background 0.3s, transform 0.3s;
 }
-
 
   @keyframes twinkle {
     0%, 100% { opacity: 0.35; }
@@ -363,18 +285,24 @@
     50% { transform: scale(1.06); }
   }
 
-  @media (max-width: 1350px) {
-    .processors-container {
+  @keyframes colorShiftCardo {
+    0% { color: #271c2b; }
+    100% { color: #4a2c5b; }
+  }
+
+  @media (max-width: 1690px) {
+    .quantum-page-container {
       padding: 10px;
       width: auto;
-      margin-left: 180px;
+      margin-left: 0;
     }
     .content-wrapper {
-      margin-left: 180px;
+      margin-left: 0;
       padding: 20px;
     }
     .welcome-text h1 {
       font-size: 2.2em;
+      margin-right: 0;
     }
     .section h2 {
       font-size: 1.6em;
@@ -385,13 +313,13 @@
     .section p, .section ul, .section ol, .section details ul {
       font-size: 20px;
     }
-    .sidebar-menu {
-      width: 160px;
+    .nav-sidebar {
+      width: 250px;
     }
-    .sidebar-menu h3 {
+    .nav-sidebar h3 {
       font-size: 22px;
     }
-    .menu-link {
+    .nav-link {
       font-size: 18px;
       padding: 10px;
     }
@@ -406,7 +334,7 @@
     .modal-content {
       width: 99%;
     }
-    .modal-content .menu-link {
+    .modal-content .nav-link {
       font-size: 16px;
     }
   }

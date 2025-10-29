@@ -1,62 +1,64 @@
-
 {% extends "base.html" %}
 
-{% block title %}Еволюція Мов Програмування для Квантових Систем{% endblock %}
+{% block title %}Quantum languages{% endblock %}
+
+
 
 {% block css %}
 <link rel="stylesheet" href="/static/css/quantum_languages.css">
 {% endblock %}
 
-
 {% block content %}
-<div class="processors-container">
- 
+<!-- Main container for the processors page -->
+<div class="quantum-page-container">
+  
   <!-- Sidebar Menu -->
-  <div id="sidebar-menu" class="sidebar-menu">
-    <h3 style="color: #961319; font-style: italic; font-size: 23px; font-weight: 600; text-shadow: 0 0 10px #00d4ff;">Навігація по веб - сторінці квантові мови програмування</h3>
+  <div id="sidebar-menu" class="nav-sidebar">
+    <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці "Мови програмування"</h3>
     <ul>
-      <li><a href="#section1" class="menu-link">Теоретичні основи</a></li>
-      <li><a href="#section2" class="menu-link">Історія: Від QASM до Q#</a></li>
-      <li><a href="#section3" class="menu-link">Гібридні парадигми</a></li>
-      <li><a href="#section4" class="menu-link">Qiskit 2.0 та Python</a></li>
-      <li><a href="#section5" class="menu-link">Q# для хмарних систем</a></li>
-      <li><a href="#section6" class="menu-link">Silq: Інтуїтивність</a></li>
-      <li><a href="#section7" class="menu-link">Cirq і Google Willow</a></li>
-      <li><a href="#section8" class="menu-link">Тренди 2025</a></li>
-      <li><a href="#section9" class="menu-link">Майбутнє мов</a></li>
+      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Теоретичні основи</a></li>
+      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Історія: від QASM до Q#</a></li>
+      <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Гібридні парадигми</a></li>
+      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Qiskit 2.0 та Python</a></li>
+      <li><a href="#section5" class="nav-link" style="color: #211255; font-weight: 700;">Q# для хмарних систем</a></li>
+      <li><a href="#section6" class="nav-link" style="color: #211255; font-weight: 700;">Silq: інтуїтивність</a></li>
+      <li><a href="#section7" class="nav-link" style="color: #211255; font-weight: 700;">Cirq і Google Willow</a></li>
+      <li><a href="#section8" class="nav-link" style="color: #211255; font-weight: 700;">Тенденції 2025</a></li>
+      <li><a href="#section9" class="nav-link" style="color: #211255; font-weight: 700;">Подальший розвиток мов програмування</a></li>
     </ul>
   </div>
 
   <!-- Modal Context Menu -->
-  <div id="modal-menu" class="modal">
+  <div id="modal-menu" class="context-modal">
     <div class="modal-content">
       <span id="close-modal">&times;</span>
       <h3>Контекстне меню</h3>
       <ul>
-        <li><a href="#section1" class="menu-link">Теоретичні основи</a></li>
-        <li><a href="#section2" class="menu-link">Історія: Від QASM до Q#</a></li>
-        <li><a href="#section3" class="menu-link">Гібридні парадигми</a></li>
-        <li><a href="#section4" class="menu-link">Qiskit 2.0 та Python</a></li>
-        <li><a href="#section5" class="menu-link">Q# для хмарних систем</a></li>
-        <li><a href="#section6" class="menu-link">Silq: Інтуїтивність</a></li>
-        <li><a href="#section7" class="menu-link">Cirq і Google Willow</a></li>
-        <li><a href="#section8" class="menu-link">Тренди 2025</a></li>
-        <li><a href="#section9" class="menu-link">Майбутнє мов</a></li>
+        <li><a href="#section1" class="nav-link" style="color: #3570c9; font-weight: 700;">Теоретичні основи</a></li>
+        <li><a href="#section2" class="nav-link" style="color: #3570c9; font-weight: 700;">Історія: від QASM до Q#</a></li>
+        <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Гібридні парадигми</a></li>
+        <li><a href="#section4" class="nav-link" style="color: #3570c9; font-weight: 700;">Qiskit 2.0 та Python</a></li>
+        <li><a href="#section5" class="nav-link" style="color: #3570c9; font-weight: 700;">Q# для хмарних систем</a></li>
+        <li><a href="#section6" class="nav-link" style="color: #3570c9; font-weight: 700;">Silq: інтуїтивність</a></li>
+        <li><a href="#section7" class="nav-link" style="color: #3570c9; font-weight: 700;">Cirq і Google Willow</a></li>
+        <li><a href="#section8" class="nav-link" style="color: #3570c9; font-weight: 700;">Тенденції 2025</a></li>
+        <li><a href="#section9" class="nav-link" style="color: #3570c9; font-weight: 700;">Подальший розвиток мов програмування</a></li>
       </ul>
     </div>
   </div>
 
   <!-- Content wrapper -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="margin-left: 260px; width: 1600px;">
     <!-- Welcome text -->
     <div class="welcome-text">
       <h1 style="color: #921319; font-size: 43px; text-align: center; font-style: italic; font-weight: 700; margin-right: 150px;">Еволюція мов програмування: кодуючи квантовий Всесвіт</h1>
       <br><p style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 29px; text-align: justify; width: 1270px; margin-right: 80px;">Уявіть квантовий комп’ютер як оркестр, де кожен кубіт – інструмент, що грає в суперпозиції. 
-       <br> <br>Мови програмування – це партитури, які перетворюють хаос квантових станів у гармонію обчислень, доступну навіть без PhD з фізики.</p>
+      <br> <br>Мови програмування – це партитури, які перетворюють хаос квантових станів у гармонію обчислень, доступну навіть без PhD з фізики.</p>
    
-       <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/quantum_ed6837d966.webp" style="width: 620px; height: 540px; margin-right: 180px;">
-      </div>
+      <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/quantum_ed6837d966.webp" style="width: 620px; height: 540px; margin-right: 180px;">
+    </div>
 
+    <!-- Частина 1: Вступ і Суть Квантових Процесорів -->
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
       <h2 style="color: #0a041d; font-weight: 700; font-size: 35px; text-align: left; ">Теоретичні основи: чому квантові мови особливі</h2>
@@ -705,16 +707,16 @@
       
     </section>
   </div>
-
-  <!-- Draggable Context Button -->
+  
+  <!-- Пересувна кнопка контекстного меню -->
   <button id="context-btn">☰</button>
-  <!-- Book Button for Modal Menu -->
-  <button id="book-btn">📘</button>
-</div>
- 
-{% endblock %}
 
-{% block js %}
-     <script src="{{ url_for('static', filename='scripts/quantum_languages.js') }}"></script>
+  <!-- Кнопка у вигляді книжечки для модального меню -->
+  <button id="book-btn">📖</button>
+</div>
+
  {% endblock %}
 
+ {% block js %}
+     <script src="{{ url_for('static', filename='scripts/quantum_languages.js') }}"></script>
+ {% endblock %}

@@ -1,98 +1,129 @@
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        // Highlight the section temporarily
-        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
-        target.classList.add('highlight');
-        setTimeout(() => target.classList.remove('highlight'), 2000);
-        // Close modal if clicking from modal menu
-        const modal = document.getElementById('modal-menu');
-        if (modal.style.display === 'block') {
-          modal.style.display = 'none';
-        }
-      }
-    });
-  });
-
-  // Draggable context button for toggling sidebar
-  const contextBtn = document.getElementById('context-btn');
-  let isDragging = false;
-  let currentX;
-  let currentY;
-  let initialX;
-  let initialY;
-
-  contextBtn.addEventListener('mousedown', function(e) {
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
     e.preventDefault();
-    initialX = e.clientX - currentX;
-    initialY = e.clientY - currentY;
-    isDragging = true;
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (isDragging) {
-      e.preventDefault();
-      currentX = e.clientX - initialX;
-      currentY = e.clientY - initialY;
-      contextBtn.style.left = currentX + 'px';
-      contextBtn.style.top = currentY + 'px';
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      // Highlight the section temporarily
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 2000);
+      // Close modal if clicking from modal menu
+      const modal = document.getElementById('modal-menu');
+      if (modal.style.display === 'block') {
+        modal.style.display = 'none';
+      }
     }
   });
+});
 
-  document.addEventListener('mouseup', function() {
-    isDragging = false;
-  });
+// Draggable context button for toggling sidebar
+const contextBtn = document.getElementById('context-btn');
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
 
-  contextBtn.ondragstart = function() {
-    return false;
-  };
+contextBtn.addEventListener('mousedown', function(e) {
+  e.preventDefault();
+  initialX = e.clientX - currentX;
+  initialY = e.clientY - currentY;
+  isDragging = true;
+});
 
-  // Initialize position
-  contextBtn.style.position = 'fixed';
-  currentX = window.innerWidth - 70; // Adjust for right: 25px
-  currentY = window.innerHeight - 70; // Adjust for bottom: 25px
-  contextBtn.style.left = currentX + 'px';
-  contextBtn.style.top = currentY + 'px';
+document.addEventListener('mousemove', function(e) {
+  if (isDragging) {
+    e.preventDefault();
+    currentX = e.clientX - initialX;
+    currentY = e.clientY - initialY;
+    contextBtn.style.left = currentX + 'px';
+    contextBtn.style.top = currentY + 'px';
+  }
+});
 
-  // Toggle sidebar visibility
-  contextBtn.addEventListener('click', () => {
-    const sidebar = document.getElementById('sidebar-menu');
-    sidebar.classList.toggle('hidden');
-  });
+document.addEventListener('mouseup', function() {
+  isDragging = false;
+});
 
-  // Modal menu for book button
-  const bookBtn = document.getElementById('book-btn');
-  const modal = document.getElementById('modal-menu');
-  const closeModal = document.getElementById('close-modal');
+contextBtn.ondragstart = function() {
+  return false;
+};
 
-  bookBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-  });
+// Initialize position
+contextBtn.style.position = 'fixed';
+currentX = window.innerWidth - 70; // Adjust for right: 25px
+currentY = window.innerHeight - 70; // Adjust for bottom: 25px
+contextBtn.style.left = currentX + 'px';
+contextBtn.style.top = currentY + 'px';
 
-  closeModal.addEventListener('click', () => {
+// Toggle sidebar visibility + video overlay
+contextBtn.addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar-menu');
+  const videoOverlay = document.getElementById('video-overlay'); // Додаємо зв’язок із відео
+
+  const isHidden = sidebar.classList.toggle('hidden');
+
+  // Якщо меню сховане — показуємо відео
+  if (isHidden) {
+    if (videoOverlay) {
+      videoOverlay.classList.add('visible');
+    }
+  } else {
+    if (videoOverlay) {
+      videoOverlay.classList.remove('visible');
+    }
+  }
+});
+
+// Modal menu for book button
+const bookBtn = document.getElementById('book-btn');
+const modal = document.getElementById('modal-menu');
+const closeModal = document.getElementById('close-modal');
+
+bookBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
     modal.style.display = 'none';
-  });
+  }
+});
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+// Highlight style
+const style = document.createElement('style');
+style.textContent = `
+  .highlight {
+    background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
+    transform: scale(1.02) !important;
+    transition: background 0.3s, transform 0.3s;
+  }
 
-  // Highlight style
-  const style = document.createElement('style');
-  style.textContent = `
-    .highlight {
-      background: linear-gradient(45deg, #E0E0E0, #E0E0E0) !important;
-      transform: scale(1.02) !important;
-      transition: background 0.3s, transform 0.3s;
-    }
-  `;
-  document.head.appendChild(style);
+  /* Додаємо стилі для відео-оверлею */
+  #video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #video-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+document.head.appendChild(style);
+
 

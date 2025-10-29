@@ -1,97 +1,93 @@
-  // Симуляція алгоритму Гровера
-  document.getElementById('simulate-grover-btn').addEventListener('click', () => {
-    const outcome = Math.random() > 0.5 ? '11' : '00'; // Спрощена симуляція
-    const resultDiv = document.getElementById('grover-simulation-result');
-    resultDiv.textContent = `Знайдено елемент: |${outcome}>`;
-    resultDiv.style.animation = 'fadeIn 0.5s';
-    setTimeout(() => {
-      resultDiv.style.animation = '';
-    }, 500);
-  });
 
-  // Плавна прокрутка для навігації бічної панелі
-  document.querySelectorAll('.nav-button').forEach(link => {
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const target = document.getElementById(targetId);
-      target.scrollIntoView({ behavior: 'smooth' });
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
-      target.classList.add('highlight');
-      setTimeout(() => target.classList.remove('highlight'), 2000);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Highlight the section temporarily
+        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('highlight'));
+        target.classList.add('highlight');
+        setTimeout(() => target.classList.remove('highlight'), 2000);
+        // Close modal if clicking from modal menu
+        const modal = document.getElementById('modal-menu');
+        if (modal.style.display === 'block') {
+          modal.style.display = 'none';
+        }
+      }
     });
   });
 
-  // Показ коду при кліку на ключові слова
-  document.querySelectorAll('.code-trigger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const codeId = trigger.getAttribute('data-code-id');
-      const codeBlock = document.getElementById(`${codeId}-code`);
-      codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
-    });
-  });
-
-  // Пересувна кнопка для контекстного меню
+  // Draggable context button for toggling sidebar
   const contextBtn = document.getElementById('context-btn');
   let isDragging = false;
+  let currentX;
+  let currentY;
+  let initialX;
+  let initialY;
 
   contextBtn.addEventListener('mousedown', function(e) {
     e.preventDefault();
+    initialX = e.clientX - currentX;
+    initialY = e.clientY - currentY;
     isDragging = true;
-    let shiftX = e.clientX - contextBtn.getBoundingClientRect().left;
-    let shiftY = e.clientY - contextBtn.getBoundingClientRect().top;
+  });
 
-    function moveAt(pageX, pageY) {
-      contextBtn.style.left = pageX - shiftX + 'px';
-      contextBtn.style.top = pageY - shiftY + 'px';
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      e.preventDefault();
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+      contextBtn.style.left = currentX + 'px';
+      contextBtn.style.top = currentY + 'px';
     }
+  });
 
-    function onMouseMove(e) {
-      if (isDragging) {
-        moveAt(e.pageX, e.pageY);
-      }
-    }
-
-    document.addEventListener('mousemove', onMouseMove);
-
-    document.addEventListener('mouseup', function() {
-      isDragging = false;
-      document.removeEventListener('mousemove', onMouseMove);
-    }, { once: true });
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
   });
 
   contextBtn.ondragstart = function() {
     return false;
   };
 
-  // Перемикання видимості бічної панелі
+  // Initialize position
+  contextBtn.style.position = 'fixed';
+  currentX = window.innerWidth - 70; // Adjust for right: 25px
+  currentY = window.innerHeight - 70; // Adjust for bottom: 25px
+  contextBtn.style.left = currentX + 'px';
+  contextBtn.style.top = currentY + 'px';
+
+  // Toggle sidebar visibility
   contextBtn.addEventListener('click', () => {
-    if (!isDragging) {
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.style.left = sidebar.style.left === '0px' ? '-330px' : '0px';
-    }
+    const sidebar = document.getElementById('sidebar-menu');
+    sidebar.classList.toggle('hidden');
   });
 
-  // Кнопка книжечки для модального меню
-  const bookBtn = document.getElementById('book-btn');
-  const modal = document.getElementById('modal-menu');
-  const closeModal = document.getElementById('close-modal');
+ // Кнопка книжечки для модального меню
+ // Modal menu for book button
+ const bookBtn = document.getElementById('book-btn');
+ const modal = document.getElementById('modal-menu');
+ const closeModal = document.getElementById('close-modal');
 
-  bookBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-  });
+ bookBtn.addEventListener('click', () => {
+   modal.style.display = 'block';
+ });
 
-  closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+ closeModal.addEventListener('click', () => {
+   modal.style.display = 'none';
+ });
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+ window.addEventListener('click', (e) => {
+   if (e.target === modal) {
+     modal.style.display = 'none';
+   }
+ });
 
-  // Додавання стилю для підсвічування
+
+  // Highlight style
   const style = document.createElement('style');
   style.textContent = `
     .highlight {
