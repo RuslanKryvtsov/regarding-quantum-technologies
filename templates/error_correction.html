@@ -14,10 +14,12 @@
   <div class="nav-sidebar" id="sidebar-menu">
     <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
     <ul>
-      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Основи QECC</a></li>
-      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Обмеження та переваги</a></li>
-      <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Типи кодів</a></li>
-      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Актуальність 2025</a></li>
+      <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Технологічні проблеми: декогеренція системи, похибки обчислень та архітектура процесора</a></li>
+      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Кріогенні системи та підтримка квантової когерентності</a></li>
+      <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Основи QECC. Логічні кубіти.</a></li>
+      <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Обмеження та переваги</a></li>
+      <li><a href="#section5" class="nav-link" style="color: #211255; font-weight: 700;">Типи кодів</a></li>
+      <li><a href="#section6" class="nav-link" style="color: #211255; font-weight: 700;">Актуальність 2025</a></li>
     </ul>
   </div>
 
@@ -27,10 +29,12 @@
       <span id="close-modal">&times;</span>
       <h3>Контекстне меню</h3>
       <ul>
-        <li><a href="#section1" class="nav-link" style="color: #3570c9; font-weight: 700;">Основи QECC</a></li>
-        <li><a href="#section2" class="nav-link" style="color: #3570c9; font-weight: 700;">Обмеження та переваги</a></li>
-        <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Типи кодів</a></li>
-        <li><a href="#section4" class="nav-link" style="color: #3570c9; font-weight: 700;">Актуальність 2025</a></li>
+        <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Технологічні проблеми: декогеренція системи, похибки обчислень та архітектура процесора</a></li>
+        <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Кріогенні системи та підтримка квантової когерентності</a></li>
+        <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Основи QECC. Логічні кубіти.</a></li>
+        <li><a href="#section4" class="nav-link" style="color: #3570c9; font-weight: 700;">Обмеження та переваги</a></li>
+        <li><a href="#section5" class="nav-link" style="color: #3570c9; font-weight: 700;">Типи кодів</a></li>
+        <li><a href="#section6" class="nav-link" style="color: #3570c9; font-weight: 700;">Актуальність 2025</a></li>
       </ul>
     </div>
   </div>
@@ -39,40 +43,154 @@
   <div class="content">
     <h1 style="color: #0c0753; font-weight: 900; font-size: 45px;">Корекція помилок у квантових системах: захист суперпозиції від хаосу</h1>
    
-    <div class="welcome-text" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in; margin-top: 35px;">     
-    </div>
+   
 
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <p style="font-size: 34px; text-align: justify; font-weight: 700;  color: rgb(85, 38, 38);">Уявіть океан суперпозиції, де кожна хвиля – потенційне обчислення.
+           
+      <h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Технологічні проблеми: декогеренція системи, похибки обчислень та архітектура процесора</h2>
+
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Фізична імплементація <strong>квантових комп'ютерів</strong> є складним завданням, яке вимагає від дослідників розв'язання низки ключових проблем.
+         Ці виклики пов'язані з фундаментальними властивостями квантових систем, які роблять їх потужними, але водночас вразливими.
+       <br><br>  Наприклад, уявіть квантовий комп'ютер як оркестр, де кожен музикант (кубіт) повинен грати в ідеальній синхронізації – будь-який шум може зруйнувати гармонію. Серед основних задач:</p>
+     
+    <ul style="font-size: 31px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+      <li>- Чутливість <em>когерентних станів</em> до зовнішнього оточення, що призводить до втрати квантових властивостей;</li>
+      <li>- Накопичення похибок під час обчислень, які накопичуються через шум і взаємодії;</li>
+      <li>- Складнощі з ініціалізацією початкових станів кубітів, оскільки вони повинні бути точно підготовленими в суперпозиції або заплутаними;</li>
+      <li>- Створення багатокубітних систем, де масштабованість стає бар'єром через зростаючу складність.</li>
+    </ul>
+
+     <ul style="font-size: 31px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Ці технологічні проблеми можна об'єднати в три великі групи: 
+        <li><strong>декогеренція системи;</strong></li> 
+        <li> <strong>похибки обчислень;</strong></li>  
+        <li>та <strong>архітектура процесора.</strong></li>  
+    </ul> 
+        
+        
+    <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Розглянемо кожну з них детальніше, доповнюючи поясненнями та прикладами для кращого розуміння.
+     <br>Детальніше про ці концепції можна прочитати в <a href="https://en.wikipedia.org/wiki/Quantum_error_correction" style="color: #003366; font-style: italic;">статті про квантову корекцію помилок на Wikipedia</a>.</p>
+      
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong>1) Декогеренція системи</strong> є однією з найбільших перешкод у квантових обчисленнях. Кубіти в заплутаному стані надзвичайно нестабільні: будь-який зовнішній вплив, як зміна температури, тиску чи навіть проліт фотона, може зруйнувати цей зв'язок. Уявіть заплутані кубіти як крихкий замок з піску на пляжі – легкий вітер або хвиля можуть його зруйнувати. 
+        <br>Для вирішення цієї проблеми використовують спеціальні "саркофаги" – пристрої з максимальною ізоляцією від зовнішніх факторів. Наприклад, імплементації на кремнієвих квантових точках або надпровідних ланцюгах вимагають наднизьких температур близько 0.01 К та вакуумної ізоляції. 
+        
+        <br>Компанія IBM, наприклад, використовує кріогенні системи для своїх квантових процесорів, щоб мінімізувати теплові флуктуації та електромагнітне випромінювання (<a href="https://www.ibm.com/quantum" style="color: #003366; font-style: italic;">детальніше на сайті IBM Quantum</a>).</p>
+     
+     <br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24); font-style: italic;">Максимальний час, протягом якого <span style="color: rgb(97, 44, 44);">квантова система з кількох заплутаних кубітів зберігає свої властивості, називається <strong>часом декогеренції</strong></span>.
+      <br> Наразі в кращих системах, таких як надпровідні кубіти від Google, <span style="color: rgb(78, 36, 36);">цей час долягає десятків мілісекунд</span>, але в 2025 році завдяки <span style="color: rgb(97, 44, 44);">прогресу в матеріалах, як антімоній на основі кремнію, він може бути подовжений</span> 
+      (<a href="https://quantum.google/" style="color: #003366; font-style: italic;">Google Quantum AI</a>).
+      
+     </p>
+      
+     <br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong>2) Похибки обчислень</strong> виникають через <span style="color: rgb(97, 44, 44);">ймовірнісну природу квантових процесів</span>.
+       <ul style="color: rgb(97, 44, 44); font-size: 29px; text-align: justify; font-weight: 700; font-style: italic; ">Вони включають
+           <li>похибки декогеренції (відразу при заплутуванні);</li> 
+           <li>похибки операцій (при виконанні гейт-операцій);</li>  
+           <li>похибки зчитування результату.</li> 
+      </ul>
+
+      <br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"> Чим більше кубітів заплутані, тим вразливіша система – це як ланцюг, де слабка ланка руйнує все. 
+        <br> Стандартні класичні методи корекції, як дублювання даних, неможливі через <span style="color: rgb(78, 36, 36);">теорему про заборону клонування</span>, яка стверджує, що точна копія невідомого квантового стану неможлива (<a href="https://en.wikipedia.org/wiki/No-cloning_theorem" style="color: #003366; font-style: italic;">детальніше про теорему</a>).</p>
+    
+        <br> <h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Для подолання цього розроблено методи <strong>квантової корекції помилок (QEC)</strong>.</h2>
+        
+        <br><br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Замість копіювання, інформація розподіляється на кілька фізичних кубітів, формуючи один "логічний" кубіт з нижчим рівнем
+           помилок. 
+           <br>Наприклад, <em>Shor-код</em> (розроблений Пітером Шором у 1995 році) використовує 9 фізичних кубітів для кодування одного логічного, дозволяючи коректувати будь-яку помилку на одному кубіті (перевертання біта, 
+           фази чи обидва). Він комбінує коди для біт-фліп та фаз-фліп помилок. 
+           <br>Інший приклад – <em>поверхневий код</em>, який використовує 2D-решітку кубітів і є масштабованим; у 2023 році Google досяг зменшення помилок з 3% до нижчих значень при масштабуванні. 
+           <br>Однак, QEC вимагає багато ресурсів: для процесора зі 100 кубітами лише 20 можуть бути для обчислень, решта – для корекції. 
+          
+           <br><br>У 2024 році Microsoft та Quantinuum досягли 800-кратного зменшення помилок у логічних кубітах, використовуючи 30 фізичних для 4 логічних
+            (<a href="https://quantum.microsoft.com/en-us/insights/education/concepts/quantum-error-correction" style="color: #003366; font-style: italic;">Microsoft Quantum</a>). 
+            <br>Це робить QEC ключовим для fault-tolerant computing, де порогова теорема гарантує довільні обчислення, якщо помилки нижче 1-3%.</p>
+      
+     <br>  <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong>3) Архітектура процесора</strong> також створює виклики. Теоретично схеми оперують десятками заплутаних кубітів, але на практиці, як у надпровідних чіпах, кубіти заплутуються лише з сусідами. Для дальніх взаємодій потрібні додаткові кубіти, що збільшує помилки, і все це мусить відбутися в межах часу декогеренції.
+      
+            <br><br>З апаратної сторони програми спочатку тестують на емуляторах класичних комп'ютерів, які імітують квантову поведінку, а потім адаптують до реальної архітектури. 
+      Це як репетиція спектаклю на папері перед живою сценою.</p>
+      
+     <br>  <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">При тестуванні квантових систем вимірюють <strong>точність (fidelity)</strong> – відсоток, що відображає ступінь заплутаності. Наприклад, при fidelity 98.5% після операції стани заплутані з ймовірністю 98.5%, але 1.5% – помилка. При послідовних операціях fidelity множиться: три операції дають 95.6%. Тому алгоритми оптимізують, зменшуючи кількість гейт-операцій, як у варіаційних квантових алгоритмах (VQA). Уявіть це як ланцюгову реакцію: кожна помилка накопичується, тому мінімалізація кроків критична.</p>
+      
+     <br><br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24); ">Таким чином, <strong>декогеренція</strong> <span style="color: rgb(97, 44, 44);">залишається найбільшою проблемою</span>, оскільки 
+      <span style="color: rgb(97, 44, 44);">за обмежений час (наприклад, 200 мс)</span> потрібно <span style="color: rgb(102, 41, 41); text-decoration: underline;">ініціалізувати кубіти, виконати обчислення, скоригувати помилки та зчитати результат</span>. 
+      <br>Прогрес у QEC, як у проєктах Google та IBM у 2025 році, наближає нас до практичних квантових комп'ютерів, де помилки не руйнують обчислення.
+      <br><br> Цікаво, що ці технології можуть революціонізувати криптографію чи моделювання молекул, але вимагають подальших інновацій у матеріалах та архітектурах.</p>
+
+   </section>  
+
+
+      <!-- Розділи -->
+    <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <p style="font-size: 32px; text-align: justify; color: #0c0753; font-weight: 900; font-style: italic;">Уявіть собі світ, де температура настільки низька, що навіть атоми майже завмирають, дозволяючи крихким <strong style="color: #6B4C35;">квантовим станам</strong>
+         танцювати в гармонії без перешкод.
+       </p>
+       <br><h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Кріогенні системи та підтримка квантової когерентності</h2>
+
+       <br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"> Саме це роблять <strong style="color: #6B4C35;">кріогенні системи</strong> в сучасних квантових комп'ютерах – вони є справжніми "холодними серцями" цих революційних машин.
+        <br> Ці складні пристрої охолоджують <strong style="color: #6B4C35;">квантові процесори</strong> до температур, близьких до абсолютного нуля, приблизно 10-20 мілікельвінів (mK), щоб захистити делікатні <strong style="color: #6B4C35;">кубіти</strong> від руйнівного впливу зовнішнього середовища, такого як тепловий шум чи електромагнітні перешкоди.
+          
+        <br><br>  Без них квантові обчислення перетворилися б на хаос, подібний до спроби грати симфонію в шумному метро.</p>
+      
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong style="color: #6B4C35;">Ключові аспекти</strong> цих систем вражають своєю інженерною майстерністю. 
+        <br><br>1) По-перше, <strong style="color: #6B4C35;">охолодження до наднизьких температур</strong> досягається за допомогою багатоступеневих <strong style="color: #6B4C35;">кріостатів</strong>, часто на базі dilution refrigeration – технології, яка використовує суміші ізотопів гелію (He-3 та He-4) для поступового зниження температури.
+        
+        Наприклад, у 2025 році компанії на кшталт Bluefors пропонують передові cryogenic measurement systems, що дозволяють досягати стабільних температур нижче 10 mK без значних енергозатрат, як зазначається в їхніх матеріалах для quantum technology.
+        
+        Це не просто холод – це штучний космічний вакуум на Землі, де теплові флуктуації мінімізуються до рівня, недосяжного в природних умовах.
+        
+        <br><br>2) По-друге, <strong style="color: #6B4C35;">екранування від зовнішніх впливів</strong> є критичним:
+         системи включають шари вакуумної ізоляції, магнітні щити та антивібраційні платформи, щоб захищати кубіти від теплового шуму, електромагнітних полів і навіть космічних променів. 
+         
+        <br> Уявіть "саркофаг" з кількох шарів, де кожен рівень відсікає черговий тип перешкод, забезпечуючи <strong style="color: #6B4C35;">когерентність</strong> кубітів на десятки мілісекунд або довше. Останні досягнення, 
+         як-от ініціатива D-Wave Quantum у липні 2025 року щодо advanced cryogenic packaging, спрямовані на зменшення тепловиділення в 10,000 разів за допомогою мініатюрних пристроїв, що можуть революціонізувати масштабованість квантових систем до тисяч кубітів.
+         
+        <br><br>3) По-третє, <strong style="color: #6B4C35;">використання спеціалізованих матеріалів</strong> робить ці системи витривалими: надпровідні матеріали на основі ніобію чи алюмінію працюють ідеально при таких температурах, а нові розробки, як енергоефективна cryogenic ternary content addressable memory, описана в Nature у вересні 2025 року, 
+        інтегрують пам'ять безпосередньо в холодне середовище, зменшуючи енергоспоживання та полегшуючи масштабування.</p>
+      
+        <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong \>Призначення кріогенних систем</strong> виходить за межі простого охолодження – вони є фундаментом для майбутнього обчислень. 
+          <br><br> Насамперед, вони підтримують <strong style="color: #6B4C35;">квантову когерентність</strong>, дозволяючи кубітам перебувати в <strong style="color: #6B4C35;">суперпозиції</strong> та <strong style="color: #6B4C35;">заплутаному стані</strong>, що є серцем алгоритмів на кшталт Шора чи Гровера. 
+          
+          <br><span style="color: rgb(97, 44, 44);">Без стабільного холоду декогеренція зруйнувала б ці стани за мікросекунди, роблячи обчислення неможливими.</span>
+          
+          <br>Далі, вони забезпечують <strong style="color: #6B4C35;">стабільність процесорів</strong>: у регіонах на кшталт Midwest, як повідомляє Chicago Quantum Exchange у серпні 2025 року, розширення cryogenic infrastructure підтримує інновації, навчання та відкриття, роблячи квантові обчислення точнішими та надійнішими. 
+          
+          <br>Нарешті, зменшення <strong style="color: #6B4C35;">теплового шуму</strong> запобігає помилкам, як показують прогнози ринку, де глобальний обсяг cryogenic systems для QC сягне 1715 млн доларів до 2031 року, відображаючи швидкий ріст. 
+          <br><br>У 2025 році, з конференціями на кшталт IIR Cryogenics, 
+          <br> фокус на cryocoolers та dilution methods обіцяє ще ефективніші системи, наближаючи еру fault-tolerant quantum computing, де холод стає ключем до розкриття безмежних можливостей.</p>
+   
+    </section>   
+
+
+    <!-- Розділи -->
+    <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <p style="font-size: 32px; text-align: justify; color: #0c0753; font-weight: 900; font-style: italic;">Уявіть океан суперпозиції, де кожна хвиля – потенційне обчислення.
         Декогеренція – це шторм, що руйнує цю тендітну структуру.
          Корекція помилок – ваш маяк, що зберігає квантову магію.</p>
      
-      <h2 style="color: #0a041d; font-weight: 700;">Теоретичні основи: від фізичних кубітів до стійких логічних</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Квантова корекція помилок (QECC) – це не просто "виправлення помилок", а <span style="font-weight: bold;  color: rgb(56, 28, 28);">алхімія, що перетворює тендітні фізичні кубіти на стійкі логічні.</span>  
-        Уявіть кубіт як тендітну хвилю на воді: bit-flip (перекидання 0↔1) – це ривок вітру, phase-flip (зміна фази) – зсув, що руйнує інтерференцію.
+         <br><h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Основи QECC. Логічні кубіти.</h2>
+    
+        <br> <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Квантова корекція помилок (QECC) – це не просто "виправлення помилок", а <span style="font-weight: bold;  color: rgb(56, 28, 28);">алхімія, що перетворює тендітні фізичні кубіти на стійкі логічні.</span>  
+        
          <br><br> QECC комбінує <span style="font-weight: bold;  color: rgb(56, 28, 28);">кілька фізичних кубітів (наприклад, 49 у surface code) в один логічний,</span> використовуючи синдромні вимірювання – "пальпацію" помилок без руйнування суперпозиції.
-         <br><br> Парадокс: щоб захистити один кубіт, потрібно 49, але це створює експоненційну стійкість, як маяк у штормі, що освітлює шлях для мільйонів обчислень.
-         <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28);">У 2025 році surface code став стандартом, дозволяючи fault-tolerant обчислення, де помилки 10⁻¹⁰ на логічний кубіт.</span></p>
+         <br> Парадокс: щоб захистити один кубіт, потрібно 49, але це створює експоненційну стійкість, як маяк у штормі, що освітлює шлях для мільйонів обчислень.
+        
       <br><br> <span style="font-weight: bold;  color: rgb(56, 28, 28); font-size: 25px; font-style: italic; text-decoration: underline;">Слід розуміти, що корекція помилок у квантових системах існує як на фізичному, так і на програмному рівнях:</span></p>
       <img src="https://images.squarespace-cdn.com/content/v1/5d52f7bd9d7b3e0001819015/1598377517551-A7Z3QEP2NIQ9S2K9B1GG/2020-08-25+18_44_59-_shorcode12.py+-+C__quantum_shorcode12.py+%283.7.7%29_.png?format=1000w" style="width: 725px; height: 645px;" alt="Код Shor">
       <h3 style="color: #0a041d; font-weight: 700;">Example: Quantum error correction - Shor code in Qiskit</h3>
-      <details>
-        <summary>Концепція логічних кубітів</summary>
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічний кубіт – це "команда" фізичних, де <span style="font-weight: bold;  color: rgb(56, 28, 28);">інформація кодується в колективному стані.</span> 
-          <br>Синдромні вимірювання виявляють помилки без колапсу суперпозиції, подібно до того, як лікар "промацує" пацієнта без втручання. Джерело: <a href="https://github.com/Qiskit/qiskit-tutorials/tree/main/tutorials/advanced/quantum_error_correction" target="_blank">Qiskit Error Correction Tutorials</a>.</p>
-      </details>
+      
     </section>
 
-    <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Обмеження та переваги: подолання декогеренції</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Декогеренція – це "квантове забування": кубіт втрачає когерентність через взаємодію з оточенням, як хвиля, що розпорошується піском.
+    <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <br><h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Обмеження та переваги: подолання декогеренції</h2>
+     
+      <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Декогеренція – це "квантове забування": кубіт втрачає когерентність через взаємодію з оточенням, як хвиля, що розпорошується піском.
          У 2025 році (MIT Quantum Index) декогеренцію скоротили на 30% (NIST/SQMS), але шум лишається – error rate ~0.1% обмежує обчислення до 100-1000 кубітів.
          <br><br> QECC дозволяє наступне: з 1000 фізичних кубітів створюється 20 логічних, готових для мільйонних обчислень.
          Перевага над класичними: експоненційна стійкість для довгих алгоритмів (Shor's, VQE), де класичні ECC обмежені лінійним overhead.
          <br><br> Парадокс: щоб врятувати квантову "магію", потрібно класичних "захисників" – гібридний підхід, де класичні процесори керують корекцією в реальному часі.
          У 2025 році це ключ до практичних застосувань, як симуляція матеріалів для нових батарей.</p>
-      <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #ffffff;">
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #030202;">
         <thead>
           <tr style="background: #003366;">
             <th style="padding: 10px; border: 1px solid #4a90e2;">Обмеження</th>
@@ -95,20 +213,19 @@
       </table>
     </section>
 
-    <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Види кодів корекції: Від Surface до Topological</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
-        <ol style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">QECC – це галерея стратегій:
+    <section id="section5" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <br><h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Види кодів корекції: від Surface до Topological</h2>
+      
+      <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+        <ol style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">QECC – це галерея стратегій:
           <li>surface code (Google Willow) – 2D-решітка з 49 фізичних кубітів на логічний, ідеальна для superconducting;</li>
           <li>LDPC codes (IBM) – низька щільність, ефективні для великих систем, зменшують overhead на 40%;</li>
           <li>topological codes (Microsoft) – геометрична заплутаність anyons, стійкі до локальних шумів без динамічних операцій.</li>
         </ol>
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Парадокс: найпростіші коди (surface) потребують найбільше ресурсів, але дають найвищу стійкість.</p>
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">У 2025 році гібриди домінують: LDPC для scale, topological для reliability.</p>
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;"> Візуально уявіть surface code як шахматну дошку, де помилки – "білі коні", а корекція – "захист короля".</p>
-      <details>
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Парадокс: найпростіші коди (surface) потребують найбільше ресурсів, але дають найвищу стійкість.</p>
+        
         <summary>Таблиця типів QECC</summary>
-        <table style="width: 100%; border-collapse: collapse; margin: 15px 0; color: #ffffff;">
+        <table style="width: 100%; border-collapse: collapse; margin: 15px 0; color: #0c0606;">
           <thead>
             <tr style="background: #003366;">
               <th style="padding: 8px; border: 1px solid #4a90e2;">Тип</th>
@@ -137,16 +254,14 @@
       </details>
     </section>
 
-    <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Актуальність 2025: перші fault-tolerant демонстрації</h2>
+    <section id="section6" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
+      <br><h2 style="color: #0a041d; font-weight: 700; font-size: 35px;">Актуальність 2025: перші fault-tolerant демонстрації</h2>
+     
       <img src="https://thequantuminsider.com/wp-content/uploads/2024/09/qedma-stack-1024x651.jpg" style="width: 650px; height: 570px;" alt="Qedma стек">
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">У 2025 році QECC переходить від теорії до практики: перші fault-tolerant демонстрації в IBM Poughkeepsie data center, де логічні кубіти витримують обчислення на 1000+ фізичних.
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">У 2025 році QECC переходить від теорії до практики: перші fault-tolerant демонстрації в IBM Poughkeepsie data center, де логічні кубіти витримують обчислення на 1000+ фізичних.
          <br>Критично для реальних задач: симуляція матеріалів (хімія нових батарей), де декогеренція руйнувала б результати.
-         <br>Парадокс: корекція – "квантовий щит", що дозволяє мікросвіт служити макро-задачам. За MIT Quantum Index, QECC – ключ до quantum advantage, з першими комерційними тестами в фінансах (оптимізація портфелів з error mitigation).</p>
-      <details>
-        <summary>Концепції для подальших сторінок</summary>
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Логічні кубіти: У алгоритмах (VQE) – error mitigation через Qiskit; у застосуваннях – стійка оптимізація фінансів. Джерело: <a href="https://github.com/Qiskit/qiskit-tutorials/tree/main/tutorials/advanced/quantum_error_correction" target="_blank">Qiskit Tutorials</a>.</p>
-      </details>
+         <br>Парадокс: корекція – "квантовий щит", що дозволяє мікросвіт служити макро-задачам. </p>
+     
     </section>
   </div>
 
