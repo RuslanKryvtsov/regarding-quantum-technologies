@@ -17,7 +17,7 @@
     <h3 style="color: #0c0753; font-style: italic; font-size: 23px; font-weight: 900;">Навігація по веб-сторінці</h3>
     <ul>
       <li><a href="#section1" class="nav-link" style="color: #211255; font-weight: 700;">Проблематика PQC</a></li>
-      <li><a href="#section2" class="nav-link" style="color: #211255; font-weight: 700;">Теоретичні основи</a></li>
+     
       <li><a href="#section3" class="nav-link" style="color: #211255; font-weight: 700;">Типи PQC алгоритмів</a></li>
       <li><a href="#section4" class="nav-link" style="color: #211255; font-weight: 700;">Тенденції 2025</a></li>
       <li><a href="#section5" class="nav-link" style="color: #211255; font-weight: 700;">Загроза від Шора</a></li>
@@ -35,7 +35,7 @@
       <h3>Контекстне меню</h3>
       <ul>
         <li><a href="#section1" class="nav-link" style="color: #3570c9; font-weight: 700;">Проблематика PQC</a></li>
-        <li><a href="#section2" class="nav-link" style="color: #3570c9; font-weight: 700;">Теоретичні основи</a></li>
+       
         <li><a href="#section3" class="nav-link" style="color: #3570c9; font-weight: 700;">Типи PQC алгоритмів</a></li>
         <li><a href="#section4" class="nav-link" style="color: #3570c9; font-weight: 700;">Тенденції 2025</a></li>
         <li><a href="#section5" class="nav-link" style="color: #3570c9; font-weight: 700;">Загроза від Шора</a></li>
@@ -58,42 +58,93 @@
 
     <!-- Розділи -->
     <section id="section1" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Проблематика PQC: Чому класична криптографія в небезпеці</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Класична криптографія – це як старовинний замок із хитромудрими ключами: <span style="font-weight: bold;  color: rgb(56, 28, 28);">RSA, ECDSA чи Diffie-Hellman забезпечують безпеку Інтернету, банківських транзакцій і IoT-пристроїв.</span> 
-        <br><br>Але квантовий комп’ютер із алгоритмом Шора загрожує зламати ці системи за лічені секунди. Так, даний алгоритм для факторизації великих чисел, який загрожує класичній криптографії RSA, на квантовому комп’ютері з 4000 кубітів може розкласти 2048-бітне число за секунди, тоді як класичному ПК потрібно мільйони років (NIST, 2025). 
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Проблематика PQC: Чому класична криптографія в небезпеці</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Класична криптографія – це як старовинний замок із хитромудрими ключами: <span style="font-weight: bold;  color: rgb(56, 28, 28);">RSA, ECDSA чи Diffie-Hellman забезпечують безпеку Інтернету, банківських транзакцій і IoT-пристроїв.</span> 
+        
         <br>Хоча повноцінний "quantum advantage" для криптоатак ще попереду, NIST уже стандартизує постквантові алгоритми, щоб захистити fintech, healthcare та IoT. 
-        <br><br>Проблема: сучасні протоколи (TLS, VPN) покладаються на вразливі алгоритми, і перехід на PQC – це не просто оновлення, а глобальна перебудова інфраструктури. 
-        Щоб захистити цифровий світ, потрібно переосмислити його основи, 
-       подібно до того, як квантова механіка змінила погляд на Всесвіт. 
-        <br><br><span style="font-weight: bold;  color: rgb(56, 28, 28);">PQC – це не "патч", а нова парадигма</span>, що забезпечує стійкість до квантових атак, зберігаючи сумісність із класичними системами.</p>
+       
+          
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong>Постквантова криптографія (PQC)</strong> — це напрям криптографії, що займається розробкою алгоритмів, стійких до атак
+         квантових комп’ютерів. </p>
+
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Важливо не плутати цей напрям із <strong>квантовою криптографією</strong> (наприклад, квантовою передачею ключів): постквантові алгоритми працюють на звичайних комп’ютерах, тоді як квантова криптографія базується на фізичних принципах квантової механіки для захисту даних.</p>
+       
+       <br><h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Чому квантові комп’ютери загрожують сучасній криптографії?</h2>
+       
+       <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Більшість широко використовуваних криптосистем (<strong>RSA</strong>, алгоритми на еліптичних кривих тощо) спираються на математичні задачі факторизації великих чисел чи дискретного логарифмування, які звичайним комп’ютерам розв’язати вкрай важко.</p>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Квантові комп’ютери здатні розв’язувати такі задачі набагато швидше, підриваючи стійкість класичних алгоритмів шифрування. Зокрема:</p>
+       <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+       <li>Відомий <strong>алгоритм Шора</strong> для квантової машини дозволяє ефективно розкладати велетенські числа на прості множники, фактично зламуючи <strong>RSA-шифрування</strong>.
+        <br>Так, даний алгоритм для факторизації великих чисел, який загрожує класичній криптографії RSA, на квантовому комп’ютері з 4000 кубітів може розкласти 2048-бітне число за секунди, тоді як класичному ПК потрібно 
+        мільйони років (NIST, 2025).</li>
+      
+       <li>Аналогічно, квантовий алгоритм для дискретного логарифму ставить під загрозу алгоритми на еліптичних кривих (<strong>ECDSA</strong>, <strong>ECC</strong>).</li>
+       </ul>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Крім асиметричних схем, квантові обчислення впливають і на симетричні алгоритми (<strong>AES</strong>, <strong>SHA</strong> тощо). Хоча симетричні шифри вважаються більш стійкими, <strong>алгоритм Гровера</strong> на квантовому комп’ютері може прискорити перебір ключа, фактично зменшуючи ефективну довжину ключа вдвічі. Тобто:</p>
+       <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+       <li>256-бітний ключ забезпечуватиме такий рівень безпеки, як 128-бітний у класичній моделі.</li>
+       <li>Відповідно, щоб зберегти надійність, довжину ключів симетричних алгоритмів необхідно збільшувати (наприклад, перейти з 128-бітних ключів AES на 256-бітні).</li>
+       </ul>
+       
+       <br><h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Принципи та напрямки постквантової криптографії</h2>
+       
+       <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Постквантові алгоритми базуються на задачах, які вважаються складними як для класичних, так і для квантових комп’ютерів. Криптографи досліджують різні математичні основи, що не піддаються прискоренню за допомогою відомих квантових алгоритмів. Серед основних підходів, на яких ґрунтуються постквантові криптосистеми:</p>
+       
+       <ol style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+       <li><strong>Алгоритми на геш-функціях.</strong> Використовують властивості криптографічних гешів (хешів). Класичний приклад — <strong>підписи Меркла</strong>, що побудовані на дереві геш-функцій. Такі хеш-підписи дуже стійкі до квантових атак (адже стійкість геш-функцій підривається квантово лише частково, через алгоритм Гровера), проте мають недолік: обмежену кількість підписів від одного ключа і великі розміри відкритих ключів. Попри це, сучасні реалізації (наприклад, <strong>SPHINCS+</strong>) усувають деякі обмеження і вже стандартизовані для використання.</li>
+       <li><strong>Алгоритми на кодах виправлення помилок.</strong> Ґрунтуються на складності декодування зашифрованих повідомлень, використовуючи теорію коректувальних кодів. Найвідоміший представник — <strong>шифрування МакЕліса (McEliece)</strong>, розроблене ще у 1970-х. Воно досі не зламане ні класичними, ні квантовими методами, хоча має дуже великий розмір публічного ключа (сотні кілобайт). Кодові алгоритми розглядаються як перспективні кандидати для шифрування і обміну ключами. Наприклад, у 2025 році алгоритм <strong>HQC (Hamming Quasi-Cyclic)</strong>, що базується на кодах, був обраний як резервний стандарт для постквантового шифрування.</li>
+       <li><strong>Алгоритми на ґратках (латтисна криптографія).</strong> Використовують задачі з геометрії чисел — пошук векторів у багатовимірних ґратках (решітках). Це один із найбільш досліджених і перспективних напрямків PQC. Приклади: алгоритми на задачі пошуку найближчого вектора чи розв’язку «шумових» рівнянь (<strong>Learning With Errors</strong>). Саме до цього класу належать багато фіналістів конкурсів постквантових алгоритмів: <strong>CRYSTALS-Kyber</strong> (шифрування) та <strong>CRYSTALS-Dilithium</strong> (цифровий підпис) побудовані на решітках і показали відмінне поєднання швидкості та відносно невеликого розміру ключів. Інші приклади решіткових схем — <strong>NTRU</strong>, <strong>SABER</strong>, <strong>FrodoKEM</strong> тощо. Перевага решіткових алгоритмів — висока швидкість та компактність (Kyber шифрує швидше за RSA і має набагато менший ключ, порядку кількох сотень байт). Недолік — доведена стійкість ґраткових задач поки не така сильна, як факторизації, і можливі нові математичні атаки; також деякі реалізації вимогливі до ресурсів (потрібно багато операцій лінійної алгебри).</li>
+       <li><strong>Алгоритми на багатовимірних поліномних системах.</strong> Ця категорія охоплює схеми, що базуються на складності розв’язання систем нелінійних багатовимірних рівнянь (як правило, квадратичних). Приклад — криптосистема <strong>Rainbow</strong> (багатовимірні сигнатури), яка свого часу була кандидатом на стандарт. Ідея полягає в тому, що знаходження ключа з набору поліноміальних рівнянь є вкрай складною задачею. Хоча деякі такі схеми були зламані або ослаблені криптоаналітиками (той же Rainbow піддалась успішній атаці на класичному комп’ютері у 2022 році), напрямок Multivariate все ще розвивається.</li>
+       <li><strong>Алгоритми на ізогеніях еліптичних кривих.</strong> Досить вузький, але цікавий напрям: використовуються так звані суперсингулярні ізогенії — особливі відображення між еліптичними кривими. Схеми на ізогеніях, як-от <strong>SIKE (Supersingular Isogeny Key Exchange)</strong>, пропонували компактні ключі і були багатообіцяючими для обміну ключами. На жаль, у 2022 році алгоритм SIKE був зламаний класичним методом (математичну лазівку знайшли до появи квантових комп’ютерів). Попри це, дослідження ізогеній тривають, і вони залишаються альтернативним підходом для побудови квантовостійких протоколів.</li>
+       </ol>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Постквантова криптографія не зводиться до якогось одного алгоритму, це цілий набір різнопланових математичних технік. Кожна з них має свої плюси й мінуси у плані безпеки, швидкодії та розміру ключів, тому експерти з інформаційної безпеки приділяють увагу всім напрямкам одразу. У майбутньому, ймовірно, стандартизовано буде кілька різних алгоритмів для різних потреб — щоб у разі зламу одного підходу (наприклад, якщо раптом знайдеться квантова атака на ґратки) існував запасний варіант з іншою математичною основою (на кодах чи гешах).</p>
+       
+       <br><h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Стандартизація та приклади постквантових алгоритмів</h2>
+       
+       <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">У 2016 році <strong>Національний інститут стандартів і технологій США (NIST)</strong> оголосив відкритий конкурс на квантовостійкі алгоритми. Протягом кількох раундів було розглянуто десятки кандидатів з усього світу. У липні 2022 року NIST оголосив перших переможців цього шестирічного відбору. До списку увійшли:</p>
+       <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+       <li><strong>CRYSTALS-Kyber</strong> — алгоритм шифрування та обміну ключами (Key Encapsulation Mechanism), оснований на решітках. Забезпечує секретний обмін ключами між сторонами.</li>
+       <li><strong>CRYSTALS-Dilithium</strong> — схема цифрового підпису на решітках. Забезпечує підтвердження автентичності та цілісності даних.</li>
+       <li><strong>FALCON</strong> — ще один алгоритм цифрового підпису на ґратках (використовує NTRU-решітки та швидке перетворення Фур’є).</li>
+       <li><strong>SPHINCS+</strong> — схема цифрового підпису на основі геш-функцій (статична багаторазова версія геш-підписів Меркла).</li>
+       </ul>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Kyber і Dilithium наразі вважаються основними стандартами для постквантового шифрування та підписів відповідно. NIST у серпні 2024 року випустив фінальні стандарти для цих алгоритмів:</p>
+       <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+       <li>Kyber отримав офіційну назву <strong>ML-KEM (Module-Lattice Key Encapsulation Mechanism)</strong>,</li>
+       <li>Dilithium — <strong>ML-DSA (Module-Lattice Digital Signature Algorithm)</strong>.</li>
+       <li>Одночасно стандартом став і SPHINCS+ як резервний алгоритм підпису (в стандарті його назвали <strong>SLH-DSA, Stateless Hash-based DSA</strong>) — він базується на зовсім іншій математичній ідеї (геш-дерев), щоб підстрахувати випадок, якщо основний решітковий підпис раптом виявиться вразливим.</li>
+       </ul>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Таким чином, вперше затверджено набір постквантових алгоритмів на державному рівні.</p>
+       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">У 2025 році NIST додатково обрав <strong>HQC (Hamming Quasi-Cyclic)</strong> — алгоритм на кодах — в якості резервного стандарту для шифрування. HQC має слугувати запасним варіантом на випадок, якщо згодом будуть виявлені слабкі місця у головного алгоритму (Kyber) на ґратковій основі. Це відображає стратегію диверсифікації криптографії: використовувати різні математичні підходи паралельно.</p>
+         
+       <br> <p style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(87, 22, 22); font-style: italic;">  PQC – це не "патч", а нова парадигма</span> щоб захистити цифровий світ, потрібно переосмислити його основи, 
+       подібно до того, як квантова механіка змінила погляд на Всесвіт.</p>
 
         <img src="https://images.synopsys.com/is/image/synopsys/quantum-cryptography-vs-post-quantum-cryptography?$social-post$" style="width: 710px; height: 610px;" alt="Квантова криптографія проти постквантової криптографії">
     
     </section>
 
-    <section id="section2" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Теоретичні основи: як працює постквантова криптографія</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Постквантова криптографія (PQC) – це як космічний щит, що захищає дані від квантових атак.
-        <br> На відміну від <span style="font-weight: bold;  color: rgb(56, 28, 28);">RSA</span>, яке спирається на <span style="font-weight: bold;  color: rgb(56, 28, 28);">складність факторизації</span>, чи <span style="font-weight: bold;  color: rgb(56, 28, 28);">ECDSA</span>, що базується на <span style="font-weight: bold;  color: rgb(56, 28, 28);">дискретному логарифмі</span>, <span style="font-weight: bold;  color: rgb(56, 28, 28);">PQC</span> використовує математичні задачі, <span style="font-weight: bold;  color: rgb(56, 28, 28);">стійкі до квантових алгоритмів</span>, таких як Шора чи Гровера.
-        <br><br> <span style="font-weight: bold; text-decoration: underline;">Основні категорії PQC: lattice-based (Kyber, NTRU), hash-based (SPHINCS+), code-based (McEliece), multivariate quadratic та supersingular elliptic curves.</span>
-        <br><br>  Уявіть lattice-based криптографію як лабіринт у багатовимірному просторі: знайти вихід (зламати) складно навіть для квантового комп’ютера, бо це потребує вирішення задачі найкоротшого вектора (SVP). Hash-based підписи, навпаки, – це як цифровий відбиток, що залежить від криптографічних хеш-функцій, стійких до квантових атак Гровера. <br><br>У 2025 році NIST стандартизував Kyber і Dilithium, які поєднують ефективність (невеликий розмір ключів) і безпеку.  <br><br>Наприклад, Kyber забезпечує шифрування з ключами ~1 KB, що ідеально для IoT. Обмеження: більший обчислювальний overhead порівняно з RSA, але це ціна за безпеку в квантовій ері.</p>
-      
-    </section>
 
+   
     <section id="section3" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Типи PQC алгоритмів: Різноманітність захисту</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">PQC – це як галактика алгоритмів, кожен із яких світить унікальним способом.
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Типи PQC алгоритмів: різноманітність захисту</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">PQC – це як галактика алгоритмів, кожен із яких світить унікальним способом.
         
         <br><br>
           <strong>PQC (Post-Quantum Cryptography)</strong> — це галактика алгоритмів, де кожен тип сяє власною зорею. 
-          Вони створені, щоб захистити дані від загроз квантових комп’ютерів, 
-          які здатні зруйнувати сучасні схеми шифрування, як-от RSA чи ECC. 
           Замість покладатися на факторизацію або логарифмічні задачі, 
           PQC базується на складних математичних структурах, 
           що залишаються непідвладними навіть квантовим атакам.
       
       
-        <ul style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 28px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify; font-weight: 800;">
+        <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           <li><strong>Lattice-based</strong> — <em>Kyber, Dilithium</em></li>
           <li><strong>Hash-based</strong> — <em>SPHINCS+</em></li>
           <li><strong>Code-based</strong> — <em>McEliece</em></li>
@@ -101,7 +152,7 @@
           <li><strong>Supersingular elliptic curves</strong> — <em>SIKE</em></li>
         </ul>
       
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           <strong>Lattice-based алгоритми</strong> — серце постквантової криптографії. 
           Їхня безпека ґрунтується на задачах <em>Learning With Errors (LWE)</em> та <em>Module-LWE</em>, 
           які неможливо розв’язати навіть із допомогою квантових машин. 
@@ -111,21 +162,21 @@
         </p>
       
               
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           <strong>Hash-based підписи</strong>, як <em>SPHINCS+</em>, — це "цифрові відбитки" епохи квантової безпеки. 
           Вони ґрунтуються виключно на хеш-функціях, що залишаються стійкими навіть до алгоритму <strong>Гровера</strong>, 
           який може лише квадратично скоротити простір пошуку (O(√n)). 
           Такі схеми підходять для систем, де критична надійність, але менш важливий розмір підпису.
         </p>
       
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           <strong>Code-based криптографія</strong> — класика, що пережила десятиліття. 
           Алгоритм <em>McEliece</em> базується на складності декодування випадкових лінійних кодів. 
           Його публічні ключі великі (до 1 МБ), проте безпека перевірена часом: 
           за понад 40 років не знайдено практичної атаки — навіть з урахуванням квантових обчислень.
         </p>
       
-        <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           <strong>Multivariate quadratic системи</strong>, як <em>Rainbow</em>, 
           оперують рівняннями, які виглядають просто, але створюють експоненційно складний простір розв’язків — 
           це ніби розв’язати кубик Рубіка у 100 вимірах. 
@@ -134,7 +185,7 @@
           показала: навіть елегантна математика вимагає постійного аудиту.
       </p>
       
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
           У 2025 році <strong>Kyber</strong> і <strong>Dilithium</strong> 
           стали офіційними стандартами <abbr title="National Institute of Standards and Technology">NIST</abbr> 
           для шифрування та підписів у постквантову епоху. 
@@ -143,36 +194,36 @@
           де квантові обчислення вже не загроза, а стимул до еволюції криптографії.
     </p>
       
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #ffffff; font-size: 21px;">
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0; color: #0f0707; font-size: 21px;">
           <thead>
-            <tr style="background: #003366;">
+            <tr style="background: #8ea7c0;">
               <th style="padding: 10px; border: 1px solid #4a90e2;">Тип</th>
               <th style="padding: 10px; border: 1px solid #4a90e2;">Приклади</th>
               <th style="padding: 10px; border: 1px solid #4a90e2;">Ключові особливості</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="background: #1b2a4a;">
+            <tr style="background: #8ea7c0;">
               <td style="padding: 10px; border: 1px solid #4a90e2;">Lattice-based</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Kyber, Dilithium</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Швидкість, компактні ключі, NIST-стандарти</td>
             </tr>
-            <tr style="background: #22385c;">
+            <tr style="background: #8ea7c0;">
               <td style="padding: 10px; border: 1px solid #4a90e2;">Hash-based</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">SPHINCS+</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Висока надійність, великі підписи</td>
             </tr>
-            <tr style="background: #1b2a4a;">
+            <tr style="background: #8ea7c0;">
               <td style="padding: 10px; border: 1px solid #4a90e2;">Code-based</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">McEliece</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Довготривала стійкість, великі ключі</td>
             </tr>
-            <tr style="background: #22385c;">
+            <tr style="background: #8ea7c0;">
               <td style="padding: 10px; border: 1px solid #4a90e2;">Multivariate quadratic</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Rainbow</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Нелінійна складність, швидкі обчислення</td>
             </tr>
-            <tr style="background: #1b2a4a;">
+            <tr style="background: #8ea7c0;">
               <td style="padding: 10px; border: 1px solid #4a90e2;">Isogeny-based</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">SIKE</td>
               <td style="padding: 10px; border: 1px solid #4a90e2;">Компактні ключі, потребує доопрацювання</td>
@@ -183,8 +234,8 @@
     </section>
 
     <section id="section4" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Тренди 2025: глобальний перехід до PQC</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">У 2025 році постквантова криптографія – це як будівництво нових мостів перед неминучим штормом. За даними ITProToday, NIST завершив стандартизацію Kyber, Dilithium і SPHINCS+, і компанії, як Microsoft Azure, уже впроваджують PQC у хмарні сервіси.
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Тенденції 2025: глобальний перехід до PQC</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">У 2025 році постквантова криптографія – це як будівництво нових мостів перед неминучим штормом. За даними ITProToday, NIST завершив стандартизацію Kyber, Dilithium і SPHINCS+, і компанії, як Microsoft Azure, уже впроваджують PQC у хмарні сервіси.
         
         <br><br>Уявіть: кожен HTTPS-запит у браузері чи транзакція в blockchain незабаром використовуватиме PQC, щоб протистояти квантовим атакам. Глобальний перехід прискорюється: 40% fintech-компаній (Moody’s) тестують PQC для захисту транзакцій, а IoT-виробники (як Bosch) інтегрують Kyber у пристрої. 
         
@@ -194,8 +245,8 @@
     </section>
 
     <section id="section5" class="section">
-      <h2 style="color: #0a041d; font-weight: 700;">Загроза від алгоритму Шора: квантовий таран</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Алгоритм Шора – це як квантовий ключ, що відмикає класичні замки. Розроблений Пітером Шором у 1994 році, він дозволяє квантовому комп’ютеру факторизувати великі числа (наприклад, 2048-бітні для RSA) за поліноміальний час, тоді як класичним потрібна експоненціальна кількість операцій.
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Загроза від алгоритму Шора: квантовий таран</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Алгоритм Шора – це як квантовий ключ, що відмикає класичні замки. Розроблений Пітером Шором у 1994 році, він дозволяє квантовому комп’ютеру факторизувати великі числа (наприклад, 2048-бітні для RSA) за поліноміальний час, тоді як класичним потрібна експоненціальна кількість операцій.
         
         <br><br>У 2025 році квантові процесори (Google Willow, 1000 кубітів) ще не досягли цього, але прогрес у QECC наближає загрозу.
          Алгоритм Шора також загрожує ECDSA, руйнуючи криптографію блокчейнів, як Bitcoin. 
@@ -206,8 +257,8 @@
     </section>
 
     <section id="section6" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">PQC у Fintech: pахист транзакцій</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Фінансовий сектор – це як серце цифрового світу, де кожна транзакція – це імпульс, захищений криптографією. 
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">PQC у Fintech: pахист транзакцій</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Фінансовий сектор – це як серце цифрового світу, де кожна транзакція – це імпульс, захищений криптографією. 
         У 2025 році fintech (Visa, JPMorgan) активно переходить на PQC, щоб захистити платежі, блокчейни та смарт-контракти від квантових атак. 
         
         <br><br>Наприклад, Kyber уже тестується в Microsoft Azure для шифрування транзакцій у хмарі, забезпечуючи швидкість і безпеку. 
@@ -218,8 +269,8 @@
     </section>
 
     <section id="section7" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">PQC для IoT: Безпека в епоху підключених пристроїв</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Інтернет речей (IoT) – це як галактика пристроїв, від розумних годинників до промислових сенсорів, де кожен вузол потребує захисту.
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">PQC для IoT: Безпека в епоху підключених пристроїв</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Інтернет речей (IoT) – це як галактика пристроїв, від розумних годинників до промислових сенсорів, де кожен вузол потребує захисту.
          У 2025 році IoT налічує 75 мільярдів пристроїв (Statista), але їхня слабка обчислювальна потужність робить RSA чи ECDSA громіздкими.
          <br><br> Квантова загроза від Шора ставить під ризик IoT-протоколи, як MQTT чи CoAP. PQC, зокрема Kyber, пропонує компактні ключі (~1 KB), ідеальні для IoT.
            Уявіть: розумна камера безпеки шифрує дані за допомогою Kyber, залишаючись стійкою до квантових атак, навіть на слабкому чіпі.
@@ -230,9 +281,31 @@
     </section>
 
     <section id="section8" class="section" style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;" >
-      <h2 style="color: #0a041d; font-weight: 700;">Інтеграція та стандарти: NIST веде шлях</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Стандартизація PQC – це як створення галактичного кодексу безпеки. 
-        У 2025 році NIST завершив відбір алгоритмів (Kyber, Dilithium, SPHINCS+), які стають основою для HTTPS, TLS 1.3 і VPN.
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Інтеграція та стандарти. NIST. </h2>
+
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong style="color: rgb(114, 47, 47);">NIST</strong> – це <strong style="color: rgb(114, 47, 47);">Національний інститут стандартів і технологій США</strong>, який розробляє стандарти, рекомендації та технології для забезпечення інноваційної та промислової конкурентоспроможності США, економічної безпеки та покращення якості життя.<br>В інформаційній безпеці <strong style="color: brown;">NIST</strong> відомий своєю системою управління ризиками кібербезпеки (<strong style="color: brown;">NIST Cybersecurity Framework</strong>), яка допомагає організаціям оцінювати та знижувати ризики.</p>
+
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"><strong style="color: rgb(114, 47, 47);">Стандартизація PQC (постквантової криптографії) NIST</strong> — це програма 
+        <strong style="color: rgb(114, 47, 47);">Національного інституту стандартів і технологій США (NIST)</strong> з розробки та впровадження нових криптографічних стандартів, стійких до квантових комп’ютерів.<br>
+        Програма включає вибір, стандартизацію та застосування постквантових алгоритмів для захисту даних від майбутніх квантових атак, починаючи з публічного обговорення у 
+        <strong style="color: rgb(114, 47, 47);">2016 році</strong>.<br><strong style="color: rgb(114, 47, 47);">NIST</strong> уже випустив перші стандарти PQC, наприклад, стандарт 
+        <strong style="color: rgb(114, 47, 47);">FIPS 204</strong>, заснований на алгоритмі <strong style="color: rgb(114, 47, 47);">ML-KEM</strong> (раніше 
+        <strong style="color: rgb(114, 47, 47);">CRYSTALS-Kyber</strong>), який використовуватиметься для захисту цифрових підписів.</p>
+      
+      <h3 style="color: #1c194d; font-weight: 900; font-size: 35px;">Основні цілі та етапи стандартизації PQC NIST</h3>
+      
+      <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+      <li><strong style="color: rgb(114, 47, 47);">Розробка алгоритмів:</strong> <strong style="color: rgb(114, 47, 47);">NIST</strong> провів відкритий конкурс, у рамках якого були представлені десятки алгоритмів шифрування та цифрових підписів.</li>
+      <li><strong style="color: rgb(114, 47, 47);">Вибір алгоритмів:</strong> Після багаторічної оцінки <strong style="color: rgb(114, 47, 47);">NIST</strong> обрав набір алгоритмів, які стали основою для нових стандартів, включаючи <strong style="color: brown;">ML-KEM</strong> (для інкапсуляції ключів) і, ймовірно, інші алгоритми для цифрових підписів.</li>
+      <li><strong style="color: rgb(114, 47, 47);">Публікація стандартів:</strong> <strong style="color: rgb(114, 47, 47);">NIST</strong> випустив перші постквантові стандарти, які організації можуть почати впроваджувати для захисту даних, що є важливим кроком для захисту як поточних, так і майбутніх даних від квантових атак.</li>
+      <li><strong style="color: rgb(114, 47, 47);">Стандартизація:</strong> Програма спрямована на включення нових алгоритмів до існуючих стандартів 
+        <strong style="color: rgb(114, 47, 47);">NIST</strong>, наприклад, <strong style="color: rgb(114, 47, 47);">FIPS 204</strong>, який буде стандартом для цифрових підписів.</li>
+      <li><strong style="color: rgb(114, 47, 47);">Квантова стійкість:</strong> Основна мета полягає в тому, щоб розробити криптографічні системи, які будуть захищені як від класичних, так і від квантових комп’ютерів, 
+        що дозволить зберегти безпеку даних у довгостроковій перспективі.</li>
+      </ul>
+
+      <span style="color: #1c194d; font-weight: 900; font-size: 33px;">Стандартизація PQC – це як створення галактичного кодексу безпеки.</span> 
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"> У 2025 році NIST завершив відбір алгоритмів (Kyber, Dilithium, SPHINCS+), які стають основою для HTTPS, TLS 1.3 і VPN.
          <br><br>Кожен вебсайт, що використовує TLS, поступово переходить на гібридні протоколи, комбінуючи RSA з Kyber, щоб забезпечити сумісність. 
          <br><br>Microsoft Azure і Google Cloud уже пропонують PQC-готові API, а OpenQuantumSafe надає бібліотеки для C, Python і Rust. 
          <br>PQC – це підготовка до майбутнього, але впроваджується на класичних системах. 
@@ -240,16 +313,34 @@
     </section>
 
     <section id="section9" class="section style="background-color: #A6B8D3; padding: 20px; margin: 20px 0; border-radius: 10px; animation: fadeInSection 1s ease-in;">
-      <h2 style="color: #0a041d; font-weight: 700;">Майбутнє PQC: Захист цифрового Всесвіту</h2>
-      <p style="line-height: 1.6; font-family: 'Cardo', serif; font-size: 31px; color: #271c2b; animation: colorShiftCardo 5s infinite alternate; text-align: justify;">Майбутнє PQC – це як будівництво космічної станції для захисту цифрового світу. 
+      <h2 style="color: #0c0753; font-weight: 900; font-size: 35px;">Майбутнє PQC: перспективи та виклики впровадження</h2>
+      <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Майбутнє PQC – це як будівництво космічної станції для захисту цифрового світу. 
         
-        <br><br>До 2035 року, за прогнозами Moody’s, 50% криптографічних систем будуть PQC-сумісними, захищаючи fintech, IoT і healthcare від квантових атак.
+       
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Нові алгоритми потрібно не лише стандартизувати, а й реалізувати у безлічі протоколів і пристроїв: від веб-браузерів і серверів до банкоматів, смарт-карт і блокчейн-гаманців. Виклики впровадження включають:</p>
+        <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+        <li>Сумісність (наприклад, старі пристрої можуть не підтримувати великі ключі),</li>
+        <li>Оптимізацію продуктивності (деякі PQC-алгоритми повільніші чи споживають більше пам’яті),</li>
+        <li>Управління ключами.</li>
+        </ul>
         
-        <br><br>Уявіть: кожен ваш пароль, транзакція чи медичний запис шифрується Kyber чи Dilithium, стійкими до алгоритму Шора.
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Експерти з безпеки наголошують: щоб уникнути катастрофічних наслідків, готуватися до квантового переходу треба вже зараз. За рекомендаціями NIST, упродовж найближчих років слід поступово відмовитися від уразливих алгоритмів:</p>
+        <ul style="font-size: 30px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">
+        <li>До <strong>2030 року</strong> припинити їх використання у нових системах,</li>
+        <li>До <strong>2035 року</strong> повністю замінити на квантовостійкі стандарти.</li>
+        </ul>
         
-       <br><br>У 2025 році компанії, як IBM і Google, інвестують у гібридні системи, де PQC працює поряд із QECC для квантових мереж. 
-       OpenQuantumSafe дозволяє розробникам тестувати PQC уже сьогодні, використовуючи бібліотеки для Python; хмарні платформи (AWS, Azure) і стандарти NIST спрощують цей шлях.  
+                
+       <br><p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);"></p>У 2025 році компанії, як IBM і Google, інвестують у гібридні системи, де PQC працює поряд із QECC для квантових мереж. 
+       <br>OpenQuantumSafe дозволяє розробникам тестувати PQC уже сьогодні, використовуючи бібліотеки для Python; хмарні платформи (AWS, Azure) і стандарти NIST спрощують цей шлях.</p>  
       
+       <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Масова міграція на квантовостійкі алгоритми вимагатиме злагоджених зусиль стандартизаторів, розробників програмного забезпечення і апаратних виробників. Ідеальний сценарій полягає в тому, що через декілька років постквантові методи шифрування стануть невидимим стандартом всюди — від веб-сайтів до банкових систем — і користувачі будуть захищені від квантових атак, навіть не задумуючись про це.</p>
+        
+        <p style="font-size: 32px; text-align: justify; font-weight: 700;  color: rgb(48, 24, 24);">Щоб це стало реальністю, вже сьогодні фахівці закликають активно тестувати і впроваджувати PQC, проводити крипто-аудити існуючих систем та планувати поступовий перехід на нові стандарти безпеки. <strong>Постквантова криптографія — це виклик і шанс одночасно:</strong> забезпечити довгострокову конфіденційність та цілісність даних у світі, де квантові технології стануть буденністю.
+               
+        <br>До 2035 року, за прогнозами Moody’s, 50% криптографічних систем будуть PQC-сумісними, захищаючи fintech, IoT і healthcare від квантових атак.</p> 
+       
+             
     </section>
   </div>
 
